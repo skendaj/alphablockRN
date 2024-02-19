@@ -131,9 +131,9 @@ var require_cjs2 = __commonJS({
   }
 });
 
-// node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js
 var require_PresenceContext = __commonJS({
-  "node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js"(exports2, module2) {
+  "node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -162,9 +162,9 @@ var require_PresenceContext = __commonJS({
   }
 });
 
-// node_modules/@tamagui/use-presence/dist/cjs/usePresence.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/usePresence.js
 var require_usePresence = __commonJS({
-  "node_modules/@tamagui/use-presence/dist/cjs/usePresence.js"(exports2, module2) {
+  "node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/usePresence.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -208,9 +208,9 @@ var require_usePresence = __commonJS({
   }
 });
 
-// node_modules/@tamagui/use-presence/dist/cjs/index.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/index.js
 var require_cjs3 = __commonJS({
-  "node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
+  "node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -15313,9 +15313,9 @@ var require_VirtualizedList = __commonJS({
   }
 });
 
-// node_modules/memoize-one/dist/memoize-one.cjs.js
+// node_modules/react-native-web/node_modules/memoize-one/dist/memoize-one.cjs.js
 var require_memoize_one_cjs = __commonJS({
-  "node_modules/memoize-one/dist/memoize-one.cjs.js"(exports2, module2) {
+  "node_modules/react-native-web/node_modules/memoize-one/dist/memoize-one.cjs.js"(exports2, module2) {
     "use strict";
     var safeIsNaN = Number.isNaN || /* @__PURE__ */ __name(function ponyfill(value) {
       return typeof value === "number" && value !== value;
@@ -29532,13 +29532,13 @@ function useConstant(fn) {
 }
 __name(useConstant, "useConstant");
 
-// node_modules/@tamagui/use-presence/dist/esm/PresenceContext.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/esm/PresenceContext.js
 var import_react7 = require("react");
 var import_jsx_runtime3 = require("react/jsx-runtime");
 var PresenceContext = (0, import_react7.createContext)(null);
 var ResetPresence = /* @__PURE__ */ __name((props) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(PresenceContext.Provider, { value: null, children: props.children }), "ResetPresence");
 
-// node_modules/@tamagui/use-presence/dist/esm/usePresence.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/esm/usePresence.js
 var import_react8 = require("react");
 function usePresence() {
   const context = (0, import_react8.useContext)(PresenceContext);

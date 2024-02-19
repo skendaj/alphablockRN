@@ -8,7 +8,8 @@ const Layout = () => {
         contentStyle: {
           backgroundColor: '#2b2e3d',
         },
-      }}>
+      }}
+    >
       <Stack.Screen name="index" />
     </Stack>
   );

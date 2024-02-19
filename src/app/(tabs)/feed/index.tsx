@@ -1,4 +1,4 @@
-import { FeedScreen } from '../../../screens/Feed/FeedScreen';
+import { FeedScreen } from "src/screens/Feed";
 
 const Page = () => {
   return <FeedScreen />;

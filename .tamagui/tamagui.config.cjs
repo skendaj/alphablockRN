@@ -41,9 +41,9 @@ var require_polyfill = __commonJS({
   }
 });
 
-// node_modules/@tamagui/animations-react-native/node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js
+// node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js
 var require_PresenceContext = __commonJS({
-  "node_modules/@tamagui/animations-react-native/node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js"(exports2, module2) {
+  "node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -61,17 +61,20 @@ var require_PresenceContext = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var PresenceContext_exports = {};
     __export2(PresenceContext_exports, {
-      PresenceContext: () => PresenceContext2
+      PresenceContext: () => PresenceContext2,
+      ResetPresence: () => ResetPresence2
     });
     module2.exports = __toCommonJS2(PresenceContext_exports);
     var import_react49 = require("react");
+    var import_jsx_runtime56 = require("react/jsx-runtime");
     var PresenceContext2 = (0, import_react49.createContext)(null);
+    var ResetPresence2 = /* @__PURE__ */ __name((props) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(PresenceContext2.Provider, { value: null, children: props.children }), "ResetPresence");
   }
 });
 
-// node_modules/@tamagui/animations-react-native/node_modules/@tamagui/use-presence/dist/cjs/usePresence.js
+// node_modules/@tamagui/use-presence/dist/cjs/usePresence.js
 var require_usePresence = __commonJS({
-  "node_modules/@tamagui/animations-react-native/node_modules/@tamagui/use-presence/dist/cjs/usePresence.js"(exports2, module2) {
+  "node_modules/@tamagui/use-presence/dist/cjs/usePresence.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -101,7 +104,7 @@ var require_usePresence = __commonJS({
       if (!context)
         return [true, null, context];
       const { isPresent: isPresent22, onExitComplete, register } = context, id = (0, import_react49.useId)() || "";
-      return (0, import_react49.useEffect)(() => register(id), [id, register]), !isPresent22 && onExitComplete ? [false, () => onExitComplete == null ? void 0 : onExitComplete(id), context] : [true, void 0, context];
+      return (0, import_react49.useEffect)(() => register(id), []), !isPresent22 && onExitComplete ? [false, () => onExitComplete == null ? void 0 : onExitComplete(id), context] : [true, void 0, context];
     }
     __name(usePresence2, "usePresence");
     function useIsPresent2() {
@@ -115,9 +118,9 @@ var require_usePresence = __commonJS({
   }
 });
 
-// node_modules/@tamagui/animations-react-native/node_modules/@tamagui/use-presence/dist/cjs/index.js
+// node_modules/@tamagui/use-presence/dist/cjs/index.js
 var require_cjs = __commonJS({
-  "node_modules/@tamagui/animations-react-native/node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
+  "node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -134,6 +137,75 @@ var require_cjs = __commonJS({
     module2.exports = __toCommonJS2(src_exports);
     __reExport2(src_exports, require_PresenceContext(), module2.exports);
     __reExport2(src_exports, require_usePresence(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/animations-react-native/node_modules/@tamagui/constants/dist/cjs/constants.js
+var require_constants = __commonJS({
+  "node_modules/@tamagui/animations-react-native/node_modules/@tamagui/constants/dist/cjs/constants.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var constants_exports = {};
+    __export2(constants_exports, {
+      currentPlatform: () => currentPlatform2,
+      isAndroid: () => isAndroid4,
+      isChrome: () => isChrome3,
+      isClient: () => isClient4,
+      isIos: () => isIos,
+      isServer: () => isServer3,
+      isTouchable: () => isTouchable3,
+      isWeb: () => isWeb5,
+      isWebTouchable: () => isWebTouchable3,
+      isWindowDefined: () => isWindowDefined2,
+      useIsomorphicLayoutEffect: () => useIsomorphicLayoutEffect3
+    });
+    module2.exports = __toCommonJS2(constants_exports);
+    var import_react49 = require("react");
+    var isWeb5 = true;
+    var isWindowDefined2 = typeof window < "u";
+    var isServer3 = isWeb5 && !isWindowDefined2;
+    var isClient4 = isWeb5 && isWindowDefined2;
+    var useIsomorphicLayoutEffect3 = isServer3 ? import_react49.useEffect : import_react49.useLayoutEffect;
+    var isChrome3 = typeof navigator < "u" && /Chrome/.test(navigator.userAgent || "");
+    var isWebTouchable3 = isClient4 && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+    var isTouchable3 = !isWeb5 || isWebTouchable3;
+    var isAndroid4 = false;
+    var isIos = false;
+    var currentPlatform2 = "web";
+  }
+});
+
+// node_modules/@tamagui/animations-react-native/node_modules/@tamagui/constants/dist/cjs/index.js
+var require_cjs2 = __commonJS({
+  "node_modules/@tamagui/animations-react-native/node_modules/@tamagui/constants/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_constants(), module2.exports);
   }
 });
 
@@ -3359,13 +3431,13 @@ var require_parse = __commonJS({
     var plus = "+".charCodeAt(0);
     var isUnicodeRange = /^[a-f0-9?-]+$/i;
     module2.exports = function(input) {
-      var tokens2 = [];
+      var tokens3 = [];
       var value = input;
       var next, quote, prev, token, escape, escapePos, whitespacePos, parenthesesOpenPos;
       var pos = 0;
       var code = value.charCodeAt(pos);
       var max2 = value.length;
-      var stack = [{ nodes: tokens2 }];
+      var stack = [{ nodes: tokens3 }];
       var balanced = 0;
       var parent;
       var name = "";
@@ -3379,7 +3451,7 @@ var require_parse = __commonJS({
             code = value.charCodeAt(next);
           } while (code <= 32);
           token = value.slice(pos, next);
-          prev = tokens2[tokens2.length - 1];
+          prev = tokens3[tokens3.length - 1];
           if (code === closeParentheses && balanced) {
             after = token;
           } else if (prev && prev.type === "div") {
@@ -3388,7 +3460,7 @@ var require_parse = __commonJS({
           } else if (code === comma || code === colon || code === slash && value.charCodeAt(next + 1) !== star && (!parent || parent && parent.type === "function" && parent.value !== "calc")) {
             before = token;
           } else {
-            tokens2.push({
+            tokens3.push({
               type: "space",
               sourceIndex: pos,
               sourceEndIndex: next,
@@ -3421,7 +3493,7 @@ var require_parse = __commonJS({
           } while (escape);
           token.value = value.slice(pos + 1, next);
           token.sourceEndIndex = token.unclosed ? next : next + 1;
-          tokens2.push(token);
+          tokens3.push(token);
           pos = next + 1;
           code = value.charCodeAt(pos);
         } else if (code === slash && value.charCodeAt(pos + 1) === star) {
@@ -3437,12 +3509,12 @@ var require_parse = __commonJS({
             token.sourceEndIndex = next;
           }
           token.value = value.slice(pos + 2, next);
-          tokens2.push(token);
+          tokens3.push(token);
           pos = next + 2;
           code = value.charCodeAt(pos);
         } else if ((code === slash || code === star) && parent && parent.type === "function" && parent.value === "calc") {
           token = value[pos];
-          tokens2.push({
+          tokens3.push({
             type: "word",
             sourceIndex: pos - before.length,
             sourceEndIndex: pos + token.length,
@@ -3452,7 +3524,7 @@ var require_parse = __commonJS({
           code = value.charCodeAt(pos);
         } else if (code === slash || code === comma || code === colon) {
           token = value[pos];
-          tokens2.push({
+          tokens3.push({
             type: "div",
             sourceIndex: pos - before.length,
             sourceEndIndex: pos + token.length,
@@ -3531,14 +3603,14 @@ var require_parse = __commonJS({
             pos = next + 1;
             token.sourceEndIndex = token.unclosed ? next : pos;
             code = value.charCodeAt(pos);
-            tokens2.push(token);
+            tokens3.push(token);
           } else {
             balanced += 1;
             token.after = "";
             token.sourceEndIndex = pos + 1;
-            tokens2.push(token);
+            tokens3.push(token);
             stack.push(token);
-            tokens2 = token.nodes = [];
+            tokens3 = token.nodes = [];
             parent = token;
           }
           name = "";
@@ -3552,7 +3624,7 @@ var require_parse = __commonJS({
           stack[stack.length - 1].sourceEndIndex = pos;
           stack.pop();
           parent = stack[balanced];
-          tokens2 = parent.nodes;
+          tokens3 = parent.nodes;
         } else {
           next = pos;
           do {
@@ -3566,14 +3638,14 @@ var require_parse = __commonJS({
           if (openParentheses === code) {
             name = token;
           } else if ((uLower === token.charCodeAt(0) || uUpper === token.charCodeAt(0)) && plus === token.charCodeAt(1) && isUnicodeRange.test(token.slice(2))) {
-            tokens2.push({
+            tokens3.push({
               type: "unicode-range",
               sourceIndex: pos,
               sourceEndIndex: next,
               value: token
             });
           } else {
-            tokens2.push({
+            tokens3.push({
               type: "word",
               sourceIndex: pos,
               sourceEndIndex: next,
@@ -10210,9 +10282,9 @@ var require_VirtualizedList = __commonJS({
   }
 });
 
-// node_modules/memoize-one/dist/memoize-one.cjs.js
+// node_modules/react-native-web/node_modules/memoize-one/dist/memoize-one.cjs.js
 var require_memoize_one_cjs = __commonJS({
-  "node_modules/memoize-one/dist/memoize-one.cjs.js"(exports2, module2) {
+  "node_modules/react-native-web/node_modules/memoize-one/dist/memoize-one.cjs.js"(exports2, module2) {
     "use strict";
     var safeIsNaN = Number.isNaN || /* @__PURE__ */ __name(function ponyfill(value) {
       return typeof value === "number" && value !== value;
@@ -21022,7 +21094,7 @@ var require_useWindowDimensions = __commonJS({
 });
 
 // node_modules/react-native-web/dist/cjs/index.js
-var require_cjs2 = __commonJS({
+var require_cjs3 = __commonJS({
   "node_modules/react-native-web/dist/cjs/index.js"(exports2) {
     "use strict";
     var _interopRequireDefault = require_interopRequireDefault().default;
@@ -21182,9 +21254,10 @@ var require_createAnimations = __commonJS({
     });
     module2.exports = __toCommonJS2(createAnimations_exports);
     var import_use_presence2 = require_cjs();
+    var import_constants44 = require_cjs2();
     var import_web15 = require("@tamagui/core");
     var import_react49 = require("react");
-    var import_react_native = require_cjs2();
+    var import_react_native = require_cjs3();
     var animatedStyleKey = {
       transform: true,
       opacity: true
@@ -21231,7 +21304,7 @@ var require_createAnimations = __commonJS({
         },
         stop() {
           var _a;
-          (_a = state.current.composite) == null || _a.stop(), state.current.composite = null;
+          (_a = state.current.composite) == null ? void 0 : _a.stop(), state.current.composite = null;
         },
         setValue(next, { type, ...config2 } = { type: "spring" }, onFinish) {
           var _a, _b;
@@ -21239,19 +21312,19 @@ var require_createAnimations = __commonJS({
           if (type === "direct")
             val.setValue(next);
           else if (type === "spring") {
-            (_a = state.current.composite) == null || _a.stop();
+            (_a = state.current.composite) == null ? void 0 : _a.stop();
             const composite = import_react_native.Animated.spring(val, {
               ...config2,
               toValue: next,
-              useNativeDriver: !import_web15.isWeb
+              useNativeDriver: !import_constants44.isWeb
             });
             composite.start(handleFinish), state.current.composite = composite;
           } else {
-            (_b = state.current.composite) == null || _b.stop();
+            (_b = state.current.composite) == null ? void 0 : _b.stop();
             const composite = import_react_native.Animated.timing(val, {
               ...config2,
               toValue: next,
-              useNativeDriver: !import_web15.isWeb
+              useNativeDriver: !import_constants44.isWeb
             });
             composite.start(handleFinish), state.current.composite = composite;
           }
@@ -21278,7 +21351,7 @@ var require_createAnimations = __commonJS({
     }
     __name(useAnimatedNumberStyle, "useAnimatedNumberStyle");
     function createAnimations2(animations2) {
-      return AnimatedView.displayName = "AnimatedView", AnimatedText.displayName = "AnimatedText", {
+      return {
         isReactNative: true,
         animations: animations2,
         View: AnimatedView,
@@ -21287,10 +21360,11 @@ var require_createAnimations = __commonJS({
         useAnimatedNumberReaction,
         useAnimatedNumberStyle,
         usePresence: import_use_presence2.usePresence,
+        ResetPresence: import_use_presence2.ResetPresence,
         useAnimations: ({ props, onDidAnimate, style, componentState, presence }) => {
           const isExiting = (presence == null ? void 0 : presence[0]) === false, sendExitComplete = presence == null ? void 0 : presence[1], animateStyles = (0, import_react49.useRef)({}), animatedTranforms = (0, import_react49.useRef)([]), animationsState = (0, import_react49.useRef)(
             /* @__PURE__ */ new WeakMap()
-          ), animateOnly = props.animateOnly || [], hasAnimateOnly = !!props.animateOnly, args = [JSON.stringify(style), componentState, isExiting, !!onDidAnimate], isThereNoNativeStyleKeys = (0, import_react49.useMemo)(() => import_web15.isWeb ? true : Object.keys(style).some((key) => animateOnly.length ? !animatedStyleKey[key] && animateOnly.indexOf(key) === -1 : !animatedStyleKey[key]), args), res = (0, import_react49.useMemo)(() => {
+          ), animateOnly = props.animateOnly || [], hasAnimateOnly = !!props.animateOnly, args = [JSON.stringify(style), componentState, isExiting, !!onDidAnimate], isThereNoNativeStyleKeys = (0, import_react49.useMemo)(() => import_constants44.isWeb ? true : Object.keys(style).some((key) => animateOnly.length ? !animatedStyleKey[key] && animateOnly.indexOf(key) === -1 : !animatedStyleKey[key]), args), res = (0, import_react49.useMemo)(() => {
             var _a;
             const runners = [], completions = [], nonAnimatedStyle = {};
             for (const key in style) {
@@ -21307,7 +21381,11 @@ var require_createAnimations = __commonJS({
                 animateStyles.current[key] = update(key, animateStyles.current[key], val);
                 continue;
               }
-              if (val)
+              if (val) {
+                if (typeof val == "string") {
+                  console.warn("Warning: Tamagui can't animate string transforms yet!");
+                  continue;
+                }
                 for (const [index3, transform] of val.entries()) {
                   if (!transform)
                     continue;
@@ -21316,6 +21394,7 @@ var require_createAnimations = __commonJS({
                     [tkey]: update(tkey, currentTransform, transform[tkey])
                   }, animatedTranforms.current = [...animatedTranforms.current];
                 }
+              }
             }
             const animatedStyle = {
               ...Object.fromEntries(
@@ -21350,7 +21429,7 @@ var require_createAnimations = __commonJS({
               ), animationsState.current.set(value, {
                 interpolation: value.interpolate(interpolateArgs),
                 current: val
-              })), isColorStyleKey && (animateToValue = curInterpolation != null && curInterpolation.animateToValue ? 0 : 1, interpolateArgs = getColorInterpolated(
+              })), isColorStyleKey && (animateToValue = (curInterpolation == null ? void 0 : curInterpolation.animateToValue) ? 0 : 1, interpolateArgs = getColorInterpolated(
                 curInterpolation == null ? void 0 : curInterpolation.current,
                 // valIn is the next color
                 valIn,
@@ -21358,7 +21437,7 @@ var require_createAnimations = __commonJS({
               ), animationsState.current.set(value, {
                 current: valIn,
                 interpolation: value.interpolate(interpolateArgs),
-                animateToValue: curInterpolation != null && curInterpolation.animateToValue ? 0 : 1
+                animateToValue: (curInterpolation == null ? void 0 : curInterpolation.animateToValue) ? 0 : 1
               })), value) {
                 const animationConfig = getAnimationConfig(key, animations2, props.animation);
                 let resolve;
@@ -21370,7 +21449,7 @@ var require_createAnimations = __commonJS({
                   function getAnimation() {
                     return import_react_native.Animated[animationConfig.type || "spring"](value, {
                       toValue: animateToValue,
-                      useNativeDriver: !import_web15.isWeb && !isThereNoNativeStyleKeys,
+                      useNativeDriver: !import_constants44.isWeb && !isThereNoNativeStyleKeys,
                       ...animationConfig
                     });
                   }
@@ -21383,19 +21462,29 @@ var require_createAnimations = __commonJS({
                   });
                 });
               }
-              return process.env.NODE_ENV === "development" && props.debug === "verbose" && console.info(" \u{1F4A0} animate", key, `from (${value._value}) to`, valIn, `(${val})`, "type", type, "interpolate", interpolateArgs), value;
+              return process.env.NODE_ENV === "development" && props.debug === "verbose" && console.info(
+                " \u{1F4A0} animate",
+                key,
+                `from (${value._value}) to`,
+                valIn,
+                `(${val})`,
+                "type",
+                type,
+                "interpolate",
+                interpolateArgs
+              ), value;
             }
             __name(update, "update");
           }, args);
-          return (0, import_web15.useIsomorphicLayoutEffect)(() => {
+          return (0, import_constants44.useIsomorphicLayoutEffect)(() => {
             res.runners.forEach((r) => r());
             let cancel = false;
             return Promise.all(res.completions).then(() => {
-              cancel || (onDidAnimate == null || onDidAnimate(), isExiting && (sendExitComplete == null || sendExitComplete()));
+              cancel || (onDidAnimate == null ? void 0 : onDidAnimate(), isExiting && (sendExitComplete == null ? void 0 : sendExitComplete()));
             }), () => {
               cancel = true;
             };
-          }, args), process.env.NODE_ENV === "development" && props.debug === "verbose" && console.info("Returning animated", res, "given style", style), res;
+          }, args), process.env.NODE_ENV === "development" && props.debug === "verbose" && console.info("Animated", { response: res, inputStyle: style, isExiting }), res;
         }
       };
     }
@@ -21431,11 +21520,8 @@ var require_createAnimations = __commonJS({
         const val = (animation == null ? void 0 : animation[key]) ?? (animation == null ? void 0 : animation[shortKey]);
         type = val == null ? void 0 : val.type, extraConf = val;
       }
-      const found = animations2[type];
-      if (!found)
-        throw new Error(`No animation of type "${type}" for key "${key}"`);
       return {
-        ...found,
+        ...animations2[type],
         ...extraConf
       };
     }
@@ -21457,7 +21543,7 @@ var require_createAnimations = __commonJS({
 });
 
 // node_modules/@tamagui/animations-react-native/dist/cjs/index.js
-var require_cjs3 = __commonJS({
+var require_cjs4 = __commonJS({
   "node_modules/@tamagui/animations-react-native/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -21479,7 +21565,7 @@ var require_cjs3 = __commonJS({
 });
 
 // node_modules/@tamagui/font-inter/dist/cjs/index.js
-var require_cjs4 = __commonJS({
+var require_cjs5 = __commonJS({
   "node_modules/@tamagui/font-inter/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -21609,7 +21695,7 @@ var require_createMedia = __commonJS({
 });
 
 // node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js
-var require_cjs5 = __commonJS({
+var require_cjs6 = __commonJS({
   "node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -21631,7 +21717,7 @@ var require_cjs5 = __commonJS({
 });
 
 // node_modules/@tamagui/use-force-update/dist/cjs/index.js
-var require_cjs6 = __commonJS({
+var require_cjs7 = __commonJS({
   "node_modules/@tamagui/use-force-update/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -21694,7 +21780,7 @@ var require_LayoutGroupContext = __commonJS({
 });
 
 // node_modules/@tamagui/use-constant/dist/cjs/index.js
-var require_cjs7 = __commonJS({
+var require_cjs8 = __commonJS({
   "node_modules/@tamagui/use-constant/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -21727,9 +21813,9 @@ var require_cjs7 = __commonJS({
   }
 });
 
-// node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js
 var require_PresenceContext2 = __commonJS({
-  "node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js"(exports2, module2) {
+  "node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/PresenceContext.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -21758,9 +21844,9 @@ var require_PresenceContext2 = __commonJS({
   }
 });
 
-// node_modules/@tamagui/use-presence/dist/cjs/usePresence.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/usePresence.js
 var require_usePresence2 = __commonJS({
-  "node_modules/@tamagui/use-presence/dist/cjs/usePresence.js"(exports2, module2) {
+  "node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/usePresence.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -21804,9 +21890,9 @@ var require_usePresence2 = __commonJS({
   }
 });
 
-// node_modules/@tamagui/use-presence/dist/cjs/index.js
-var require_cjs8 = __commonJS({
-  "node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/index.js
+var require_cjs9 = __commonJS({
+  "node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -21859,8 +21945,8 @@ var require_PresenceChild = __commonJS({
       PresenceChild: () => PresenceChild2
     });
     module2.exports = __toCommonJS2(PresenceChild_exports);
-    var import_use_constant3 = require_cjs7();
-    var import_use_presence2 = require_cjs8();
+    var import_use_constant3 = require_cjs8();
+    var import_use_presence2 = require_cjs9();
     var React43 = __toESM2(require("react"));
     var import_react49 = require("react");
     var import_jsx_runtime56 = require("react/jsx-runtime");
@@ -21936,7 +22022,7 @@ var require_AnimatePresence = __commonJS({
       AnimatePresence: () => AnimatePresence2
     });
     module2.exports = __toCommonJS2(AnimatePresence_exports);
-    var import_use_force_update2 = require_cjs6();
+    var import_use_force_update2 = require_cjs7();
     var import_react49 = require("react");
     var import_LayoutGroupContext2 = require_LayoutGroupContext();
     var import_PresenceChild2 = require_PresenceChild();
@@ -22060,7 +22146,7 @@ var require_types = __commonJS({
 });
 
 // node_modules/@tamagui/animate-presence/dist/cjs/index.js
-var require_cjs9 = __commonJS({
+var require_cjs10 = __commonJS({
   "node_modules/@tamagui/animate-presence/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22077,14 +22163,14 @@ var require_cjs9 = __commonJS({
     var src_exports = {};
     module2.exports = __toCommonJS2(src_exports);
     __reExport2(src_exports, require_AnimatePresence(), module2.exports);
-    __reExport2(src_exports, require_cjs8(), module2.exports);
+    __reExport2(src_exports, require_cjs9(), module2.exports);
     __reExport2(src_exports, require_types(), module2.exports);
     __reExport2(src_exports, require_PresenceChild(), module2.exports);
   }
 });
 
 // node_modules/@tamagui/helpers/node_modules/@tamagui/simple-hash/dist/cjs/index.js
-var require_cjs10 = __commonJS({
+var require_cjs11 = __commonJS({
   "node_modules/@tamagui/helpers/node_modules/@tamagui/simple-hash/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22297,7 +22383,7 @@ var require_types2 = __commonJS({
 });
 
 // node_modules/@tamagui/constants/dist/cjs/constants.js
-var require_constants = __commonJS({
+var require_constants2 = __commonJS({
   "node_modules/@tamagui/constants/dist/cjs/constants.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22345,7 +22431,7 @@ var require_constants = __commonJS({
 });
 
 // node_modules/@tamagui/constants/dist/cjs/index.js
-var require_cjs11 = __commonJS({
+var require_cjs12 = __commonJS({
   "node_modules/@tamagui/constants/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22361,7 +22447,7 @@ var require_cjs11 = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var src_exports = {};
     module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_constants(), module2.exports);
+    __reExport2(src_exports, require_constants2(), module2.exports);
   }
 });
 
@@ -22388,7 +22474,7 @@ var require_shouldRenderNativePlatform = __commonJS({
       shouldRenderNativePlatform: () => shouldRenderNativePlatform3
     });
     module2.exports = __toCommonJS2(shouldRenderNativePlatform_exports);
-    var import_constants44 = require_cjs11();
+    var import_constants44 = require_cjs12();
     var ALL_PLATFORMS = ["web", "android", "ios"];
     function shouldRenderNativePlatform3(nativeProp) {
       if (!nativeProp)
@@ -22440,7 +22526,7 @@ var require_validStyleProps = __commonJS({
       validStyles: () => validStyles2
     });
     module2.exports = __toCommonJS2(validStyleProps_exports);
-    var import_constants44 = require_cjs11();
+    var import_constants44 = require_cjs12();
     var textColors2 = {
       color: true,
       textDecorationColor: true,
@@ -22720,7 +22806,7 @@ var require_withStaticProperties = __commonJS({
 });
 
 // node_modules/@tamagui/helpers/dist/cjs/index.js
-var require_cjs12 = __commonJS({
+var require_cjs13 = __commonJS({
   "node_modules/@tamagui/helpers/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22736,7 +22822,7 @@ var require_cjs12 = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var src_exports = {};
     module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_cjs10(), module2.exports);
+    __reExport2(src_exports, require_cjs11(), module2.exports);
     __reExport2(src_exports, require_clamp2(), module2.exports);
     __reExport2(src_exports, require_composeEventHandlers(), module2.exports);
     __reExport2(src_exports, require_concatClassName(), module2.exports);
@@ -22770,7 +22856,7 @@ var require_useGet = __commonJS({
       useGet: () => useGet6
     });
     module2.exports = __toCommonJS2(useGet_exports);
-    var import_constants44 = require_cjs11();
+    var import_constants44 = require_cjs12();
     var import_react49 = require("react");
     function useGet6(currentValue, initialValue2, forwardToFunction) {
       const curRef = (0, import_react49.useRef)(initialValue2 ?? currentValue);
@@ -22823,7 +22909,7 @@ var require_useEvent2 = __commonJS({
 });
 
 // node_modules/@tamagui/use-event/dist/cjs/index.js
-var require_cjs13 = __commonJS({
+var require_cjs14 = __commonJS({
   "node_modules/@tamagui/use-event/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22867,7 +22953,7 @@ var require_useControllableState = __commonJS({
       useControllableState: () => useControllableState2
     });
     module2.exports = __toCommonJS2(useControllableState_exports);
-    var import_use_event3 = require_cjs13();
+    var import_use_event3 = require_cjs14();
     var import_react49 = require("react");
     var emptyCallbackFn2 = /* @__PURE__ */ __name((_) => _(), "emptyCallbackFn");
     function useControllableState2({
@@ -22905,7 +22991,7 @@ var require_useControllableState = __commonJS({
 });
 
 // node_modules/@tamagui/use-controllable-state/dist/cjs/index.js
-var require_cjs14 = __commonJS({
+var require_cjs15 = __commonJS({
   "node_modules/@tamagui/use-controllable-state/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -22962,9 +23048,9 @@ var require_Collapsible = __commonJS({
       CollapsibleTriggerFrame: () => CollapsibleTriggerFrame
     });
     module2.exports = __toCommonJS2(Collapsible_exports);
-    var import_animate_presence6 = require_cjs9();
-    var import_helpers25 = require_cjs12();
-    var import_use_controllable_state15 = require_cjs14();
+    var import_animate_presence6 = require_cjs10();
+    var import_helpers25 = require_cjs13();
+    var import_use_controllable_state15 = require_cjs15();
     var import_web15 = require("@tamagui/core");
     var React43 = __toESM2(require("react"));
     var import_jsx_runtime56 = require("react/jsx-runtime");
@@ -23063,7 +23149,7 @@ var require_Collapsible = __commonJS({
 });
 
 // node_modules/@tamagui/collapsible/dist/cjs/index.js
-var require_cjs15 = __commonJS({
+var require_cjs16 = __commonJS({
   "node_modules/@tamagui/collapsible/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23135,7 +23221,7 @@ var require_compose_refs = __commonJS({
 });
 
 // node_modules/@tamagui/compose-refs/dist/cjs/index.js
-var require_cjs16 = __commonJS({
+var require_cjs17 = __commonJS({
   "node_modules/@tamagui/compose-refs/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23188,8 +23274,8 @@ var require_Collection = __commonJS({
       createCollection: () => createCollection2
     });
     module2.exports = __toCommonJS2(Collection_exports);
-    var import_compose_refs23 = require_cjs16();
-    var import_constants44 = require_cjs11();
+    var import_compose_refs23 = require_cjs17();
+    var import_constants44 = require_cjs12();
     var import_core53 = require("@tamagui/core");
     var import_react49 = __toESM2(require("react"));
     var import_jsx_runtime56 = require("react/jsx-runtime");
@@ -23247,7 +23333,7 @@ var require_Collection = __commonJS({
 });
 
 // node_modules/@tamagui/collection/dist/cjs/index.js
-var require_cjs17 = __commonJS({
+var require_cjs18 = __commonJS({
   "node_modules/@tamagui/collection/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23295,13 +23381,13 @@ var require_getElevation = __commonJS({
     var getElevation2 = /* @__PURE__ */ __name((size4, extras) => {
       if (!size4)
         return;
-      const { tokens: tokens2 } = extras, token = tokens2.size[size4], sizeNum = (0, import_core53.isVariable)(token) ? +token.val : size4;
+      const { tokens: tokens3 } = extras, token = tokens3.size[size4], sizeNum = (0, import_core53.isVariable)(token) ? +token.val : size4;
       return getSizedElevation2(sizeNum, extras);
     }, "getElevation");
-    var getSizedElevation2 = /* @__PURE__ */ __name((val, { theme, tokens: tokens2 }) => {
+    var getSizedElevation2 = /* @__PURE__ */ __name((val, { theme, tokens: tokens3 }) => {
       let num = 0;
       if (val === true) {
-        const val2 = (0, import_core53.getVariableValue)(tokens2.size.true);
+        const val2 = (0, import_core53.getVariableValue)(tokens3.size.true);
         typeof val2 == "number" ? num = val2 : num = 10;
       } else
         num = +val;
@@ -23396,7 +23482,7 @@ var require_Stacks = __commonJS({
 });
 
 // node_modules/@tamagui/get-token/dist/cjs/index.js
-var require_cjs18 = __commonJS({
+var require_cjs19 = __commonJS({
   "node_modules/@tamagui/get-token/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23436,10 +23522,10 @@ var require_cjs18 = __commonJS({
     var cacheWholeKeys = {};
     var stepTokenUpOrDown = /* @__PURE__ */ __name((type, current, options = defaultOptions) => {
       var _a, _b;
-      const tokens2 = (0, import_web15.getTokens)({ prefixed: true })[type];
+      const tokens3 = (0, import_web15.getTokens)({ prefixed: true })[type];
       if (!(type in cacheVariables)) {
         cacheKeys[type] = [], cacheVariables[type] = [], cacheWholeKeys[type] = [], cacheWholeVariables[type] = [];
-        const sorted = Object.keys(tokens2).map((k) => tokens2[k]).sort((a, b) => a.val - b.val);
+        const sorted = Object.keys(tokens3).map((k) => tokens3[k]).sort((a, b) => a.val - b.val);
         for (const token of sorted)
           cacheKeys[type].push(token.key), cacheVariables[type].push(token);
         const sortedExcludingHalfSteps = sorted.filter((x) => !x.key.endsWith(".5"));
@@ -23450,14 +23536,14 @@ var require_cjs18 = __commonJS({
       let shift3 = options.shift || 0;
       shift3 && (current === "$true" || (0, import_web15.isVariable)(current) && current.name === "true") && (shift3 += shift3 > 0 ? 1 : -1);
       const index3 = Math.min(max2, Math.max(min2, currentIndex + shift3)), found = tokensOrdered[index3];
-      return (typeof found == "string" ? tokens2[found] : found) || tokens2.$true;
+      return (typeof found == "string" ? tokens3[found] : found) || tokens3.$true;
     }, "stepTokenUpOrDown");
     var getTokenRelative = stepTokenUpOrDown;
   }
 });
 
 // node_modules/@tamagui/get-button-sized/dist/cjs/index.js
-var require_cjs19 = __commonJS({
+var require_cjs20 = __commonJS({
   "node_modules/@tamagui/get-button-sized/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23479,8 +23565,8 @@ var require_cjs19 = __commonJS({
       getButtonSized: () => getButtonSized6
     });
     module2.exports = __toCommonJS2(src_exports);
-    var import_get_token14 = require_cjs18();
-    var getButtonSized6 = /* @__PURE__ */ __name((val, { tokens: tokens2, props }) => {
+    var import_get_token14 = require_cjs19();
+    var getButtonSized6 = /* @__PURE__ */ __name((val, { tokens: tokens3, props }) => {
       if (!val || props.circular)
         return;
       if (typeof val == "number")
@@ -23489,7 +23575,7 @@ var require_cjs19 = __commonJS({
           height: val,
           borderRadius: props.circular ? 1e5 : val * 0.2
         };
-      const xSize = (0, import_get_token14.getSpace)(val), radiusToken = tokens2.radius[val] ?? tokens2.radius.$true;
+      const xSize = (0, import_get_token14.getSpace)(val), radiusToken = tokens3.radius[val] ?? tokens3.radius.$true;
       return {
         paddingHorizontal: xSize,
         height: val,
@@ -23555,17 +23641,17 @@ var require_variants = __commonJS({
     }), "bordered");
     var padded2 = {
       true: (_, extras) => {
-        const { tokens: tokens2, props } = extras;
+        const { tokens: tokens3, props } = extras;
         return {
-          padding: tokens2.space[props.size] || tokens2.space.$true
+          padding: tokens3.space[props.size] || tokens3.space.$true
         };
       }
     };
     var radiused2 = {
       true: (_, extras) => {
-        const { tokens: tokens2, props } = extras;
+        const { tokens: tokens3, props } = extras;
         return {
-          borderRadius: tokens2.radius[props.size] || tokens2.radius.$true
+          borderRadius: tokens3.radius[props.size] || tokens3.radius.$true
         };
       }
     };
@@ -23574,10 +23660,10 @@ var require_variants = __commonJS({
       padding: 0
     };
     var circular2 = {
-      true: (_, { props, tokens: tokens2 }) => {
+      true: (_, { props, tokens: tokens3 }) => {
         if (!("size" in props))
           return circularStyle2;
-        const size4 = typeof props.size == "number" ? props.size : tokens2.size[props.size];
+        const size4 = typeof props.size == "number" ? props.size : tokens3.size[props.size];
         return {
           ...circularStyle2,
           width: size4,
@@ -23644,7 +23730,7 @@ var require_SizableStack = __commonJS({
     });
     module2.exports = __toCommonJS2(SizableStack_exports);
     var import_core53 = require("@tamagui/core");
-    var import_get_button_sized6 = require_cjs19();
+    var import_get_button_sized6 = require_cjs20();
     var import_Stacks3 = require_Stacks();
     var import_variants3 = require_variants();
     var SizableStack2 = (0, import_core53.styled)(import_Stacks3.XStack, {
@@ -23772,7 +23858,7 @@ var require_NestingContext = __commonJS({
 });
 
 // node_modules/@tamagui/stacks/dist/cjs/index.js
-var require_cjs20 = __commonJS({
+var require_cjs21 = __commonJS({
   "node_modules/@tamagui/stacks/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23796,7 +23882,7 @@ var require_cjs20 = __commonJS({
 });
 
 // node_modules/@tamagui/get-font-sized/dist/cjs/index.js
-var require_cjs21 = __commonJS({
+var require_cjs22 = __commonJS({
   "node_modules/@tamagui/get-font-sized/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -23880,7 +23966,7 @@ var require_SizableText = __commonJS({
       SizableText: () => SizableText2
     });
     module2.exports = __toCommonJS2(SizableText_exports);
-    var import_get_font_sized4 = require_cjs21();
+    var import_get_font_sized4 = require_cjs22();
     var import_web15 = require("@tamagui/core");
     var variants3 = {
       unstyled: {
@@ -24099,7 +24185,7 @@ var require_types3 = __commonJS({
 });
 
 // node_modules/@tamagui/text/dist/cjs/index.js
-var require_cjs22 = __commonJS({
+var require_cjs23 = __commonJS({
   "node_modules/@tamagui/text/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -24175,7 +24261,7 @@ var require_useDirection = __commonJS({
 });
 
 // node_modules/@tamagui/use-direction/dist/cjs/index.js
-var require_cjs23 = __commonJS({
+var require_cjs24 = __commonJS({
   "node_modules/@tamagui/use-direction/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -24228,15 +24314,15 @@ var require_Accordion = __commonJS({
       Accordion: () => Accordion
     });
     module2.exports = __toCommonJS2(Accordion_exports);
-    var import_collapsible = require_cjs15();
-    var import_collection2 = require_cjs17();
-    var import_compose_refs23 = require_cjs16();
-    var import_constants44 = require_cjs11();
-    var import_helpers25 = require_cjs12();
-    var import_stacks25 = require_cjs20();
-    var import_text8 = require_cjs22();
-    var import_use_controllable_state15 = require_cjs14();
-    var import_use_direction5 = require_cjs23();
+    var import_collapsible = require_cjs16();
+    var import_collection2 = require_cjs18();
+    var import_compose_refs23 = require_cjs17();
+    var import_constants44 = require_cjs12();
+    var import_helpers25 = require_cjs13();
+    var import_stacks25 = require_cjs21();
+    var import_text8 = require_cjs23();
+    var import_use_controllable_state15 = require_cjs15();
+    var import_use_direction5 = require_cjs24();
     var import_web15 = require("@tamagui/core");
     var React43 = __toESM2(require("react"));
     var import_jsx_runtime56 = require("react/jsx-runtime");
@@ -24535,7 +24621,7 @@ var require_Accordion = __commonJS({
 });
 
 // node_modules/@tamagui/accordion/dist/cjs/index.js
-var require_cjs24 = __commonJS({
+var require_cjs25 = __commonJS({
   "node_modules/@tamagui/accordion/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -24732,7 +24818,7 @@ var require_AriaHidden = __commonJS({
 });
 
 // node_modules/@tamagui/aria-hidden/dist/cjs/index.js
-var require_cjs25 = __commonJS({
+var require_cjs26 = __commonJS({
   "node_modules/@tamagui/aria-hidden/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -24786,8 +24872,8 @@ var require_FocusScope = __commonJS({
       useFocusScope: () => useFocusScope
     });
     module2.exports = __toCommonJS2(FocusScope_exports);
-    var import_compose_refs23 = require_cjs16();
-    var import_use_event3 = require_cjs13();
+    var import_compose_refs23 = require_cjs17();
+    var import_use_event3 = require_cjs14();
     var React43 = __toESM2(require("react"));
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
@@ -24955,7 +25041,7 @@ var require_FocusScope = __commonJS({
 });
 
 // node_modules/@tamagui/focus-scope/dist/cjs/index.js
-var require_cjs26 = __commonJS({
+var require_cjs27 = __commonJS({
   "node_modules/@tamagui/focus-scope/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -25570,7 +25656,7 @@ var init_tslib_es6 = __esm({
 });
 
 // node_modules/react-remove-scroll-bar/dist/es5/constants.js
-var require_constants2 = __commonJS({
+var require_constants3 = __commonJS({
   "node_modules/react-remove-scroll-bar/dist/es5/constants.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -26192,7 +26278,7 @@ var require_UI = __commonJS({
     exports2.RemoveScroll = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
     var React43 = tslib_1.__importStar(require("react"));
-    var constants_1 = require_constants2();
+    var constants_1 = require_constants3();
     var use_callback_ref_1 = require_es52();
     var medium_1 = require_medium2();
     var nothing = /* @__PURE__ */ __name(function() {
@@ -26425,7 +26511,7 @@ var require_component2 = __commonJS({
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
     var React43 = tslib_1.__importStar(require("react"));
     var react_style_singleton_1 = require_es55();
-    var constants_1 = require_constants2();
+    var constants_1 = require_constants3();
     var utils_1 = require_utils2();
     var Style = (0, react_style_singleton_1.styleSingleton)();
     var getStyles = /* @__PURE__ */ __name(function(_a, allowRelative, gapMode, important) {
@@ -26460,7 +26546,7 @@ var require_es56 = __commonJS({
     Object.defineProperty(exports2, "RemoveScrollBar", { enumerable: true, get: function() {
       return component_1.RemoveScrollBar;
     } });
-    var constants_1 = require_constants2();
+    var constants_1 = require_constants3();
     Object.defineProperty(exports2, "zeroRightClassName", { enumerable: true, get: function() {
       return constants_1.zeroRightClassName;
     } });
@@ -26859,10 +26945,10 @@ var require_Image2 = __commonJS({
       Image: () => Image2
     });
     module2.exports = __toCommonJS2(Image_exports);
-    var import_constants44 = require_cjs11();
+    var import_constants44 = require_cjs12();
     var import_core53 = require("@tamagui/core");
     var import_react49 = require("react");
-    var import_react_native = require_cjs2();
+    var import_react_native = require_cjs3();
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var StyledImage = (0, import_core53.styled)(import_react_native.Image, {
       name: "Image"
@@ -26888,7 +26974,7 @@ var require_Image2 = __commonJS({
 });
 
 // node_modules/@tamagui/image/dist/cjs/index.js
-var require_cjs27 = __commonJS({
+var require_cjs28 = __commonJS({
   "node_modules/@tamagui/image/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -26958,7 +27044,7 @@ var require_getFontSize = __commonJS({
 });
 
 // node_modules/@tamagui/font-size/dist/cjs/index.js
-var require_cjs28 = __commonJS({
+var require_cjs29 = __commonJS({
   "node_modules/@tamagui/font-size/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -27077,7 +27163,7 @@ var require_useGetThemedIcon = __commonJS({
 });
 
 // node_modules/@tamagui/helpers-tamagui/dist/cjs/index.js
-var require_cjs29 = __commonJS({
+var require_cjs30 = __commonJS({
   "node_modules/@tamagui/helpers-tamagui/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -27093,7 +27179,7 @@ var require_cjs29 = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var src_exports = {};
     module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_cjs12(), module2.exports);
+    __reExport2(src_exports, require_cjs13(), module2.exports);
     __reExport2(src_exports, require_prevent(), module2.exports);
     __reExport2(src_exports, require_useCurrentColor(), module2.exports);
     __reExport2(src_exports, require_useGetThemedIcon(), module2.exports);
@@ -27158,7 +27244,7 @@ var require_focusableInputHOC = __commonJS({
       useFocusable: () => useFocusable2
     });
     module2.exports = __toCommonJS2(focusableInputHOC_exports);
-    var import_compose_refs23 = require_cjs16();
+    var import_compose_refs23 = require_cjs17();
     var import_web15 = require("@tamagui/core");
     var import_react49 = require("react");
     var import_registerFocusable = require_registerFocusable();
@@ -27232,7 +27318,7 @@ var require_focusable = __commonJS({
 });
 
 // node_modules/@tamagui/focusable/dist/cjs/index.js
-var require_cjs30 = __commonJS({
+var require_cjs31 = __commonJS({
   "node_modules/@tamagui/focusable/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -27382,7 +27468,7 @@ var require_create_context = __commonJS({
 });
 
 // node_modules/@tamagui/create-context/dist/cjs/index.js
-var require_cjs31 = __commonJS({
+var require_cjs32 = __commonJS({
   "node_modules/@tamagui/create-context/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -28255,12 +28341,12 @@ var require_Group = __commonJS({
     });
     module2.exports = __toCommonJS2(Group_exports);
     var import_core53 = require("@tamagui/core");
-    var import_create_context11 = require_cjs31();
-    var import_helpers25 = require_cjs12();
-    var import_stacks25 = require_cjs20();
-    var import_use_controllable_state15 = require_cjs14();
+    var import_create_context11 = require_cjs32();
+    var import_helpers25 = require_cjs13();
+    var import_stacks25 = require_cjs21();
+    var import_use_controllable_state15 = require_cjs15();
     var import_react49 = __toESM2(require("react"));
-    var import_react_native = require_cjs2();
+    var import_react_native = require_cjs3();
     var import_reforest = require_dist();
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var GROUP_NAME3 = "Group";
@@ -28274,8 +28360,8 @@ var require_Group = __commonJS({
             size: "$true"
           }
         },
-        size: (val, { tokens: tokens2 }) => ({
-          borderRadius: tokens2.radius[val] ?? val ?? tokens2.radius.$true
+        size: (val, { tokens: tokens3 }) => ({
+          borderRadius: tokens3.radius[val] ?? val ?? tokens3.radius.$true
         })
       },
       defaultVariants: {
@@ -28434,7 +28520,7 @@ var require_Group = __commonJS({
 });
 
 // node_modules/@tamagui/group/dist/cjs/index.js
-var require_cjs32 = __commonJS({
+var require_cjs33 = __commonJS({
   "node_modules/@tamagui/group/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -28514,7 +28600,7 @@ var require_createMedia2 = __commonJS({
 });
 
 // node_modules/tamagui/node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js
-var require_cjs33 = __commonJS({
+var require_cjs34 = __commonJS({
   "node_modules/tamagui/node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -28563,13 +28649,13 @@ var require_ListItem = __commonJS({
       useListItem: () => useListItem2
     });
     module2.exports = __toCommonJS2(ListItem_exports);
-    var import_font_size4 = require_cjs28();
-    var import_get_font_sized4 = require_cjs21();
-    var import_get_token14 = require_cjs18();
-    var import_helpers25 = require_cjs12();
-    var import_helpers_tamagui4 = require_cjs29();
-    var import_stacks25 = require_cjs20();
-    var import_text8 = require_cjs22();
+    var import_font_size4 = require_cjs29();
+    var import_get_font_sized4 = require_cjs22();
+    var import_get_token14 = require_cjs19();
+    var import_helpers25 = require_cjs13();
+    var import_helpers_tamagui4 = require_cjs30();
+    var import_stacks25 = require_cjs21();
+    var import_text8 = require_cjs23();
     var import_web15 = require("@tamagui/core");
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var NAME3 = "ListItem";
@@ -28592,10 +28678,10 @@ var require_ListItem = __commonJS({
           }
         },
         size: {
-          "...size": (val, { tokens: tokens2 }) => ({
-            minHeight: tokens2.size[val],
-            paddingHorizontal: tokens2.space[val],
-            paddingVertical: (0, import_get_token14.getSpace)(tokens2.space[val], {
+          "...size": (val, { tokens: tokens3 }) => ({
+            minHeight: tokens3.size[val],
+            paddingHorizontal: tokens3.space[val],
+            paddingVertical: (0, import_get_token14.getSpace)(tokens3.space[val], {
               shift: -4
             })
           })
@@ -28740,7 +28826,7 @@ var require_ListItem = __commonJS({
 });
 
 // node_modules/@tamagui/list-item/dist/cjs/index.js
-var require_cjs34 = __commonJS({
+var require_cjs35 = __commonJS({
   "node_modules/@tamagui/list-item/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -29126,7 +29212,7 @@ var require_mutateTheme = __commonJS({
       mutateThemes: () => mutateThemes
     });
     module2.exports = __toCommonJS2(mutateTheme_exports);
-    var import_constants44 = require_cjs11();
+    var import_constants44 = require_cjs12();
     var import_web15 = require("@tamagui/core");
     var import_react49 = require("react");
     function mutateThemes({
@@ -29339,7 +29425,7 @@ var require_replaceTheme = __commonJS({
 });
 
 // node_modules/@tamagui/theme/dist/cjs/index.js
-var require_cjs35 = __commonJS({
+var require_cjs36 = __commonJS({
   "node_modules/@tamagui/theme/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -29375,9 +29461,9 @@ __export(tamagui_config_exports, {
   default: () => tamagui_config_default
 });
 module.exports = __toCommonJS(tamagui_config_exports);
-var import_animations_react_native = __toESM(require_cjs3());
-var import_font_inter = __toESM(require_cjs4());
-var import_react_native_media_driver = __toESM(require_cjs5());
+var import_animations_react_native = __toESM(require_cjs4());
+var import_font_inter = __toESM(require_cjs5());
+var import_react_native_media_driver = __toESM(require_cjs6());
 
 // node_modules/@tamagui/shorthands/dist/esm/index.js
 var shorthands = {
@@ -33249,7 +33335,7 @@ var dark_red_active_SliderThumb = n578;
 var dark_red_active_Tooltip = n578;
 var dark_red_active_ProgressIndicator = n578;
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/blue.js
+// node_modules/@tamagui/colors/dist/esm/dark/blue.js
 var blue = {
   blue1: "hsl(212, 35.0%, 9.2%)",
   blue2: "hsl(216, 50.0%, 11.8%)",
@@ -33265,7 +33351,7 @@ var blue = {
   blue12: "hsl(206, 98.0%, 95.8%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/gray.js
+// node_modules/@tamagui/colors/dist/esm/dark/gray.js
 var gray = {
   gray1: "hsl(0, 0%, 8.5%)",
   gray2: "hsl(0, 0%, 11.0%)",
@@ -33281,7 +33367,7 @@ var gray = {
   gray12: "hsl(0, 0%, 93.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/green.js
+// node_modules/@tamagui/colors/dist/esm/dark/green.js
 var green = {
   green1: "hsl(146, 30.0%, 7.4%)",
   green2: "hsl(155, 44.2%, 8.4%)",
@@ -33297,7 +33383,7 @@ var green = {
   green12: "hsl(137, 72.0%, 94.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/orange.js
+// node_modules/@tamagui/colors/dist/esm/dark/orange.js
 var orange = {
   orange1: "hsl(30, 70.0%, 7.2%)",
   orange2: "hsl(28, 100%, 8.4%)",
@@ -33313,7 +33399,7 @@ var orange = {
   orange12: "hsl(24, 97.0%, 93.2%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/pink.js
+// node_modules/@tamagui/colors/dist/esm/dark/pink.js
 var pink = {
   pink1: "hsl(318, 25.0%, 9.6%)",
   pink2: "hsl(319, 32.2%, 11.6%)",
@@ -33329,7 +33415,7 @@ var pink = {
   pink12: "hsl(322, 90.0%, 95.8%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/purple.js
+// node_modules/@tamagui/colors/dist/esm/dark/purple.js
 var purple = {
   purple1: "hsl(284, 20.0%, 9.6%)",
   purple2: "hsl(283, 30.0%, 11.8%)",
@@ -33345,7 +33431,7 @@ var purple = {
   purple12: "hsl(279, 75.0%, 95.7%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/red.js
+// node_modules/@tamagui/colors/dist/esm/dark/red.js
 var red = {
   red1: "hsl(353, 23.0%, 9.8%)",
   red2: "hsl(357, 34.4%, 12.0%)",
@@ -33361,7 +33447,7 @@ var red = {
   red12: "hsl(351, 89.0%, 96.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/dark/yellow.js
+// node_modules/@tamagui/colors/dist/esm/dark/yellow.js
 var yellow = {
   yellow1: "hsl(45, 100%, 5.5%)",
   yellow2: "hsl(46, 100%, 6.7%)",
@@ -33377,7 +33463,7 @@ var yellow = {
   yellow12: "hsl(53, 100%, 91.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/blue.js
+// node_modules/@tamagui/colors/dist/esm/light/blue.js
 var blue2 = {
   blue1: "hsl(206, 100%, 99.2%)",
   blue2: "hsl(210, 100%, 98.0%)",
@@ -33393,7 +33479,7 @@ var blue2 = {
   blue12: "hsl(211, 100%, 15.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/gray.js
+// node_modules/@tamagui/colors/dist/esm/light/gray.js
 var gray2 = {
   gray1: "hsl(0, 0%, 99.0%)",
   gray2: "hsl(0, 0%, 97.3%)",
@@ -33409,7 +33495,7 @@ var gray2 = {
   gray12: "hsl(0, 0%, 9.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/green.js
+// node_modules/@tamagui/colors/dist/esm/light/green.js
 var green2 = {
   green1: "hsl(136, 50.0%, 98.9%)",
   green2: "hsl(138, 62.5%, 96.9%)",
@@ -33425,7 +33511,7 @@ var green2 = {
   green12: "hsl(155, 40.0%, 14.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/orange.js
+// node_modules/@tamagui/colors/dist/esm/light/orange.js
 var orange2 = {
   orange1: "hsl(24, 70.0%, 99.0%)",
   orange2: "hsl(24, 83.3%, 97.6%)",
@@ -33441,7 +33527,7 @@ var orange2 = {
   orange12: "hsl(15, 60.0%, 17.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/pink.js
+// node_modules/@tamagui/colors/dist/esm/light/pink.js
 var pink2 = {
   pink1: "hsl(322, 100%, 99.4%)",
   pink2: "hsl(323, 100%, 98.4%)",
@@ -33457,7 +33543,7 @@ var pink2 = {
   pink12: "hsl(320, 70.0%, 13.5%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/purple.js
+// node_modules/@tamagui/colors/dist/esm/light/purple.js
 var purple2 = {
   purple1: "hsl(280, 65.0%, 99.4%)",
   purple2: "hsl(276, 100%, 99.0%)",
@@ -33473,7 +33559,7 @@ var purple2 = {
   purple12: "hsl(272, 66.0%, 16.0%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/red.js
+// node_modules/@tamagui/colors/dist/esm/light/red.js
 var red2 = {
   red1: "hsl(359, 100%, 99.4%)",
   red2: "hsl(359, 100%, 98.6%)",
@@ -33489,7 +33575,7 @@ var red2 = {
   red12: "hsl(354, 50.0%, 14.6%)"
 };
 
-// node_modules/@tamagui/themes/node_modules/@tamagui/colors/dist/esm/light/yellow.js
+// node_modules/@tamagui/colors/dist/esm/light/yellow.js
 var yellow2 = {
   yellow1: "hsl(60, 54.0%, 98.5%)",
   yellow2: "hsl(52, 100%, 95.5%)",
@@ -33629,13 +33715,7 @@ var tokens = (0, import_web.createTokens)({
   radius,
   zIndex,
   space,
-  size,
-  // testing
-  icon: {
-    sm: 16,
-    md: 24,
-    lg: 32
-  }
+  size
 });
 
 // node_modules/tamagui/dist/esm/index.js
@@ -33915,7 +33995,7 @@ globalThis.React ||= React;
 typeof requestAnimationFrame > "u" && (globalThis.requestAnimationFrame = setImmediate);
 
 // node_modules/tamagui/dist/esm/index.js
-__reExport(esm_exports2, __toESM(require_cjs24()));
+__reExport(esm_exports2, __toESM(require_cjs25()));
 
 // node_modules/@tamagui/constants/dist/esm/constants.js
 var import_react = require("react");
@@ -34380,13 +34460,13 @@ function useConstant(fn) {
 }
 __name(useConstant, "useConstant");
 
-// node_modules/@tamagui/use-presence/dist/esm/PresenceContext.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/esm/PresenceContext.js
 var import_react7 = require("react");
 var import_jsx_runtime3 = require("react/jsx-runtime");
 var PresenceContext = (0, import_react7.createContext)(null);
 var ResetPresence = /* @__PURE__ */ __name((props) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(PresenceContext.Provider, { value: null, children: props.children }), "ResetPresence");
 
-// node_modules/@tamagui/use-presence/dist/esm/usePresence.js
+// node_modules/@tamagui/animate-presence/node_modules/@tamagui/use-presence/dist/esm/usePresence.js
 var import_react8 = require("react");
 function usePresence() {
   const context = (0, import_react8.useContext)(PresenceContext);
@@ -34556,7 +34636,7 @@ var AnimatePresence = /* @__PURE__ */ __name(({
 AnimatePresence.displayName = "AnimatePresence";
 
 // node_modules/@tamagui/dialog/dist/esm/Dialog.js
-var import_aria_hidden = __toESM(require_cjs25());
+var import_aria_hidden = __toESM(require_cjs26());
 var import_core13 = require("@tamagui/core");
 
 // node_modules/@tamagui/use-callback-ref/dist/esm/index.js
@@ -34778,7 +34858,7 @@ function handleAndDispatchCustomEvent(name, handler, detail, { discrete }) {
 __name(handleAndDispatchCustomEvent, "handleAndDispatchCustomEvent");
 
 // node_modules/@tamagui/dialog/dist/esm/Dialog.js
-var import_focus_scope = __toESM(require_cjs26());
+var import_focus_scope = __toESM(require_cjs27());
 
 // node_modules/@tamagui/stacks/dist/esm/Stacks.js
 var import_core3 = require("@tamagui/core");
@@ -34788,13 +34868,13 @@ var import_core2 = require("@tamagui/core");
 var getElevation = /* @__PURE__ */ __name((size4, extras) => {
   if (!size4)
     return;
-  const { tokens: tokens2 } = extras, token = tokens2.size[size4], sizeNum = (0, import_core2.isVariable)(token) ? +token.val : size4;
+  const { tokens: tokens3 } = extras, token = tokens3.size[size4], sizeNum = (0, import_core2.isVariable)(token) ? +token.val : size4;
   return getSizedElevation(sizeNum, extras);
 }, "getElevation");
-var getSizedElevation = /* @__PURE__ */ __name((val, { theme, tokens: tokens2 }) => {
+var getSizedElevation = /* @__PURE__ */ __name((val, { theme, tokens: tokens3 }) => {
   let num = 0;
   if (val === true) {
-    const val2 = (0, import_core2.getVariableValue)(tokens2.size.true);
+    const val2 = (0, import_core2.getVariableValue)(tokens3.size.true);
     typeof val2 == "number" ? num = val2 : num = 10;
   } else
     num = +val;
@@ -34859,7 +34939,7 @@ ZStack.displayName = "ZStack";
 
 // node_modules/@tamagui/stacks/dist/esm/SizableStack.js
 var import_core4 = require("@tamagui/core");
-var import_get_button_sized = __toESM(require_cjs19());
+var import_get_button_sized = __toESM(require_cjs20());
 
 // node_modules/@tamagui/stacks/dist/esm/variants.js
 var elevate = {
@@ -34887,17 +34967,17 @@ var bordered = /* @__PURE__ */ __name((val, { props }) => ({
 }), "bordered");
 var padded = {
   true: (_, extras) => {
-    const { tokens: tokens2, props } = extras;
+    const { tokens: tokens3, props } = extras;
     return {
-      padding: tokens2.space[props.size] || tokens2.space.$true
+      padding: tokens3.space[props.size] || tokens3.space.$true
     };
   }
 };
 var radiused = {
   true: (_, extras) => {
-    const { tokens: tokens2, props } = extras;
+    const { tokens: tokens3, props } = extras;
     return {
-      borderRadius: tokens2.radius[props.size] || tokens2.radius.$true
+      borderRadius: tokens3.radius[props.size] || tokens3.radius.$true
     };
   }
 };
@@ -34906,10 +34986,10 @@ var circularStyle = {
   padding: 0
 };
 var circular = {
-  true: (_, { props, tokens: tokens2 }) => {
+  true: (_, { props, tokens: tokens3 }) => {
     if (!("size" in props))
       return circularStyle;
-    const size4 = typeof props.size == "number" ? props.size : tokens2.size[props.size];
+    const size4 = typeof props.size == "number" ? props.size : tokens3.size[props.size];
     return {
       ...circularStyle,
       width: size4,
@@ -35237,7 +35317,7 @@ SHEET_HIDDEN_STYLESHEET && document.head.appendChild(SHEET_HIDDEN_STYLESHEET);
 // node_modules/@tamagui/sheet/dist/esm/createSheet.js
 var import_core10 = require("@tamagui/core");
 var import_react24 = require("react");
-var import_react_native_web4 = __toESM(require_cjs2());
+var import_react_native_web4 = __toESM(require_cjs3());
 
 // node_modules/@tamagui/sheet/dist/esm/SheetContext.js
 var [createSheetContext, createSheetScope] = createContextScope(SHEET_NAME);
@@ -35251,7 +35331,7 @@ var import_core9 = require("@tamagui/core");
 
 // node_modules/@tamagui/use-keyboard-visible/dist/esm/useKeyboardVisible.js
 var import_react17 = require("react");
-var import_react_native_web = __toESM(require_cjs2());
+var import_react_native_web = __toESM(require_cjs3());
 var useKeyboardVisible = /* @__PURE__ */ __name(() => {
   const [isKeyboardVisible, setKeyboardVisible] = (0, import_react17.useState)(false);
   return (0, import_react17.useEffect)(() => {
@@ -35268,7 +35348,7 @@ var useKeyboardVisible = /* @__PURE__ */ __name(() => {
 
 // node_modules/@tamagui/sheet/dist/esm/SheetImplementationCustom.js
 var import_react22 = require("react");
-var import_react_native_web2 = __toESM(require_cjs2());
+var import_react_native_web2 = __toESM(require_cjs3());
 
 // node_modules/@tamagui/sheet/dist/esm/contexts.js
 var import_react18 = require("react");
@@ -35720,7 +35800,7 @@ __name(getYPositions, "getYPositions");
 
 // node_modules/@tamagui/scroll-view/dist/esm/ScrollView.js
 var import_web2 = require("@tamagui/core");
-var import_react_native_web3 = __toESM(require_cjs2());
+var import_react_native_web3 = __toESM(require_cjs3());
 var ScrollView = (0, import_web2.styled)(import_react_native_web3.ScrollView, {
   name: "ScrollView",
   scrollEnabled: true,
@@ -36038,7 +36118,7 @@ var SheetController = /* @__PURE__ */ __name(({
 
 // node_modules/@tamagui/sheet/dist/esm/nativeSheet.js
 var import_react26 = require("react");
-var import_react_native_web5 = __toESM(require_cjs2());
+var import_react_native_web5 = __toESM(require_cjs3());
 var import_jsx_runtime14 = require("react/jsx-runtime");
 var nativeSheets = {
   ios: null
@@ -36068,7 +36148,7 @@ function setupNativeSheet(platform2, Implementation) {
 __name(setupNativeSheet, "setupNativeSheet");
 
 // node_modules/@tamagui/text/dist/esm/SizableText.js
-var import_get_font_sized = __toESM(require_cjs21());
+var import_get_font_sized = __toESM(require_cjs22());
 var import_web3 = require("@tamagui/core");
 var variants2 = {
   unstyled: {
@@ -36825,14 +36905,14 @@ AlertDialog.displayName = ROOT_NAME;
 
 // node_modules/@tamagui/avatar/dist/esm/Avatar.js
 var import_core15 = require("@tamagui/core");
-var import_image = __toESM(require_cjs27());
+var import_image = __toESM(require_cjs28());
 
 // node_modules/@tamagui/shapes/dist/esm/Square.js
 var import_web6 = require("@tamagui/core");
 
 // node_modules/@tamagui/shapes/dist/esm/getShapeSize.js
-var getShapeSize = /* @__PURE__ */ __name((size4, { tokens: tokens2 }) => {
-  const width = tokens2.size[size4] ?? size4, height = tokens2.size[size4] ?? size4;
+var getShapeSize = /* @__PURE__ */ __name((size4, { tokens: tokens3 }) => {
+  const width = tokens3.size[size4] ?? size4, height = tokens3.size[size4] ?? size4;
   return {
     width,
     height,
@@ -36957,9 +37037,9 @@ var Avatar = withStaticProperties(
 Avatar.displayName = AVATAR_NAME;
 
 // node_modules/@tamagui/button/dist/esm/Button.js
-var import_font_size = __toESM(require_cjs28());
-var import_get_button_sized2 = __toESM(require_cjs19());
-var import_helpers_tamagui = __toESM(require_cjs29());
+var import_font_size = __toESM(require_cjs29());
+var import_get_button_sized2 = __toESM(require_cjs20());
+var import_helpers_tamagui = __toESM(require_cjs30());
 var import_web8 = require("@tamagui/core");
 var import_react28 = require("react");
 var import_jsx_runtime19 = require("react/jsx-runtime");
@@ -37179,8 +37259,8 @@ var CardFrame = (0, import_web9.styled)(ThemeableStack, {
       }
     },
     size: {
-      "...size": (val, { tokens: tokens2 }) => ({
-        borderRadius: tokens2.radius[val] ?? val
+      "...size": (val, { tokens: tokens3 }) => ({
+        borderRadius: tokens3.radius[val] ?? val
       })
     }
   },
@@ -37200,8 +37280,8 @@ var CardHeader = (0, import_web9.styled)(ThemeableStack, {
       }
     },
     size: {
-      "...size": (val, { tokens: tokens2 }) => ({
-        padding: tokens2.space[val] ?? val
+      "...size": (val, { tokens: tokens3 }) => ({
+        padding: tokens3.space[val] ?? val
       })
     }
   },
@@ -37250,7 +37330,7 @@ var Card = (0, import_web9.withStaticProperties)(CardFrame, {
 
 // node_modules/@tamagui/checkbox/dist/esm/Checkbox.js
 var import_core17 = require("@tamagui/core");
-var import_get_token = __toESM(require_cjs18());
+var import_get_token = __toESM(require_cjs19());
 
 // node_modules/@tamagui/checkbox/dist/esm/CheckboxStyledContext.js
 var import_core16 = require("@tamagui/core");
@@ -37320,7 +37400,7 @@ var CheckboxFrame = (0, import_core17.styled)(ThemeableStack, {
       }
     },
     size: {
-      "...size": (val, { tokens: tokens2 }) => ({
+      "...size": (val, { tokens: tokens3 }) => ({
         borderRadius: (0, import_core17.getVariableValue)((0, import_get_token.getSize)(val)) / 8
       })
     }
@@ -37331,9 +37411,9 @@ var CheckboxFrame = (0, import_core17.styled)(ThemeableStack, {
 });
 
 // node_modules/@tamagui/label/dist/esm/Label.js
-var import_focusable = __toESM(require_cjs30());
-var import_get_button_sized3 = __toESM(require_cjs19());
-var import_get_font_sized2 = __toESM(require_cjs21());
+var import_focusable = __toESM(require_cjs31());
+var import_get_button_sized3 = __toESM(require_cjs20());
+var import_get_font_sized2 = __toESM(require_cjs22());
 var import_web10 = require("@tamagui/core");
 var React14 = __toESM(require("react"));
 var import_jsx_runtime20 = require("react/jsx-runtime");
@@ -37553,9 +37633,9 @@ __name(useCheckbox, "useCheckbox");
 
 // node_modules/@tamagui/checkbox/dist/esm/createCheckbox.js
 var import_core18 = require("@tamagui/core");
-var import_font_size2 = __toESM(require_cjs28());
-var import_get_token2 = __toESM(require_cjs18());
-var import_helpers_tamagui2 = __toESM(require_cjs29());
+var import_font_size2 = __toESM(require_cjs29());
+var import_get_token2 = __toESM(require_cjs19());
+var import_helpers_tamagui2 = __toESM(require_cjs30());
 var import_react31 = __toESM(require("react"));
 var import_jsx_runtime23 = require("react/jsx-runtime");
 var CheckboxContext = import_react31.default.createContext({
@@ -37687,7 +37767,7 @@ var Checkbox = createCheckbox({
 });
 
 // node_modules/tamagui/dist/esm/index.js
-__reExport(esm_exports2, __toESM(require_cjs28()));
+__reExport(esm_exports2, __toESM(require_cjs29()));
 
 // node_modules/@tamagui/form/dist/esm/Form.js
 var import_core19 = require("@tamagui/core");
@@ -37729,8 +37809,8 @@ var Form2 = withStaticProperties(FormComponent, {
 });
 
 // node_modules/tamagui/dist/esm/index.js
-__reExport(esm_exports2, __toESM(require_cjs32()));
 __reExport(esm_exports2, __toESM(require_cjs33()));
+__reExport(esm_exports2, __toESM(require_cjs34()));
 
 // node_modules/@tamagui/elements/dist/esm/index.js
 var import_core20 = require("@tamagui/core");
@@ -37776,9 +37856,9 @@ var Nav = (0, import_core20.styled)(import_core20.View, {
 });
 
 // node_modules/tamagui/dist/esm/index.js
-__reExport(esm_exports2, __toESM(require_cjs29()));
-__reExport(esm_exports2, __toESM(require_cjs27()));
-__reExport(esm_exports2, __toESM(require_cjs34()));
+__reExport(esm_exports2, __toESM(require_cjs30()));
+__reExport(esm_exports2, __toESM(require_cjs28()));
+__reExport(esm_exports2, __toESM(require_cjs35()));
 
 // node_modules/@tamagui/animate/dist/esm/Animate.js
 var import_jsx_runtime25 = require("react/jsx-runtime");
@@ -37800,7 +37880,7 @@ function Animate({ children, type, ...props }) {
 __name(Animate, "Animate");
 
 // node_modules/@tamagui/popover/dist/esm/Popover.js
-var import_aria_hidden2 = __toESM(require_cjs25());
+var import_aria_hidden2 = __toESM(require_cjs26());
 var import_core24 = require("@tamagui/core");
 
 // node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs
@@ -39496,13 +39576,13 @@ var useFloating2 = /* @__PURE__ */ __name((props) => {
 }, "useFloating");
 
 // node_modules/@tamagui/popover/dist/esm/Popover.js
-var import_focus_scope2 = __toESM(require_cjs26());
+var import_focus_scope2 = __toESM(require_cjs27());
 
 // node_modules/@tamagui/popper/dist/esm/Popper.js
 var import_core23 = require("@tamagui/core");
-var import_get_token3 = __toESM(require_cjs18());
+var import_get_token3 = __toESM(require_cjs19());
 var React19 = __toESM(require("react"));
-var import_react_native_web6 = __toESM(require_cjs2());
+var import_react_native_web6 = __toESM(require_cjs3());
 var import_jsx_runtime26 = require("react/jsx-runtime");
 var PopperContext = (0, import_core23.createStyledContext)({});
 var { useStyledContext: usePopperContext, Provider: PopperProvider } = PopperContext;
@@ -39601,9 +39681,9 @@ var PopperContentFrame = (0, import_core23.styled)(ThemeableStack, {
       }
     },
     size: {
-      "...size": (val, { tokens: tokens2 }) => ({
-        padding: tokens2.space[val],
-        borderRadius: tokens2.radius[val]
+      "...size": (val, { tokens: tokens3 }) => ({
+        padding: tokens3.space[val],
+        borderRadius: tokens3.radius[val]
       })
     }
   },
@@ -39747,7 +39827,7 @@ var PopperArrow = PopperArrowFrame.styleable(
 
 // node_modules/@tamagui/popover/dist/esm/Popover.js
 var React21 = __toESM(require("react"));
-var import_react_native_web7 = __toESM(require_cjs2());
+var import_react_native_web7 = __toESM(require_cjs3());
 
 // node_modules/@floating-ui/react/dist/floating-ui.react.mjs
 var React20 = __toESM(require("react"), 1);
@@ -43538,7 +43618,7 @@ var useShowPopoverSheet = /* @__PURE__ */ __name((context) => {
 
 // node_modules/@tamagui/progress/dist/esm/Progress.js
 var import_core25 = require("@tamagui/core");
-var import_get_token4 = __toESM(require_cjs18());
+var import_get_token4 = __toESM(require_cjs19());
 var React22 = __toESM(require("react"));
 var import_jsx_runtime28 = require("react/jsx-runtime");
 var PROGRESS_NAME = "Progress";
@@ -43666,7 +43746,7 @@ var Progress = withStaticProperties(
 
 // node_modules/@tamagui/radio-group/dist/esm/RadioGroup.js
 var import_core28 = require("@tamagui/core");
-var import_get_token5 = __toESM(require_cjs18());
+var import_get_token5 = __toESM(require_cjs19());
 
 // node_modules/@tamagui/collection/dist/esm/Collection.js
 var import_core26 = require("@tamagui/core");
@@ -44269,8 +44349,8 @@ RadioGroup.displayName = RADIO_GROUP_NAME;
 
 // node_modules/@tamagui/select/dist/esm/Select.js
 var import_core35 = require("@tamagui/core");
-var import_get_token6 = __toESM(require_cjs18());
-var import_list_item3 = __toESM(require_cjs34());
+var import_get_token6 = __toESM(require_cjs19());
+var import_list_item3 = __toESM(require_cjs35());
 
 // node_modules/@tamagui/separator/dist/esm/Separator.js
 var import_core29 = require("@tamagui/core");
@@ -44365,7 +44445,7 @@ var ForwardSelectContext = /* @__PURE__ */ __name(({
 
 // node_modules/@tamagui/select/dist/esm/SelectContent.js
 var import_core31 = require("@tamagui/core");
-var import_focus_scope3 = __toESM(require_cjs26());
+var import_focus_scope3 = __toESM(require_cjs27());
 var import_react41 = require("react");
 
 // node_modules/@tamagui/select/dist/esm/useSelectBreakpointActive.js
@@ -44601,7 +44681,7 @@ var SelectInlineImpl = /* @__PURE__ */ __name((props) => {
 }, "SelectInlineImpl");
 
 // node_modules/@tamagui/select/dist/esm/SelectItem.js
-var import_list_item = __toESM(require_cjs34());
+var import_list_item = __toESM(require_cjs35());
 var React28 = __toESM(require("react"));
 var import_jsx_runtime36 = require("react/jsx-runtime");
 var ITEM_NAME2 = "SelectItem";
@@ -44845,7 +44925,7 @@ var SelectScrollButtonImpl = React30.memo(
 );
 
 // node_modules/@tamagui/select/dist/esm/SelectTrigger.js
-var import_list_item2 = __toESM(require_cjs34());
+var import_list_item2 = __toESM(require_cjs35());
 var React31 = __toESM(require("react"));
 var import_jsx_runtime39 = require("react/jsx-runtime");
 var TRIGGER_NAME4 = "SelectTrigger";
@@ -44917,8 +44997,8 @@ var SelectViewportFrame = (0, import_core34.styled)(ThemeableStack, {
       }
     },
     size: {
-      "...size": (val, { tokens: tokens2 }) => ({
-        borderRadius: tokens2.radius[val] ?? val
+      "...size": (val, { tokens: tokens3 }) => ({
+        borderRadius: tokens3.radius[val] ?? val
       })
     }
   },
@@ -45082,10 +45162,10 @@ var NativeSelectFrame = (0, import_core35.styled)(ThemeableStack, {
   variants: {
     size: {
       "...size": (val, extras) => {
-        const { tokens: tokens2 } = extras, paddingHorizontal = (0, import_core35.getVariableValue)(tokens2.space[val]);
+        const { tokens: tokens3 } = extras, paddingHorizontal = (0, import_core35.getVariableValue)(tokens3.space[val]);
         return {
-          borderRadius: tokens2.radius[val] ?? val,
-          minHeight: tokens2.size[val],
+          borderRadius: tokens3.radius[val] ?? val,
+          minHeight: tokens3.size[val],
           paddingRight: paddingHorizontal + 20,
           paddingLeft: paddingHorizontal,
           paddingVertical: (0, import_get_token6.getSpace)(val, {
@@ -45315,7 +45395,7 @@ Select.displayName = SELECT_NAME;
 
 // node_modules/@tamagui/slider/dist/esm/Slider.js
 var import_core37 = require("@tamagui/core");
-var import_get_token8 = __toESM(require_cjs18());
+var import_get_token8 = __toESM(require_cjs19());
 var React34 = __toESM(require("react"));
 
 // node_modules/@tamagui/slider/dist/esm/constants.js
@@ -45398,7 +45478,7 @@ __name(roundValue, "roundValue");
 
 // node_modules/@tamagui/slider/dist/esm/SliderImpl.js
 var import_core36 = require("@tamagui/core");
-var import_get_token7 = __toESM(require_cjs18());
+var import_get_token7 = __toESM(require_cjs19());
 var React33 = __toESM(require("react"));
 var import_jsx_runtime42 = require("react/jsx-runtime");
 var SliderFrame = (0, import_core36.styled)(YStack, {
@@ -45683,7 +45763,7 @@ var SliderTrackActive = React34.forwardRef(
 SliderTrackActive.displayName = RANGE_NAME;
 var THUMB_NAME = "SliderThumb";
 var getThumbSize = /* @__PURE__ */ __name((val) => {
-  const tokens2 = (0, import_core37.getTokens)(), size4 = typeof val == "number" ? val : (0, import_get_token8.getSize)(tokens2.size[val], {
+  const tokens3 = (0, import_core37.getTokens)(), size4 = typeof val == "number" ? val : (0, import_get_token8.getSize)(tokens3.size[val], {
     shift: -1
   });
   return {
@@ -45972,7 +46052,7 @@ __name(useSwitch, "useSwitch");
 
 // node_modules/@tamagui/switch/dist/esm/createSwitch.js
 var React36 = __toESM(require("react"));
-var import_react_native_web8 = __toESM(require_cjs2());
+var import_react_native_web8 = __toESM(require_cjs3());
 
 // node_modules/@tamagui/switch/dist/esm/StyledContext.js
 var import_core38 = require("@tamagui/core");
@@ -45983,7 +46063,7 @@ var SwitchStyledContext = (0, import_core38.createStyledContext)({
 
 // node_modules/@tamagui/switch/dist/esm/Switch.js
 var import_core39 = require("@tamagui/core");
-var import_get_token9 = __toESM(require_cjs18());
+var import_get_token9 = __toESM(require_cjs19());
 var SwitchThumb = (0, import_core39.styled)(ThemeableStack, {
   name: "SwitchThumb",
   context: SwitchStyledContext,
@@ -46173,8 +46253,8 @@ var Switch = createSwitch({
 });
 
 // node_modules/@tamagui/tabs/dist/esm/Tabs.js
-var import_get_button_sized4 = __toESM(require_cjs19());
-var import_group = __toESM(require_cjs32());
+var import_get_button_sized4 = __toESM(require_cjs20());
+var import_group = __toESM(require_cjs33());
 var import_web11 = require("@tamagui/core");
 var React37 = __toESM(require("react"));
 var import_jsx_runtime46 = require("react/jsx-runtime");
@@ -46439,14 +46519,14 @@ function makeContentId(baseId, value) {
 __name(makeContentId, "makeContentId");
 
 // node_modules/tamagui/dist/esm/index.js
-__reExport(esm_exports2, __toESM(require_cjs35()));
+__reExport(esm_exports2, __toESM(require_cjs36()));
 
 // node_modules/@tamagui/toggle-group/dist/esm/ToggleGroup.js
-var import_focusable2 = __toESM(require_cjs30());
-var import_font_size3 = __toESM(require_cjs28());
-var import_get_token10 = __toESM(require_cjs18());
-var import_group2 = __toESM(require_cjs32());
-var import_helpers_tamagui3 = __toESM(require_cjs29());
+var import_focusable2 = __toESM(require_cjs31());
+var import_font_size3 = __toESM(require_cjs29());
+var import_get_token10 = __toESM(require_cjs19());
+var import_group2 = __toESM(require_cjs33());
+var import_helpers_tamagui3 = __toESM(require_cjs30());
 var import_web13 = require("@tamagui/core");
 var import_react45 = __toESM(require("react"));
 
@@ -46779,7 +46859,7 @@ var ToggleGroupImpl = ToggleGroupImplElementFrame.extractable(
 
 // node_modules/@tamagui/tooltip/dist/esm/Tooltip.js
 var import_core41 = require("@tamagui/core");
-var import_get_token11 = __toESM(require_cjs18());
+var import_get_token11 = __toESM(require_cjs19());
 var React40 = __toESM(require("react"));
 var import_jsx_runtime49 = require("react/jsx-runtime");
 var TOOLTIP_SCOPE = "tooltip";
@@ -46932,7 +47012,7 @@ var voidFn = /* @__PURE__ */ __name(() => {
 }, "voidFn");
 
 // node_modules/@tamagui/tooltip/dist/esm/TooltipSimple.js
-var import_get_token12 = __toESM(require_cjs18());
+var import_get_token12 = __toESM(require_cjs19());
 var React41 = __toESM(require("react"));
 var import_jsx_runtime50 = require("react/jsx-runtime");
 var TooltipSimple = React41.forwardRef(
@@ -47001,7 +47081,7 @@ var defaultTooltipDelay = { open: 3e3, close: 100 };
 
 // node_modules/@tamagui/use-window-dimensions/dist/esm/index.js
 var import_react48 = require("react");
-var import_react_native_web9 = __toESM(require_cjs2());
+var import_react_native_web9 = __toESM(require_cjs3());
 var initialValue = {
   height: 800,
   width: 600
@@ -47121,7 +47201,7 @@ var TamaguiProvider = /* @__PURE__ */ __name(({ children, ...props }) => /* @__P
 
 // node_modules/tamagui/dist/esm/views/Anchor.js
 var import_core44 = require("@tamagui/core");
-var import_react_native_web10 = __toESM(require_cjs2());
+var import_react_native_web10 = __toESM(require_cjs3());
 var import_jsx_runtime52 = require("react/jsx-runtime");
 var AnchorFrame = (0, import_core44.styled)(SizableText, {
   name: "Anchor",
@@ -47177,14 +47257,14 @@ var Fieldset = (0, import_core46.styled)(YStack, {
 
 // node_modules/tamagui/dist/esm/views/Input.js
 var import_core48 = require("@tamagui/core");
-var import_focusable3 = __toESM(require_cjs30());
-var import_react_native_web11 = __toESM(require_cjs2());
+var import_focusable3 = __toESM(require_cjs31());
+var import_react_native_web11 = __toESM(require_cjs3());
 
 // node_modules/tamagui/dist/esm/helpers/inputHelpers.js
 var import_core47 = require("@tamagui/core");
-var import_get_button_sized5 = __toESM(require_cjs19());
-var import_get_font_sized3 = __toESM(require_cjs21());
-var import_get_token13 = __toESM(require_cjs18());
+var import_get_button_sized5 = __toESM(require_cjs20());
+var import_get_font_sized3 = __toESM(require_cjs22());
+var import_get_token13 = __toESM(require_cjs19());
 var inputSizeVariant = /* @__PURE__ */ __name((val = "$true", extras) => {
   if (extras.props.multiline || extras.props.numberOfLines > 1)
     return textAreaSizeVariant(val, extras);
@@ -47294,7 +47374,7 @@ __name(useInputProps, "useInputProps");
 // node_modules/tamagui/dist/esm/views/Spinner.js
 var import_core49 = require("@tamagui/core");
 var React42 = __toESM(require("react"));
-var import_react_native_web12 = __toESM(require_cjs2());
+var import_react_native_web12 = __toESM(require_cjs3());
 var import_jsx_runtime54 = require("react/jsx-runtime");
 var Spinner = YStack.extractable(
   (0, import_core49.themeable)(
@@ -47380,6 +47460,16 @@ var animations = (0, import_animations_react_native.createAnimations)({
 });
 var headingFont = (0, import_font_inter.createInterFont)();
 var bodyFont = (0, import_font_inter.createInterFont)();
+var tokens2 = (0, import_core52.createTokens)({
+  ...tokens,
+  color: {
+    red: "#f00",
+    primary: "#6188ff",
+    highlight: "#3861fb",
+    gray: "#cfd6e4",
+    white: "#fff"
+  }
+});
 var config = createTamagui({
   animations,
   defaultTheme: "dark",
@@ -47391,7 +47481,7 @@ var config = createTamagui({
     body: bodyFont
   },
   themes: generated_new_exports,
-  tokens,
+  tokens: tokens2,
   media: (0, import_react_native_media_driver.createMedia)({
     xs: { maxWidth: 660 },
     sm: { maxWidth: 800 },
