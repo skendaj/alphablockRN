@@ -1,10 +1,9 @@
-import { Text, View } from "tamagui";
-
+import { Text, View } from 'tamagui';
 
 export const SearchScreen = () => {
   return (
     <View>
-      <Text>SearchScreen</Text>
+      <Text color="$white">Search</Text>
     </View>
   );
 };

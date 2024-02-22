@@ -6,22 +6,19 @@ import { themes, tokens as defaultTokens } from '@tamagui/themes';
 import { createTamagui, createTokens } from 'tamagui';
 
 const animations = createAnimations({
-  bouncy: {
-    type: 'spring',
+  fast: {
+    damping: 20,
+    mass: 1.2,
+    stiffness: 250,
+  },
+  medium: {
     damping: 10,
     mass: 0.9,
     stiffness: 100,
   },
-  lazy: {
-    type: 'spring',
+  slow: {
     damping: 20,
     stiffness: 60,
-  },
-  quick: {
-    type: 'spring',
-    damping: 20,
-    mass: 1.2,
-    stiffness: 250,
   },
 });
 
@@ -36,6 +33,9 @@ const tokens = createTokens({
     highlight: '#3861fb',
     gray: '#cfd6e4',
     white: '#fff',
+    blackbg: '#222531',
+    darkbg: '#2b2e3d',
+    borderColorPrimaryWithOpacity: 'rgba(97, 136, 255, 0.4)',
   },
 });
 const config = createTamagui({

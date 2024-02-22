@@ -9,20 +9,12 @@ import { StatusBar, TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-interface TabBarLabelProps {
-  focused: boolean;
-  label: string;
-}
-
-const AppHeader = (props) => {
+const AppHeader = () => {
   return (
-    <SafeAreaView edges={['top']} style={{ backgroundColor: '#222531' }}>
+    <SafeAreaView edges={['top']} style={{ backgroundColor: '#2b2e3d' }}>
       <StatusBar barStyle="light-content" />
-
       <XStack
         height={50}
-        borderColor={'#222531'}
-        borderWidth={1}
         justifyContent="space-between"
         alignItems="center"
         paddingHorizontal={20}
@@ -30,7 +22,7 @@ const AppHeader = (props) => {
         <TouchableOpacity>
           <XStack gap={10}>
             <FontAwesome5 name="cube" size={25} color={'#cfd6e4'} />
-            <Text fontSize={20} color={'#cfd6e4'}>
+            <Text fontSize={20} color="$gray">
               Alpha Block
             </Text>
           </XStack>
@@ -49,44 +41,37 @@ const AppHeader = (props) => {
   );
 };
 const TabsNavigator = () => {
-  const TabBarLabel: FC<TabBarLabelProps> = ({ focused, label }) => (
-    <Text style={{ color: focused ? '#6188ff' : '#cfd6e4' }} fontSize={13}>
-      {label}
-    </Text>
-  );
   return (
     <Tabs
       screenOptions={() => ({
         headerShown: true,
-        headerTransparent: true,
+        // headerTransparent: false,
         tabBarStyle: {
           backgroundColor: '#222531',
+
           borderTopColor: '#222531',
+          paddingTop: 10,
         },
-        header: (props) => <AppHeader {...props} />,
+        header: () => <AppHeader />,
       })}
     >
       <Tabs.Screen
         name="feed"
         options={{
-          tabBarLabel: (props) => <TabBarLabel {...props} label="Feed" />,
-          tabBarIcon: ({ focused }) => (
-            <Entypo
-              name="area-graph"
-              size={23}
-              color={focused ? '#6188ff' : '#cfd6e4'}
-            />
+          tabBarLabel: 'Feed',
+          tabBarIcon: ({ focused, color }) => (
+            <Entypo name="area-graph" size={20} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="news"
         options={{
-          tabBarLabel: (props) => <TabBarLabel {...props} label="News" />,
+          tabBarLabel: 'News',
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name="newspaper-outline"
-              size={23}
+              size={20}
               color={focused ? '#6188ff' : '#cfd6e4'}
             />
           ),
@@ -95,11 +80,11 @@ const TabsNavigator = () => {
       <Tabs.Screen
         name="search"
         options={{
-          tabBarLabel: (props) => <TabBarLabel {...props} label="Search" />,
+          tabBarLabel: 'Search',
           tabBarIcon: ({ focused }) => (
             <AntDesign
               name="search1"
-              size={23}
+              size={20}
               color={focused ? '#6188ff' : '#cfd6e4'}
             />
           ),
@@ -108,11 +93,11 @@ const TabsNavigator = () => {
       <Tabs.Screen
         name="portfolio"
         options={{
-          tabBarLabel: (props) => <TabBarLabel {...props} label="Portfolio" />,
+          tabBarLabel: 'Portolio',
           tabBarIcon: ({ focused }) => (
             <FontAwesome5
               name="chart-pie"
-              size={23}
+              size={20}
               color={focused ? '#6188ff' : '#cfd6e4'}
             />
           ),
@@ -121,6 +106,11 @@ const TabsNavigator = () => {
     </Tabs>
   );
 };
+
+const DrawerLayout = () => {
+  return <XStack></XStack>;
+};
+
 const Layout = () => {
   return (
     <>

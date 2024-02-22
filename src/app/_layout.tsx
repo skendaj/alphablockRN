@@ -14,7 +14,6 @@ import config from '../../tamagui.config';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const RootNavigator = () => {
-  
   return (
     <Stack
       screenOptions={{

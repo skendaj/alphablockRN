@@ -5,7 +5,7 @@ import { Button, Input, Text, View, XStack, YStack } from 'tamagui';
 export const NewsScreen = () => {
   return (
     <View>
-      <Text color={'#fff'}>News</Text>
+      <Text color="$white">News</Text>
     </View>
   );
 };

@@ -5,7 +5,7 @@ import { Button, Input, Text, View, XStack, YStack } from 'tamagui';
 export const PortfolioScreen = () => {
   return (
     <View>
-      <Text color={'#fff'}>PortfolioScreen</Text>
+      <Text color="$white">Portfolio</Text>
     </View>
   );
 };

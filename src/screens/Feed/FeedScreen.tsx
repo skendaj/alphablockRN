@@ -1,11 +1,11 @@
-import { Activity, Airplay } from '@tamagui/lucide-icons';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, Input, Text, View, XStack, YStack } from 'tamagui';
+import { FeedTabs } from './components';
 
 export const FeedScreen = () => {
   return (
     <View>
-      <Text color={'#fff'}>Feed</Text>
+      <Text color="$white">Feed</Text>
+      <FeedTabs />
     </View>
   );
 };
