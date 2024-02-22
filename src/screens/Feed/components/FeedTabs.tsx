@@ -217,7 +217,7 @@ export const FeedTabs = () => {
       >
         <AnimatedYStack
           key={currentTab}
-          animation="100ms"
+          animation="fast"
           x={0}
           opacity={1}
           flex={1}
@@ -244,7 +244,7 @@ const TabsRovingIndicator = ({
   return (
     <YStack
       position="absolute"
-      animation="100ms"
+      animation="fast"
       enterStyle={{
         opacity: 0,
       }}
