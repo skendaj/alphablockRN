@@ -8,7 +8,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar, TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-import { Drawer } from '@expo-router/drawer';
 
 const AppHeader = () => {
   return (
@@ -108,9 +107,9 @@ const TabsNavigator = () => {
   );
 };
 
-const DrawerLayout = () => {
-  return <Drawer />;
-};
+// const DrawerLayout = () => {
+//   return <Drawer />;
+// };
 
 const Layout = () => {
   return (
