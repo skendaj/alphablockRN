@@ -25,7 +25,8 @@ const RootNavigator = () => {
         },
       }}
     >
-      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="(drawer)" />
+      <Stack.Screen name="index" />
     </Stack>
   );
 };

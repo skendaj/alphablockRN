@@ -34,72 +34,10 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// node_modules/@tamagui/constants/dist/cjs/constants.js
-var require_constants = __commonJS({
-  "node_modules/@tamagui/constants/dist/cjs/constants.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var constants_exports = {};
-    __export2(constants_exports, {
-      currentPlatform: () => currentPlatform2,
-      isAndroid: () => isAndroid4,
-      isChrome: () => isChrome3,
-      isClient: () => isClient4,
-      isIos: () => isIos,
-      isServer: () => isServer3,
-      isTouchable: () => isTouchable3,
-      isWeb: () => isWeb5,
-      isWebTouchable: () => isWebTouchable3,
-      isWindowDefined: () => isWindowDefined2,
-      useIsomorphicLayoutEffect: () => useIsomorphicLayoutEffect3
-    });
-    module2.exports = __toCommonJS2(constants_exports);
-    var import_react49 = require("react");
-    var isWeb5 = true;
-    var isWindowDefined2 = typeof window < "u";
-    var isServer3 = isWeb5 && !isWindowDefined2;
-    var isClient4 = isWeb5 && isWindowDefined2;
-    var useIsomorphicLayoutEffect3 = isServer3 ? import_react49.useEffect : import_react49.useLayoutEffect;
-    var isChrome3 = typeof navigator < "u" && /Chrome/.test(navigator.userAgent || "");
-    var isWebTouchable3 = isClient4 && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
-    var isTouchable3 = !isWeb5 || isWebTouchable3;
-    var isAndroid4 = false;
-    var isIos = false;
-    var currentPlatform2 = "web";
-  }
-});
-
-// node_modules/@tamagui/constants/dist/cjs/index.js
-var require_cjs = __commonJS({
-  "node_modules/@tamagui/constants/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_constants(), module2.exports);
+// node_modules/@tamagui/animations-react-native/dist/cjs/polyfill.js
+var require_polyfill = __commonJS({
+  "node_modules/@tamagui/animations-react-native/dist/cjs/polyfill.js"() {
+    typeof requestAnimationFrame > "u" && (globalThis.requestAnimationFrame = setImmediate);
   }
 });
 
@@ -181,7 +119,7 @@ var require_usePresence = __commonJS({
 });
 
 // node_modules/@tamagui/use-presence/dist/cjs/index.js
-var require_cjs2 = __commonJS({
+var require_cjs = __commonJS({
   "node_modules/@tamagui/use-presence/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -202,9 +140,9 @@ var require_cjs2 = __commonJS({
   }
 });
 
-// node_modules/@tamagui/animations-css/dist/cjs/createAnimations.js
-var require_createAnimations = __commonJS({
-  "node_modules/@tamagui/animations-css/dist/cjs/createAnimations.js"(exports2, module2) {
+// node_modules/@tamagui/constants/dist/cjs/constants.js
+var require_constants = __commonJS({
+  "node_modules/@tamagui/constants/dist/cjs/constants.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -220,82 +158,39 @@ var require_createAnimations = __commonJS({
       return to;
     }, "__copyProps");
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var createAnimations_exports = {};
-    __export2(createAnimations_exports, {
-      createAnimations: () => createAnimations2
+    var constants_exports = {};
+    __export2(constants_exports, {
+      currentPlatform: () => currentPlatform2,
+      isAndroid: () => isAndroid4,
+      isChrome: () => isChrome3,
+      isClient: () => isClient4,
+      isIos: () => isIos,
+      isServer: () => isServer3,
+      isTouchable: () => isTouchable3,
+      isWeb: () => isWeb5,
+      isWebTouchable: () => isWebTouchable3,
+      isWindowDefined: () => isWindowDefined2,
+      useIsomorphicLayoutEffect: () => useIsomorphicLayoutEffect3
     });
-    module2.exports = __toCommonJS2(createAnimations_exports);
-    var import_constants44 = require_cjs();
-    var import_web15 = require("@tamagui/core");
-    var import_use_presence2 = require_cjs2();
+    module2.exports = __toCommonJS2(constants_exports);
     var import_react49 = require("react");
-    function createAnimations2(animations2) {
-      const reactionListeners = /* @__PURE__ */ new WeakMap();
-      return {
-        animations: animations2,
-        usePresence: import_use_presence2.usePresence,
-        ResetPresence: import_use_presence2.ResetPresence,
-        supportsCSSVars: true,
-        useAnimatedNumber(initial) {
-          const [val, setVal] = (0, import_react49.useState)(initial);
-          return {
-            getInstance() {
-              return setVal;
-            },
-            getValue() {
-              return val;
-            },
-            setValue(next) {
-              setVal(next);
-              const listeners = reactionListeners.get(setVal);
-              listeners && listeners.forEach((cb) => cb(next));
-            },
-            stop() {
-            }
-          };
-        },
-        useAnimatedNumberReaction({ value }, onValue) {
-          (0, import_react49.useEffect)(() => {
-            const instance = value.getInstance();
-            let queue = reactionListeners.get(instance);
-            if (!queue) {
-              const next = /* @__PURE__ */ new Set();
-              reactionListeners.set(instance, next), queue = next;
-            }
-            return queue.add(onValue), () => {
-              queue == null ? void 0 : queue.delete(onValue);
-            };
-          }, []);
-        },
-        useAnimatedNumberStyle(val, getStyle) {
-          return getStyle(val.getValue());
-        },
-        useAnimations: ({ props, presence, style, componentState, stateRef }) => {
-          const isEntering = !!componentState.unmounted, isExiting = (presence == null ? void 0 : presence[0]) === false, sendExitComplete = presence == null ? void 0 : presence[1], [animationKey, animationConfig] = [].concat(props.animation), animation = animations2[animationKey], keys = props.animateOnly ?? ["all"];
-          return (0, import_constants44.useIsomorphicLayoutEffect)(() => {
-            const host = stateRef.current.host;
-            if (!sendExitComplete || !isExiting || !host)
-              return;
-            const node = host, onFinishAnimation = /* @__PURE__ */ __name(() => {
-              sendExitComplete == null ? void 0 : sendExitComplete();
-            }, "onFinishAnimation");
-            return node.addEventListener("transitionend", onFinishAnimation), node.addEventListener("transitioncancel", onFinishAnimation), () => {
-              node.removeEventListener("transitionend", onFinishAnimation), node.removeEventListener("transitioncancel", onFinishAnimation);
-            };
-          }, [sendExitComplete, isExiting]), animation ? (Array.isArray(style.transform) && (style.transform = (0, import_web15.transformsToString)(style.transform)), style.transition = keys.map((key) => {
-            const override = animations2[animationConfig == null ? void 0 : animationConfig[key]] ?? animation;
-            return `${key} ${override}`;
-          }).join(", "), process.env.NODE_ENV === "development" && props.debug && console.info("CSS animation", style, style.transition, { isEntering, isExiting }), { style }) : null;
-        }
-      };
-    }
-    __name(createAnimations2, "createAnimations");
+    var isWeb5 = true;
+    var isWindowDefined2 = typeof window < "u";
+    var isServer3 = isWeb5 && !isWindowDefined2;
+    var isClient4 = isWeb5 && isWindowDefined2;
+    var useIsomorphicLayoutEffect3 = isServer3 ? import_react49.useEffect : import_react49.useLayoutEffect;
+    var isChrome3 = typeof navigator < "u" && /Chrome/.test(navigator.userAgent || "");
+    var isWebTouchable3 = isClient4 && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+    var isTouchable3 = !isWeb5 || isWebTouchable3;
+    var isAndroid4 = false;
+    var isIos = false;
+    var currentPlatform2 = "web";
   }
 });
 
-// node_modules/@tamagui/animations-css/dist/cjs/index.js
-var require_cjs3 = __commonJS({
-  "node_modules/@tamagui/animations-css/dist/cjs/index.js"(exports2, module2) {
+// node_modules/@tamagui/constants/dist/cjs/index.js
+var require_cjs2 = __commonJS({
+  "node_modules/@tamagui/constants/dist/cjs/index.js"(exports2, module2) {
     var __defProp2 = Object.defineProperty;
     var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
@@ -310,5220 +205,7 @@ var require_cjs3 = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var src_exports = {};
     module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_createAnimations(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/font-inter/dist/cjs/index.js
-var require_cjs4 = __commonJS({
-  "node_modules/@tamagui/font-inter/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      createInterFont: () => createInterFont2
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var import_core53 = require("@tamagui/core");
-    var createInterFont2 = /* @__PURE__ */ __name((font = {}, {
-      sizeLineHeight = /* @__PURE__ */ __name((size4) => size4 + 10, "sizeLineHeight"),
-      sizeSize = /* @__PURE__ */ __name((size4) => size4 * 1, "sizeSize")
-    } = {}) => {
-      const size4 = Object.fromEntries(
-        Object.entries({
-          ...defaultSizes,
-          ...font.size
-        }).map(([k, v]) => [k, sizeSize(+v)])
-      );
-      return (0, import_core53.createFont)({
-        family: import_core53.isWeb ? 'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' : "Inter",
-        lineHeight: Object.fromEntries(
-          Object.entries(size4).map(([k, v]) => [k, sizeLineHeight((0, import_core53.getVariableValue)(v))])
-        ),
-        weight: {
-          4: "300"
-        },
-        letterSpacing: {
-          4: 0
-        },
-        ...font,
-        size: size4
-      });
-    }, "createInterFont");
-    var defaultSizes = {
-      1: 11,
-      2: 12,
-      3: 13,
-      4: 14,
-      true: 14,
-      5: 16,
-      6: 18,
-      7: 20,
-      8: 23,
-      9: 30,
-      10: 46,
-      11: 55,
-      12: 62,
-      13: 72,
-      14: 92,
-      15: 114,
-      16: 134
-    };
-  }
-});
-
-// node_modules/@tamagui/react-native-media-driver/dist/cjs/matchMedia.js
-var require_matchMedia = __commonJS({
-  "node_modules/@tamagui/react-native-media-driver/dist/cjs/matchMedia.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var matchMedia_exports = {};
-    __export2(matchMedia_exports, {
-      matchMedia: () => matchMedia2
-    });
-    module2.exports = __toCommonJS2(matchMedia_exports);
-    var matchMedia2 = globalThis.matchMedia;
-  }
-});
-
-// node_modules/@tamagui/react-native-media-driver/dist/cjs/createMedia.js
-var require_createMedia = __commonJS({
-  "node_modules/@tamagui/react-native-media-driver/dist/cjs/createMedia.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var createMedia_exports = {};
-    __export2(createMedia_exports, {
-      createMedia: () => createMedia2
-    });
-    module2.exports = __toCommonJS2(createMedia_exports);
-    var import_web15 = require("@tamagui/core");
-    var import_matchMedia = require_matchMedia();
-    function createMedia2(media) {
-      return (0, import_web15.setupMatchMedia)(import_matchMedia.matchMedia), media;
-    }
-    __name(createMedia2, "createMedia");
-  }
-});
-
-// node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js
-var require_cjs5 = __commonJS({
-  "node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_createMedia(), module2.exports);
-    __reExport2(src_exports, require_matchMedia(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/use-force-update/dist/cjs/index.js
-var require_cjs6 = __commonJS({
-  "node_modules/@tamagui/use-force-update/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      isServerSide: () => isServerSide2,
-      useForceUpdate: () => useForceUpdate2
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var import_react49 = require("react");
-    var isServerSide2 = typeof window > "u";
-    var idFn3 = /* @__PURE__ */ __name(() => {
-    }, "idFn");
-    function useForceUpdate2() {
-      return isServerSide2 ? idFn3 : (0, import_react49.useReducer)((x) => Math.random(), 0)[1];
-    }
-    __name(useForceUpdate2, "useForceUpdate");
-  }
-});
-
-// node_modules/@tamagui/animate-presence/dist/cjs/LayoutGroupContext.js
-var require_LayoutGroupContext = __commonJS({
-  "node_modules/@tamagui/animate-presence/dist/cjs/LayoutGroupContext.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var LayoutGroupContext_exports = {};
-    __export2(LayoutGroupContext_exports, {
-      LayoutGroupContext: () => LayoutGroupContext2
-    });
-    module2.exports = __toCommonJS2(LayoutGroupContext_exports);
-    var import_react49 = require("react");
-    var LayoutGroupContext2 = (0, import_react49.createContext)({});
-  }
-});
-
-// node_modules/@tamagui/use-constant/dist/cjs/index.js
-var require_cjs7 = __commonJS({
-  "node_modules/@tamagui/use-constant/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      useConstant: () => useConstant2
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var import_react49 = require("react");
-    function useConstant2(fn) {
-      if (typeof document > "u")
-        return (0, import_react49.useMemo)(() => fn(), []);
-      const ref = (0, import_react49.useRef)();
-      return ref.current || (ref.current = { v: fn() }), ref.current.v;
-    }
-    __name(useConstant2, "useConstant");
-  }
-});
-
-// node_modules/@tamagui/animate-presence/dist/cjs/PresenceChild.js
-var require_PresenceChild = __commonJS({
-  "node_modules/@tamagui/animate-presence/dist/cjs/PresenceChild.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var PresenceChild_exports = {};
-    __export2(PresenceChild_exports, {
-      PresenceChild: () => PresenceChild2
-    });
-    module2.exports = __toCommonJS2(PresenceChild_exports);
-    var import_use_constant3 = require_cjs7();
-    var import_use_presence2 = require_cjs2();
-    var React43 = __toESM2(require("react"));
-    var import_react49 = require("react");
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    var PresenceChild2 = React43.memo(
-      ({
-        children,
-        initial,
-        isPresent: isPresent2,
-        onExitComplete,
-        exitVariant,
-        enterVariant,
-        enterExitVariant,
-        presenceAffectsLayout,
-        custom
-      }) => {
-        const presenceChildren = (0, import_use_constant3.useConstant)(newChildrenMap2), id = (0, import_react49.useId)() || "", context = React43.useMemo(
-          () => ({
-            id,
-            initial,
-            isPresent: isPresent2,
-            custom,
-            exitVariant,
-            enterVariant,
-            enterExitVariant,
-            onExitComplete: () => {
-              presenceChildren.set(id, true);
-              for (const isComplete of presenceChildren.values())
-                if (!isComplete)
-                  return;
-              onExitComplete == null ? void 0 : onExitComplete();
-            },
-            register: () => (presenceChildren.set(id, false), () => presenceChildren.delete(id))
-          }),
-          /**
-           * If the presence of a child affects the layout of the components around it,
-           * we want to make a new context value to ensure they get re-rendered
-           * so they can detect that layout change.
-           */
-          // @ts-expect-error its ok
-          presenceAffectsLayout ? void 0 : [isPresent2, exitVariant, enterVariant]
-        );
-        return React43.useMemo(() => {
-          presenceChildren.forEach((_, key) => presenceChildren.set(key, false));
-        }, [isPresent2]), React43.useEffect(() => {
-          !isPresent2 && !presenceChildren.size && (onExitComplete == null ? void 0 : onExitComplete());
-        }, [isPresent2]), /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_use_presence2.PresenceContext.Provider, { value: context, children });
-      }
-    );
-    function newChildrenMap2() {
-      return /* @__PURE__ */ new Map();
-    }
-    __name(newChildrenMap2, "newChildrenMap");
-  }
-});
-
-// node_modules/@tamagui/animate-presence/dist/cjs/AnimatePresence.js
-var require_AnimatePresence = __commonJS({
-  "node_modules/@tamagui/animate-presence/dist/cjs/AnimatePresence.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var AnimatePresence_exports = {};
-    __export2(AnimatePresence_exports, {
-      AnimatePresence: () => AnimatePresence2
-    });
-    module2.exports = __toCommonJS2(AnimatePresence_exports);
-    var import_use_force_update2 = require_cjs6();
-    var import_react49 = require("react");
-    var import_LayoutGroupContext2 = require_LayoutGroupContext();
-    var import_PresenceChild2 = require_PresenceChild();
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    var getChildKey2 = /* @__PURE__ */ __name((child) => child.key || "", "getChildKey");
-    function updateChildLookup2(children, allChildren) {
-      children.forEach((child) => {
-        const key = getChildKey2(child);
-        allChildren.set(key, child);
-      });
-    }
-    __name(updateChildLookup2, "updateChildLookup");
-    function onlyElements2(children) {
-      const filtered = [];
-      return import_react49.Children.forEach(children, (child) => {
-        (0, import_react49.isValidElement)(child) && filtered.push(child);
-      }), filtered;
-    }
-    __name(onlyElements2, "onlyElements");
-    var AnimatePresence2 = /* @__PURE__ */ __name(({
-      children,
-      enterVariant,
-      exitVariant,
-      enterExitVariant,
-      initial = true,
-      onExitComplete,
-      exitBeforeEnter,
-      presenceAffectsLayout = true,
-      custom
-    }) => {
-      let forceRender = (0, import_react49.useContext)(import_LayoutGroupContext2.LayoutGroupContext).forceRender ?? (0, import_use_force_update2.useForceUpdate)();
-      const filteredChildren = onlyElements2(children), presentChildren = (0, import_react49.useRef)(filteredChildren), allChildren = (0, import_react49.useRef)(/* @__PURE__ */ new Map()).current, exiting = (0, import_react49.useRef)(/* @__PURE__ */ new Set()).current;
-      updateChildLookup2(filteredChildren, allChildren);
-      const isInitialRender = (0, import_react49.useRef)(true);
-      if (isInitialRender.current)
-        return isInitialRender.current = false, /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_jsx_runtime56.Fragment, { children: filteredChildren.map((child) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          import_PresenceChild2.PresenceChild,
-          {
-            isPresent: true,
-            enterExitVariant,
-            exitVariant,
-            enterVariant,
-            initial: initial ? void 0 : false,
-            presenceAffectsLayout,
-            custom,
-            children: child
-          },
-          getChildKey2(child)
-        )) });
-      let childrenToRender = [...filteredChildren];
-      const presentKeys = presentChildren.current.map(getChildKey2), targetKeys = filteredChildren.map(getChildKey2), numPresent = presentKeys.length;
-      for (let i = 0; i < numPresent; i++) {
-        const key = presentKeys[i];
-        targetKeys.indexOf(key) === -1 ? exiting.add(key) : exiting.delete(key);
-      }
-      return exitBeforeEnter && exiting.size && (childrenToRender = []), exiting.forEach((key) => {
-        if (targetKeys.indexOf(key) !== -1)
-          return;
-        const child = allChildren.get(key);
-        if (!child)
-          return;
-        const insertionIndex = presentKeys.indexOf(key), exitingComponent = /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          import_PresenceChild2.PresenceChild,
-          {
-            isPresent: false,
-            onExitComplete: () => {
-              allChildren.delete(key), exiting.delete(key);
-              const removeIndex = presentChildren.current.findIndex(
-                (presentChild) => presentChild.key === key
-              );
-              presentChildren.current.splice(removeIndex, 1), exiting.size || (presentChildren.current = filteredChildren, forceRender(), onExitComplete == null ? void 0 : onExitComplete());
-            },
-            presenceAffectsLayout,
-            enterExitVariant,
-            enterVariant,
-            exitVariant,
-            custom,
-            children: child
-          },
-          getChildKey2(child)
-        );
-        childrenToRender.splice(insertionIndex, 0, exitingComponent);
-      }), childrenToRender = childrenToRender.map((child) => {
-        const key = child.key;
-        return exiting.has(key) ? child : /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          import_PresenceChild2.PresenceChild,
-          {
-            isPresent: true,
-            exitVariant,
-            enterVariant,
-            enterExitVariant,
-            presenceAffectsLayout,
-            custom,
-            children: child
-          },
-          getChildKey2(child)
-        );
-      }), presentChildren.current = childrenToRender, /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_jsx_runtime56.Fragment, { children: exiting.size ? childrenToRender : childrenToRender.map((child) => (0, import_react49.cloneElement)(child)) });
-    }, "AnimatePresence");
-    AnimatePresence2.displayName = "AnimatePresence";
-  }
-});
-
-// node_modules/@tamagui/animate-presence/dist/cjs/types.js
-var require_types = __commonJS({
-  "node_modules/@tamagui/animate-presence/dist/cjs/types.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var types_exports = {};
-    module2.exports = __toCommonJS2(types_exports);
-  }
-});
-
-// node_modules/@tamagui/animate-presence/dist/cjs/index.js
-var require_cjs8 = __commonJS({
-  "node_modules/@tamagui/animate-presence/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_AnimatePresence(), module2.exports);
-    __reExport2(src_exports, require_cjs2(), module2.exports);
-    __reExport2(src_exports, require_types(), module2.exports);
-    __reExport2(src_exports, require_PresenceChild(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/simple-hash/dist/cjs/index.js
-var require_cjs9 = __commonJS({
-  "node_modules/@tamagui/simple-hash/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      simpleHash: () => simpleHash
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var cache = /* @__PURE__ */ new Map();
-    var simpleHash = /* @__PURE__ */ __name((str, hashMin = 10) => {
-      if (cache.has(str))
-        return cache.get(str);
-      let hash = 0, valids = "";
-      const len = str.length;
-      for (let i = 0; i < len; i++) {
-        const char = str.charCodeAt(i);
-        if (hashMin !== "strict" && (char === 46 && (valids += "d0t"), isValidCSSCharCode(char) && len <= hashMin)) {
-          valids += str[i];
-          continue;
-        }
-        hash = hashChar(hash, str[i]);
-      }
-      const res = valids + (hash ? Math.abs(hash) : "");
-      return cache.size > 1e4 && cache.clear(), cache.set(str, res), res;
-    }, "simpleHash");
-    var hashChar = /* @__PURE__ */ __name((hash, c) => Math.imul(31, hash) + c.charCodeAt(0) | 0, "hashChar");
-    function isValidCSSCharCode(code) {
-      return (
-        // A-Z
-        code >= 65 && code <= 90 || // a-z
-        code >= 97 && code <= 122 || // _
-        code === 95 || // -
-        code === 45 || // 0-9
-        code >= 48 && code <= 57
-      );
-    }
-    __name(isValidCSSCharCode, "isValidCSSCharCode");
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/clamp.js
-var require_clamp = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/clamp.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var clamp_exports = {};
-    __export2(clamp_exports, {
-      clamp: () => clamp3
-    });
-    module2.exports = __toCommonJS2(clamp_exports);
-    function clamp3(value, [min2, max2]) {
-      return Math.min(max2, Math.max(min2, value));
-    }
-    __name(clamp3, "clamp");
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/composeEventHandlers.js
-var require_composeEventHandlers = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/composeEventHandlers.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var composeEventHandlers_exports = {};
-    __export2(composeEventHandlers_exports, {
-      composeEventHandlers: () => composeEventHandlers3
-    });
-    module2.exports = __toCommonJS2(composeEventHandlers_exports);
-    function composeEventHandlers3(og, next, { checkDefaultPrevented = true } = {}) {
-      return !og || !next ? next || og || void 0 : (event) => {
-        if (og == null ? void 0 : og(event), !event || !(checkDefaultPrevented && "defaultPrevented" in event) || // @ts-ignore
-        "defaultPrevented" in event && !event.defaultPrevented)
-          return next == null ? void 0 : next(event);
-      };
-    }
-    __name(composeEventHandlers3, "composeEventHandlers");
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/concatClassName.js
-var require_concatClassName = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/concatClassName.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var concatClassName_exports = {};
-    __export2(concatClassName_exports, {
-      concatClassName: () => concatClassName
-    });
-    module2.exports = __toCommonJS2(concatClassName_exports);
-    function concatClassName(_cn) {
-      const args = arguments, usedPrefixes = [];
-      let final = "";
-      const len = args.length;
-      let propObjects = null;
-      for (let x = len; x >= 0; x--) {
-        const cns = args[x];
-        if (!cns)
-          continue;
-        if (!Array.isArray(cns) && typeof cns != "string") {
-          propObjects = propObjects || [], propObjects.push(cns);
-          continue;
-        }
-        const names = Array.isArray(cns) ? cns : cns.split(" "), numNames = names.length;
-        for (let i = numNames - 1; i >= 0; i--) {
-          const name = names[i];
-          if (!name || name === " ")
-            continue;
-          if (name[0] !== "_") {
-            final = name + " " + final;
-            continue;
-          }
-          const splitIndex = name.indexOf("-");
-          if (splitIndex < 1) {
-            final = name + " " + final;
-            continue;
-          }
-          const isMediaQuery = name[splitIndex + 1] === "_", styleKey = name.slice(1, name.lastIndexOf("-")), mediaKey = isMediaQuery ? name.slice(splitIndex + 2, splitIndex + 7) : null, uid = mediaKey ? styleKey + mediaKey : styleKey;
-          if (usedPrefixes.indexOf(uid) > -1)
-            continue;
-          usedPrefixes.push(uid);
-          const propName = styleKey;
-          propName && propObjects && propObjects.some((po) => {
-            if (mediaKey) {
-              const propKey = pseudoInvert[mediaKey];
-              return po && po[propKey] && propName in po[propKey] && po[propKey] !== null;
-            }
-            return po && propName in po && po[propName] !== null;
-          }) || (final = name + " " + final);
-        }
-      }
-      return final;
-    }
-    __name(concatClassName, "concatClassName");
-    var pseudoInvert = {
-      hover: "hoverStyle",
-      focus: "focusStyle",
-      press: "pressStyle"
-    };
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/types.js
-var require_types2 = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/types.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var types_exports = {};
-    module2.exports = __toCommonJS2(types_exports);
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/shouldRenderNativePlatform.js
-var require_shouldRenderNativePlatform = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/shouldRenderNativePlatform.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var shouldRenderNativePlatform_exports = {};
-    __export2(shouldRenderNativePlatform_exports, {
-      shouldRenderNativePlatform: () => shouldRenderNativePlatform3
-    });
-    module2.exports = __toCommonJS2(shouldRenderNativePlatform_exports);
-    var import_constants44 = require_cjs();
-    var ALL_PLATFORMS = ["web", "android", "ios"];
-    function shouldRenderNativePlatform3(nativeProp) {
-      if (!nativeProp)
-        return null;
-      const userRequestedPlatforms = resolvePlatformNames(nativeProp);
-      for (const platform2 of ALL_PLATFORMS)
-        if (platform2 === import_constants44.currentPlatform && userRequestedPlatforms.has(platform2))
-          return platform2;
-      return null;
-    }
-    __name(shouldRenderNativePlatform3, "shouldRenderNativePlatform");
-    function resolvePlatformNames(nativeProp) {
-      const platforms = nativeProp === true ? ALL_PLATFORMS : nativeProp === false ? [] : Array.isArray(nativeProp) ? nativeProp : [nativeProp], set = new Set(platforms);
-      return set.has("mobile") && (set.add("android"), set.add("ios"), set.delete("mobile")), set;
-    }
-    __name(resolvePlatformNames, "resolvePlatformNames");
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/validStyleProps.js
-var require_validStyleProps = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/validStyleProps.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var validStyleProps_exports = {};
-    __export2(validStyleProps_exports, {
-      stylePropsAll: () => stylePropsAll,
-      stylePropsFont: () => stylePropsFont2,
-      stylePropsText: () => stylePropsText2,
-      stylePropsTextOnly: () => stylePropsTextOnly2,
-      stylePropsTransform: () => stylePropsTransform2,
-      stylePropsUnitless: () => stylePropsUnitless2,
-      stylePropsView: () => stylePropsView2,
-      tokenCategories: () => tokenCategories2,
-      validPseudoKeys: () => validPseudoKeys2,
-      validStyles: () => validStyles2
-    });
-    module2.exports = __toCommonJS2(validStyleProps_exports);
-    var import_constants44 = require_cjs();
-    var textColors2 = {
-      color: true,
-      textDecorationColor: true,
-      textShadowColor: true
-    };
-    var tokenCategories2 = {
-      radius: {
-        borderRadius: true,
-        borderTopLeftRadius: true,
-        borderTopRightRadius: true,
-        borderBottomLeftRadius: true,
-        borderBottomRightRadius: true,
-        // logical
-        borderStartStartRadius: true,
-        borderStartEndRadius: true,
-        borderEndStartRadius: true,
-        borderEndEndRadius: true
-      },
-      size: {
-        width: true,
-        height: true,
-        minWidth: true,
-        minHeight: true,
-        maxWidth: true,
-        maxHeight: true
-      },
-      zIndex: {
-        zIndex: true
-      },
-      color: {
-        backgroundColor: true,
-        borderColor: true,
-        borderBlockStartColor: true,
-        borderBlockEndColor: true,
-        borderBlockColor: true,
-        borderBottomColor: true,
-        borderTopColor: true,
-        borderLeftColor: true,
-        borderRightColor: true,
-        borderEndColor: true,
-        borderStartColor: true,
-        shadowColor: true,
-        ...textColors2,
-        outlineColor: true
-      }
-    };
-    var stylePropsUnitless2 = {
-      WebkitLineClamp: true,
-      animationIterationCount: true,
-      aspectRatio: true,
-      borderImageOutset: true,
-      borderImageSlice: true,
-      borderImageWidth: true,
-      columnCount: true,
-      flex: true,
-      flexGrow: true,
-      flexOrder: true,
-      flexPositive: true,
-      flexShrink: true,
-      flexNegative: true,
-      fontWeight: true,
-      gridRow: true,
-      gridRowEnd: true,
-      gridRowGap: true,
-      gridRowStart: true,
-      gridColumn: true,
-      gridColumnEnd: true,
-      gridColumnGap: true,
-      gridColumnStart: true,
-      lineClamp: true,
-      opacity: true,
-      order: true,
-      orphans: true,
-      tabSize: true,
-      widows: true,
-      zIndex: true,
-      zoom: true,
-      scale: true,
-      scaleX: true,
-      scaleY: true,
-      scaleZ: true,
-      shadowOpacity: true
-    };
-    var stylePropsTransform2 = {
-      x: true,
-      y: true,
-      scale: true,
-      perspective: true,
-      scaleX: true,
-      scaleY: true,
-      skewX: true,
-      skewY: true,
-      matrix: true,
-      rotate: true,
-      rotateY: true,
-      rotateX: true,
-      rotateZ: true
-    };
-    var stylePropsView2 = {
-      backfaceVisibility: true,
-      borderBottomEndRadius: true,
-      borderBottomStartRadius: true,
-      borderBottomWidth: true,
-      borderLeftWidth: true,
-      borderRightWidth: true,
-      borderStyle: true,
-      borderTopEndRadius: true,
-      borderTopStartRadius: true,
-      borderTopWidth: true,
-      borderWidth: true,
-      transform: true,
-      transformOrigin: true,
-      alignContent: true,
-      alignItems: true,
-      alignSelf: true,
-      borderEndWidth: true,
-      borderStartWidth: true,
-      bottom: true,
-      display: true,
-      end: true,
-      flexBasis: true,
-      flexDirection: true,
-      flexWrap: true,
-      gap: true,
-      columnGap: true,
-      rowGap: true,
-      justifyContent: true,
-      left: true,
-      margin: true,
-      marginBlockEnd: true,
-      marginBlockStart: true,
-      marginInlineEnd: true,
-      marginInline: true,
-      marginInlineStart: true,
-      marginBottom: true,
-      marginEnd: true,
-      marginHorizontal: true,
-      marginLeft: true,
-      marginRight: true,
-      marginStart: true,
-      marginTop: true,
-      marginVertical: true,
-      overflow: true,
-      padding: true,
-      paddingBottom: true,
-      paddingInline: true,
-      paddingBlock: true,
-      paddingBlockStart: true,
-      paddingInlineEnd: true,
-      paddingInlineStart: true,
-      paddingEnd: true,
-      paddingHorizontal: true,
-      paddingLeft: true,
-      paddingRight: true,
-      paddingStart: true,
-      paddingTop: true,
-      paddingVertical: true,
-      position: true,
-      right: true,
-      start: true,
-      top: true,
-      direction: true,
-      shadowOffset: true,
-      shadowRadius: true,
-      ...tokenCategories2.color,
-      ...tokenCategories2.radius,
-      ...tokenCategories2.size,
-      ...tokenCategories2.radius,
-      ...stylePropsTransform2,
-      ...stylePropsUnitless2,
-      // RN doesn't support specific border styles per-edge
-      borderBottomStyle: true,
-      borderTopStyle: true,
-      borderLeftStyle: true,
-      borderRightStyle: true,
-      overflowX: true,
-      overflowY: true,
-      userSelect: true,
-      cursor: true,
-      contain: true,
-      pointerEvents: true,
-      boxSizing: true,
-      boxShadow: true,
-      outlineStyle: true,
-      outlineOffset: true,
-      outlineWidth: true,
-      touchAction: true,
-      ...import_constants44.isAndroid ? { elevationAndroid: true } : {}
-    };
-    var stylePropsFont2 = {
-      fontFamily: true,
-      fontSize: true,
-      fontStyle: true,
-      fontWeight: true,
-      letterSpacing: true,
-      lineHeight: true,
-      textTransform: true
-    };
-    var stylePropsTextOnly2 = {
-      ...stylePropsFont2,
-      textAlign: true,
-      textDecorationLine: true,
-      textDecorationStyle: true,
-      ...textColors2,
-      textShadowOffset: true,
-      textShadowRadius: true,
-      whiteSpace: true,
-      wordWrap: true,
-      textOverflow: true,
-      textDecorationDistance: true,
-      userSelect: true,
-      selectable: true,
-      cursor: true,
-      WebkitLineClamp: true,
-      WebkitBoxOrient: true
-    };
-    var stylePropsText2 = {
-      ...stylePropsView2,
-      ...stylePropsTextOnly2
-    };
-    var stylePropsAll = stylePropsText2;
-    var validPseudoKeys2 = {
-      enterStyle: true,
-      exitStyle: true,
-      hoverStyle: true,
-      pressStyle: true,
-      focusStyle: true
-    };
-    var validStyles2 = {
-      ...validPseudoKeys2,
-      ...stylePropsView2
-    };
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/withStaticProperties.js
-var require_withStaticProperties = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/withStaticProperties.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var withStaticProperties_exports = {};
-    __export2(withStaticProperties_exports, {
-      withStaticProperties: () => withStaticProperties6
-    });
-    module2.exports = __toCommonJS2(withStaticProperties_exports);
-    var import_react49 = require("react");
-    var Decorated2 = Symbol();
-    var withStaticProperties6 = /* @__PURE__ */ __name((component, staticProps) => {
-      const next = (() => {
-        if (component[Decorated2]) {
-          const _ = (0, import_react49.forwardRef)(
-            (props, ref) => (0, import_react49.createElement)(component, { ...props, ref })
-          );
-          for (const key in component) {
-            const v = component[key];
-            _[key] = v && typeof v == "object" ? { ...v } : v;
-          }
-        }
-        return component;
-      })();
-      return Object.assign(next, staticProps), next[Decorated2] = true, next;
-    }, "withStaticProperties");
-  }
-});
-
-// node_modules/@tamagui/helpers/dist/cjs/index.js
-var require_cjs10 = __commonJS({
-  "node_modules/@tamagui/helpers/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_cjs9(), module2.exports);
-    __reExport2(src_exports, require_clamp(), module2.exports);
-    __reExport2(src_exports, require_composeEventHandlers(), module2.exports);
-    __reExport2(src_exports, require_concatClassName(), module2.exports);
-    __reExport2(src_exports, require_types2(), module2.exports);
-    __reExport2(src_exports, require_shouldRenderNativePlatform(), module2.exports);
-    __reExport2(src_exports, require_validStyleProps(), module2.exports);
-    __reExport2(src_exports, require_withStaticProperties(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/use-event/dist/cjs/useGet.js
-var require_useGet = __commonJS({
-  "node_modules/@tamagui/use-event/dist/cjs/useGet.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var useGet_exports = {};
-    __export2(useGet_exports, {
-      useGet: () => useGet6
-    });
-    module2.exports = __toCommonJS2(useGet_exports);
-    var import_constants44 = require_cjs();
-    var import_react49 = require("react");
-    function useGet6(currentValue, initialValue2, forwardToFunction) {
-      const curRef = (0, import_react49.useRef)(initialValue2 ?? currentValue);
-      return (0, import_constants44.useIsomorphicLayoutEffect)(() => {
-        curRef.current = currentValue;
-      }), (0, import_react49.useCallback)(
-        forwardToFunction ? (...args) => {
-          var _a;
-          return (_a = curRef.current) == null ? void 0 : _a.apply(null, args);
-        } : () => curRef.current,
-        []
-      );
-    }
-    __name(useGet6, "useGet");
-  }
-});
-
-// node_modules/@tamagui/use-event/dist/cjs/useEvent.js
-var require_useEvent = __commonJS({
-  "node_modules/@tamagui/use-event/dist/cjs/useEvent.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var useEvent_exports = {};
-    __export2(useEvent_exports, {
-      useEvent: () => useEvent12
-    });
-    module2.exports = __toCommonJS2(useEvent_exports);
-    var import_useGet2 = require_useGet();
-    function useEvent12(callback) {
-      return (0, import_useGet2.useGet)(callback, defaultValue2, true);
-    }
-    __name(useEvent12, "useEvent");
-    var defaultValue2 = /* @__PURE__ */ __name(() => {
-      throw new Error("Cannot call an event handler while rendering.");
-    }, "defaultValue");
-  }
-});
-
-// node_modules/@tamagui/use-event/dist/cjs/index.js
-var require_cjs11 = __commonJS({
-  "node_modules/@tamagui/use-event/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_useEvent(), module2.exports);
-    __reExport2(src_exports, require_useGet(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/use-controllable-state/dist/cjs/useControllableState.js
-var require_useControllableState = __commonJS({
-  "node_modules/@tamagui/use-controllable-state/dist/cjs/useControllableState.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var useControllableState_exports = {};
-    __export2(useControllableState_exports, {
-      useControllableState: () => useControllableState2
-    });
-    module2.exports = __toCommonJS2(useControllableState_exports);
-    var import_use_event3 = require_cjs11();
-    var import_react49 = require("react");
-    var emptyCallbackFn2 = /* @__PURE__ */ __name((_) => _(), "emptyCallbackFn");
-    function useControllableState2({
-      prop,
-      defaultProp,
-      onChange,
-      strategy = "prop-wins",
-      preventUpdate,
-      transition
-    }) {
-      const [state, setState] = (0, import_react49.useState)(prop ?? defaultProp), previous = (0, import_react49.useRef)(state), propWins = strategy === "prop-wins" && prop !== void 0, value = propWins ? prop : state, onChangeCb = (0, import_use_event3.useEvent)(onChange || idFn3), transitionFn = transition ? import_react49.startTransition : emptyCallbackFn2;
-      (0, import_react49.useEffect)(() => {
-        prop !== void 0 && (previous.current = prop, transitionFn(() => {
-          setState(prop);
-        }));
-      }, [prop]), (0, import_react49.useEffect)(() => {
-        propWins || state !== previous.current && (previous.current = state, onChangeCb(state));
-      }, [onChangeCb, state, propWins]);
-      const setter = (0, import_use_event3.useEvent)((next) => {
-        if (!preventUpdate)
-          if (propWins) {
-            const nextValue = typeof next == "function" ? next(previous.current) : next;
-            onChangeCb(nextValue);
-          } else
-            transitionFn(() => {
-              setState(next);
-            });
-      });
-      return [value, setter];
-    }
-    __name(useControllableState2, "useControllableState");
-    var idFn3 = /* @__PURE__ */ __name(() => {
-    }, "idFn");
-  }
-});
-
-// node_modules/@tamagui/use-controllable-state/dist/cjs/index.js
-var require_cjs12 = __commonJS({
-  "node_modules/@tamagui/use-controllable-state/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_useControllableState(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/collapsible/dist/cjs/Collapsible.js
-var require_Collapsible = __commonJS({
-  "node_modules/@tamagui/collapsible/dist/cjs/Collapsible.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var Collapsible_exports = {};
-    __export2(Collapsible_exports, {
-      Collapsible: () => Collapsible,
-      CollapsibleContent: () => CollapsibleContent,
-      CollapsibleContentFrame: () => CollapsibleContentFrame,
-      CollapsibleTrigger: () => CollapsibleTrigger,
-      CollapsibleTriggerFrame: () => CollapsibleTriggerFrame
-    });
-    module2.exports = __toCommonJS2(Collapsible_exports);
-    var import_animate_presence6 = require_cjs8();
-    var import_helpers25 = require_cjs10();
-    var import_use_controllable_state15 = require_cjs12();
-    var import_web15 = require("@tamagui/core");
-    var React43 = __toESM2(require("react"));
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    var COLLAPSIBLE_NAME = "Collapsible";
-    var { Provider: CollapsibleProvider, useStyledContext: useCollapsibleContext } = (0, import_web15.createStyledContext)();
-    var _Collapsible = React43.forwardRef(
-      (props, forwardedRef) => {
-        const {
-          __scopeCollapsible,
-          open: openProp,
-          defaultOpen,
-          disabled,
-          onOpenChange,
-          ...collapsibleProps
-        } = props, [open = false, setOpen] = (0, import_use_controllable_state15.useControllableState)({
-          prop: openProp,
-          defaultProp: defaultOpen,
-          onChange: onOpenChange
-        });
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          CollapsibleProvider,
-          {
-            scope: __scopeCollapsible,
-            disabled,
-            contentId: React43.useId(),
-            open,
-            onOpenToggle: React43.useCallback(
-              () => setOpen((prevOpen) => !prevOpen),
-              [setOpen]
-            ),
-            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-              import_web15.Stack,
-              {
-                "data-state": getState6(open),
-                "data-disabled": disabled ? "" : void 0,
-                ...collapsibleProps,
-                ref: forwardedRef
-              }
-            )
-          }
-        );
-      }
-    );
-    _Collapsible.displayName = COLLAPSIBLE_NAME;
-    var TRIGGER_NAME6 = "CollapsibleTrigger";
-    var CollapsibleTriggerFrame = (0, import_web15.styled)(import_web15.Stack, {
-      name: TRIGGER_NAME6,
-      tag: "button"
-    });
-    var CollapsibleTrigger = CollapsibleTriggerFrame.styleable(
-      (props, forwardedRef) => {
-        const { __scopeCollapsible, children, ...triggerProps } = props, context = useCollapsibleContext(__scopeCollapsible);
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          CollapsibleTriggerFrame,
-          {
-            "aria-controls": context.contentId,
-            "aria-expanded": context.open || false,
-            "data-state": getState6(context.open),
-            "data-disabled": context.disabled ? "" : void 0,
-            disabled: context.disabled,
-            ...triggerProps,
-            ref: forwardedRef,
-            onPress: (0, import_helpers25.composeEventHandlers)(props.onPress, context.onOpenToggle),
-            children: typeof children == "function" ? children({ open: context.open }) : children
-          }
-        );
-      }
-    );
-    CollapsibleTrigger.displayName = TRIGGER_NAME6;
-    var CONTENT_NAME5 = "CollapsibleContent";
-    var CollapsibleContentFrame = (0, import_web15.styled)(import_web15.Stack, {
-      name: CONTENT_NAME5
-    });
-    var CollapsibleContent = CollapsibleContentFrame.styleable(
-      (props, forwardedRef) => {
-        const {
-          forceMount,
-          children,
-          // @ts-expect-error
-          __scopeCollapsible,
-          ...contentProps
-        } = props, context = useCollapsibleContext(__scopeCollapsible);
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_animate_presence6.AnimatePresence, { ...contentProps, children: forceMount || context.open ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(CollapsibleContentFrame, { ref: forwardedRef, ...contentProps, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_animate_presence6.ResetPresence, { children }) }) : null });
-      }
-    );
-    CollapsibleContent.displayName = CONTENT_NAME5;
-    function getState6(open) {
-      return open ? "open" : "closed";
-    }
-    __name(getState6, "getState");
-    var Collapsible = (0, import_helpers25.withStaticProperties)(_Collapsible, {
-      Trigger: CollapsibleTrigger,
-      Content: CollapsibleContent
-    });
-  }
-});
-
-// node_modules/@tamagui/collapsible/dist/cjs/index.js
-var require_cjs13 = __commonJS({
-  "node_modules/@tamagui/collapsible/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_Collapsible(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/compose-refs/dist/cjs/compose-refs.js
-var require_compose_refs = __commonJS({
-  "node_modules/@tamagui/compose-refs/dist/cjs/compose-refs.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var compose_refs_exports = {};
-    __export2(compose_refs_exports, {
-      composeRefs: () => composeRefs2,
-      setRef: () => setRef2,
-      useComposedRefs: () => useComposedRefs2
-    });
-    module2.exports = __toCommonJS2(compose_refs_exports);
-    var React43 = __toESM2(require("react"));
-    function setRef2(ref, value) {
-      typeof ref == "function" ? ref(value) : ref && (ref.current = value);
-    }
-    __name(setRef2, "setRef");
-    function composeRefs2(...refs) {
-      return (node) => refs.forEach((ref) => setRef2(ref, node));
-    }
-    __name(composeRefs2, "composeRefs");
-    function useComposedRefs2(...refs) {
-      return React43.useCallback(composeRefs2(...refs), refs);
-    }
-    __name(useComposedRefs2, "useComposedRefs");
-  }
-});
-
-// node_modules/@tamagui/compose-refs/dist/cjs/index.js
-var require_cjs14 = __commonJS({
-  "node_modules/@tamagui/compose-refs/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_compose_refs(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/collection/dist/cjs/Collection.js
-var require_Collection = __commonJS({
-  "node_modules/@tamagui/collection/dist/cjs/Collection.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var Collection_exports = {};
-    __export2(Collection_exports, {
-      createCollection: () => createCollection2
-    });
-    module2.exports = __toCommonJS2(Collection_exports);
-    var import_compose_refs23 = require_cjs14();
-    var import_constants44 = require_cjs();
-    var import_core53 = require("@tamagui/core");
-    var import_react49 = __toESM2(require("react"));
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    function createCollection2(name) {
-      const { Provider: CollectionProviderImpl, useStyledContext: useCollectionContext } = (0, import_core53.createStyledContext)({
-        collectionRef: { current: null },
-        itemMap: /* @__PURE__ */ new Map()
-      }), CollectionProvider = /* @__PURE__ */ __name((props) => {
-        const { __scopeCollection, children } = props, ref = import_react49.default.useRef(null), itemMap = import_react49.default.useRef(/* @__PURE__ */ new Map()).current;
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          CollectionProviderImpl,
-          {
-            scope: __scopeCollection,
-            itemMap,
-            collectionRef: ref,
-            children
-          }
-        );
-      }, "CollectionProvider");
-      CollectionProvider.displayName = "CollectionProvider";
-      const COLLECTION_SLOT_NAME = name + "CollectionSlot", CollectionSlot = import_react49.default.forwardRef((props, forwardedRef) => {
-        const { __scopeCollection, children } = props, context = useCollectionContext(__scopeCollection), composedRefs = (0, import_compose_refs23.useComposedRefs)(forwardedRef, context.collectionRef);
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_core53.Slot, { ref: composedRefs, children });
-      });
-      CollectionSlot.displayName = COLLECTION_SLOT_NAME;
-      const ITEM_SLOT_NAME = name + "CollectionItemSlot", ITEM_DATA_ATTR = "data-collection-item", CollectionItemSlot = import_react49.default.forwardRef((props, forwardedRef) => {
-        const { __scopeCollection, children, ...itemData } = props, ref = import_react49.default.useRef(null), composedRefs = (0, import_compose_refs23.useComposedRefs)(forwardedRef, ref), context = useCollectionContext(__scopeCollection);
-        return import_react49.default.useEffect(() => (context.itemMap.set(ref, { ref, ...itemData }), () => void context.itemMap.delete(ref))), /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_core53.Slot, { [ITEM_DATA_ATTR]: "", ref: composedRefs, children });
-      });
-      CollectionItemSlot.displayName = ITEM_SLOT_NAME;
-      function useCollection2(__scopeCollection) {
-        const context = useCollectionContext(__scopeCollection);
-        return import_react49.default.useCallback(() => {
-          if (!import_constants44.isWeb)
-            return [];
-          const collectionNode = context.collectionRef.current;
-          if (!collectionNode)
-            return [];
-          const orderedNodes = Array.from(
-            collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`)
-          );
-          return Array.from(context.itemMap.values()).sort(
-            (a, b) => orderedNodes.indexOf(a.ref.current) - orderedNodes.indexOf(b.ref.current)
-          );
-        }, [context.collectionRef, context.itemMap]);
-      }
-      __name(useCollection2, "useCollection");
-      return [
-        { Provider: CollectionProvider, Slot: CollectionSlot, ItemSlot: CollectionItemSlot },
-        useCollection2
-      ];
-    }
-    __name(createCollection2, "createCollection");
-  }
-});
-
-// node_modules/@tamagui/collection/dist/cjs/index.js
-var require_cjs15 = __commonJS({
-  "node_modules/@tamagui/collection/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_Collection(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/getElevation.js
-var require_getElevation = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/getElevation.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var getElevation_exports = {};
-    __export2(getElevation_exports, {
-      getElevation: () => getElevation2,
-      getSizedElevation: () => getSizedElevation2
-    });
-    module2.exports = __toCommonJS2(getElevation_exports);
-    var import_core53 = require("@tamagui/core");
-    var getElevation2 = /* @__PURE__ */ __name((size4, extras) => {
-      if (!size4)
-        return;
-      const { tokens: tokens3 } = extras, token = tokens3.size[size4], sizeNum = (0, import_core53.isVariable)(token) ? +token.val : size4;
-      return getSizedElevation2(sizeNum, extras);
-    }, "getElevation");
-    var getSizedElevation2 = /* @__PURE__ */ __name((val, { theme, tokens: tokens3 }) => {
-      let num = 0;
-      if (val === true) {
-        const val2 = (0, import_core53.getVariableValue)(tokens3.size.true);
-        typeof val2 == "number" ? num = val2 : num = 10;
-      } else
-        num = +val;
-      if (num === 0)
-        return;
-      const [height, shadowRadius] = [Math.round(num / 4 + 1), Math.round(num / 2 + 2)];
-      return {
-        shadowColor: theme.shadowColor,
-        shadowRadius,
-        shadowOffset: { height, width: 0 },
-        ...import_core53.isAndroid ? {
-          elevationAndroid: 2 * height
-        } : {}
-      };
-    }, "getSizedElevation");
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/Stacks.js
-var require_Stacks = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/Stacks.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var Stacks_exports = {};
-    __export2(Stacks_exports, {
-      XStack: () => XStack2,
-      YStack: () => YStack2,
-      ZStack: () => ZStack2,
-      fullscreenStyle: () => fullscreenStyle2
-    });
-    module2.exports = __toCommonJS2(Stacks_exports);
-    var import_core53 = require("@tamagui/core");
-    var import_getElevation3 = require_getElevation();
-    var fullscreenStyle2 = {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0
-    };
-    var getInset2 = /* @__PURE__ */ __name((val) => val && typeof val == "object" ? val : {
-      top: val,
-      left: val,
-      bottom: val,
-      right: val
-    }, "getInset");
-    var variants3 = {
-      fullscreen: {
-        true: fullscreenStyle2
-      },
-      elevation: {
-        "...size": import_getElevation3.getElevation,
-        ":number": import_getElevation3.getElevation
-      },
-      inset: getInset2
-    };
-    var YStack2 = (0, import_core53.styled)(import_core53.View, {
-      flexDirection: "column",
-      variants: variants3
-    });
-    YStack2.displayName = "YStack";
-    var XStack2 = (0, import_core53.styled)(import_core53.View, {
-      flexDirection: "row",
-      variants: variants3
-    });
-    XStack2.displayName = "XStack";
-    var ZStack2 = (0, import_core53.styled)(
-      YStack2,
-      {
-        position: "relative"
-      },
-      {
-        neverFlatten: true,
-        isZStack: true
-      }
-    );
-    ZStack2.displayName = "ZStack";
-  }
-});
-
-// node_modules/@tamagui/get-token/dist/cjs/index.js
-var require_cjs16 = __commonJS({
-  "node_modules/@tamagui/get-token/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      getRadius: () => getRadius,
-      getSize: () => getSize10,
-      getSpace: () => getSpace5,
-      getTokenRelative: () => getTokenRelative,
-      stepTokenUpOrDown: () => stepTokenUpOrDown
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var import_web15 = require("@tamagui/core");
-    var defaultOptions = {
-      shift: 0,
-      bounds: [0]
-    };
-    var getSize10 = /* @__PURE__ */ __name((size4, options) => getTokenRelative("size", size4, options), "getSize");
-    var getSpace5 = /* @__PURE__ */ __name((space2, options) => getTokenRelative("space", space2, options), "getSpace");
-    var getRadius = /* @__PURE__ */ __name((radius2, options) => getTokenRelative("radius", radius2, options), "getRadius");
-    var cacheVariables = {};
-    var cacheWholeVariables = {};
-    var cacheKeys = {};
-    var cacheWholeKeys = {};
-    var stepTokenUpOrDown = /* @__PURE__ */ __name((type, current, options = defaultOptions) => {
-      var _a, _b;
-      const tokens3 = (0, import_web15.getTokens)({ prefixed: true })[type];
-      if (!(type in cacheVariables)) {
-        cacheKeys[type] = [], cacheVariables[type] = [], cacheWholeKeys[type] = [], cacheWholeVariables[type] = [];
-        const sorted = Object.keys(tokens3).map((k) => tokens3[k]).sort((a, b) => a.val - b.val);
-        for (const token of sorted)
-          cacheKeys[type].push(token.key), cacheVariables[type].push(token);
-        const sortedExcludingHalfSteps = sorted.filter((x) => !x.key.endsWith(".5"));
-        for (const token of sortedExcludingHalfSteps)
-          cacheWholeKeys[type].push(token.key), cacheWholeVariables[type].push(token);
-      }
-      const isString = typeof current == "string", tokensOrdered = (options.excludeHalfSteps ? isString ? cacheWholeKeys : cacheWholeVariables : isString ? cacheKeys : cacheVariables)[type], min2 = ((_a = options.bounds) == null ? void 0 : _a[0]) ?? 0, max2 = ((_b = options.bounds) == null ? void 0 : _b[1]) ?? tokensOrdered.length - 1, currentIndex = tokensOrdered.indexOf(current);
-      let shift3 = options.shift || 0;
-      shift3 && (current === "$true" || (0, import_web15.isVariable)(current) && current.name === "true") && (shift3 += shift3 > 0 ? 1 : -1);
-      const index3 = Math.min(max2, Math.max(min2, currentIndex + shift3)), found = tokensOrdered[index3];
-      return (typeof found == "string" ? tokens3[found] : found) || tokens3.$true;
-    }, "stepTokenUpOrDown");
-    var getTokenRelative = stepTokenUpOrDown;
-  }
-});
-
-// node_modules/@tamagui/get-button-sized/dist/cjs/index.js
-var require_cjs17 = __commonJS({
-  "node_modules/@tamagui/get-button-sized/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      getButtonSized: () => getButtonSized6
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var import_get_token14 = require_cjs16();
-    var getButtonSized6 = /* @__PURE__ */ __name((val, { tokens: tokens3, props }) => {
-      if (!val || props.circular)
-        return;
-      if (typeof val == "number")
-        return {
-          paddingHorizontal: val * 0.25,
-          height: val,
-          borderRadius: props.circular ? 1e5 : val * 0.2
-        };
-      const xSize = (0, import_get_token14.getSpace)(val), radiusToken = tokens3.radius[val] ?? tokens3.radius.$true;
-      return {
-        paddingHorizontal: xSize,
-        height: val,
-        borderRadius: props.circular ? 1e5 : radiusToken
-      };
-    }, "getButtonSized");
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/variants.js
-var require_variants = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/variants.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var variants_exports = {};
-    __export2(variants_exports, {
-      bordered: () => bordered2,
-      circular: () => circular2,
-      elevate: () => elevate2,
-      focusTheme: () => focusTheme2,
-      hoverTheme: () => hoverTheme2,
-      padded: () => padded2,
-      pressTheme: () => pressTheme2,
-      radiused: () => radiused2
-    });
-    module2.exports = __toCommonJS2(variants_exports);
-    var import_getElevation3 = require_getElevation();
-    var elevate2 = {
-      true: (_, extras) => (0, import_getElevation3.getElevation)(extras.props.size, extras)
-    };
-    var bordered2 = /* @__PURE__ */ __name((val, { props }) => ({
-      // TODO size it with size in '...size'
-      borderWidth: typeof val == "number" ? val : 1,
-      borderColor: "$borderColor",
-      ...props.hoverTheme && {
-        hoverStyle: {
-          borderColor: "$borderColorHover"
-        }
-      },
-      ...props.pressTheme && {
-        pressStyle: {
-          borderColor: "$borderColorPress"
-        }
-      },
-      ...props.focusTheme && {
-        focusStyle: {
-          borderColor: "$borderColorFocus"
-        }
-      }
-    }), "bordered");
-    var padded2 = {
-      true: (_, extras) => {
-        const { tokens: tokens3, props } = extras;
-        return {
-          padding: tokens3.space[props.size] || tokens3.space.$true
-        };
-      }
-    };
-    var radiused2 = {
-      true: (_, extras) => {
-        const { tokens: tokens3, props } = extras;
-        return {
-          borderRadius: tokens3.radius[props.size] || tokens3.radius.$true
-        };
-      }
-    };
-    var circularStyle2 = {
-      borderRadius: 1e5,
-      padding: 0
-    };
-    var circular2 = {
-      true: (_, { props, tokens: tokens3 }) => {
-        if (!("size" in props))
-          return circularStyle2;
-        const size4 = typeof props.size == "number" ? props.size : tokens3.size[props.size];
-        return {
-          ...circularStyle2,
-          width: size4,
-          height: size4,
-          maxWidth: size4,
-          maxHeight: size4,
-          minWidth: size4,
-          minHeight: size4
-        };
-      }
-    };
-    var hoverTheme2 = {
-      true: {
-        hoverStyle: {
-          backgroundColor: "$backgroundHover",
-          borderColor: "$borderColorHover"
-        }
-      },
-      false: {}
-    };
-    var pressTheme2 = {
-      true: {
-        cursor: "pointer",
-        pressStyle: {
-          backgroundColor: "$backgroundPress",
-          borderColor: "$borderColorPress"
-        }
-      },
-      false: {}
-    };
-    var focusTheme2 = {
-      true: {
-        focusStyle: {
-          backgroundColor: "$backgroundFocus",
-          borderColor: "$borderColorFocus"
-        }
-      },
-      false: {}
-    };
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/SizableStack.js
-var require_SizableStack = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/SizableStack.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var SizableStack_exports = {};
-    __export2(SizableStack_exports, {
-      SizableStack: () => SizableStack2
-    });
-    module2.exports = __toCommonJS2(SizableStack_exports);
-    var import_core53 = require("@tamagui/core");
-    var import_get_button_sized6 = require_cjs17();
-    var import_Stacks3 = require_Stacks();
-    var import_variants3 = require_variants();
-    var SizableStack2 = (0, import_core53.styled)(import_Stacks3.XStack, {
-      name: "SizableStack",
-      variants: {
-        unstyled: {
-          true: {
-            hoverTheme: false,
-            pressTheme: false,
-            focusTheme: false,
-            elevate: false,
-            bordered: false
-          }
-        },
-        hoverTheme: import_variants3.hoverTheme,
-        pressTheme: import_variants3.pressTheme,
-        focusTheme: import_variants3.focusTheme,
-        circular: import_variants3.circular,
-        elevate: import_variants3.elevate,
-        bordered: import_variants3.bordered,
-        size: {
-          "...size": (val, extras) => (0, import_get_button_sized6.getButtonSized)(val, extras)
-        }
-      }
-    });
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/ThemeableStack.js
-var require_ThemeableStack = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/ThemeableStack.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var ThemeableStack_exports = {};
-    __export2(ThemeableStack_exports, {
-      ThemeableStack: () => ThemeableStack2,
-      themeableVariants: () => themeableVariants2
-    });
-    module2.exports = __toCommonJS2(ThemeableStack_exports);
-    var import_core53 = require("@tamagui/core");
-    var import_Stacks3 = require_Stacks();
-    var import_variants3 = require_variants();
-    var chromelessStyle2 = {
-      backgroundColor: "transparent",
-      borderColor: "transparent",
-      shadowColor: "transparent",
-      hoverStyle: {
-        borderColor: "transparent"
-      }
-    };
-    var themeableVariants2 = {
-      backgrounded: {
-        true: {
-          backgroundColor: "$background"
-        }
-      },
-      radiused: import_variants3.radiused,
-      hoverTheme: import_variants3.hoverTheme,
-      pressTheme: import_variants3.pressTheme,
-      focusTheme: import_variants3.focusTheme,
-      circular: import_variants3.circular,
-      padded: import_variants3.padded,
-      elevate: import_variants3.elevate,
-      bordered: import_variants3.bordered,
-      transparent: {
-        true: {
-          backgroundColor: "transparent"
-        }
-      },
-      chromeless: {
-        true: chromelessStyle2,
-        all: {
-          ...chromelessStyle2,
-          hoverStyle: chromelessStyle2,
-          pressStyle: chromelessStyle2,
-          focusStyle: chromelessStyle2
-        }
-      }
-    };
-    var ThemeableStack2 = (0, import_core53.styled)(import_Stacks3.YStack, {
-      variants: themeableVariants2
-    });
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/NestingContext.js
-var require_NestingContext = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/NestingContext.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var NestingContext_exports = {};
-    __export2(NestingContext_exports, {
-      ButtonNestingContext: () => ButtonNestingContext2
-    });
-    module2.exports = __toCommonJS2(NestingContext_exports);
-    var import_react49 = require("react");
-    var ButtonNestingContext2 = (0, import_react49.createContext)(false);
-  }
-});
-
-// node_modules/@tamagui/stacks/dist/cjs/index.js
-var require_cjs18 = __commonJS({
-  "node_modules/@tamagui/stacks/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_Stacks(), module2.exports);
-    __reExport2(src_exports, require_SizableStack(), module2.exports);
-    __reExport2(src_exports, require_ThemeableStack(), module2.exports);
-    __reExport2(src_exports, require_NestingContext(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/get-font-sized/dist/cjs/index.js
-var require_cjs19 = __commonJS({
-  "node_modules/@tamagui/get-font-sized/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    __export2(src_exports, {
-      getFontSized: () => getFontSized4
-    });
-    module2.exports = __toCommonJS2(src_exports);
-    var import_core53 = require("@tamagui/core");
-    var getFontSized4 = /* @__PURE__ */ __name((sizeTokenIn = "$true", { font, fontFamily, props }) => {
-      var _a, _b, _c, _d, _e, _f;
-      if (!font) {
-        process.env.NODE_ENV === "development" && console.warn(
-          "Warning: No font found in props",
-          { ...props },
-          'For a sized text component, you either need to set fontFamily directly, or through the "defaultFont" setting in your createTamagui config.'
-        );
-        return;
-      }
-      const sizeToken = sizeTokenIn === "$true" ? getDefaultSizeToken(font) : sizeTokenIn, fontSize = font.size[sizeToken], lineHeight = (_a = font.lineHeight) == null ? void 0 : _a[sizeToken], fontWeight = (_b = font.weight) == null ? void 0 : _b[sizeToken], letterSpacing = (_c = font.letterSpacing) == null ? void 0 : _c[sizeToken], textTransform = (_d = font.transform) == null ? void 0 : _d[sizeToken], fontStyle = props.fontStyle ?? ((_e = font.style) == null ? void 0 : _e[sizeToken]), style = {
-        color: props.color ?? ((_f = font.color) == null ? void 0 : _f[sizeToken]),
-        fontStyle,
-        textTransform,
-        fontFamily,
-        fontWeight,
-        letterSpacing,
-        fontSize,
-        lineHeight
-      };
-      return process.env.NODE_ENV === "development" && props.debug && props.debug === "verbose" && (console.groupCollapsed("  \u{1F539} getFontSized", sizeTokenIn, sizeToken), console.info({ style, props, font }), console.groupEnd()), style;
-    }, "getFontSized");
-    var cache = /* @__PURE__ */ new WeakMap();
-    function getDefaultSizeToken(font) {
-      if (typeof font == "object" && cache.has(font))
-        return cache.get(font);
-      const sizeTokens = "$true" in font.size ? font.size : (0, import_core53.getTokens)().size, sizeDefault = sizeTokens.$true, sizeDefaultSpecific = sizeDefault ? Object.keys(sizeTokens).find(
-        (x) => x !== "$true" && sizeTokens[x].val === sizeDefault.val
-      ) : null;
-      return !sizeDefault || !sizeDefaultSpecific ? (process.env.NODE_ENV === "development" && console.warn(`No default size is set in your tokens for the "true" key, fonts will be inconsistent.
-
-      Fix this by having consistent tokens across fonts and sizes and setting a true key for your size tokens, or
-      set true keys for all your font tokens: "size", "lineHeight", "fontStyle", etc.`), Object.keys(font.size)[3]) : (cache.set(font, sizeDefaultSpecific), sizeDefaultSpecific);
-    }
-    __name(getDefaultSizeToken, "getDefaultSizeToken");
-  }
-});
-
-// node_modules/@tamagui/text/dist/cjs/SizableText.js
-var require_SizableText = __commonJS({
-  "node_modules/@tamagui/text/dist/cjs/SizableText.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var SizableText_exports = {};
-    __export2(SizableText_exports, {
-      SizableText: () => SizableText2
-    });
-    module2.exports = __toCommonJS2(SizableText_exports);
-    var import_get_font_sized4 = require_cjs19();
-    var import_web15 = require("@tamagui/core");
-    var variants3 = {
-      unstyled: {
-        false: {
-          size: "$true",
-          color: "$color"
-        }
-      },
-      size: import_get_font_sized4.getFontSized
-    };
-    variants3.fontFamily = {
-      "...": (_, extras) => {
-        const size4 = extras.props.size || "$true";
-        return (0, import_get_font_sized4.getFontSized)(size4, extras);
-      }
-    };
-    var SizableText2 = (0, import_web15.styled)(import_web15.Text, {
-      name: "SizableText",
-      fontFamily: "$body",
-      variants: variants3,
-      defaultVariants: {
-        unstyled: process.env.TAMAGUI_HEADLESS === "1"
-      }
-    });
-  }
-});
-
-// node_modules/@tamagui/text/dist/cjs/Paragraph.js
-var require_Paragraph = __commonJS({
-  "node_modules/@tamagui/text/dist/cjs/Paragraph.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var Paragraph_exports = {};
-    __export2(Paragraph_exports, {
-      Paragraph: () => Paragraph2
-    });
-    module2.exports = __toCommonJS2(Paragraph_exports);
-    var import_web15 = require("@tamagui/core");
-    var import_SizableText2 = require_SizableText();
-    var Paragraph2 = (0, import_web15.styled)(import_SizableText2.SizableText, {
-      name: "Paragraph",
-      tag: "p",
-      userSelect: "auto",
-      color: "$color",
-      size: "$true"
-    });
-  }
-});
-
-// node_modules/@tamagui/text/dist/cjs/Headings.js
-var require_Headings = __commonJS({
-  "node_modules/@tamagui/text/dist/cjs/Headings.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var Headings_exports = {};
-    __export2(Headings_exports, {
-      H1: () => H12,
-      H2: () => H22,
-      H3: () => H32,
-      H4: () => H42,
-      H5: () => H52,
-      H6: () => H62,
-      Heading: () => Heading2
-    });
-    module2.exports = __toCommonJS2(Headings_exports);
-    var import_web15 = require("@tamagui/core");
-    var import_Paragraph2 = require_Paragraph();
-    var Heading2 = (0, import_web15.styled)(import_Paragraph2.Paragraph, {
-      tag: "span",
-      name: "Heading",
-      accessibilityRole: "header",
-      fontFamily: "$heading",
-      size: "$8",
-      margin: 0
-    });
-    var H12 = (0, import_web15.styled)(Heading2, {
-      name: "H1",
-      tag: "h1",
-      size: "$10"
-    });
-    var H22 = (0, import_web15.styled)(Heading2, {
-      name: "H2",
-      tag: "h2",
-      size: "$9"
-    });
-    var H32 = (0, import_web15.styled)(Heading2, {
-      name: "H3",
-      tag: "h3",
-      size: "$8"
-    });
-    var H42 = (0, import_web15.styled)(Heading2, {
-      name: "H4",
-      tag: "h4",
-      size: "$7"
-    });
-    var H52 = (0, import_web15.styled)(Heading2, {
-      name: "H5",
-      tag: "h5",
-      size: "$6"
-    });
-    var H62 = (0, import_web15.styled)(Heading2, {
-      name: "H6",
-      tag: "h6",
-      size: "$5"
-    });
-  }
-});
-
-// node_modules/@tamagui/text/dist/cjs/wrapChildrenInText.js
-var require_wrapChildrenInText = __commonJS({
-  "node_modules/@tamagui/text/dist/cjs/wrapChildrenInText.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var wrapChildrenInText_exports = {};
-    __export2(wrapChildrenInText_exports, {
-      wrapChildrenInText: () => wrapChildrenInText2
-    });
-    module2.exports = __toCommonJS2(wrapChildrenInText_exports);
-    var import_react49 = __toESM2(require("react"));
-    var import_jsx_runtime56 = (
-      // so "data-disable-theme" is a hack to fix themeInverse, don't ask me why
-      require("react/jsx-runtime")
-    );
-    function wrapChildrenInText2(TextComponent, propsIn, extraProps) {
-      const {
-        children,
-        textProps,
-        size: size4,
-        noTextWrap,
-        color: color2,
-        fontFamily,
-        fontSize,
-        fontWeight,
-        letterSpacing,
-        textAlign,
-        fontStyle,
-        maxFontSizeMultiplier
-      } = propsIn;
-      if (noTextWrap || !children)
-        return [children];
-      const props = {
-        ...extraProps
-      };
-      return color2 && (props.color = color2), fontFamily && (props.fontFamily = fontFamily), fontSize && (props.fontSize = fontSize), fontWeight && (props.fontWeight = fontWeight), letterSpacing && (props.letterSpacing = letterSpacing), textAlign && (props.textAlign = textAlign), size4 && (props.size = size4), fontStyle && (props.fontStyle = fontStyle), maxFontSizeMultiplier && (props.maxFontSizeMultiplier = maxFontSizeMultiplier), import_react49.default.Children.toArray(children).map((child, index3) => typeof child == "string" ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextComponent, { ...props, ...textProps, children: child }, index3) : child);
-    }
-    __name(wrapChildrenInText2, "wrapChildrenInText");
-  }
-});
-
-// node_modules/@tamagui/text/dist/cjs/types.js
-var require_types3 = __commonJS({
-  "node_modules/@tamagui/text/dist/cjs/types.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var types_exports = {};
-    module2.exports = __toCommonJS2(types_exports);
-  }
-});
-
-// node_modules/@tamagui/text/dist/cjs/index.js
-var require_cjs20 = __commonJS({
-  "node_modules/@tamagui/text/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_SizableText(), module2.exports);
-    __reExport2(src_exports, require_Paragraph(), module2.exports);
-    __reExport2(src_exports, require_Headings(), module2.exports);
-    __reExport2(src_exports, require_wrapChildrenInText(), module2.exports);
-    __reExport2(src_exports, require_types3(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/use-direction/dist/cjs/useDirection.js
-var require_useDirection = __commonJS({
-  "node_modules/@tamagui/use-direction/dist/cjs/useDirection.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var useDirection_exports = {};
-    __export2(useDirection_exports, {
-      DirectionProvider: () => DirectionProvider,
-      Provider: () => Provider,
-      useDirection: () => useDirection2
-    });
-    module2.exports = __toCommonJS2(useDirection_exports);
-    var React43 = __toESM2(require("react"));
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    var DirectionContext2 = React43.createContext(void 0);
-    var DirectionProvider = /* @__PURE__ */ __name((props) => {
-      const { dir, children } = props;
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(DirectionContext2.Provider, { value: dir, children });
-    }, "DirectionProvider");
-    function useDirection2(localDir) {
-      const globalDir = React43.useContext(DirectionContext2);
-      return localDir || globalDir || "ltr";
-    }
-    __name(useDirection2, "useDirection");
-    var Provider = DirectionProvider;
-  }
-});
-
-// node_modules/@tamagui/use-direction/dist/cjs/index.js
-var require_cjs21 = __commonJS({
-  "node_modules/@tamagui/use-direction/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_useDirection(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/accordion/dist/cjs/Accordion.js
-var require_Accordion = __commonJS({
-  "node_modules/@tamagui/accordion/dist/cjs/Accordion.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var Accordion_exports = {};
-    __export2(Accordion_exports, {
-      Accordion: () => Accordion
-    });
-    module2.exports = __toCommonJS2(Accordion_exports);
-    var import_collapsible = require_cjs13();
-    var import_collection2 = require_cjs15();
-    var import_compose_refs23 = require_cjs14();
-    var import_constants44 = require_cjs();
-    var import_helpers25 = require_cjs10();
-    var import_stacks25 = require_cjs18();
-    var import_text8 = require_cjs20();
-    var import_use_controllable_state15 = require_cjs12();
-    var import_use_direction5 = require_cjs21();
-    var import_web15 = require("@tamagui/core");
-    var React43 = __toESM2(require("react"));
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    var ACCORDION_NAME = "Accordion";
-    var ACCORDION_KEYS = ["Home", "End", "ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"];
-    var [Collection2, useCollection2] = (0, import_collection2.createCollection)(ACCORDION_NAME);
-    var ACCORDION_CONTEXT = "Accordion";
-    var AccordionComponent = React43.forwardRef((props, forwardedRef) => {
-      const { type, ...accordionProps } = props, singleProps = accordionProps, multipleProps = accordionProps;
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Collection2.Provider, { __scopeCollection: props.__scopeAccordion || ACCORDION_CONTEXT, children: type === "multiple" ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImplMultiple, { ...multipleProps, ref: forwardedRef }) : /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImplSingle, { ...singleProps, ref: forwardedRef }) });
-    });
-    AccordionComponent.displayName = ACCORDION_NAME;
-    AccordionComponent.propTypes = {
-      type(props) {
-        const value = props.value || props.defaultValue;
-        return props.type && !["single", "multiple"].includes(props.type) ? new Error(
-          "Invalid prop `type` supplied to `Accordion`. Expected one of `single | multiple`."
-        ) : props.type === "multiple" && typeof value == "string" ? new Error(
-          "Invalid prop `type` supplied to `Accordion`. Expected `single` when `defaultValue` or `value` is type `string`."
-        ) : props.type === "single" && Array.isArray(value) ? new Error(
-          "Invalid prop `type` supplied to `Accordion`. Expected `multiple` when `defaultValue` or `value` is type `string[]`."
-        ) : null;
-      }
-    };
-    var { Provider: AccordionValueProvider, useStyledContext: useAccordionValueContext } = (0, import_web15.createStyledContext)();
-    var {
-      Provider: AccordionCollapsibleProvider,
-      useStyledContext: useAccordionCollapsibleContext
-    } = (0, import_web15.createStyledContext)();
-    var AccordionImplSingle = React43.forwardRef((props, forwardedRef) => {
-      const {
-        value: valueProp,
-        defaultValue: defaultValue2,
-        control,
-        onValueChange = /* @__PURE__ */ __name(() => {
-        }, "onValueChange"),
-        collapsible = false,
-        ...accordionSingleProps
-      } = props, [value, setValue] = (0, import_use_controllable_state15.useControllableState)({
-        prop: valueProp,
-        defaultProp: defaultValue2 || "",
-        onChange: onValueChange
-      });
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-        AccordionValueProvider,
-        {
-          scope: props.__scopeAccordion,
-          value: value ? [value] : [],
-          onItemOpen: setValue,
-          onItemClose: React43.useCallback(
-            () => collapsible && setValue(""),
-            [setValue, collapsible]
-          ),
-          children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-            AccordionCollapsibleProvider,
-            {
-              scope: props.__scopeAccordion,
-              collapsible,
-              children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImpl, { ...accordionSingleProps, ref: forwardedRef })
-            }
-          )
-        }
-      );
-    });
-    var AccordionImplMultiple = React43.forwardRef((props, forwardedRef) => {
-      const {
-        value: valueProp,
-        defaultValue: defaultValue2,
-        onValueChange = /* @__PURE__ */ __name(() => {
-        }, "onValueChange"),
-        ...accordionMultipleProps
-      } = props, [value, setValue] = (0, import_use_controllable_state15.useControllableState)({
-        prop: valueProp,
-        defaultProp: defaultValue2 || [],
-        onChange: onValueChange
-      }), handleItemOpen = React43.useCallback(
-        (itemValue) => setValue((prevValue = []) => [...prevValue, itemValue]),
-        [setValue]
-      ), handleItemClose = React43.useCallback(
-        (itemValue) => setValue((prevValue = []) => prevValue.filter((value2) => value2 !== itemValue)),
-        [setValue]
-      );
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-        AccordionValueProvider,
-        {
-          scope: props.__scopeAccordion,
-          value: value || [],
-          onItemOpen: handleItemOpen,
-          onItemClose: handleItemClose,
-          children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionCollapsibleProvider, { scope: props.__scopeAccordion, collapsible: true, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImpl, { ...accordionMultipleProps, ref: forwardedRef }) })
-        }
-      );
-    });
-    var { Provider: AccordionImplProvider, useStyledContext: useAccordionContext } = (0, import_web15.createStyledContext)();
-    var AccordionImpl = React43.forwardRef(
-      (props, forwardedRef) => {
-        const {
-          __scopeAccordion,
-          disabled,
-          dir,
-          orientation = "vertical",
-          ...accordionProps
-        } = props, accordionRef = React43.useRef(null), composedRef = (0, import_compose_refs23.useComposedRefs)(accordionRef, forwardedRef), getItems = useCollection2(__scopeAccordion || ACCORDION_CONTEXT), isDirectionLTR = (0, import_use_direction5.useDirection)(dir) === "ltr", handleKeyDown = (0, import_helpers25.composeEventHandlers)(
-          props.onKeyDown,
-          (event) => {
-            var _a;
-            if (!ACCORDION_KEYS.includes(event.key))
-              return;
-            const target = event.target, triggerCollection = getItems().filter((item) => {
-              var _a2;
-              return !((_a2 = item.ref.current) == null ? void 0 : _a2.disabled);
-            }), triggerIndex = triggerCollection.findIndex(
-              (item) => item.ref.current === target
-            ), triggerCount = triggerCollection.length;
-            if (triggerIndex === -1)
-              return;
-            event.preventDefault();
-            let nextIndex = triggerIndex;
-            const homeIndex = 0, endIndex = triggerCount - 1, moveNext = /* @__PURE__ */ __name(() => {
-              nextIndex = triggerIndex + 1, nextIndex > endIndex && (nextIndex = homeIndex);
-            }, "moveNext"), movePrev = /* @__PURE__ */ __name(() => {
-              nextIndex = triggerIndex - 1, nextIndex < homeIndex && (nextIndex = endIndex);
-            }, "movePrev");
-            switch (event.key) {
-              case "Home":
-                nextIndex = homeIndex;
-                break;
-              case "End":
-                nextIndex = endIndex;
-                break;
-              case "ArrowRight":
-                orientation === "horizontal" && (isDirectionLTR ? moveNext() : movePrev());
-                break;
-              case "ArrowDown":
-                orientation === "vertical" && moveNext();
-                break;
-              case "ArrowLeft":
-                orientation === "horizontal" && (isDirectionLTR ? movePrev() : moveNext());
-                break;
-              case "ArrowUp":
-                orientation === "vertical" && movePrev();
-                break;
-            }
-            const clampedIndex = nextIndex % triggerCount;
-            (_a = triggerCollection[clampedIndex].ref.current) == null ? void 0 : _a.focus();
-          }
-        );
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          AccordionImplProvider,
-          {
-            scope: __scopeAccordion,
-            disabled,
-            direction: dir,
-            orientation,
-            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Collection2.Slot, { __scopeCollection: __scopeAccordion || ACCORDION_CONTEXT, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-              import_stacks25.YStack,
-              {
-                "data-orientation": orientation,
-                ref: composedRef,
-                ...accordionProps,
-                ...import_constants44.isWeb && {
-                  onKeyDown: handleKeyDown
-                }
-              }
-            ) })
-          }
-        );
-      }
-    );
-    var ITEM_NAME3 = "AccordionItem";
-    var { Provider: AccordionItemProvider, useStyledContext: useAccordionItemContext } = (0, import_web15.createStyledContext)();
-    var AccordionItem = React43.forwardRef(
-      (props, forwardedRef) => {
-        const { __scopeAccordion, value, ...accordionItemProps } = props, accordionContext = useAccordionContext(__scopeAccordion), valueContext = useAccordionValueContext(__scopeAccordion), triggerId = React43.useId(), open = value && valueContext.value.includes(value) || false, disabled = accordionContext.disabled || props.disabled;
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          AccordionItemProvider,
-          {
-            scope: __scopeAccordion,
-            open,
-            disabled,
-            triggerId,
-            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-              import_collapsible.Collapsible,
-              {
-                "data-orientation": accordionContext.orientation,
-                "data-state": open ? "open" : "closed",
-                __scopeCollapsible: __scopeAccordion || ACCORDION_CONTEXT,
-                ...accordionItemProps,
-                ref: forwardedRef,
-                disabled,
-                open,
-                onOpenChange: (open2) => {
-                  open2 ? valueContext.onItemOpen(value) : valueContext.onItemClose(value);
-                }
-              }
-            )
-          }
-        );
-      }
-    );
-    AccordionItem.displayName = ITEM_NAME3;
-    var HEADER_NAME = "AccordionHeader";
-    var AccordionHeader = React43.forwardRef(
-      (props, forwardedRef) => {
-        const { __scopeAccordion, ...headerProps } = props, accordionContext = useAccordionContext(__scopeAccordion), itemContext = useAccordionItemContext(__scopeAccordion);
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-          import_text8.H1,
-          {
-            "data-orientation": accordionContext.orientation,
-            "data-state": getState6(itemContext.open),
-            "data-disabled": itemContext.disabled ? "" : void 0,
-            ...headerProps,
-            ref: forwardedRef
-          }
-        );
-      }
-    );
-    AccordionHeader.displayName = HEADER_NAME;
-    var AccordionTriggerFrame = (0, import_web15.styled)(import_collapsible.Collapsible.Trigger, {
-      variants: {
-        unstyled: {
-          false: {
-            cursor: "pointer",
-            backgroundColor: "$background",
-            borderColor: "$borderColor",
-            borderWidth: 1,
-            padding: "$true",
-            hoverStyle: {
-              backgroundColor: "$backgroundHover"
-            },
-            focusStyle: {
-              backgroundColor: "$backgroundFocus"
-            },
-            pressStyle: {
-              backgroundColor: "$backgroundPress"
-            }
-          }
-        }
-      },
-      defaultVariants: {
-        unstyled: process.env.TAMAGUI_HEADLESS === "1"
-      }
-    });
-    var AccordionTrigger = AccordionTriggerFrame.styleable(function(props, forwardedRef) {
-      const { __scopeAccordion, ...triggerProps } = props, accordionContext = useAccordionContext(__scopeAccordion), itemContext = useAccordionItemContext(__scopeAccordion), collapsibleContext = useAccordionCollapsibleContext(__scopeAccordion);
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Collection2.ItemSlot, { __scopeCollection: __scopeAccordion || ACCORDION_CONTEXT, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-        AccordionTriggerFrame,
-        {
-          __scopeCollapsible: __scopeAccordion || ACCORDION_CONTEXT,
-          "aria-disabled": itemContext.open && !collapsibleContext.collapsible || void 0,
-          "data-orientation": accordionContext.orientation,
-          id: itemContext.triggerId,
-          ...triggerProps,
-          ref: forwardedRef
-        }
-      ) });
-    });
-    var AccordionContentFrame = (0, import_web15.styled)(import_collapsible.Collapsible.Content, {
-      variants: {
-        unstyled: {
-          false: {
-            padding: "$true",
-            backgroundColor: "$background"
-          }
-        }
-      },
-      defaultVariants: {
-        unstyled: process.env.TAMAGUI_HEADLESS === "1"
-      }
-    });
-    var AccordionContent = AccordionContentFrame.styleable(function(props, forwardedRef) {
-      const { __scopeAccordion, ...contentProps } = props, accordionContext = useAccordionContext(__scopeAccordion), itemContext = useAccordionItemContext(__scopeAccordion);
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
-        AccordionContentFrame,
-        {
-          role: "region",
-          "aria-labelledby": itemContext.triggerId,
-          "data-orientation": accordionContext.orientation,
-          __scopeCollapsible: __scopeAccordion || ACCORDION_CONTEXT,
-          ...contentProps,
-          ref: forwardedRef
-        }
-      );
-    });
-    function getState6(open) {
-      return open ? "open" : "closed";
-    }
-    __name(getState6, "getState");
-    var Accordion = (0, import_helpers25.withStaticProperties)(AccordionComponent, {
-      Trigger: AccordionTrigger,
-      Header: AccordionHeader,
-      Content: AccordionContent,
-      Item: AccordionItem
-    });
-  }
-});
-
-// node_modules/@tamagui/accordion/dist/cjs/index.js
-var require_cjs22 = __commonJS({
-  "node_modules/@tamagui/accordion/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_Accordion(), module2.exports);
-  }
-});
-
-// node_modules/aria-hidden/dist/es5/index.js
-var require_es5 = __commonJS({
-  "node_modules/aria-hidden/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.suppressOthers = exports2.supportsInert = exports2.inertOthers = exports2.hideOthers = void 0;
-    var getDefaultParent = /* @__PURE__ */ __name(function(originalTarget) {
-      if (typeof document === "undefined") {
-        return null;
-      }
-      var sampleTarget = Array.isArray(originalTarget) ? originalTarget[0] : originalTarget;
-      return sampleTarget.ownerDocument.body;
-    }, "getDefaultParent");
-    var counterMap2 = /* @__PURE__ */ new WeakMap();
-    var uncontrolledNodes = /* @__PURE__ */ new WeakMap();
-    var markerMap2 = {};
-    var lockCount2 = 0;
-    var unwrapHost2 = /* @__PURE__ */ __name(function(node) {
-      return node && (node.host || unwrapHost2(node.parentNode));
-    }, "unwrapHost");
-    var correctTargets = /* @__PURE__ */ __name(function(parent, targets) {
-      return targets.map(function(target) {
-        if (parent.contains(target)) {
-          return target;
-        }
-        var correctedTarget = unwrapHost2(target);
-        if (correctedTarget && parent.contains(correctedTarget)) {
-          return correctedTarget;
-        }
-        console.error("aria-hidden", target, "in not contained inside", parent, ". Doing nothing");
-        return null;
-      }).filter(function(x) {
-        return Boolean(x);
-      });
-    }, "correctTargets");
-    var applyAttributeToOthers2 = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName, controlAttribute) {
-      var targets = correctTargets(parentNode, Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
-      if (!markerMap2[markerName]) {
-        markerMap2[markerName] = /* @__PURE__ */ new WeakMap();
-      }
-      var markerCounter = markerMap2[markerName];
-      var hiddenNodes = [];
-      var elementsToKeep = /* @__PURE__ */ new Set();
-      var elementsToStop = new Set(targets);
-      var keep = /* @__PURE__ */ __name(function(el) {
-        if (!el || elementsToKeep.has(el)) {
-          return;
-        }
-        elementsToKeep.add(el);
-        keep(el.parentNode);
-      }, "keep");
-      targets.forEach(keep);
-      var deep = /* @__PURE__ */ __name(function(parent) {
-        if (!parent || elementsToStop.has(parent)) {
-          return;
-        }
-        Array.prototype.forEach.call(parent.children, function(node) {
-          if (elementsToKeep.has(node)) {
-            deep(node);
-          } else {
-            var attr2 = node.getAttribute(controlAttribute);
-            var alreadyHidden = attr2 !== null && attr2 !== "false";
-            var counterValue = (counterMap2.get(node) || 0) + 1;
-            var markerValue = (markerCounter.get(node) || 0) + 1;
-            counterMap2.set(node, counterValue);
-            markerCounter.set(node, markerValue);
-            hiddenNodes.push(node);
-            if (counterValue === 1 && alreadyHidden) {
-              uncontrolledNodes.set(node, true);
-            }
-            if (markerValue === 1) {
-              node.setAttribute(markerName, "true");
-            }
-            if (!alreadyHidden) {
-              node.setAttribute(controlAttribute, "true");
-            }
-          }
-        });
-      }, "deep");
-      deep(parentNode);
-      elementsToKeep.clear();
-      lockCount2++;
-      return function() {
-        hiddenNodes.forEach(function(node) {
-          var counterValue = counterMap2.get(node) - 1;
-          var markerValue = markerCounter.get(node) - 1;
-          counterMap2.set(node, counterValue);
-          markerCounter.set(node, markerValue);
-          if (!counterValue) {
-            if (!uncontrolledNodes.has(node)) {
-              node.removeAttribute(controlAttribute);
-            }
-            uncontrolledNodes.delete(node);
-          }
-          if (!markerValue) {
-            node.removeAttribute(markerName);
-          }
-        });
-        lockCount2--;
-        if (!lockCount2) {
-          counterMap2 = /* @__PURE__ */ new WeakMap();
-          counterMap2 = /* @__PURE__ */ new WeakMap();
-          uncontrolledNodes = /* @__PURE__ */ new WeakMap();
-          markerMap2 = {};
-        }
-      };
-    }, "applyAttributeToOthers");
-    var hideOthers3 = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName) {
-      if (markerName === void 0) {
-        markerName = "data-aria-hidden";
-      }
-      var targets = Array.from(Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
-      var activeParentNode = parentNode || getDefaultParent(originalTarget);
-      if (!activeParentNode) {
-        return function() {
-          return null;
-        };
-      }
-      targets.push.apply(targets, Array.from(activeParentNode.querySelectorAll("[aria-live]")));
-      return applyAttributeToOthers2(targets, activeParentNode, markerName, "aria-hidden");
-    }, "hideOthers");
-    exports2.hideOthers = hideOthers3;
-    var inertOthers = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName) {
-      if (markerName === void 0) {
-        markerName = "data-inert-ed";
-      }
-      var activeParentNode = parentNode || getDefaultParent(originalTarget);
-      if (!activeParentNode) {
-        return function() {
-          return null;
-        };
-      }
-      return applyAttributeToOthers2(originalTarget, activeParentNode, markerName, "inert");
-    }, "inertOthers");
-    exports2.inertOthers = inertOthers;
-    var supportsInert2 = /* @__PURE__ */ __name(function() {
-      return typeof HTMLElement !== "undefined" && HTMLElement.prototype.hasOwnProperty("inert");
-    }, "supportsInert");
-    exports2.supportsInert = supportsInert2;
-    var suppressOthers = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName) {
-      if (markerName === void 0) {
-        markerName = "data-suppressed";
-      }
-      return ((0, exports2.supportsInert)() ? exports2.inertOthers : exports2.hideOthers)(originalTarget, parentNode, markerName);
-    }, "suppressOthers");
-    exports2.suppressOthers = suppressOthers;
-  }
-});
-
-// node_modules/@tamagui/aria-hidden/dist/cjs/AriaHidden.js
-var require_AriaHidden = __commonJS({
-  "node_modules/@tamagui/aria-hidden/dist/cjs/AriaHidden.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var AriaHidden_exports = {};
-    __export2(AriaHidden_exports, {
-      hideOthers: () => import_aria_hidden3.hideOthers
-    });
-    module2.exports = __toCommonJS2(AriaHidden_exports);
-    var import_aria_hidden3 = require_es5();
-  }
-});
-
-// node_modules/@tamagui/aria-hidden/dist/cjs/index.js
-var require_cjs23 = __commonJS({
-  "node_modules/@tamagui/aria-hidden/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_AriaHidden(), module2.exports);
-  }
-});
-
-// node_modules/@tamagui/focus-scope/dist/cjs/FocusScope.js
-var require_FocusScope = __commonJS({
-  "node_modules/@tamagui/focus-scope/dist/cjs/FocusScope.js"(exports2, module2) {
-    var __create2 = Object.create;
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __getProtoOf2 = Object.getPrototypeOf;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = /* @__PURE__ */ __name((target, all) => {
-      for (var name in all)
-        __defProp2(target, name, { get: all[name], enumerable: true });
-    }, "__export");
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-      // If the importer is in node compatibility mode or this is not an ESM
-      // file that has been converted to a CommonJS file using a Babel-
-      // compatible transform (i.e. "__esModule" has not been set), then set
-      // "default" to the CommonJS "module.exports" for node compatibility.
-      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
-      mod
-    )), "__toESM");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var FocusScope_exports = {};
-    __export2(FocusScope_exports, {
-      FocusScope: () => FocusScope4,
-      useFocusScope: () => useFocusScope
-    });
-    module2.exports = __toCommonJS2(FocusScope_exports);
-    var import_compose_refs23 = require_cjs14();
-    var import_use_event3 = require_cjs11();
-    var React43 = __toESM2(require("react"));
-    var import_jsx_runtime56 = require("react/jsx-runtime");
-    var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
-    var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
-    var EVENT_OPTIONS2 = { bubbles: false, cancelable: true };
-    var FocusScope4 = React43.forwardRef(
-      function(props, forwardedRef) {
-        const childProps = useFocusScope(props, forwardedRef);
-        return typeof props.children == "function" ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_jsx_runtime56.Fragment, { children: props.children(childProps) }) : React43.cloneElement(React43.Children.only(props.children), childProps);
-      }
-    );
-    function useFocusScope(props, forwardedRef) {
-      const {
-        loop = false,
-        enabled = true,
-        trapped = false,
-        onMountAutoFocus: onMountAutoFocusProp,
-        onUnmountAutoFocus: onUnmountAutoFocusProp,
-        forceUnmount,
-        children,
-        ...scopeProps
-      } = props, [container, setContainer] = React43.useState(null), onMountAutoFocus = (0, import_use_event3.useEvent)(onMountAutoFocusProp), onUnmountAutoFocus = (0, import_use_event3.useEvent)(onUnmountAutoFocusProp), lastFocusedElementRef = React43.useRef(null), composedRefs = (0, import_compose_refs23.useComposedRefs)(forwardedRef, (node) => setContainer(node)), focusScope = React43.useRef({
-        paused: false,
-        pause() {
-          this.paused = true;
-        },
-        resume() {
-          this.paused = false;
-        }
-      }).current;
-      React43.useEffect(() => {
-        if (!enabled || !trapped)
-          return;
-        const controller = new AbortController();
-        function handleFocusIn(event) {
-          if (focusScope.paused || !container)
-            return;
-          const target = event.target;
-          container.contains(target) ? (target == null ? void 0 : target.addEventListener("blur", handleBlur, { signal: controller.signal }), lastFocusedElementRef.current = target) : focus(lastFocusedElementRef.current, { select: true });
-        }
-        __name(handleFocusIn, "handleFocusIn");
-        function handleFocusOut(event) {
-          controller.abort(), !(focusScope.paused || !container) && (container.contains(event.relatedTarget) || focus(lastFocusedElementRef.current, { select: true }));
-        }
-        __name(handleFocusOut, "handleFocusOut");
-        function handleBlur() {
-          lastFocusedElementRef.current = container;
-        }
-        __name(handleBlur, "handleBlur");
-        return document.addEventListener("focusin", handleFocusIn), document.addEventListener("focusout", handleFocusOut), () => {
-          controller.abort(), document.removeEventListener("focusin", handleFocusIn), document.removeEventListener("focusout", handleFocusOut);
-        };
-      }, [trapped, forceUnmount, container, focusScope.paused]), React43.useEffect(() => {
-        if (!enabled || !container || forceUnmount)
-          return;
-        focusScopesStack.add(focusScope);
-        const previouslyFocusedElement = document.activeElement;
-        if (!container.contains(previouslyFocusedElement)) {
-          const mountEvent = new CustomEvent(AUTOFOCUS_ON_MOUNT, EVENT_OPTIONS2);
-          if (container.addEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus), container.dispatchEvent(mountEvent), !mountEvent.defaultPrevented) {
-            const candidates = removeLinks(getTabbableCandidates(container));
-            focusFirst2(candidates, { select: true }), document.activeElement === previouslyFocusedElement && focus(container);
-          }
-        }
-        return () => {
-          container.removeEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
-          const unmountEvent = new CustomEvent(AUTOFOCUS_ON_UNMOUNT, EVENT_OPTIONS2);
-          container.addEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus), container.dispatchEvent(unmountEvent), unmountEvent.defaultPrevented || focus(previouslyFocusedElement ?? document.body, { select: true }), container.removeEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus), focusScopesStack.remove(focusScope);
-        };
-      }, [enabled, container, forceUnmount, onMountAutoFocus, onUnmountAutoFocus, focusScope]);
-      const handleKeyDown = React43.useCallback(
-        (event) => {
-          if (!trapped || !loop || focusScope.paused)
-            return;
-          const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey, focusedElement = document.activeElement;
-          if (isTabKey && focusedElement) {
-            const container2 = event.currentTarget, [first, last] = getTabbableEdges(container2);
-            first && last ? !event.shiftKey && focusedElement === last ? (event.preventDefault(), loop && focus(first, { select: true })) : event.shiftKey && focusedElement === first && (event.preventDefault(), loop && focus(last, { select: true })) : focusedElement === container2 && event.preventDefault();
-          }
-        },
-        [loop, trapped, focusScope.paused]
-      );
-      return {
-        tabIndex: -1,
-        ...scopeProps,
-        ref: composedRefs,
-        onKeyDown: handleKeyDown
-      };
-    }
-    __name(useFocusScope, "useFocusScope");
-    function focusFirst2(candidates, { select = false } = {}) {
-      const previouslyFocusedElement = document.activeElement;
-      for (const candidate of candidates)
-        if (focus(candidate, { select }), document.activeElement !== previouslyFocusedElement)
-          return;
-    }
-    __name(focusFirst2, "focusFirst");
-    function getTabbableEdges(container) {
-      const candidates = getTabbableCandidates(container), first = findVisible(candidates, container), last = findVisible(candidates.reverse(), container);
-      return [first, last];
-    }
-    __name(getTabbableEdges, "getTabbableEdges");
-    function getTabbableCandidates(container) {
-      const nodes = [], walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, {
-        acceptNode: (node) => {
-          const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
-          return node.disabled || node.hidden || isHiddenInput ? NodeFilter.FILTER_SKIP : node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
-        }
-      });
-      for (; walker.nextNode(); )
-        nodes.push(walker.currentNode);
-      return nodes;
-    }
-    __name(getTabbableCandidates, "getTabbableCandidates");
-    function findVisible(elements, container) {
-      for (const element of elements)
-        if (!isHidden(element, { upTo: container }))
-          return element;
-    }
-    __name(findVisible, "findVisible");
-    function isHidden(node, { upTo }) {
-      if (getComputedStyle(node).visibility === "hidden")
-        return true;
-      for (; node; ) {
-        if (upTo !== void 0 && node === upTo)
-          return false;
-        if (getComputedStyle(node).display === "none")
-          return true;
-        node = node.parentElement;
-      }
-      return false;
-    }
-    __name(isHidden, "isHidden");
-    function isSelectableInput(element) {
-      return element instanceof HTMLInputElement && "select" in element;
-    }
-    __name(isSelectableInput, "isSelectableInput");
-    function focus(element, { select = false } = {}) {
-      if (element == null ? void 0 : element.focus) {
-        const previouslyFocusedElement = document.activeElement;
-        element.focus({ preventScroll: true }), element !== previouslyFocusedElement && isSelectableInput(element) && select && element.select();
-      }
-    }
-    __name(focus, "focus");
-    var focusScopesStack = createFocusScopesStack();
-    function createFocusScopesStack() {
-      let stack = [];
-      return {
-        add(focusScope) {
-          const activeFocusScope = stack[0];
-          focusScope !== activeFocusScope && (activeFocusScope == null ? void 0 : activeFocusScope.pause()), stack = arrayRemove(stack, focusScope), stack.unshift(focusScope);
-        },
-        remove(focusScope) {
-          var _a;
-          stack = arrayRemove(stack, focusScope), (_a = stack[0]) == null ? void 0 : _a.resume();
-        }
-      };
-    }
-    __name(createFocusScopesStack, "createFocusScopesStack");
-    function arrayRemove(array, item) {
-      const updatedArray = [...array], index3 = updatedArray.indexOf(item);
-      return index3 !== -1 && updatedArray.splice(index3, 1), updatedArray;
-    }
-    __name(arrayRemove, "arrayRemove");
-    function removeLinks(items) {
-      return items.filter((item) => item.tagName !== "A");
-    }
-    __name(removeLinks, "removeLinks");
-  }
-});
-
-// node_modules/@tamagui/focus-scope/dist/cjs/index.js
-var require_cjs24 = __commonJS({
-  "node_modules/@tamagui/focus-scope/dist/cjs/index.js"(exports2, module2) {
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
-      if (from && typeof from == "object" || typeof from == "function")
-        for (let key of __getOwnPropNames2(from))
-          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      return to;
-    }, "__copyProps");
-    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
-    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
-    var src_exports = {};
-    module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_FocusScope(), module2.exports);
-  }
-});
-
-// node_modules/tslib/tslib.es6.mjs
-var tslib_es6_exports = {};
-__export(tslib_es6_exports, {
-  __addDisposableResource: () => __addDisposableResource,
-  __assign: () => __assign,
-  __asyncDelegator: () => __asyncDelegator,
-  __asyncGenerator: () => __asyncGenerator,
-  __asyncValues: () => __asyncValues,
-  __await: () => __await,
-  __awaiter: () => __awaiter,
-  __classPrivateFieldGet: () => __classPrivateFieldGet,
-  __classPrivateFieldIn: () => __classPrivateFieldIn,
-  __classPrivateFieldSet: () => __classPrivateFieldSet,
-  __createBinding: () => __createBinding,
-  __decorate: () => __decorate,
-  __disposeResources: () => __disposeResources,
-  __esDecorate: () => __esDecorate,
-  __exportStar: () => __exportStar,
-  __extends: () => __extends,
-  __generator: () => __generator,
-  __importDefault: () => __importDefault,
-  __importStar: () => __importStar,
-  __makeTemplateObject: () => __makeTemplateObject,
-  __metadata: () => __metadata,
-  __param: () => __param,
-  __propKey: () => __propKey,
-  __read: () => __read,
-  __rest: () => __rest,
-  __runInitializers: () => __runInitializers,
-  __setFunctionName: () => __setFunctionName,
-  __spread: () => __spread,
-  __spreadArray: () => __spreadArray,
-  __spreadArrays: () => __spreadArrays,
-  __values: () => __values,
-  default: () => tslib_es6_default
-});
-function __extends(d, b) {
-  if (typeof b !== "function" && b !== null)
-    throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-  extendStatics(d, b);
-  function __() {
-    this.constructor = d;
-  }
-  __name(__, "__");
-  d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-function __rest(s, e) {
-  var t2 = {};
-  for (var p in s)
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-      t2[p] = s[p];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-      if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-        t2[p[i]] = s[p[i]];
-    }
-  return t2;
-}
-function __decorate(decorators, target, key, desc) {
-  var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-  if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-    r = Reflect.decorate(decorators, target, key, desc);
-  else
-    for (var i = decorators.length - 1; i >= 0; i--)
-      if (d = decorators[i])
-        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-function __param(paramIndex, decorator) {
-  return function(target, key) {
-    decorator(target, key, paramIndex);
-  };
-}
-function __esDecorate(ctor, descriptorIn, decorators, contextIn, initializers, extraInitializers) {
-  function accept(f) {
-    if (f !== void 0 && typeof f !== "function")
-      throw new TypeError("Function expected");
-    return f;
-  }
-  __name(accept, "accept");
-  var kind = contextIn.kind, key = kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
-  var target = !descriptorIn && ctor ? contextIn["static"] ? ctor : ctor.prototype : null;
-  var descriptor = descriptorIn || (target ? Object.getOwnPropertyDescriptor(target, contextIn.name) : {});
-  var _, done = false;
-  for (var i = decorators.length - 1; i >= 0; i--) {
-    var context = {};
-    for (var p in contextIn)
-      context[p] = p === "access" ? {} : contextIn[p];
-    for (var p in contextIn.access)
-      context.access[p] = contextIn.access[p];
-    context.addInitializer = function(f) {
-      if (done)
-        throw new TypeError("Cannot add initializers after decoration has completed");
-      extraInitializers.push(accept(f || null));
-    };
-    var result = (0, decorators[i])(kind === "accessor" ? { get: descriptor.get, set: descriptor.set } : descriptor[key], context);
-    if (kind === "accessor") {
-      if (result === void 0)
-        continue;
-      if (result === null || typeof result !== "object")
-        throw new TypeError("Object expected");
-      if (_ = accept(result.get))
-        descriptor.get = _;
-      if (_ = accept(result.set))
-        descriptor.set = _;
-      if (_ = accept(result.init))
-        initializers.unshift(_);
-    } else if (_ = accept(result)) {
-      if (kind === "field")
-        initializers.unshift(_);
-      else
-        descriptor[key] = _;
-    }
-  }
-  if (target)
-    Object.defineProperty(target, contextIn.name, descriptor);
-  done = true;
-}
-function __runInitializers(thisArg, initializers, value) {
-  var useValue = arguments.length > 2;
-  for (var i = 0; i < initializers.length; i++) {
-    value = useValue ? initializers[i].call(thisArg, value) : initializers[i].call(thisArg);
-  }
-  return useValue ? value : void 0;
-}
-function __propKey(x) {
-  return typeof x === "symbol" ? x : "".concat(x);
-}
-function __setFunctionName(f, name, prefix) {
-  if (typeof name === "symbol")
-    name = name.description ? "[".concat(name.description, "]") : "";
-  return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
-}
-function __metadata(metadataKey, metadataValue) {
-  if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-    return Reflect.metadata(metadataKey, metadataValue);
-}
-function __awaiter(thisArg, _arguments, P, generator) {
-  function adopt(value) {
-    return value instanceof P ? value : new P(function(resolve) {
-      resolve(value);
-    });
-  }
-  __name(adopt, "adopt");
-  return new (P || (P = Promise))(function(resolve, reject) {
-    function fulfilled(value) {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-    __name(fulfilled, "fulfilled");
-    function rejected(value) {
-      try {
-        step(generator["throw"](value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-    __name(rejected, "rejected");
-    function step(result) {
-      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-    }
-    __name(step, "step");
-    step((generator = generator.apply(thisArg, _arguments || [])).next());
-  });
-}
-function __generator(thisArg, body) {
-  var _ = { label: 0, sent: function() {
-    if (t2[0] & 1)
-      throw t2[1];
-    return t2[1];
-  }, trys: [], ops: [] }, f, y, t2, g;
-  return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
-    return this;
-  }), g;
-  function verb(n) {
-    return function(v) {
-      return step([n, v]);
-    };
-  }
-  __name(verb, "verb");
-  function step(op) {
-    if (f)
-      throw new TypeError("Generator is already executing.");
-    while (g && (g = 0, op[0] && (_ = 0)), _)
-      try {
-        if (f = 1, y && (t2 = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t2 = y["return"]) && t2.call(y), 0) : y.next) && !(t2 = t2.call(y, op[1])).done)
-          return t2;
-        if (y = 0, t2)
-          op = [op[0] & 2, t2.value];
-        switch (op[0]) {
-          case 0:
-          case 1:
-            t2 = op;
-            break;
-          case 4:
-            _.label++;
-            return { value: op[1], done: false };
-          case 5:
-            _.label++;
-            y = op[1];
-            op = [0];
-            continue;
-          case 7:
-            op = _.ops.pop();
-            _.trys.pop();
-            continue;
-          default:
-            if (!(t2 = _.trys, t2 = t2.length > 0 && t2[t2.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-              _ = 0;
-              continue;
-            }
-            if (op[0] === 3 && (!t2 || op[1] > t2[0] && op[1] < t2[3])) {
-              _.label = op[1];
-              break;
-            }
-            if (op[0] === 6 && _.label < t2[1]) {
-              _.label = t2[1];
-              t2 = op;
-              break;
-            }
-            if (t2 && _.label < t2[2]) {
-              _.label = t2[2];
-              _.ops.push(op);
-              break;
-            }
-            if (t2[2])
-              _.ops.pop();
-            _.trys.pop();
-            continue;
-        }
-        op = body.call(thisArg, _);
-      } catch (e) {
-        op = [6, e];
-        y = 0;
-      } finally {
-        f = t2 = 0;
-      }
-    if (op[0] & 5)
-      throw op[1];
-    return { value: op[0] ? op[1] : void 0, done: true };
-  }
-  __name(step, "step");
-}
-function __exportStar(m, o) {
-  for (var p in m)
-    if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
-      __createBinding(o, m, p);
-}
-function __values(o) {
-  var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-  if (m)
-    return m.call(o);
-  if (o && typeof o.length === "number")
-    return {
-      next: function() {
-        if (o && i >= o.length)
-          o = void 0;
-        return { value: o && o[i++], done: !o };
-      }
-    };
-  throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-}
-function __read(o, n) {
-  var m = typeof Symbol === "function" && o[Symbol.iterator];
-  if (!m)
-    return o;
-  var i = m.call(o), r, ar = [], e;
-  try {
-    while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
-      ar.push(r.value);
-  } catch (error) {
-    e = { error };
-  } finally {
-    try {
-      if (r && !r.done && (m = i["return"]))
-        m.call(i);
-    } finally {
-      if (e)
-        throw e.error;
-    }
-  }
-  return ar;
-}
-function __spread() {
-  for (var ar = [], i = 0; i < arguments.length; i++)
-    ar = ar.concat(__read(arguments[i]));
-  return ar;
-}
-function __spreadArrays() {
-  for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-    s += arguments[i].length;
-  for (var r = Array(s), k = 0, i = 0; i < il; i++)
-    for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-      r[k] = a[j];
-  return r;
-}
-function __spreadArray(to, from, pack) {
-  if (pack || arguments.length === 2)
-    for (var i = 0, l = from.length, ar; i < l; i++) {
-      if (ar || !(i in from)) {
-        if (!ar)
-          ar = Array.prototype.slice.call(from, 0, i);
-        ar[i] = from[i];
-      }
-    }
-  return to.concat(ar || Array.prototype.slice.call(from));
-}
-function __await(v) {
-  return this instanceof __await ? (this.v = v, this) : new __await(v);
-}
-function __asyncGenerator(thisArg, _arguments, generator) {
-  if (!Symbol.asyncIterator)
-    throw new TypeError("Symbol.asyncIterator is not defined.");
-  var g = generator.apply(thisArg, _arguments || []), i, q = [];
-  return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-    return this;
-  }, i;
-  function verb(n) {
-    if (g[n])
-      i[n] = function(v) {
-        return new Promise(function(a, b) {
-          q.push([n, v, a, b]) > 1 || resume(n, v);
-        });
-      };
-  }
-  __name(verb, "verb");
-  function resume(n, v) {
-    try {
-      step(g[n](v));
-    } catch (e) {
-      settle(q[0][3], e);
-    }
-  }
-  __name(resume, "resume");
-  function step(r) {
-    r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
-  }
-  __name(step, "step");
-  function fulfill(value) {
-    resume("next", value);
-  }
-  __name(fulfill, "fulfill");
-  function reject(value) {
-    resume("throw", value);
-  }
-  __name(reject, "reject");
-  function settle(f, v) {
-    if (f(v), q.shift(), q.length)
-      resume(q[0][0], q[0][1]);
-  }
-  __name(settle, "settle");
-}
-function __asyncDelegator(o) {
-  var i, p;
-  return i = {}, verb("next"), verb("throw", function(e) {
-    throw e;
-  }), verb("return"), i[Symbol.iterator] = function() {
-    return this;
-  }, i;
-  function verb(n, f) {
-    i[n] = o[n] ? function(v) {
-      return (p = !p) ? { value: __await(o[n](v)), done: false } : f ? f(v) : v;
-    } : f;
-  }
-  __name(verb, "verb");
-}
-function __asyncValues(o) {
-  if (!Symbol.asyncIterator)
-    throw new TypeError("Symbol.asyncIterator is not defined.");
-  var m = o[Symbol.asyncIterator], i;
-  return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-    return this;
-  }, i);
-  function verb(n) {
-    i[n] = o[n] && function(v) {
-      return new Promise(function(resolve, reject) {
-        v = o[n](v), settle(resolve, reject, v.done, v.value);
-      });
-    };
-  }
-  __name(verb, "verb");
-  function settle(resolve, reject, d, v) {
-    Promise.resolve(v).then(function(v2) {
-      resolve({ value: v2, done: d });
-    }, reject);
-  }
-  __name(settle, "settle");
-}
-function __makeTemplateObject(cooked, raw) {
-  if (Object.defineProperty) {
-    Object.defineProperty(cooked, "raw", { value: raw });
-  } else {
-    cooked.raw = raw;
-  }
-  return cooked;
-}
-function __importStar(mod) {
-  if (mod && mod.__esModule)
-    return mod;
-  var result = {};
-  if (mod != null) {
-    for (var k in mod)
-      if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-        __createBinding(result, mod, k);
-  }
-  __setModuleDefault(result, mod);
-  return result;
-}
-function __importDefault(mod) {
-  return mod && mod.__esModule ? mod : { default: mod };
-}
-function __classPrivateFieldGet(receiver, state, kind, f) {
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a getter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot read private member from an object whose class did not declare it");
-  return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-}
-function __classPrivateFieldSet(receiver, state, value, kind, f) {
-  if (kind === "m")
-    throw new TypeError("Private method is not writable");
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a setter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot write private member to an object whose class did not declare it");
-  return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
-}
-function __classPrivateFieldIn(state, receiver) {
-  if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
-    throw new TypeError("Cannot use 'in' operator on non-object");
-  return typeof state === "function" ? receiver === state : state.has(receiver);
-}
-function __addDisposableResource(env, value, async) {
-  if (value !== null && value !== void 0) {
-    if (typeof value !== "object" && typeof value !== "function")
-      throw new TypeError("Object expected.");
-    var dispose;
-    if (async) {
-      if (!Symbol.asyncDispose)
-        throw new TypeError("Symbol.asyncDispose is not defined.");
-      dispose = value[Symbol.asyncDispose];
-    }
-    if (dispose === void 0) {
-      if (!Symbol.dispose)
-        throw new TypeError("Symbol.dispose is not defined.");
-      dispose = value[Symbol.dispose];
-    }
-    if (typeof dispose !== "function")
-      throw new TypeError("Object not disposable.");
-    env.stack.push({ value, dispose, async });
-  } else if (async) {
-    env.stack.push({ async: true });
-  }
-  return value;
-}
-function __disposeResources(env) {
-  function fail(e) {
-    env.error = env.hasError ? new _SuppressedError(e, env.error, "An error was suppressed during disposal.") : e;
-    env.hasError = true;
-  }
-  __name(fail, "fail");
-  function next() {
-    while (env.stack.length) {
-      var rec = env.stack.pop();
-      try {
-        var result = rec.dispose && rec.dispose.call(rec.value);
-        if (rec.async)
-          return Promise.resolve(result).then(next, function(e) {
-            fail(e);
-            return next();
-          });
-      } catch (e) {
-        fail(e);
-      }
-    }
-    if (env.hasError)
-      throw env.error;
-  }
-  __name(next, "next");
-  return next();
-}
-var extendStatics, __assign, __createBinding, __setModuleDefault, _SuppressedError, tslib_es6_default;
-var init_tslib_es6 = __esm({
-  "node_modules/tslib/tslib.es6.mjs"() {
-    extendStatics = /* @__PURE__ */ __name(function(d, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
-        d2.__proto__ = b2;
-      } || function(d2, b2) {
-        for (var p in b2)
-          if (Object.prototype.hasOwnProperty.call(b2, p))
-            d2[p] = b2[p];
-      };
-      return extendStatics(d, b);
-    }, "extendStatics");
-    __name(__extends, "__extends");
-    __assign = /* @__PURE__ */ __name(function() {
-      __assign = Object.assign || /* @__PURE__ */ __name(function __assign2(t2) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p))
-              t2[p] = s[p];
-        }
-        return t2;
-      }, "__assign");
-      return __assign.apply(this, arguments);
-    }, "__assign");
-    __name(__rest, "__rest");
-    __name(__decorate, "__decorate");
-    __name(__param, "__param");
-    __name(__esDecorate, "__esDecorate");
-    __name(__runInitializers, "__runInitializers");
-    __name(__propKey, "__propKey");
-    __name(__setFunctionName, "__setFunctionName");
-    __name(__metadata, "__metadata");
-    __name(__awaiter, "__awaiter");
-    __name(__generator, "__generator");
-    __createBinding = Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-        desc = { enumerable: true, get: function() {
-          return m[k];
-        } };
-      }
-      Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      o[k2] = m[k];
-    };
-    __name(__exportStar, "__exportStar");
-    __name(__values, "__values");
-    __name(__read, "__read");
-    __name(__spread, "__spread");
-    __name(__spreadArrays, "__spreadArrays");
-    __name(__spreadArray, "__spreadArray");
-    __name(__await, "__await");
-    __name(__asyncGenerator, "__asyncGenerator");
-    __name(__asyncDelegator, "__asyncDelegator");
-    __name(__asyncValues, "__asyncValues");
-    __name(__makeTemplateObject, "__makeTemplateObject");
-    __setModuleDefault = Object.create ? function(o, v) {
-      Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
-      o["default"] = v;
-    };
-    __name(__importStar, "__importStar");
-    __name(__importDefault, "__importDefault");
-    __name(__classPrivateFieldGet, "__classPrivateFieldGet");
-    __name(__classPrivateFieldSet, "__classPrivateFieldSet");
-    __name(__classPrivateFieldIn, "__classPrivateFieldIn");
-    __name(__addDisposableResource, "__addDisposableResource");
-    _SuppressedError = typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
-      var e = new Error(message);
-      return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
-    };
-    __name(__disposeResources, "__disposeResources");
-    tslib_es6_default = {
-      __extends,
-      __assign,
-      __rest,
-      __decorate,
-      __param,
-      __metadata,
-      __awaiter,
-      __generator,
-      __createBinding,
-      __exportStar,
-      __values,
-      __read,
-      __spread,
-      __spreadArrays,
-      __spreadArray,
-      __await,
-      __asyncGenerator,
-      __asyncDelegator,
-      __asyncValues,
-      __makeTemplateObject,
-      __importStar,
-      __importDefault,
-      __classPrivateFieldGet,
-      __classPrivateFieldSet,
-      __classPrivateFieldIn,
-      __addDisposableResource,
-      __disposeResources
-    };
-  }
-});
-
-// node_modules/react-remove-scroll-bar/dist/es5/constants.js
-var require_constants2 = __commonJS({
-  "node_modules/react-remove-scroll-bar/dist/es5/constants.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.removedBarSizeVariable = exports2.noScrollbarsClassName = exports2.fullWidthClassName = exports2.zeroRightClassName = void 0;
-    exports2.zeroRightClassName = "right-scroll-bar-position";
-    exports2.fullWidthClassName = "width-before-scroll-bar";
-    exports2.noScrollbarsClassName = "with-scroll-bars-hidden";
-    exports2.removedBarSizeVariable = "--removed-body-scroll-bar-size";
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/assignRef.js
-var require_assignRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/assignRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.assignRef = void 0;
-    function assignRef(ref, value) {
-      if (typeof ref === "function") {
-        ref(value);
-      } else if (ref) {
-        ref.current = value;
-      }
-      return ref;
-    }
-    __name(assignRef, "assignRef");
-    exports2.assignRef = assignRef;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/useRef.js
-var require_useRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/useRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.useCallbackRef = void 0;
-    var react_1 = require("react");
-    function useCallbackRef2(initialValue2, callback) {
-      var ref = (0, react_1.useState)(function() {
-        return {
-          // value
-          value: initialValue2,
-          // last callback
-          callback,
-          // "memoized" public interface
-          facade: {
-            get current() {
-              return ref.value;
-            },
-            set current(value) {
-              var last = ref.value;
-              if (last !== value) {
-                ref.value = value;
-                ref.callback(value, last);
-              }
-            }
-          }
-        };
-      })[0];
-      ref.callback = callback;
-      return ref.facade;
-    }
-    __name(useCallbackRef2, "useCallbackRef");
-    exports2.useCallbackRef = useCallbackRef2;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/createRef.js
-var require_createRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/createRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.createCallbackRef = void 0;
-    function createCallbackRef(callback) {
-      var current = null;
-      return {
-        get current() {
-          return current;
-        },
-        set current(value) {
-          var last = current;
-          if (last !== value) {
-            current = value;
-            callback(value, last);
-          }
-        }
-      };
-    }
-    __name(createCallbackRef, "createCallbackRef");
-    exports2.createCallbackRef = createCallbackRef;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/mergeRef.js
-var require_mergeRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/mergeRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.mergeRefs = void 0;
-    var assignRef_1 = require_assignRef();
-    var createRef_1 = require_createRef();
-    function mergeRefs(refs) {
-      return (0, createRef_1.createCallbackRef)(function(newValue) {
-        return refs.forEach(function(ref) {
-          return (0, assignRef_1.assignRef)(ref, newValue);
-        });
-      });
-    }
-    __name(mergeRefs, "mergeRefs");
-    exports2.mergeRefs = mergeRefs;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/useMergeRef.js
-var require_useMergeRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/useMergeRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.useMergeRefs = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var assignRef_1 = require_assignRef();
-    var useRef_1 = require_useRef();
-    var currentValues = /* @__PURE__ */ new WeakMap();
-    function useMergeRefs(refs, defaultValue2) {
-      var callbackRef = (0, useRef_1.useCallbackRef)(defaultValue2 || null, function(newValue) {
-        return refs.forEach(function(ref) {
-          return (0, assignRef_1.assignRef)(ref, newValue);
-        });
-      });
-      React43.useLayoutEffect(function() {
-        var oldValue = currentValues.get(callbackRef);
-        if (oldValue) {
-          var prevRefs_1 = new Set(oldValue);
-          var nextRefs_1 = new Set(refs);
-          var current_1 = callbackRef.current;
-          prevRefs_1.forEach(function(ref) {
-            if (!nextRefs_1.has(ref)) {
-              (0, assignRef_1.assignRef)(ref, null);
-            }
-          });
-          nextRefs_1.forEach(function(ref) {
-            if (!prevRefs_1.has(ref)) {
-              (0, assignRef_1.assignRef)(ref, current_1);
-            }
-          });
-        }
-        currentValues.set(callbackRef, refs);
-      }, [refs]);
-      return callbackRef;
-    }
-    __name(useMergeRefs, "useMergeRefs");
-    exports2.useMergeRefs = useMergeRefs;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/useTransformRef.js
-var require_useTransformRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/useTransformRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.useTransformRef = void 0;
-    var assignRef_1 = require_assignRef();
-    var useRef_1 = require_useRef();
-    function useTransformRef(ref, transformer) {
-      return (0, useRef_1.useCallbackRef)(null, function(value) {
-        return (0, assignRef_1.assignRef)(ref, transformer(value));
-      });
-    }
-    __name(useTransformRef, "useTransformRef");
-    exports2.useTransformRef = useTransformRef;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/transformRef.js
-var require_transformRef = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/transformRef.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.transformRef = void 0;
-    var assignRef_1 = require_assignRef();
-    var createRef_1 = require_createRef();
-    function transformRef(ref, transformer) {
-      return (0, createRef_1.createCallbackRef)(function(value) {
-        return (0, assignRef_1.assignRef)(ref, transformer(value));
-      });
-    }
-    __name(transformRef, "transformRef");
-    exports2.transformRef = transformRef;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/refToCallback.js
-var require_refToCallback = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/refToCallback.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.useRefToCallback = exports2.refToCallback = void 0;
-    function refToCallback(ref) {
-      return function(newValue) {
-        if (typeof ref === "function") {
-          ref(newValue);
-        } else if (ref) {
-          ref.current = newValue;
-        }
-      };
-    }
-    __name(refToCallback, "refToCallback");
-    exports2.refToCallback = refToCallback;
-    var nullCallback = /* @__PURE__ */ __name(function() {
-      return null;
-    }, "nullCallback");
-    var weakMem = /* @__PURE__ */ new WeakMap();
-    var weakMemoize = /* @__PURE__ */ __name(function(ref) {
-      var usedRef = ref || nullCallback;
-      var storedRef = weakMem.get(usedRef);
-      if (storedRef) {
-        return storedRef;
-      }
-      var cb = refToCallback(usedRef);
-      weakMem.set(usedRef, cb);
-      return cb;
-    }, "weakMemoize");
-    function useRefToCallback(ref) {
-      return weakMemoize(ref);
-    }
-    __name(useRefToCallback, "useRefToCallback");
-    exports2.useRefToCallback = useRefToCallback;
-  }
-});
-
-// node_modules/use-callback-ref/dist/es5/index.js
-var require_es52 = __commonJS({
-  "node_modules/use-callback-ref/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.useRefToCallback = exports2.refToCallback = exports2.transformRef = exports2.useTransformRef = exports2.useMergeRefs = exports2.mergeRefs = exports2.createCallbackRef = exports2.useCallbackRef = exports2.assignRef = void 0;
-    var assignRef_1 = require_assignRef();
-    Object.defineProperty(exports2, "assignRef", { enumerable: true, get: function() {
-      return assignRef_1.assignRef;
-    } });
-    var useRef_1 = require_useRef();
-    Object.defineProperty(exports2, "useCallbackRef", { enumerable: true, get: function() {
-      return useRef_1.useCallbackRef;
-    } });
-    var createRef_1 = require_createRef();
-    Object.defineProperty(exports2, "createCallbackRef", { enumerable: true, get: function() {
-      return createRef_1.createCallbackRef;
-    } });
-    var mergeRef_1 = require_mergeRef();
-    Object.defineProperty(exports2, "mergeRefs", { enumerable: true, get: function() {
-      return mergeRef_1.mergeRefs;
-    } });
-    var useMergeRef_1 = require_useMergeRef();
-    Object.defineProperty(exports2, "useMergeRefs", { enumerable: true, get: function() {
-      return useMergeRef_1.useMergeRefs;
-    } });
-    var useTransformRef_1 = require_useTransformRef();
-    Object.defineProperty(exports2, "useTransformRef", { enumerable: true, get: function() {
-      return useTransformRef_1.useTransformRef;
-    } });
-    var transformRef_1 = require_transformRef();
-    Object.defineProperty(exports2, "transformRef", { enumerable: true, get: function() {
-      return transformRef_1.transformRef;
-    } });
-    var refToCallback_1 = require_refToCallback();
-    Object.defineProperty(exports2, "refToCallback", { enumerable: true, get: function() {
-      return refToCallback_1.refToCallback;
-    } });
-    Object.defineProperty(exports2, "useRefToCallback", { enumerable: true, get: function() {
-      return refToCallback_1.useRefToCallback;
-    } });
-  }
-});
-
-// node_modules/detect-node-es/es5/node.js
-var require_node = __commonJS({
-  "node_modules/detect-node-es/es5/node.js"(exports2, module2) {
-    module2.exports.isNode = Object.prototype.toString.call(typeof process !== "undefined" ? process : 0) === "[object process]";
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/env.js
-var require_env = __commonJS({
-  "node_modules/use-sidecar/dist/es5/env.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.env = void 0;
-    var detect_node_es_1 = require_node();
-    exports2.env = {
-      isNode: detect_node_es_1.isNode,
-      forceCache: false
-    };
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/hook.js
-var require_hook = __commonJS({
-  "node_modules/use-sidecar/dist/es5/hook.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.useSidecar = void 0;
-    var react_1 = require("react");
-    var env_1 = require_env();
-    var cache = /* @__PURE__ */ new WeakMap();
-    var NO_OPTIONS = {};
-    function useSidecar(importer, effect) {
-      var options = effect && effect.options || NO_OPTIONS;
-      if (env_1.env.isNode && !options.ssr) {
-        return [null, null];
-      }
-      return useRealSidecar(importer, effect);
-    }
-    __name(useSidecar, "useSidecar");
-    exports2.useSidecar = useSidecar;
-    function useRealSidecar(importer, effect) {
-      var options = effect && effect.options || NO_OPTIONS;
-      var couldUseCache = env_1.env.forceCache || env_1.env.isNode && !!options.ssr || !options.async;
-      var _a = (0, react_1.useState)(couldUseCache ? function() {
-        return cache.get(importer);
-      } : void 0), Car = _a[0], setCar = _a[1];
-      var _b = (0, react_1.useState)(null), error = _b[0], setError = _b[1];
-      (0, react_1.useEffect)(function() {
-        if (!Car) {
-          importer().then(function(car) {
-            var resolved = effect ? effect.read() : car.default || car;
-            if (!resolved) {
-              console.error("Sidecar error: with importer", importer);
-              var error_1;
-              if (effect) {
-                console.error("Sidecar error: with medium", effect);
-                error_1 = new Error("Sidecar medium was not found");
-              } else {
-                error_1 = new Error("Sidecar was not found in exports");
-              }
-              setError(function() {
-                return error_1;
-              });
-              throw error_1;
-            }
-            cache.set(importer, resolved);
-            setCar(function() {
-              return resolved;
-            });
-          }, function(e) {
-            return setError(function() {
-              return e;
-            });
-          });
-        }
-      }, []);
-      return [Car, error];
-    }
-    __name(useRealSidecar, "useRealSidecar");
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/hoc.js
-var require_hoc = __commonJS({
-  "node_modules/use-sidecar/dist/es5/hoc.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.sidecar = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var hook_1 = require_hook();
-    function sidecar(importer, errorComponent) {
-      var ErrorCase = /* @__PURE__ */ __name(function() {
-        return errorComponent;
-      }, "ErrorCase");
-      return /* @__PURE__ */ __name(function Sidecar(props) {
-        var _a = (0, hook_1.useSidecar)(importer, props.sideCar), Car = _a[0], error = _a[1];
-        if (error && errorComponent) {
-          return ErrorCase;
-        }
-        return Car ? React43.createElement(Car, tslib_1.__assign({}, props)) : null;
-      }, "Sidecar");
-    }
-    __name(sidecar, "sidecar");
-    exports2.sidecar = sidecar;
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/config.js
-var require_config = __commonJS({
-  "node_modules/use-sidecar/dist/es5/config.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.setConfig = exports2.config = void 0;
-    exports2.config = {
-      onError: function(e) {
-        return console.error(e);
-      }
-    };
-    var setConfig = /* @__PURE__ */ __name(function(conf) {
-      Object.assign(exports2.config, conf);
-    }, "setConfig");
-    exports2.setConfig = setConfig;
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/medium.js
-var require_medium = __commonJS({
-  "node_modules/use-sidecar/dist/es5/medium.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.createSidecarMedium = exports2.createMedium = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    function ItoI(a) {
-      return a;
-    }
-    __name(ItoI, "ItoI");
-    function innerCreateMedium(defaults, middleware) {
-      if (middleware === void 0) {
-        middleware = ItoI;
-      }
-      var buffer = [];
-      var assigned = false;
-      var medium = {
-        read: function() {
-          if (assigned) {
-            throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");
-          }
-          if (buffer.length) {
-            return buffer[buffer.length - 1];
-          }
-          return defaults;
-        },
-        useMedium: function(data) {
-          var item = middleware(data, assigned);
-          buffer.push(item);
-          return function() {
-            buffer = buffer.filter(function(x) {
-              return x !== item;
-            });
-          };
-        },
-        assignSyncMedium: function(cb) {
-          assigned = true;
-          while (buffer.length) {
-            var cbs2 = buffer;
-            buffer = [];
-            cbs2.forEach(cb);
-          }
-          buffer = {
-            push: function(x) {
-              return cb(x);
-            },
-            filter: function() {
-              return buffer;
-            }
-          };
-        },
-        assignMedium: function(cb) {
-          assigned = true;
-          var pendingQueue = [];
-          if (buffer.length) {
-            var cbs2 = buffer;
-            buffer = [];
-            cbs2.forEach(cb);
-            pendingQueue = buffer;
-          }
-          var executeQueue = /* @__PURE__ */ __name(function() {
-            var cbs3 = pendingQueue;
-            pendingQueue = [];
-            cbs3.forEach(cb);
-          }, "executeQueue");
-          var cycle = /* @__PURE__ */ __name(function() {
-            return Promise.resolve().then(executeQueue);
-          }, "cycle");
-          cycle();
-          buffer = {
-            push: function(x) {
-              pendingQueue.push(x);
-              cycle();
-            },
-            filter: function(filter) {
-              pendingQueue = pendingQueue.filter(filter);
-              return buffer;
-            }
-          };
-        }
-      };
-      return medium;
-    }
-    __name(innerCreateMedium, "innerCreateMedium");
-    function createMedium(defaults, middleware) {
-      if (middleware === void 0) {
-        middleware = ItoI;
-      }
-      return innerCreateMedium(defaults, middleware);
-    }
-    __name(createMedium, "createMedium");
-    exports2.createMedium = createMedium;
-    function createSidecarMedium(options) {
-      if (options === void 0) {
-        options = {};
-      }
-      var medium = innerCreateMedium(null);
-      medium.options = tslib_1.__assign({ async: true, ssr: false }, options);
-      return medium;
-    }
-    __name(createSidecarMedium, "createSidecarMedium");
-    exports2.createSidecarMedium = createSidecarMedium;
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/renderProp.js
-var require_renderProp = __commonJS({
-  "node_modules/use-sidecar/dist/es5/renderProp.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.renderCar = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var react_1 = require("react");
-    function renderCar(WrappedComponent, defaults) {
-      function State(_a) {
-        var stateRef = _a.stateRef, props = _a.props;
-        var renderTarget = (0, react_1.useCallback)(/* @__PURE__ */ __name(function SideTarget() {
-          var args = [];
-          for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-          }
-          (0, react_1.useLayoutEffect)(function() {
-            stateRef.current(args);
-          });
-          return null;
-        }, "SideTarget"), []);
-        return React43.createElement(WrappedComponent, tslib_1.__assign({}, props, { children: renderTarget }));
-      }
-      __name(State, "State");
-      var Children5 = React43.memo(function(_a) {
-        var stateRef = _a.stateRef, defaultState = _a.defaultState, children = _a.children;
-        var _b = (0, react_1.useState)(defaultState.current), state = _b[0], setState = _b[1];
-        (0, react_1.useEffect)(function() {
-          stateRef.current = setState;
-        }, []);
-        return children.apply(void 0, state);
-      }, function() {
-        return true;
-      });
-      return /* @__PURE__ */ __name(function Combiner(props) {
-        var defaultState = React43.useRef(defaults(props));
-        var ref = React43.useRef(function(state) {
-          return defaultState.current = state;
-        });
-        return React43.createElement(
-          React43.Fragment,
-          null,
-          React43.createElement(State, { stateRef: ref, props }),
-          React43.createElement(Children5, { stateRef: ref, defaultState, children: props.children })
-        );
-      }, "Combiner");
-    }
-    __name(renderCar, "renderCar");
-    exports2.renderCar = renderCar;
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/exports.js
-var require_exports = __commonJS({
-  "node_modules/use-sidecar/dist/es5/exports.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.exportSidecar = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var SideCar = /* @__PURE__ */ __name(function(_a) {
-      var sideCar = _a.sideCar, rest = tslib_1.__rest(_a, ["sideCar"]);
-      if (!sideCar) {
-        throw new Error("Sidecar: please provide `sideCar` property to import the right car");
-      }
-      var Target = sideCar.read();
-      if (!Target) {
-        throw new Error("Sidecar medium not found");
-      }
-      return React43.createElement(Target, tslib_1.__assign({}, rest));
-    }, "SideCar");
-    SideCar.isSideCarExport = true;
-    function exportSidecar(medium, exported) {
-      medium.useMedium(exported);
-      return SideCar;
-    }
-    __name(exportSidecar, "exportSidecar");
-    exports2.exportSidecar = exportSidecar;
-  }
-});
-
-// node_modules/use-sidecar/dist/es5/index.js
-var require_es53 = __commonJS({
-  "node_modules/use-sidecar/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.exportSidecar = exports2.renderCar = exports2.createSidecarMedium = exports2.createMedium = exports2.setConfig = exports2.useSidecar = exports2.sidecar = void 0;
-    var hoc_1 = require_hoc();
-    Object.defineProperty(exports2, "sidecar", { enumerable: true, get: function() {
-      return hoc_1.sidecar;
-    } });
-    var hook_1 = require_hook();
-    Object.defineProperty(exports2, "useSidecar", { enumerable: true, get: function() {
-      return hook_1.useSidecar;
-    } });
-    var config_1 = require_config();
-    Object.defineProperty(exports2, "setConfig", { enumerable: true, get: function() {
-      return config_1.setConfig;
-    } });
-    var medium_1 = require_medium();
-    Object.defineProperty(exports2, "createMedium", { enumerable: true, get: function() {
-      return medium_1.createMedium;
-    } });
-    Object.defineProperty(exports2, "createSidecarMedium", { enumerable: true, get: function() {
-      return medium_1.createSidecarMedium;
-    } });
-    var renderProp_1 = require_renderProp();
-    Object.defineProperty(exports2, "renderCar", { enumerable: true, get: function() {
-      return renderProp_1.renderCar;
-    } });
-    var exports_1 = require_exports();
-    Object.defineProperty(exports2, "exportSidecar", { enumerable: true, get: function() {
-      return exports_1.exportSidecar;
-    } });
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/medium.js
-var require_medium2 = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/medium.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.effectCar = void 0;
-    var use_sidecar_1 = require_es53();
-    exports2.effectCar = (0, use_sidecar_1.createSidecarMedium)();
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/UI.js
-var require_UI = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/UI.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.RemoveScroll = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var constants_1 = require_constants2();
-    var use_callback_ref_1 = require_es52();
-    var medium_1 = require_medium2();
-    var nothing = /* @__PURE__ */ __name(function() {
-      return;
-    }, "nothing");
-    var RemoveScroll2 = React43.forwardRef(function(props, parentRef) {
-      var ref = React43.useRef(null);
-      var _a = React43.useState({
-        onScrollCapture: nothing,
-        onWheelCapture: nothing,
-        onTouchMoveCapture: nothing
-      }), callbacks = _a[0], setCallbacks = _a[1];
-      var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b = props.as, Container = _b === void 0 ? "div" : _b, rest = tslib_1.__rest(props, ["forwardProps", "children", "className", "removeScrollBar", "enabled", "shards", "sideCar", "noIsolation", "inert", "allowPinchZoom", "as"]);
-      var SideCar = sideCar;
-      var containerRef = (0, use_callback_ref_1.useMergeRefs)([ref, parentRef]);
-      var containerProps = tslib_1.__assign(tslib_1.__assign({}, rest), callbacks);
-      return React43.createElement(
-        React43.Fragment,
-        null,
-        enabled && React43.createElement(SideCar, { sideCar: medium_1.effectCar, removeScrollBar, shards, noIsolation, inert, setCallbacks, allowPinchZoom: !!allowPinchZoom, lockRef: ref }),
-        forwardProps ? React43.cloneElement(React43.Children.only(children), tslib_1.__assign(tslib_1.__assign({}, containerProps), { ref: containerRef })) : React43.createElement(Container, tslib_1.__assign({}, containerProps, { className, ref: containerRef }), children)
-      );
-    });
-    exports2.RemoveScroll = RemoveScroll2;
-    RemoveScroll2.defaultProps = {
-      enabled: true,
-      removeScrollBar: true,
-      inert: false
-    };
-    RemoveScroll2.classNames = {
-      fullWidth: constants_1.fullWidthClassName,
-      zeroRight: constants_1.zeroRightClassName
-    };
-  }
-});
-
-// node_modules/get-nonce/dist/es5/index.js
-var require_es54 = __commonJS({
-  "node_modules/get-nonce/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    var currentNonce;
-    exports2.setNonce = function(nonce) {
-      currentNonce = nonce;
-    };
-    exports2.getNonce = function() {
-      if (currentNonce) {
-        return currentNonce;
-      }
-      if (typeof __webpack_nonce__ !== "undefined") {
-        return __webpack_nonce__;
-      }
-      return void 0;
-    };
-  }
-});
-
-// node_modules/react-style-singleton/dist/es5/singleton.js
-var require_singleton = __commonJS({
-  "node_modules/react-style-singleton/dist/es5/singleton.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.stylesheetSingleton = void 0;
-    var get_nonce_1 = require_es54();
-    function makeStyleTag() {
-      if (!document)
-        return null;
-      var tag = document.createElement("style");
-      tag.type = "text/css";
-      var nonce = (0, get_nonce_1.getNonce)();
-      if (nonce) {
-        tag.setAttribute("nonce", nonce);
-      }
-      return tag;
-    }
-    __name(makeStyleTag, "makeStyleTag");
-    function injectStyles(tag, css) {
-      if (tag.styleSheet) {
-        tag.styleSheet.cssText = css;
-      } else {
-        tag.appendChild(document.createTextNode(css));
-      }
-    }
-    __name(injectStyles, "injectStyles");
-    function insertStyleTag(tag) {
-      var head = document.head || document.getElementsByTagName("head")[0];
-      head.appendChild(tag);
-    }
-    __name(insertStyleTag, "insertStyleTag");
-    var stylesheetSingleton = /* @__PURE__ */ __name(function() {
-      var counter = 0;
-      var stylesheet = null;
-      return {
-        add: function(style) {
-          if (counter == 0) {
-            if (stylesheet = makeStyleTag()) {
-              injectStyles(stylesheet, style);
-              insertStyleTag(stylesheet);
-            }
-          }
-          counter++;
-        },
-        remove: function() {
-          counter--;
-          if (!counter && stylesheet) {
-            stylesheet.parentNode && stylesheet.parentNode.removeChild(stylesheet);
-            stylesheet = null;
-          }
-        }
-      };
-    }, "stylesheetSingleton");
-    exports2.stylesheetSingleton = stylesheetSingleton;
-  }
-});
-
-// node_modules/react-style-singleton/dist/es5/hook.js
-var require_hook2 = __commonJS({
-  "node_modules/react-style-singleton/dist/es5/hook.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.styleHookSingleton = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var singleton_1 = require_singleton();
-    var styleHookSingleton = /* @__PURE__ */ __name(function() {
-      var sheet = (0, singleton_1.stylesheetSingleton)();
-      return function(styles, isDynamic) {
-        React43.useEffect(function() {
-          sheet.add(styles);
-          return function() {
-            sheet.remove();
-          };
-        }, [styles && isDynamic]);
-      };
-    }, "styleHookSingleton");
-    exports2.styleHookSingleton = styleHookSingleton;
-  }
-});
-
-// node_modules/react-style-singleton/dist/es5/component.js
-var require_component = __commonJS({
-  "node_modules/react-style-singleton/dist/es5/component.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.styleSingleton = void 0;
-    var hook_1 = require_hook2();
-    var styleSingleton = /* @__PURE__ */ __name(function() {
-      var useStyle2 = (0, hook_1.styleHookSingleton)();
-      var Sheet2 = /* @__PURE__ */ __name(function(_a) {
-        var styles = _a.styles, dynamic = _a.dynamic;
-        useStyle2(styles, dynamic);
-        return null;
-      }, "Sheet");
-      return Sheet2;
-    }, "styleSingleton");
-    exports2.styleSingleton = styleSingleton;
-  }
-});
-
-// node_modules/react-style-singleton/dist/es5/index.js
-var require_es55 = __commonJS({
-  "node_modules/react-style-singleton/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.styleHookSingleton = exports2.stylesheetSingleton = exports2.styleSingleton = void 0;
-    var component_1 = require_component();
-    Object.defineProperty(exports2, "styleSingleton", { enumerable: true, get: function() {
-      return component_1.styleSingleton;
-    } });
-    var singleton_1 = require_singleton();
-    Object.defineProperty(exports2, "stylesheetSingleton", { enumerable: true, get: function() {
-      return singleton_1.stylesheetSingleton;
-    } });
-    var hook_1 = require_hook2();
-    Object.defineProperty(exports2, "styleHookSingleton", { enumerable: true, get: function() {
-      return hook_1.styleHookSingleton;
-    } });
-  }
-});
-
-// node_modules/react-remove-scroll-bar/dist/es5/utils.js
-var require_utils = __commonJS({
-  "node_modules/react-remove-scroll-bar/dist/es5/utils.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.getGapWidth = exports2.zeroGap = void 0;
-    exports2.zeroGap = {
-      left: 0,
-      top: 0,
-      right: 0,
-      gap: 0
-    };
-    var parse = /* @__PURE__ */ __name(function(x) {
-      return parseInt(x || "", 10) || 0;
-    }, "parse");
-    var getOffset = /* @__PURE__ */ __name(function(gapMode) {
-      var cs = window.getComputedStyle(document.body);
-      var left = cs[gapMode === "padding" ? "paddingLeft" : "marginLeft"];
-      var top = cs[gapMode === "padding" ? "paddingTop" : "marginTop"];
-      var right = cs[gapMode === "padding" ? "paddingRight" : "marginRight"];
-      return [parse(left), parse(top), parse(right)];
-    }, "getOffset");
-    var getGapWidth = /* @__PURE__ */ __name(function(gapMode) {
-      if (gapMode === void 0) {
-        gapMode = "margin";
-      }
-      if (typeof window === "undefined") {
-        return exports2.zeroGap;
-      }
-      var offsets = getOffset(gapMode);
-      var documentWidth = document.documentElement.clientWidth;
-      var windowWidth = window.innerWidth;
-      return {
-        left: offsets[0],
-        top: offsets[1],
-        right: offsets[2],
-        gap: Math.max(0, windowWidth - documentWidth + offsets[2] - offsets[0])
-      };
-    }, "getGapWidth");
-    exports2.getGapWidth = getGapWidth;
-  }
-});
-
-// node_modules/react-remove-scroll-bar/dist/es5/component.js
-var require_component2 = __commonJS({
-  "node_modules/react-remove-scroll-bar/dist/es5/component.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.RemoveScrollBar = exports2.lockAttribute = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var react_style_singleton_1 = require_es55();
-    var constants_1 = require_constants2();
-    var utils_1 = require_utils();
-    var Style = (0, react_style_singleton_1.styleSingleton)();
-    exports2.lockAttribute = "data-scroll-locked";
-    var getStyles = /* @__PURE__ */ __name(function(_a, allowRelative, gapMode, important) {
-      var left = _a.left, top = _a.top, right = _a.right, gap = _a.gap;
-      if (gapMode === void 0) {
-        gapMode = "margin";
-      }
-      return "\n  .".concat(constants_1.noScrollbarsClassName, " {\n   overflow: hidden ").concat(important, ";\n   padding-right: ").concat(gap, "px ").concat(important, ";\n  }\n  body[").concat(exports2.lockAttribute, "] {\n    overflow: hidden ").concat(important, ";\n    overscroll-behavior: contain;\n    ").concat([
-        allowRelative && "position: relative ".concat(important, ";"),
-        gapMode === "margin" && "\n    padding-left: ".concat(left, "px;\n    padding-top: ").concat(top, "px;\n    padding-right: ").concat(right, "px;\n    margin-left:0;\n    margin-top:0;\n    margin-right: ").concat(gap, "px ").concat(important, ";\n    "),
-        gapMode === "padding" && "padding-right: ".concat(gap, "px ").concat(important, ";")
-      ].filter(Boolean).join(""), "\n  }\n  \n  .").concat(constants_1.zeroRightClassName, " {\n    right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(constants_1.fullWidthClassName, " {\n    margin-right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(constants_1.zeroRightClassName, " .").concat(constants_1.zeroRightClassName, " {\n    right: 0 ").concat(important, ";\n  }\n  \n  .").concat(constants_1.fullWidthClassName, " .").concat(constants_1.fullWidthClassName, " {\n    margin-right: 0 ").concat(important, ";\n  }\n  \n  body[").concat(exports2.lockAttribute, "] {\n    ").concat(constants_1.removedBarSizeVariable, ": ").concat(gap, "px;\n  }\n");
-    }, "getStyles");
-    var RemoveScrollBar = /* @__PURE__ */ __name(function(props) {
-      var noRelative = props.noRelative, noImportant = props.noImportant, _a = props.gapMode, gapMode = _a === void 0 ? "margin" : _a;
-      var gap = React43.useMemo(function() {
-        return (0, utils_1.getGapWidth)(gapMode);
-      }, [gapMode]);
-      React43.useEffect(function() {
-        document.body.setAttribute(exports2.lockAttribute, "");
-        return function() {
-          document.body.removeAttribute(exports2.lockAttribute);
-        };
-      }, []);
-      return React43.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
-    }, "RemoveScrollBar");
-    exports2.RemoveScrollBar = RemoveScrollBar;
-  }
-});
-
-// node_modules/react-remove-scroll-bar/dist/es5/index.js
-var require_es56 = __commonJS({
-  "node_modules/react-remove-scroll-bar/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.getGapWidth = exports2.removedBarSizeVariable = exports2.noScrollbarsClassName = exports2.fullWidthClassName = exports2.zeroRightClassName = exports2.RemoveScrollBar = void 0;
-    var component_1 = require_component2();
-    Object.defineProperty(exports2, "RemoveScrollBar", { enumerable: true, get: function() {
-      return component_1.RemoveScrollBar;
-    } });
-    var constants_1 = require_constants2();
-    Object.defineProperty(exports2, "zeroRightClassName", { enumerable: true, get: function() {
-      return constants_1.zeroRightClassName;
-    } });
-    Object.defineProperty(exports2, "fullWidthClassName", { enumerable: true, get: function() {
-      return constants_1.fullWidthClassName;
-    } });
-    Object.defineProperty(exports2, "noScrollbarsClassName", { enumerable: true, get: function() {
-      return constants_1.noScrollbarsClassName;
-    } });
-    Object.defineProperty(exports2, "removedBarSizeVariable", { enumerable: true, get: function() {
-      return constants_1.removedBarSizeVariable;
-    } });
-    var utils_1 = require_utils();
-    Object.defineProperty(exports2, "getGapWidth", { enumerable: true, get: function() {
-      return utils_1.getGapWidth;
-    } });
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/aggresiveCapture.js
-var require_aggresiveCapture = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/aggresiveCapture.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.nonPassive = void 0;
-    var passiveSupported = false;
-    if (typeof window !== "undefined") {
-      try {
-        options = Object.defineProperty({}, "passive", {
-          get: function() {
-            passiveSupported = true;
-            return true;
-          }
-        });
-        window.addEventListener("test", options, options);
-        window.removeEventListener("test", options, options);
-      } catch (err) {
-        passiveSupported = false;
-      }
-    }
-    var options;
-    exports2.nonPassive = passiveSupported ? { passive: false } : false;
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/handleScroll.js
-var require_handleScroll = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/handleScroll.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.handleScroll = exports2.locationCouldBeScrolled = void 0;
-    var alwaysContainsScroll = /* @__PURE__ */ __name(function(node) {
-      return node.tagName === "TEXTAREA";
-    }, "alwaysContainsScroll");
-    var elementCanBeScrolled = /* @__PURE__ */ __name(function(node, overflow) {
-      var styles = window.getComputedStyle(node);
-      return (
-        // not-not-scrollable
-        styles[overflow] !== "hidden" && // contains scroll inside self
-        !(styles.overflowY === styles.overflowX && !alwaysContainsScroll(node) && styles[overflow] === "visible")
-      );
-    }, "elementCanBeScrolled");
-    var elementCouldBeVScrolled = /* @__PURE__ */ __name(function(node) {
-      return elementCanBeScrolled(node, "overflowY");
-    }, "elementCouldBeVScrolled");
-    var elementCouldBeHScrolled = /* @__PURE__ */ __name(function(node) {
-      return elementCanBeScrolled(node, "overflowX");
-    }, "elementCouldBeHScrolled");
-    var locationCouldBeScrolled = /* @__PURE__ */ __name(function(axis, node) {
-      var current = node;
-      do {
-        if (typeof ShadowRoot !== "undefined" && current instanceof ShadowRoot) {
-          current = current.host;
-        }
-        var isScrollable = elementCouldBeScrolled(axis, current);
-        if (isScrollable) {
-          var _a = getScrollVariables(axis, current), s = _a[1], d = _a[2];
-          if (s > d) {
-            return true;
-          }
-        }
-        current = current.parentNode;
-      } while (current && current !== document.body);
-      return false;
-    }, "locationCouldBeScrolled");
-    exports2.locationCouldBeScrolled = locationCouldBeScrolled;
-    var getVScrollVariables = /* @__PURE__ */ __name(function(_a) {
-      var scrollTop = _a.scrollTop, scrollHeight = _a.scrollHeight, clientHeight = _a.clientHeight;
-      return [
-        scrollTop,
-        scrollHeight,
-        clientHeight
-      ];
-    }, "getVScrollVariables");
-    var getHScrollVariables = /* @__PURE__ */ __name(function(_a) {
-      var scrollLeft = _a.scrollLeft, scrollWidth = _a.scrollWidth, clientWidth = _a.clientWidth;
-      return [
-        scrollLeft,
-        scrollWidth,
-        clientWidth
-      ];
-    }, "getHScrollVariables");
-    var elementCouldBeScrolled = /* @__PURE__ */ __name(function(axis, node) {
-      return axis === "v" ? elementCouldBeVScrolled(node) : elementCouldBeHScrolled(node);
-    }, "elementCouldBeScrolled");
-    var getScrollVariables = /* @__PURE__ */ __name(function(axis, node) {
-      return axis === "v" ? getVScrollVariables(node) : getHScrollVariables(node);
-    }, "getScrollVariables");
-    var getDirectionFactor = /* @__PURE__ */ __name(function(axis, direction) {
-      return axis === "h" && direction === "rtl" ? -1 : 1;
-    }, "getDirectionFactor");
-    var handleScroll = /* @__PURE__ */ __name(function(axis, endTarget, event, sourceDelta, noOverscroll) {
-      var directionFactor = getDirectionFactor(axis, window.getComputedStyle(endTarget).direction);
-      var delta = directionFactor * sourceDelta;
-      var target = event.target;
-      var targetInLock = endTarget.contains(target);
-      var shouldCancelScroll = false;
-      var isDeltaPositive = delta > 0;
-      var availableScroll = 0;
-      var availableScrollTop = 0;
-      do {
-        var _a = getScrollVariables(axis, target), position = _a[0], scroll_1 = _a[1], capacity = _a[2];
-        var elementScroll = scroll_1 - capacity - directionFactor * position;
-        if (position || elementScroll) {
-          if (elementCouldBeScrolled(axis, target)) {
-            availableScroll += elementScroll;
-            availableScrollTop += position;
-          }
-        }
-        target = target.parentNode;
-      } while (
-        // portaled content
-        !targetInLock && target !== document.body || // self content
-        targetInLock && (endTarget.contains(target) || endTarget === target)
-      );
-      if (isDeltaPositive && (noOverscroll && availableScroll === 0 || !noOverscroll && delta > availableScroll)) {
-        shouldCancelScroll = true;
-      } else if (!isDeltaPositive && (noOverscroll && availableScrollTop === 0 || !noOverscroll && -delta > availableScrollTop)) {
-        shouldCancelScroll = true;
-      }
-      return shouldCancelScroll;
-    }, "handleScroll");
-    exports2.handleScroll = handleScroll;
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/SideEffect.js
-var require_SideEffect = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/SideEffect.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.RemoveScrollSideCar = exports2.getDeltaXY = exports2.getTouchXY = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var react_remove_scroll_bar_1 = require_es56();
-    var react_style_singleton_1 = require_es55();
-    var aggresiveCapture_1 = require_aggresiveCapture();
-    var handleScroll_1 = require_handleScroll();
-    var getTouchXY = /* @__PURE__ */ __name(function(event) {
-      return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
-    }, "getTouchXY");
-    exports2.getTouchXY = getTouchXY;
-    var getDeltaXY = /* @__PURE__ */ __name(function(event) {
-      return [event.deltaX, event.deltaY];
-    }, "getDeltaXY");
-    exports2.getDeltaXY = getDeltaXY;
-    var extractRef = /* @__PURE__ */ __name(function(ref) {
-      return ref && "current" in ref ? ref.current : ref;
-    }, "extractRef");
-    var deltaCompare = /* @__PURE__ */ __name(function(x, y) {
-      return x[0] === y[0] && x[1] === y[1];
-    }, "deltaCompare");
-    var generateStyle = /* @__PURE__ */ __name(function(id) {
-      return "\n  .block-interactivity-".concat(id, " {pointer-events: none;}\n  .allow-interactivity-").concat(id, " {pointer-events: all;}\n");
-    }, "generateStyle");
-    var idCounter = 0;
-    var lockStack = [];
-    function RemoveScrollSideCar(props) {
-      var shouldPreventQueue = React43.useRef([]);
-      var touchStartRef = React43.useRef([0, 0]);
-      var activeAxis = React43.useRef();
-      var id = React43.useState(idCounter++)[0];
-      var Style = React43.useState(function() {
-        return (0, react_style_singleton_1.styleSingleton)();
-      })[0];
-      var lastProps = React43.useRef(props);
-      React43.useEffect(function() {
-        lastProps.current = props;
-      }, [props]);
-      React43.useEffect(function() {
-        if (props.inert) {
-          document.body.classList.add("block-interactivity-".concat(id));
-          var allow_1 = tslib_1.__spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
-          allow_1.forEach(function(el) {
-            return el.classList.add("allow-interactivity-".concat(id));
-          });
-          return function() {
-            document.body.classList.remove("block-interactivity-".concat(id));
-            allow_1.forEach(function(el) {
-              return el.classList.remove("allow-interactivity-".concat(id));
-            });
-          };
-        }
-        return;
-      }, [props.inert, props.lockRef.current, props.shards]);
-      var shouldCancelEvent = React43.useCallback(function(event, parent) {
-        if ("touches" in event && event.touches.length === 2) {
-          return !lastProps.current.allowPinchZoom;
-        }
-        var touch = (0, exports2.getTouchXY)(event);
-        var touchStart = touchStartRef.current;
-        var deltaX = "deltaX" in event ? event.deltaX : touchStart[0] - touch[0];
-        var deltaY = "deltaY" in event ? event.deltaY : touchStart[1] - touch[1];
-        var currentAxis;
-        var target = event.target;
-        var moveDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "h" : "v";
-        if ("touches" in event && moveDirection === "h" && target.type === "range") {
-          return false;
-        }
-        var canBeScrolledInMainDirection = (0, handleScroll_1.locationCouldBeScrolled)(moveDirection, target);
-        if (!canBeScrolledInMainDirection) {
-          return true;
-        }
-        if (canBeScrolledInMainDirection) {
-          currentAxis = moveDirection;
-        } else {
-          currentAxis = moveDirection === "v" ? "h" : "v";
-          canBeScrolledInMainDirection = (0, handleScroll_1.locationCouldBeScrolled)(moveDirection, target);
-        }
-        if (!canBeScrolledInMainDirection) {
-          return false;
-        }
-        if (!activeAxis.current && "changedTouches" in event && (deltaX || deltaY)) {
-          activeAxis.current = currentAxis;
-        }
-        if (!currentAxis) {
-          return true;
-        }
-        var cancelingAxis = activeAxis.current || currentAxis;
-        return (0, handleScroll_1.handleScroll)(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY, true);
-      }, []);
-      var shouldPrevent = React43.useCallback(function(_event) {
-        var event = _event;
-        if (!lockStack.length || lockStack[lockStack.length - 1] !== Style) {
-          return;
-        }
-        var delta = "deltaY" in event ? (0, exports2.getDeltaXY)(event) : (0, exports2.getTouchXY)(event);
-        var sourceEvent = shouldPreventQueue.current.filter(function(e) {
-          return e.name === event.type && e.target === event.target && deltaCompare(e.delta, delta);
-        })[0];
-        if (sourceEvent && sourceEvent.should) {
-          if (event.cancelable) {
-            event.preventDefault();
-          }
-          return;
-        }
-        if (!sourceEvent) {
-          var shardNodes = (lastProps.current.shards || []).map(extractRef).filter(Boolean).filter(function(node) {
-            return node.contains(event.target);
-          });
-          var shouldStop = shardNodes.length > 0 ? shouldCancelEvent(event, shardNodes[0]) : !lastProps.current.noIsolation;
-          if (shouldStop) {
-            if (event.cancelable) {
-              event.preventDefault();
-            }
-          }
-        }
-      }, []);
-      var shouldCancel = React43.useCallback(function(name, delta, target, should) {
-        var event = { name, delta, target, should };
-        shouldPreventQueue.current.push(event);
-        setTimeout(function() {
-          shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e) {
-            return e !== event;
-          });
-        }, 1);
-      }, []);
-      var scrollTouchStart = React43.useCallback(function(event) {
-        touchStartRef.current = (0, exports2.getTouchXY)(event);
-        activeAxis.current = void 0;
-      }, []);
-      var scrollWheel = React43.useCallback(function(event) {
-        shouldCancel(event.type, (0, exports2.getDeltaXY)(event), event.target, shouldCancelEvent(event, props.lockRef.current));
-      }, []);
-      var scrollTouchMove = React43.useCallback(function(event) {
-        shouldCancel(event.type, (0, exports2.getTouchXY)(event), event.target, shouldCancelEvent(event, props.lockRef.current));
-      }, []);
-      React43.useEffect(function() {
-        lockStack.push(Style);
-        props.setCallbacks({
-          onScrollCapture: scrollWheel,
-          onWheelCapture: scrollWheel,
-          onTouchMoveCapture: scrollTouchMove
-        });
-        document.addEventListener("wheel", shouldPrevent, aggresiveCapture_1.nonPassive);
-        document.addEventListener("touchmove", shouldPrevent, aggresiveCapture_1.nonPassive);
-        document.addEventListener("touchstart", scrollTouchStart, aggresiveCapture_1.nonPassive);
-        return function() {
-          lockStack = lockStack.filter(function(inst) {
-            return inst !== Style;
-          });
-          document.removeEventListener("wheel", shouldPrevent, aggresiveCapture_1.nonPassive);
-          document.removeEventListener("touchmove", shouldPrevent, aggresiveCapture_1.nonPassive);
-          document.removeEventListener("touchstart", scrollTouchStart, aggresiveCapture_1.nonPassive);
-        };
-      }, []);
-      var removeScrollBar = props.removeScrollBar, inert = props.inert;
-      return React43.createElement(
-        React43.Fragment,
-        null,
-        inert ? React43.createElement(Style, { styles: generateStyle(id) }) : null,
-        removeScrollBar ? React43.createElement(react_remove_scroll_bar_1.RemoveScrollBar, { gapMode: "margin" }) : null
-      );
-    }
-    __name(RemoveScrollSideCar, "RemoveScrollSideCar");
-    exports2.RemoveScrollSideCar = RemoveScrollSideCar;
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/sidecar.js
-var require_sidecar = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/sidecar.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    var use_sidecar_1 = require_es53();
-    var SideEffect_1 = require_SideEffect();
-    var medium_1 = require_medium2();
-    exports2.default = (0, use_sidecar_1.exportSidecar)(medium_1.effectCar, SideEffect_1.RemoveScrollSideCar);
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/Combination.js
-var require_Combination = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/Combination.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React43 = tslib_1.__importStar(require("react"));
-    var UI_1 = require_UI();
-    var sidecar_1 = tslib_1.__importDefault(require_sidecar());
-    var ReactRemoveScroll = React43.forwardRef(function(props, ref) {
-      return React43.createElement(UI_1.RemoveScroll, tslib_1.__assign({}, props, { ref, sideCar: sidecar_1.default }));
-    });
-    ReactRemoveScroll.classNames = UI_1.RemoveScroll.classNames;
-    exports2.default = ReactRemoveScroll;
-  }
-});
-
-// node_modules/react-remove-scroll/dist/es5/index.js
-var require_es57 = __commonJS({
-  "node_modules/react-remove-scroll/dist/es5/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.RemoveScroll = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var Combination_1 = tslib_1.__importDefault(require_Combination());
-    exports2.RemoveScroll = Combination_1.default;
+    __reExport2(src_exports, require_constants(), module2.exports);
   }
 });
 
@@ -11197,7 +5879,7 @@ var require_isSelectionValid = __commonJS({
 });
 
 // node_modules/react-native-web/dist/cjs/modules/useResponderEvents/utils.js
-var require_utils2 = __commonJS({
+var require_utils = __commonJS({
   "node_modules/react-native-web/dist/cjs/modules/useResponderEvents/utils.js"(exports2) {
     "use strict";
     var _interopRequireDefault = require_interopRequireDefault().default;
@@ -11515,7 +6197,7 @@ var require_ResponderSystem = __commonJS({
     exports2.terminateResponder = terminateResponder;
     var _createResponderEvent = _interopRequireDefault(require_createResponderEvent());
     var _ResponderEventTypes = require_ResponderEventTypes();
-    var _utils = require_utils2();
+    var _utils = require_utils();
     var _ResponderTouchHistoryStore = require_ResponderTouchHistoryStore();
     var _canUseDom = _interopRequireDefault(require_canUseDom());
     var emptyObject = {};
@@ -13462,7 +8144,7 @@ var require_Batchinator = __commonJS({
 });
 
 // node_modules/react-native-web/dist/cjs/vendor/react-native/Utilities/clamp.js
-var require_clamp2 = __commonJS({
+var require_clamp = __commonJS({
   "node_modules/react-native-web/dist/cjs/vendor/react-native/Utilities/clamp.js"(exports2, module2) {
     "use strict";
     function clamp3(min2, value, max2) {
@@ -14421,7 +9103,7 @@ var require_VirtualizedList = __commonJS({
     var _StyleSheet = _interopRequireDefault(require_StyleSheet());
     var _findNodeHandle = _interopRequireDefault(require_findNodeHandle());
     var _Batchinator = _interopRequireDefault(require_Batchinator());
-    var _clamp = _interopRequireDefault(require_clamp2());
+    var _clamp = _interopRequireDefault(require_clamp());
     var _infoLog = _interopRequireDefault(require_infoLog());
     var _CellRenderMask = require_CellRenderMask();
     var _ChildListCollection = _interopRequireDefault(require_ChildListCollection());
@@ -24381,7 +19063,7 @@ var require_modality = __commonJS({
 });
 
 // node_modules/react-native-web/dist/cjs/modules/useEvent/index.js
-var require_useEvent2 = __commonJS({
+var require_useEvent = __commonJS({
   "node_modules/react-native-web/dist/cjs/modules/useEvent/index.js"(exports2, module2) {
     "use strict";
     var _interopRequireDefault = require_interopRequireDefault().default;
@@ -24431,7 +19113,7 @@ var require_useHover = __commonJS({
     exports2.__esModule = true;
     exports2.default = useHover2;
     var _modality = require_modality();
-    var _useEvent = _interopRequireDefault(require_useEvent2());
+    var _useEvent = _interopRequireDefault(require_useEvent());
     var _useLayoutEffect = _interopRequireDefault(require_useLayoutEffect());
     var emptyObject = {};
     var opts = {
@@ -26412,7 +21094,7 @@ var require_useWindowDimensions = __commonJS({
 });
 
 // node_modules/react-native-web/dist/cjs/index.js
-var require_cjs25 = __commonJS({
+var require_cjs3 = __commonJS({
   "node_modules/react-native-web/dist/cjs/index.js"(exports2) {
     "use strict";
     var _interopRequireDefault = require_interopRequireDefault().default;
@@ -26543,6 +21225,5558 @@ var require_cjs25 = __commonJS({
   }
 });
 
+// node_modules/@tamagui/animations-react-native/dist/cjs/createAnimations.js
+var require_createAnimations = __commonJS({
+  "node_modules/@tamagui/animations-react-native/dist/cjs/createAnimations.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var createAnimations_exports = {};
+    __export2(createAnimations_exports, {
+      AnimatedText: () => AnimatedText,
+      AnimatedView: () => AnimatedView,
+      createAnimations: () => createAnimations2,
+      useAnimatedNumber: () => useAnimatedNumber,
+      useAnimatedNumberReaction: () => useAnimatedNumberReaction,
+      useAnimatedNumberStyle: () => useAnimatedNumberStyle
+    });
+    module2.exports = __toCommonJS2(createAnimations_exports);
+    var import_use_presence2 = require_cjs();
+    var import_constants44 = require_cjs2();
+    var import_web15 = require("@tamagui/core");
+    var import_react49 = require("react");
+    var import_react_native = require_cjs3();
+    var animatedStyleKey = {
+      transform: true,
+      opacity: true
+    };
+    var colorStyleKey = {
+      backgroundColor: true,
+      color: true,
+      borderColor: true,
+      borderLeftColor: true,
+      borderRightColor: true,
+      borderTopColor: true,
+      borderBottomColor: true
+    };
+    var costlyToAnimateStyleKey = {
+      borderRadius: true,
+      borderTopLeftRadius: true,
+      borderTopRightRadius: true,
+      borderBottomLeftRadius: true,
+      borderBottomRightRadius: true,
+      borderWidth: true,
+      borderLeftWidth: true,
+      borderRightWidth: true,
+      borderTopWidth: true,
+      borderBottomWidth: true,
+      ...colorStyleKey
+      // TODO for other keys like height or width, it's better to not add them here till layout animations are ready
+    };
+    var AnimatedView = import_react_native.Animated.View;
+    var AnimatedText = import_react_native.Animated.Text;
+    function useAnimatedNumber(initial) {
+      const state = (0, import_react49.useRef)(
+        null
+      );
+      return state.current || (state.current = {
+        composite: null,
+        val: new import_react_native.Animated.Value(initial),
+        strategy: { type: "spring" }
+      }), {
+        getInstance() {
+          return state.current.val;
+        },
+        getValue() {
+          return state.current.val._value;
+        },
+        stop() {
+          var _a;
+          (_a = state.current.composite) == null ? void 0 : _a.stop(), state.current.composite = null;
+        },
+        setValue(next, { type, ...config2 } = { type: "spring" }, onFinish) {
+          var _a, _b;
+          const val = state.current.val, handleFinish = onFinish ? ({ finished }) => finished ? onFinish() : null : void 0;
+          if (type === "direct")
+            val.setValue(next);
+          else if (type === "spring") {
+            (_a = state.current.composite) == null ? void 0 : _a.stop();
+            const composite = import_react_native.Animated.spring(val, {
+              ...config2,
+              toValue: next,
+              useNativeDriver: !import_constants44.isWeb
+            });
+            composite.start(handleFinish), state.current.composite = composite;
+          } else {
+            (_b = state.current.composite) == null ? void 0 : _b.stop();
+            const composite = import_react_native.Animated.timing(val, {
+              ...config2,
+              toValue: next,
+              useNativeDriver: !import_constants44.isWeb
+            });
+            composite.start(handleFinish), state.current.composite = composite;
+          }
+        }
+      };
+    }
+    __name(useAnimatedNumber, "useAnimatedNumber");
+    function useAnimatedNumberReaction({
+      value
+    }, onValue) {
+      const onChange = (0, import_web15.useEvent)((current) => {
+        onValue(current.value);
+      });
+      (0, import_react49.useEffect)(() => {
+        const id = value.getInstance().addListener(onChange);
+        return () => {
+          value.getInstance().removeListener(id);
+        };
+      }, [value, onChange]);
+    }
+    __name(useAnimatedNumberReaction, "useAnimatedNumberReaction");
+    function useAnimatedNumberStyle(value, getStyle) {
+      return getStyle(value.getInstance());
+    }
+    __name(useAnimatedNumberStyle, "useAnimatedNumberStyle");
+    function createAnimations2(animations2) {
+      return {
+        isReactNative: true,
+        animations: animations2,
+        View: AnimatedView,
+        Text: AnimatedText,
+        useAnimatedNumber,
+        useAnimatedNumberReaction,
+        useAnimatedNumberStyle,
+        usePresence: import_use_presence2.usePresence,
+        ResetPresence: import_use_presence2.ResetPresence,
+        useAnimations: ({ props, onDidAnimate, style, componentState, presence }) => {
+          const isExiting = (presence == null ? void 0 : presence[0]) === false, sendExitComplete = presence == null ? void 0 : presence[1], animateStyles = (0, import_react49.useRef)({}), animatedTranforms = (0, import_react49.useRef)([]), animationsState = (0, import_react49.useRef)(
+            /* @__PURE__ */ new WeakMap()
+          ), animateOnly = props.animateOnly || [], hasAnimateOnly = !!props.animateOnly, args = [JSON.stringify(style), componentState, isExiting, !!onDidAnimate], isThereNoNativeStyleKeys = (0, import_react49.useMemo)(() => import_constants44.isWeb ? true : Object.keys(style).some((key) => animateOnly.length ? !animatedStyleKey[key] && animateOnly.indexOf(key) === -1 : !animatedStyleKey[key]), args), res = (0, import_react49.useMemo)(() => {
+            var _a;
+            const runners = [], completions = [], nonAnimatedStyle = {};
+            for (const key in style) {
+              const val = style[key];
+              if (animatedStyleKey[key] == null && !costlyToAnimateStyleKey[key]) {
+                nonAnimatedStyle[key] = val;
+                continue;
+              }
+              if (hasAnimateOnly && !animateOnly.includes(key)) {
+                nonAnimatedStyle[key] = val;
+                continue;
+              }
+              if (key !== "transform") {
+                animateStyles.current[key] = update(key, animateStyles.current[key], val);
+                continue;
+              }
+              if (val) {
+                if (typeof val == "string") {
+                  console.warn("Warning: Tamagui can't animate string transforms yet!");
+                  continue;
+                }
+                for (const [index3, transform] of val.entries()) {
+                  if (!transform)
+                    continue;
+                  const tkey = Object.keys(transform)[0], currentTransform = (_a = animatedTranforms.current[index3]) == null ? void 0 : _a[tkey];
+                  animatedTranforms.current[index3] = {
+                    [tkey]: update(tkey, currentTransform, transform[tkey])
+                  }, animatedTranforms.current = [...animatedTranforms.current];
+                }
+              }
+            }
+            const animatedStyle = {
+              ...Object.fromEntries(
+                Object.entries(animateStyles.current).map(([k, v]) => {
+                  var _a2;
+                  return [
+                    k,
+                    ((_a2 = animationsState.current.get(v)) == null ? void 0 : _a2.interpolation) || v
+                  ];
+                })
+              ),
+              transform: animatedTranforms.current.map((r) => {
+                var _a2;
+                const key = Object.keys(r)[0], val = ((_a2 = animationsState.current.get(r[key])) == null ? void 0 : _a2.interpolation) || r[key];
+                return { [key]: val };
+              })
+            };
+            return {
+              runners,
+              completions,
+              style: [nonAnimatedStyle, animatedStyle]
+            };
+            function update(key, animated, valIn) {
+              const isColorStyleKey = colorStyleKey[key], [val, type] = isColorStyleKey ? [0, void 0] : getValue(valIn);
+              let animateToValue = val;
+              const value = animated || new import_react_native.Animated.Value(val), curInterpolation = animationsState.current.get(value);
+              let interpolateArgs;
+              if (type && (interpolateArgs = getInterpolated(
+                (curInterpolation == null ? void 0 : curInterpolation.current) ?? value._value,
+                val,
+                type
+              ), animationsState.current.set(value, {
+                interpolation: value.interpolate(interpolateArgs),
+                current: val
+              })), isColorStyleKey && (animateToValue = (curInterpolation == null ? void 0 : curInterpolation.animateToValue) ? 0 : 1, interpolateArgs = getColorInterpolated(
+                curInterpolation == null ? void 0 : curInterpolation.current,
+                // valIn is the next color
+                valIn,
+                animateToValue
+              ), animationsState.current.set(value, {
+                current: valIn,
+                interpolation: value.interpolate(interpolateArgs),
+                animateToValue: (curInterpolation == null ? void 0 : curInterpolation.animateToValue) ? 0 : 1
+              })), value) {
+                const animationConfig = getAnimationConfig(key, animations2, props.animation);
+                let resolve;
+                const promise = new Promise((res2) => {
+                  resolve = res2;
+                });
+                completions.push(promise), runners.push(() => {
+                  value.stopAnimation();
+                  function getAnimation() {
+                    return import_react_native.Animated[animationConfig.type || "spring"](value, {
+                      toValue: animateToValue,
+                      useNativeDriver: !import_constants44.isWeb && !isThereNoNativeStyleKeys,
+                      ...animationConfig
+                    });
+                  }
+                  __name(getAnimation, "getAnimation");
+                  (animationConfig.delay ? import_react_native.Animated.sequence([
+                    import_react_native.Animated.delay(animationConfig.delay),
+                    getAnimation()
+                  ]) : getAnimation()).start(({ finished }) => {
+                    finished && resolve();
+                  });
+                });
+              }
+              return process.env.NODE_ENV === "development" && props.debug === "verbose" && console.info(
+                " \u{1F4A0} animate",
+                key,
+                `from (${value._value}) to`,
+                valIn,
+                `(${val})`,
+                "type",
+                type,
+                "interpolate",
+                interpolateArgs
+              ), value;
+            }
+            __name(update, "update");
+          }, args);
+          return (0, import_constants44.useIsomorphicLayoutEffect)(() => {
+            res.runners.forEach((r) => r());
+            let cancel = false;
+            return Promise.all(res.completions).then(() => {
+              cancel || (onDidAnimate == null ? void 0 : onDidAnimate(), isExiting && (sendExitComplete == null ? void 0 : sendExitComplete()));
+            }), () => {
+              cancel = true;
+            };
+          }, args), process.env.NODE_ENV === "development" && props.debug === "verbose" && console.info("Animated", { response: res, inputStyle: style, isExiting }), res;
+        }
+      };
+    }
+    __name(createAnimations2, "createAnimations");
+    function getColorInterpolated(currentColor, nextColor, animateToValue) {
+      const inputRange = [0, 1], outputRange = [currentColor || nextColor, nextColor];
+      return animateToValue === 0 && outputRange.reverse(), {
+        inputRange,
+        outputRange
+      };
+    }
+    __name(getColorInterpolated, "getColorInterpolated");
+    function getInterpolated(current, next, postfix = "deg") {
+      next === current && (current = next - 1e-9);
+      const inputRange = [current, next], outputRange = [`${current}${postfix}`, `${next}${postfix}`];
+      return next < current && (inputRange.reverse(), outputRange.reverse()), {
+        inputRange,
+        outputRange
+      };
+    }
+    __name(getInterpolated, "getInterpolated");
+    function getAnimationConfig(key, animations2, animation) {
+      var _a, _b;
+      if (typeof animation == "string")
+        return animations2[animation];
+      let type = "", extraConf;
+      const shortKey = transformShorthands[key];
+      if (Array.isArray(animation)) {
+        type = animation[0];
+        const conf = ((_a = animation[1]) == null ? void 0 : _a[key]) ?? ((_b = animation[1]) == null ? void 0 : _b[shortKey]);
+        conf && (typeof conf == "string" ? type = conf : (type = conf.type || type, extraConf = conf));
+      } else {
+        const val = (animation == null ? void 0 : animation[key]) ?? (animation == null ? void 0 : animation[shortKey]);
+        type = val == null ? void 0 : val.type, extraConf = val;
+      }
+      return {
+        ...animations2[type],
+        ...extraConf
+      };
+    }
+    __name(getAnimationConfig, "getAnimationConfig");
+    var transformShorthands = {
+      x: "translateX",
+      y: "translateY",
+      translateX: "x",
+      translateY: "y"
+    };
+    function getValue(input, isColor = false) {
+      if (typeof input != "string")
+        return [input];
+      const [_, number, after] = input.match(/([-0-9]+)(deg|%|px)/) ?? [];
+      return [+number, after];
+    }
+    __name(getValue, "getValue");
+  }
+});
+
+// node_modules/@tamagui/animations-react-native/dist/cjs/index.js
+var require_cjs4 = __commonJS({
+  "node_modules/@tamagui/animations-react-native/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    var import_polyfill = require_polyfill();
+    __reExport2(src_exports, require_createAnimations(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/font-inter/dist/cjs/index.js
+var require_cjs5 = __commonJS({
+  "node_modules/@tamagui/font-inter/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      createInterFont: () => createInterFont2
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var import_core53 = require("@tamagui/core");
+    var createInterFont2 = /* @__PURE__ */ __name((font = {}, {
+      sizeLineHeight = /* @__PURE__ */ __name((size4) => size4 + 10, "sizeLineHeight"),
+      sizeSize = /* @__PURE__ */ __name((size4) => size4 * 1, "sizeSize")
+    } = {}) => {
+      const size4 = Object.fromEntries(
+        Object.entries({
+          ...defaultSizes,
+          ...font.size
+        }).map(([k, v]) => [k, sizeSize(+v)])
+      );
+      return (0, import_core53.createFont)({
+        family: import_core53.isWeb ? 'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' : "Inter",
+        lineHeight: Object.fromEntries(
+          Object.entries(size4).map(([k, v]) => [k, sizeLineHeight((0, import_core53.getVariableValue)(v))])
+        ),
+        weight: {
+          4: "300"
+        },
+        letterSpacing: {
+          4: 0
+        },
+        ...font,
+        size: size4
+      });
+    }, "createInterFont");
+    var defaultSizes = {
+      1: 11,
+      2: 12,
+      3: 13,
+      4: 14,
+      true: 14,
+      5: 16,
+      6: 18,
+      7: 20,
+      8: 23,
+      9: 30,
+      10: 46,
+      11: 55,
+      12: 62,
+      13: 72,
+      14: 92,
+      15: 114,
+      16: 134
+    };
+  }
+});
+
+// node_modules/@tamagui/react-native-media-driver/dist/cjs/matchMedia.js
+var require_matchMedia = __commonJS({
+  "node_modules/@tamagui/react-native-media-driver/dist/cjs/matchMedia.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var matchMedia_exports = {};
+    __export2(matchMedia_exports, {
+      matchMedia: () => matchMedia2
+    });
+    module2.exports = __toCommonJS2(matchMedia_exports);
+    var matchMedia2 = globalThis.matchMedia;
+  }
+});
+
+// node_modules/@tamagui/react-native-media-driver/dist/cjs/createMedia.js
+var require_createMedia = __commonJS({
+  "node_modules/@tamagui/react-native-media-driver/dist/cjs/createMedia.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var createMedia_exports = {};
+    __export2(createMedia_exports, {
+      createMedia: () => createMedia2
+    });
+    module2.exports = __toCommonJS2(createMedia_exports);
+    var import_web15 = require("@tamagui/core");
+    var import_matchMedia = require_matchMedia();
+    function createMedia2(media) {
+      return (0, import_web15.setupMatchMedia)(import_matchMedia.matchMedia), media;
+    }
+    __name(createMedia2, "createMedia");
+  }
+});
+
+// node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js
+var require_cjs6 = __commonJS({
+  "node_modules/@tamagui/react-native-media-driver/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_createMedia(), module2.exports);
+    __reExport2(src_exports, require_matchMedia(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/use-force-update/dist/cjs/index.js
+var require_cjs7 = __commonJS({
+  "node_modules/@tamagui/use-force-update/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      isServerSide: () => isServerSide2,
+      useForceUpdate: () => useForceUpdate2
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var import_react49 = require("react");
+    var isServerSide2 = typeof window > "u";
+    var idFn3 = /* @__PURE__ */ __name(() => {
+    }, "idFn");
+    function useForceUpdate2() {
+      return isServerSide2 ? idFn3 : (0, import_react49.useReducer)((x) => Math.random(), 0)[1];
+    }
+    __name(useForceUpdate2, "useForceUpdate");
+  }
+});
+
+// node_modules/@tamagui/animate-presence/dist/cjs/LayoutGroupContext.js
+var require_LayoutGroupContext = __commonJS({
+  "node_modules/@tamagui/animate-presence/dist/cjs/LayoutGroupContext.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var LayoutGroupContext_exports = {};
+    __export2(LayoutGroupContext_exports, {
+      LayoutGroupContext: () => LayoutGroupContext2
+    });
+    module2.exports = __toCommonJS2(LayoutGroupContext_exports);
+    var import_react49 = require("react");
+    var LayoutGroupContext2 = (0, import_react49.createContext)({});
+  }
+});
+
+// node_modules/@tamagui/use-constant/dist/cjs/index.js
+var require_cjs8 = __commonJS({
+  "node_modules/@tamagui/use-constant/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      useConstant: () => useConstant2
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var import_react49 = require("react");
+    function useConstant2(fn) {
+      if (typeof document > "u")
+        return (0, import_react49.useMemo)(() => fn(), []);
+      const ref = (0, import_react49.useRef)();
+      return ref.current || (ref.current = { v: fn() }), ref.current.v;
+    }
+    __name(useConstant2, "useConstant");
+  }
+});
+
+// node_modules/@tamagui/animate-presence/dist/cjs/PresenceChild.js
+var require_PresenceChild = __commonJS({
+  "node_modules/@tamagui/animate-presence/dist/cjs/PresenceChild.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var PresenceChild_exports = {};
+    __export2(PresenceChild_exports, {
+      PresenceChild: () => PresenceChild2
+    });
+    module2.exports = __toCommonJS2(PresenceChild_exports);
+    var import_use_constant3 = require_cjs8();
+    var import_use_presence2 = require_cjs();
+    var React43 = __toESM2(require("react"));
+    var import_react49 = require("react");
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    var PresenceChild2 = React43.memo(
+      ({
+        children,
+        initial,
+        isPresent: isPresent2,
+        onExitComplete,
+        exitVariant,
+        enterVariant,
+        enterExitVariant,
+        presenceAffectsLayout,
+        custom
+      }) => {
+        const presenceChildren = (0, import_use_constant3.useConstant)(newChildrenMap2), id = (0, import_react49.useId)() || "", context = React43.useMemo(
+          () => ({
+            id,
+            initial,
+            isPresent: isPresent2,
+            custom,
+            exitVariant,
+            enterVariant,
+            enterExitVariant,
+            onExitComplete: () => {
+              presenceChildren.set(id, true);
+              for (const isComplete of presenceChildren.values())
+                if (!isComplete)
+                  return;
+              onExitComplete == null ? void 0 : onExitComplete();
+            },
+            register: () => (presenceChildren.set(id, false), () => presenceChildren.delete(id))
+          }),
+          /**
+           * If the presence of a child affects the layout of the components around it,
+           * we want to make a new context value to ensure they get re-rendered
+           * so they can detect that layout change.
+           */
+          // @ts-expect-error its ok
+          presenceAffectsLayout ? void 0 : [isPresent2, exitVariant, enterVariant]
+        );
+        return React43.useMemo(() => {
+          presenceChildren.forEach((_, key) => presenceChildren.set(key, false));
+        }, [isPresent2]), React43.useEffect(() => {
+          !isPresent2 && !presenceChildren.size && (onExitComplete == null ? void 0 : onExitComplete());
+        }, [isPresent2]), /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_use_presence2.PresenceContext.Provider, { value: context, children });
+      }
+    );
+    function newChildrenMap2() {
+      return /* @__PURE__ */ new Map();
+    }
+    __name(newChildrenMap2, "newChildrenMap");
+  }
+});
+
+// node_modules/@tamagui/animate-presence/dist/cjs/AnimatePresence.js
+var require_AnimatePresence = __commonJS({
+  "node_modules/@tamagui/animate-presence/dist/cjs/AnimatePresence.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var AnimatePresence_exports = {};
+    __export2(AnimatePresence_exports, {
+      AnimatePresence: () => AnimatePresence2
+    });
+    module2.exports = __toCommonJS2(AnimatePresence_exports);
+    var import_use_force_update2 = require_cjs7();
+    var import_react49 = require("react");
+    var import_LayoutGroupContext2 = require_LayoutGroupContext();
+    var import_PresenceChild2 = require_PresenceChild();
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    var getChildKey2 = /* @__PURE__ */ __name((child) => child.key || "", "getChildKey");
+    function updateChildLookup2(children, allChildren) {
+      children.forEach((child) => {
+        const key = getChildKey2(child);
+        allChildren.set(key, child);
+      });
+    }
+    __name(updateChildLookup2, "updateChildLookup");
+    function onlyElements2(children) {
+      const filtered = [];
+      return import_react49.Children.forEach(children, (child) => {
+        (0, import_react49.isValidElement)(child) && filtered.push(child);
+      }), filtered;
+    }
+    __name(onlyElements2, "onlyElements");
+    var AnimatePresence2 = /* @__PURE__ */ __name(({
+      children,
+      enterVariant,
+      exitVariant,
+      enterExitVariant,
+      initial = true,
+      onExitComplete,
+      exitBeforeEnter,
+      presenceAffectsLayout = true,
+      custom
+    }) => {
+      let forceRender = (0, import_react49.useContext)(import_LayoutGroupContext2.LayoutGroupContext).forceRender ?? (0, import_use_force_update2.useForceUpdate)();
+      const filteredChildren = onlyElements2(children), presentChildren = (0, import_react49.useRef)(filteredChildren), allChildren = (0, import_react49.useRef)(/* @__PURE__ */ new Map()).current, exiting = (0, import_react49.useRef)(/* @__PURE__ */ new Set()).current;
+      updateChildLookup2(filteredChildren, allChildren);
+      const isInitialRender = (0, import_react49.useRef)(true);
+      if (isInitialRender.current)
+        return isInitialRender.current = false, /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_jsx_runtime56.Fragment, { children: filteredChildren.map((child) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          import_PresenceChild2.PresenceChild,
+          {
+            isPresent: true,
+            enterExitVariant,
+            exitVariant,
+            enterVariant,
+            initial: initial ? void 0 : false,
+            presenceAffectsLayout,
+            custom,
+            children: child
+          },
+          getChildKey2(child)
+        )) });
+      let childrenToRender = [...filteredChildren];
+      const presentKeys = presentChildren.current.map(getChildKey2), targetKeys = filteredChildren.map(getChildKey2), numPresent = presentKeys.length;
+      for (let i = 0; i < numPresent; i++) {
+        const key = presentKeys[i];
+        targetKeys.indexOf(key) === -1 ? exiting.add(key) : exiting.delete(key);
+      }
+      return exitBeforeEnter && exiting.size && (childrenToRender = []), exiting.forEach((key) => {
+        if (targetKeys.indexOf(key) !== -1)
+          return;
+        const child = allChildren.get(key);
+        if (!child)
+          return;
+        const insertionIndex = presentKeys.indexOf(key), exitingComponent = /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          import_PresenceChild2.PresenceChild,
+          {
+            isPresent: false,
+            onExitComplete: () => {
+              allChildren.delete(key), exiting.delete(key);
+              const removeIndex = presentChildren.current.findIndex(
+                (presentChild) => presentChild.key === key
+              );
+              presentChildren.current.splice(removeIndex, 1), exiting.size || (presentChildren.current = filteredChildren, forceRender(), onExitComplete == null ? void 0 : onExitComplete());
+            },
+            presenceAffectsLayout,
+            enterExitVariant,
+            enterVariant,
+            exitVariant,
+            custom,
+            children: child
+          },
+          getChildKey2(child)
+        );
+        childrenToRender.splice(insertionIndex, 0, exitingComponent);
+      }), childrenToRender = childrenToRender.map((child) => {
+        const key = child.key;
+        return exiting.has(key) ? child : /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          import_PresenceChild2.PresenceChild,
+          {
+            isPresent: true,
+            exitVariant,
+            enterVariant,
+            enterExitVariant,
+            presenceAffectsLayout,
+            custom,
+            children: child
+          },
+          getChildKey2(child)
+        );
+      }), presentChildren.current = childrenToRender, /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_jsx_runtime56.Fragment, { children: exiting.size ? childrenToRender : childrenToRender.map((child) => (0, import_react49.cloneElement)(child)) });
+    }, "AnimatePresence");
+    AnimatePresence2.displayName = "AnimatePresence";
+  }
+});
+
+// node_modules/@tamagui/animate-presence/dist/cjs/types.js
+var require_types = __commonJS({
+  "node_modules/@tamagui/animate-presence/dist/cjs/types.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var types_exports = {};
+    module2.exports = __toCommonJS2(types_exports);
+  }
+});
+
+// node_modules/@tamagui/animate-presence/dist/cjs/index.js
+var require_cjs9 = __commonJS({
+  "node_modules/@tamagui/animate-presence/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_AnimatePresence(), module2.exports);
+    __reExport2(src_exports, require_cjs(), module2.exports);
+    __reExport2(src_exports, require_types(), module2.exports);
+    __reExport2(src_exports, require_PresenceChild(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/simple-hash/dist/cjs/index.js
+var require_cjs10 = __commonJS({
+  "node_modules/@tamagui/simple-hash/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      simpleHash: () => simpleHash
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var cache = /* @__PURE__ */ new Map();
+    var simpleHash = /* @__PURE__ */ __name((str, hashMin = 10) => {
+      if (cache.has(str))
+        return cache.get(str);
+      let hash = 0, valids = "";
+      const len = str.length;
+      for (let i = 0; i < len; i++) {
+        const char = str.charCodeAt(i);
+        if (hashMin !== "strict" && (char === 46 && (valids += "d0t"), isValidCSSCharCode(char) && len <= hashMin)) {
+          valids += str[i];
+          continue;
+        }
+        hash = hashChar(hash, str[i]);
+      }
+      const res = valids + (hash ? Math.abs(hash) : "");
+      return cache.size > 1e4 && cache.clear(), cache.set(str, res), res;
+    }, "simpleHash");
+    var hashChar = /* @__PURE__ */ __name((hash, c) => Math.imul(31, hash) + c.charCodeAt(0) | 0, "hashChar");
+    function isValidCSSCharCode(code) {
+      return (
+        // A-Z
+        code >= 65 && code <= 90 || // a-z
+        code >= 97 && code <= 122 || // _
+        code === 95 || // -
+        code === 45 || // 0-9
+        code >= 48 && code <= 57
+      );
+    }
+    __name(isValidCSSCharCode, "isValidCSSCharCode");
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/clamp.js
+var require_clamp2 = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/clamp.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var clamp_exports = {};
+    __export2(clamp_exports, {
+      clamp: () => clamp3
+    });
+    module2.exports = __toCommonJS2(clamp_exports);
+    function clamp3(value, [min2, max2]) {
+      return Math.min(max2, Math.max(min2, value));
+    }
+    __name(clamp3, "clamp");
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/composeEventHandlers.js
+var require_composeEventHandlers = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/composeEventHandlers.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var composeEventHandlers_exports = {};
+    __export2(composeEventHandlers_exports, {
+      composeEventHandlers: () => composeEventHandlers3
+    });
+    module2.exports = __toCommonJS2(composeEventHandlers_exports);
+    function composeEventHandlers3(og, next, { checkDefaultPrevented = true } = {}) {
+      return !og || !next ? next || og || void 0 : (event) => {
+        if (og == null ? void 0 : og(event), !event || !(checkDefaultPrevented && "defaultPrevented" in event) || // @ts-ignore
+        "defaultPrevented" in event && !event.defaultPrevented)
+          return next == null ? void 0 : next(event);
+      };
+    }
+    __name(composeEventHandlers3, "composeEventHandlers");
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/concatClassName.js
+var require_concatClassName = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/concatClassName.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var concatClassName_exports = {};
+    __export2(concatClassName_exports, {
+      concatClassName: () => concatClassName
+    });
+    module2.exports = __toCommonJS2(concatClassName_exports);
+    function concatClassName(_cn) {
+      const args = arguments, usedPrefixes = [];
+      let final = "";
+      const len = args.length;
+      let propObjects = null;
+      for (let x = len; x >= 0; x--) {
+        const cns = args[x];
+        if (!cns)
+          continue;
+        if (!Array.isArray(cns) && typeof cns != "string") {
+          propObjects = propObjects || [], propObjects.push(cns);
+          continue;
+        }
+        const names = Array.isArray(cns) ? cns : cns.split(" "), numNames = names.length;
+        for (let i = numNames - 1; i >= 0; i--) {
+          const name = names[i];
+          if (!name || name === " ")
+            continue;
+          if (name[0] !== "_") {
+            final = name + " " + final;
+            continue;
+          }
+          const splitIndex = name.indexOf("-");
+          if (splitIndex < 1) {
+            final = name + " " + final;
+            continue;
+          }
+          const isMediaQuery = name[splitIndex + 1] === "_", styleKey = name.slice(1, name.lastIndexOf("-")), mediaKey = isMediaQuery ? name.slice(splitIndex + 2, splitIndex + 7) : null, uid = mediaKey ? styleKey + mediaKey : styleKey;
+          if (usedPrefixes.indexOf(uid) > -1)
+            continue;
+          usedPrefixes.push(uid);
+          const propName = styleKey;
+          propName && propObjects && propObjects.some((po) => {
+            if (mediaKey) {
+              const propKey = pseudoInvert[mediaKey];
+              return po && po[propKey] && propName in po[propKey] && po[propKey] !== null;
+            }
+            return po && propName in po && po[propName] !== null;
+          }) || (final = name + " " + final);
+        }
+      }
+      return final;
+    }
+    __name(concatClassName, "concatClassName");
+    var pseudoInvert = {
+      hover: "hoverStyle",
+      focus: "focusStyle",
+      press: "pressStyle"
+    };
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/types.js
+var require_types2 = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/types.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var types_exports = {};
+    module2.exports = __toCommonJS2(types_exports);
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/shouldRenderNativePlatform.js
+var require_shouldRenderNativePlatform = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/shouldRenderNativePlatform.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var shouldRenderNativePlatform_exports = {};
+    __export2(shouldRenderNativePlatform_exports, {
+      shouldRenderNativePlatform: () => shouldRenderNativePlatform3
+    });
+    module2.exports = __toCommonJS2(shouldRenderNativePlatform_exports);
+    var import_constants44 = require_cjs2();
+    var ALL_PLATFORMS = ["web", "android", "ios"];
+    function shouldRenderNativePlatform3(nativeProp) {
+      if (!nativeProp)
+        return null;
+      const userRequestedPlatforms = resolvePlatformNames(nativeProp);
+      for (const platform2 of ALL_PLATFORMS)
+        if (platform2 === import_constants44.currentPlatform && userRequestedPlatforms.has(platform2))
+          return platform2;
+      return null;
+    }
+    __name(shouldRenderNativePlatform3, "shouldRenderNativePlatform");
+    function resolvePlatformNames(nativeProp) {
+      const platforms = nativeProp === true ? ALL_PLATFORMS : nativeProp === false ? [] : Array.isArray(nativeProp) ? nativeProp : [nativeProp], set = new Set(platforms);
+      return set.has("mobile") && (set.add("android"), set.add("ios"), set.delete("mobile")), set;
+    }
+    __name(resolvePlatformNames, "resolvePlatformNames");
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/validStyleProps.js
+var require_validStyleProps = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/validStyleProps.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var validStyleProps_exports = {};
+    __export2(validStyleProps_exports, {
+      stylePropsAll: () => stylePropsAll,
+      stylePropsFont: () => stylePropsFont2,
+      stylePropsText: () => stylePropsText2,
+      stylePropsTextOnly: () => stylePropsTextOnly2,
+      stylePropsTransform: () => stylePropsTransform2,
+      stylePropsUnitless: () => stylePropsUnitless2,
+      stylePropsView: () => stylePropsView2,
+      tokenCategories: () => tokenCategories2,
+      validPseudoKeys: () => validPseudoKeys2,
+      validStyles: () => validStyles2
+    });
+    module2.exports = __toCommonJS2(validStyleProps_exports);
+    var import_constants44 = require_cjs2();
+    var textColors2 = {
+      color: true,
+      textDecorationColor: true,
+      textShadowColor: true
+    };
+    var tokenCategories2 = {
+      radius: {
+        borderRadius: true,
+        borderTopLeftRadius: true,
+        borderTopRightRadius: true,
+        borderBottomLeftRadius: true,
+        borderBottomRightRadius: true,
+        // logical
+        borderStartStartRadius: true,
+        borderStartEndRadius: true,
+        borderEndStartRadius: true,
+        borderEndEndRadius: true
+      },
+      size: {
+        width: true,
+        height: true,
+        minWidth: true,
+        minHeight: true,
+        maxWidth: true,
+        maxHeight: true
+      },
+      zIndex: {
+        zIndex: true
+      },
+      color: {
+        backgroundColor: true,
+        borderColor: true,
+        borderBlockStartColor: true,
+        borderBlockEndColor: true,
+        borderBlockColor: true,
+        borderBottomColor: true,
+        borderTopColor: true,
+        borderLeftColor: true,
+        borderRightColor: true,
+        borderEndColor: true,
+        borderStartColor: true,
+        shadowColor: true,
+        ...textColors2,
+        outlineColor: true
+      }
+    };
+    var stylePropsUnitless2 = {
+      WebkitLineClamp: true,
+      animationIterationCount: true,
+      aspectRatio: true,
+      borderImageOutset: true,
+      borderImageSlice: true,
+      borderImageWidth: true,
+      columnCount: true,
+      flex: true,
+      flexGrow: true,
+      flexOrder: true,
+      flexPositive: true,
+      flexShrink: true,
+      flexNegative: true,
+      fontWeight: true,
+      gridRow: true,
+      gridRowEnd: true,
+      gridRowGap: true,
+      gridRowStart: true,
+      gridColumn: true,
+      gridColumnEnd: true,
+      gridColumnGap: true,
+      gridColumnStart: true,
+      lineClamp: true,
+      opacity: true,
+      order: true,
+      orphans: true,
+      tabSize: true,
+      widows: true,
+      zIndex: true,
+      zoom: true,
+      scale: true,
+      scaleX: true,
+      scaleY: true,
+      scaleZ: true,
+      shadowOpacity: true
+    };
+    var stylePropsTransform2 = {
+      x: true,
+      y: true,
+      scale: true,
+      perspective: true,
+      scaleX: true,
+      scaleY: true,
+      skewX: true,
+      skewY: true,
+      matrix: true,
+      rotate: true,
+      rotateY: true,
+      rotateX: true,
+      rotateZ: true
+    };
+    var stylePropsView2 = {
+      backfaceVisibility: true,
+      borderBottomEndRadius: true,
+      borderBottomStartRadius: true,
+      borderBottomWidth: true,
+      borderLeftWidth: true,
+      borderRightWidth: true,
+      borderStyle: true,
+      borderTopEndRadius: true,
+      borderTopStartRadius: true,
+      borderTopWidth: true,
+      borderWidth: true,
+      transform: true,
+      transformOrigin: true,
+      alignContent: true,
+      alignItems: true,
+      alignSelf: true,
+      borderEndWidth: true,
+      borderStartWidth: true,
+      bottom: true,
+      display: true,
+      end: true,
+      flexBasis: true,
+      flexDirection: true,
+      flexWrap: true,
+      gap: true,
+      columnGap: true,
+      rowGap: true,
+      justifyContent: true,
+      left: true,
+      margin: true,
+      marginBlockEnd: true,
+      marginBlockStart: true,
+      marginInlineEnd: true,
+      marginInline: true,
+      marginInlineStart: true,
+      marginBottom: true,
+      marginEnd: true,
+      marginHorizontal: true,
+      marginLeft: true,
+      marginRight: true,
+      marginStart: true,
+      marginTop: true,
+      marginVertical: true,
+      overflow: true,
+      padding: true,
+      paddingBottom: true,
+      paddingInline: true,
+      paddingBlock: true,
+      paddingBlockStart: true,
+      paddingInlineEnd: true,
+      paddingInlineStart: true,
+      paddingEnd: true,
+      paddingHorizontal: true,
+      paddingLeft: true,
+      paddingRight: true,
+      paddingStart: true,
+      paddingTop: true,
+      paddingVertical: true,
+      position: true,
+      right: true,
+      start: true,
+      top: true,
+      direction: true,
+      shadowOffset: true,
+      shadowRadius: true,
+      ...tokenCategories2.color,
+      ...tokenCategories2.radius,
+      ...tokenCategories2.size,
+      ...tokenCategories2.radius,
+      ...stylePropsTransform2,
+      ...stylePropsUnitless2,
+      // RN doesn't support specific border styles per-edge
+      borderBottomStyle: true,
+      borderTopStyle: true,
+      borderLeftStyle: true,
+      borderRightStyle: true,
+      overflowX: true,
+      overflowY: true,
+      userSelect: true,
+      cursor: true,
+      contain: true,
+      pointerEvents: true,
+      boxSizing: true,
+      boxShadow: true,
+      outlineStyle: true,
+      outlineOffset: true,
+      outlineWidth: true,
+      touchAction: true,
+      ...import_constants44.isAndroid ? { elevationAndroid: true } : {}
+    };
+    var stylePropsFont2 = {
+      fontFamily: true,
+      fontSize: true,
+      fontStyle: true,
+      fontWeight: true,
+      letterSpacing: true,
+      lineHeight: true,
+      textTransform: true
+    };
+    var stylePropsTextOnly2 = {
+      ...stylePropsFont2,
+      textAlign: true,
+      textDecorationLine: true,
+      textDecorationStyle: true,
+      ...textColors2,
+      textShadowOffset: true,
+      textShadowRadius: true,
+      whiteSpace: true,
+      wordWrap: true,
+      textOverflow: true,
+      textDecorationDistance: true,
+      userSelect: true,
+      selectable: true,
+      cursor: true,
+      WebkitLineClamp: true,
+      WebkitBoxOrient: true
+    };
+    var stylePropsText2 = {
+      ...stylePropsView2,
+      ...stylePropsTextOnly2
+    };
+    var stylePropsAll = stylePropsText2;
+    var validPseudoKeys2 = {
+      enterStyle: true,
+      exitStyle: true,
+      hoverStyle: true,
+      pressStyle: true,
+      focusStyle: true
+    };
+    var validStyles2 = {
+      ...validPseudoKeys2,
+      ...stylePropsView2
+    };
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/withStaticProperties.js
+var require_withStaticProperties = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/withStaticProperties.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var withStaticProperties_exports = {};
+    __export2(withStaticProperties_exports, {
+      withStaticProperties: () => withStaticProperties6
+    });
+    module2.exports = __toCommonJS2(withStaticProperties_exports);
+    var import_react49 = require("react");
+    var Decorated2 = Symbol();
+    var withStaticProperties6 = /* @__PURE__ */ __name((component, staticProps) => {
+      const next = (() => {
+        if (component[Decorated2]) {
+          const _ = (0, import_react49.forwardRef)(
+            (props, ref) => (0, import_react49.createElement)(component, { ...props, ref })
+          );
+          for (const key in component) {
+            const v = component[key];
+            _[key] = v && typeof v == "object" ? { ...v } : v;
+          }
+        }
+        return component;
+      })();
+      return Object.assign(next, staticProps), next[Decorated2] = true, next;
+    }, "withStaticProperties");
+  }
+});
+
+// node_modules/@tamagui/helpers/dist/cjs/index.js
+var require_cjs11 = __commonJS({
+  "node_modules/@tamagui/helpers/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_cjs10(), module2.exports);
+    __reExport2(src_exports, require_clamp2(), module2.exports);
+    __reExport2(src_exports, require_composeEventHandlers(), module2.exports);
+    __reExport2(src_exports, require_concatClassName(), module2.exports);
+    __reExport2(src_exports, require_types2(), module2.exports);
+    __reExport2(src_exports, require_shouldRenderNativePlatform(), module2.exports);
+    __reExport2(src_exports, require_validStyleProps(), module2.exports);
+    __reExport2(src_exports, require_withStaticProperties(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/use-event/dist/cjs/useGet.js
+var require_useGet = __commonJS({
+  "node_modules/@tamagui/use-event/dist/cjs/useGet.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var useGet_exports = {};
+    __export2(useGet_exports, {
+      useGet: () => useGet6
+    });
+    module2.exports = __toCommonJS2(useGet_exports);
+    var import_constants44 = require_cjs2();
+    var import_react49 = require("react");
+    function useGet6(currentValue, initialValue2, forwardToFunction) {
+      const curRef = (0, import_react49.useRef)(initialValue2 ?? currentValue);
+      return (0, import_constants44.useIsomorphicLayoutEffect)(() => {
+        curRef.current = currentValue;
+      }), (0, import_react49.useCallback)(
+        forwardToFunction ? (...args) => {
+          var _a;
+          return (_a = curRef.current) == null ? void 0 : _a.apply(null, args);
+        } : () => curRef.current,
+        []
+      );
+    }
+    __name(useGet6, "useGet");
+  }
+});
+
+// node_modules/@tamagui/use-event/dist/cjs/useEvent.js
+var require_useEvent2 = __commonJS({
+  "node_modules/@tamagui/use-event/dist/cjs/useEvent.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var useEvent_exports = {};
+    __export2(useEvent_exports, {
+      useEvent: () => useEvent12
+    });
+    module2.exports = __toCommonJS2(useEvent_exports);
+    var import_useGet2 = require_useGet();
+    function useEvent12(callback) {
+      return (0, import_useGet2.useGet)(callback, defaultValue2, true);
+    }
+    __name(useEvent12, "useEvent");
+    var defaultValue2 = /* @__PURE__ */ __name(() => {
+      throw new Error("Cannot call an event handler while rendering.");
+    }, "defaultValue");
+  }
+});
+
+// node_modules/@tamagui/use-event/dist/cjs/index.js
+var require_cjs12 = __commonJS({
+  "node_modules/@tamagui/use-event/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_useEvent2(), module2.exports);
+    __reExport2(src_exports, require_useGet(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/use-controllable-state/dist/cjs/useControllableState.js
+var require_useControllableState = __commonJS({
+  "node_modules/@tamagui/use-controllable-state/dist/cjs/useControllableState.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var useControllableState_exports = {};
+    __export2(useControllableState_exports, {
+      useControllableState: () => useControllableState2
+    });
+    module2.exports = __toCommonJS2(useControllableState_exports);
+    var import_use_event3 = require_cjs12();
+    var import_react49 = require("react");
+    var emptyCallbackFn2 = /* @__PURE__ */ __name((_) => _(), "emptyCallbackFn");
+    function useControllableState2({
+      prop,
+      defaultProp,
+      onChange,
+      strategy = "prop-wins",
+      preventUpdate,
+      transition
+    }) {
+      const [state, setState] = (0, import_react49.useState)(prop ?? defaultProp), previous = (0, import_react49.useRef)(state), propWins = strategy === "prop-wins" && prop !== void 0, value = propWins ? prop : state, onChangeCb = (0, import_use_event3.useEvent)(onChange || idFn3), transitionFn = transition ? import_react49.startTransition : emptyCallbackFn2;
+      (0, import_react49.useEffect)(() => {
+        prop !== void 0 && (previous.current = prop, transitionFn(() => {
+          setState(prop);
+        }));
+      }, [prop]), (0, import_react49.useEffect)(() => {
+        propWins || state !== previous.current && (previous.current = state, onChangeCb(state));
+      }, [onChangeCb, state, propWins]);
+      const setter = (0, import_use_event3.useEvent)((next) => {
+        if (!preventUpdate)
+          if (propWins) {
+            const nextValue = typeof next == "function" ? next(previous.current) : next;
+            onChangeCb(nextValue);
+          } else
+            transitionFn(() => {
+              setState(next);
+            });
+      });
+      return [value, setter];
+    }
+    __name(useControllableState2, "useControllableState");
+    var idFn3 = /* @__PURE__ */ __name(() => {
+    }, "idFn");
+  }
+});
+
+// node_modules/@tamagui/use-controllable-state/dist/cjs/index.js
+var require_cjs13 = __commonJS({
+  "node_modules/@tamagui/use-controllable-state/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_useControllableState(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/collapsible/dist/cjs/Collapsible.js
+var require_Collapsible = __commonJS({
+  "node_modules/@tamagui/collapsible/dist/cjs/Collapsible.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var Collapsible_exports = {};
+    __export2(Collapsible_exports, {
+      Collapsible: () => Collapsible,
+      CollapsibleContent: () => CollapsibleContent,
+      CollapsibleContentFrame: () => CollapsibleContentFrame,
+      CollapsibleTrigger: () => CollapsibleTrigger,
+      CollapsibleTriggerFrame: () => CollapsibleTriggerFrame
+    });
+    module2.exports = __toCommonJS2(Collapsible_exports);
+    var import_animate_presence6 = require_cjs9();
+    var import_helpers25 = require_cjs11();
+    var import_use_controllable_state15 = require_cjs13();
+    var import_web15 = require("@tamagui/core");
+    var React43 = __toESM2(require("react"));
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    var COLLAPSIBLE_NAME = "Collapsible";
+    var { Provider: CollapsibleProvider, useStyledContext: useCollapsibleContext } = (0, import_web15.createStyledContext)();
+    var _Collapsible = React43.forwardRef(
+      (props, forwardedRef) => {
+        const {
+          __scopeCollapsible,
+          open: openProp,
+          defaultOpen,
+          disabled,
+          onOpenChange,
+          ...collapsibleProps
+        } = props, [open = false, setOpen] = (0, import_use_controllable_state15.useControllableState)({
+          prop: openProp,
+          defaultProp: defaultOpen,
+          onChange: onOpenChange
+        });
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          CollapsibleProvider,
+          {
+            scope: __scopeCollapsible,
+            disabled,
+            contentId: React43.useId(),
+            open,
+            onOpenToggle: React43.useCallback(
+              () => setOpen((prevOpen) => !prevOpen),
+              [setOpen]
+            ),
+            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              import_web15.Stack,
+              {
+                "data-state": getState6(open),
+                "data-disabled": disabled ? "" : void 0,
+                ...collapsibleProps,
+                ref: forwardedRef
+              }
+            )
+          }
+        );
+      }
+    );
+    _Collapsible.displayName = COLLAPSIBLE_NAME;
+    var TRIGGER_NAME6 = "CollapsibleTrigger";
+    var CollapsibleTriggerFrame = (0, import_web15.styled)(import_web15.Stack, {
+      name: TRIGGER_NAME6,
+      tag: "button"
+    });
+    var CollapsibleTrigger = CollapsibleTriggerFrame.styleable(
+      (props, forwardedRef) => {
+        const { __scopeCollapsible, children, ...triggerProps } = props, context = useCollapsibleContext(__scopeCollapsible);
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          CollapsibleTriggerFrame,
+          {
+            "aria-controls": context.contentId,
+            "aria-expanded": context.open || false,
+            "data-state": getState6(context.open),
+            "data-disabled": context.disabled ? "" : void 0,
+            disabled: context.disabled,
+            ...triggerProps,
+            ref: forwardedRef,
+            onPress: (0, import_helpers25.composeEventHandlers)(props.onPress, context.onOpenToggle),
+            children: typeof children == "function" ? children({ open: context.open }) : children
+          }
+        );
+      }
+    );
+    CollapsibleTrigger.displayName = TRIGGER_NAME6;
+    var CONTENT_NAME5 = "CollapsibleContent";
+    var CollapsibleContentFrame = (0, import_web15.styled)(import_web15.Stack, {
+      name: CONTENT_NAME5
+    });
+    var CollapsibleContent = CollapsibleContentFrame.styleable(
+      (props, forwardedRef) => {
+        const {
+          forceMount,
+          children,
+          // @ts-expect-error
+          __scopeCollapsible,
+          ...contentProps
+        } = props, context = useCollapsibleContext(__scopeCollapsible);
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_animate_presence6.AnimatePresence, { ...contentProps, children: forceMount || context.open ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(CollapsibleContentFrame, { ref: forwardedRef, ...contentProps, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_animate_presence6.ResetPresence, { children }) }) : null });
+      }
+    );
+    CollapsibleContent.displayName = CONTENT_NAME5;
+    function getState6(open) {
+      return open ? "open" : "closed";
+    }
+    __name(getState6, "getState");
+    var Collapsible = (0, import_helpers25.withStaticProperties)(_Collapsible, {
+      Trigger: CollapsibleTrigger,
+      Content: CollapsibleContent
+    });
+  }
+});
+
+// node_modules/@tamagui/collapsible/dist/cjs/index.js
+var require_cjs14 = __commonJS({
+  "node_modules/@tamagui/collapsible/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_Collapsible(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/compose-refs/dist/cjs/compose-refs.js
+var require_compose_refs = __commonJS({
+  "node_modules/@tamagui/compose-refs/dist/cjs/compose-refs.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var compose_refs_exports = {};
+    __export2(compose_refs_exports, {
+      composeRefs: () => composeRefs2,
+      setRef: () => setRef2,
+      useComposedRefs: () => useComposedRefs2
+    });
+    module2.exports = __toCommonJS2(compose_refs_exports);
+    var React43 = __toESM2(require("react"));
+    function setRef2(ref, value) {
+      typeof ref == "function" ? ref(value) : ref && (ref.current = value);
+    }
+    __name(setRef2, "setRef");
+    function composeRefs2(...refs) {
+      return (node) => refs.forEach((ref) => setRef2(ref, node));
+    }
+    __name(composeRefs2, "composeRefs");
+    function useComposedRefs2(...refs) {
+      return React43.useCallback(composeRefs2(...refs), refs);
+    }
+    __name(useComposedRefs2, "useComposedRefs");
+  }
+});
+
+// node_modules/@tamagui/compose-refs/dist/cjs/index.js
+var require_cjs15 = __commonJS({
+  "node_modules/@tamagui/compose-refs/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_compose_refs(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/collection/dist/cjs/Collection.js
+var require_Collection = __commonJS({
+  "node_modules/@tamagui/collection/dist/cjs/Collection.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var Collection_exports = {};
+    __export2(Collection_exports, {
+      createCollection: () => createCollection2
+    });
+    module2.exports = __toCommonJS2(Collection_exports);
+    var import_compose_refs23 = require_cjs15();
+    var import_constants44 = require_cjs2();
+    var import_core53 = require("@tamagui/core");
+    var import_react49 = __toESM2(require("react"));
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    function createCollection2(name) {
+      const { Provider: CollectionProviderImpl, useStyledContext: useCollectionContext } = (0, import_core53.createStyledContext)({
+        collectionRef: { current: null },
+        itemMap: /* @__PURE__ */ new Map()
+      }), CollectionProvider = /* @__PURE__ */ __name((props) => {
+        const { __scopeCollection, children } = props, ref = import_react49.default.useRef(null), itemMap = import_react49.default.useRef(/* @__PURE__ */ new Map()).current;
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          CollectionProviderImpl,
+          {
+            scope: __scopeCollection,
+            itemMap,
+            collectionRef: ref,
+            children
+          }
+        );
+      }, "CollectionProvider");
+      CollectionProvider.displayName = "CollectionProvider";
+      const COLLECTION_SLOT_NAME = name + "CollectionSlot", CollectionSlot = import_react49.default.forwardRef((props, forwardedRef) => {
+        const { __scopeCollection, children } = props, context = useCollectionContext(__scopeCollection), composedRefs = (0, import_compose_refs23.useComposedRefs)(forwardedRef, context.collectionRef);
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_core53.Slot, { ref: composedRefs, children });
+      });
+      CollectionSlot.displayName = COLLECTION_SLOT_NAME;
+      const ITEM_SLOT_NAME = name + "CollectionItemSlot", ITEM_DATA_ATTR = "data-collection-item", CollectionItemSlot = import_react49.default.forwardRef((props, forwardedRef) => {
+        const { __scopeCollection, children, ...itemData } = props, ref = import_react49.default.useRef(null), composedRefs = (0, import_compose_refs23.useComposedRefs)(forwardedRef, ref), context = useCollectionContext(__scopeCollection);
+        return import_react49.default.useEffect(() => (context.itemMap.set(ref, { ref, ...itemData }), () => void context.itemMap.delete(ref))), /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_core53.Slot, { [ITEM_DATA_ATTR]: "", ref: composedRefs, children });
+      });
+      CollectionItemSlot.displayName = ITEM_SLOT_NAME;
+      function useCollection2(__scopeCollection) {
+        const context = useCollectionContext(__scopeCollection);
+        return import_react49.default.useCallback(() => {
+          if (!import_constants44.isWeb)
+            return [];
+          const collectionNode = context.collectionRef.current;
+          if (!collectionNode)
+            return [];
+          const orderedNodes = Array.from(
+            collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`)
+          );
+          return Array.from(context.itemMap.values()).sort(
+            (a, b) => orderedNodes.indexOf(a.ref.current) - orderedNodes.indexOf(b.ref.current)
+          );
+        }, [context.collectionRef, context.itemMap]);
+      }
+      __name(useCollection2, "useCollection");
+      return [
+        { Provider: CollectionProvider, Slot: CollectionSlot, ItemSlot: CollectionItemSlot },
+        useCollection2
+      ];
+    }
+    __name(createCollection2, "createCollection");
+  }
+});
+
+// node_modules/@tamagui/collection/dist/cjs/index.js
+var require_cjs16 = __commonJS({
+  "node_modules/@tamagui/collection/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_Collection(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/getElevation.js
+var require_getElevation = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/getElevation.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var getElevation_exports = {};
+    __export2(getElevation_exports, {
+      getElevation: () => getElevation2,
+      getSizedElevation: () => getSizedElevation2
+    });
+    module2.exports = __toCommonJS2(getElevation_exports);
+    var import_core53 = require("@tamagui/core");
+    var getElevation2 = /* @__PURE__ */ __name((size4, extras) => {
+      if (!size4)
+        return;
+      const { tokens: tokens3 } = extras, token = tokens3.size[size4], sizeNum = (0, import_core53.isVariable)(token) ? +token.val : size4;
+      return getSizedElevation2(sizeNum, extras);
+    }, "getElevation");
+    var getSizedElevation2 = /* @__PURE__ */ __name((val, { theme, tokens: tokens3 }) => {
+      let num = 0;
+      if (val === true) {
+        const val2 = (0, import_core53.getVariableValue)(tokens3.size.true);
+        typeof val2 == "number" ? num = val2 : num = 10;
+      } else
+        num = +val;
+      if (num === 0)
+        return;
+      const [height, shadowRadius] = [Math.round(num / 4 + 1), Math.round(num / 2 + 2)];
+      return {
+        shadowColor: theme.shadowColor,
+        shadowRadius,
+        shadowOffset: { height, width: 0 },
+        ...import_core53.isAndroid ? {
+          elevationAndroid: 2 * height
+        } : {}
+      };
+    }, "getSizedElevation");
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/Stacks.js
+var require_Stacks = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/Stacks.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var Stacks_exports = {};
+    __export2(Stacks_exports, {
+      XStack: () => XStack2,
+      YStack: () => YStack2,
+      ZStack: () => ZStack2,
+      fullscreenStyle: () => fullscreenStyle2
+    });
+    module2.exports = __toCommonJS2(Stacks_exports);
+    var import_core53 = require("@tamagui/core");
+    var import_getElevation3 = require_getElevation();
+    var fullscreenStyle2 = {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0
+    };
+    var getInset2 = /* @__PURE__ */ __name((val) => val && typeof val == "object" ? val : {
+      top: val,
+      left: val,
+      bottom: val,
+      right: val
+    }, "getInset");
+    var variants3 = {
+      fullscreen: {
+        true: fullscreenStyle2
+      },
+      elevation: {
+        "...size": import_getElevation3.getElevation,
+        ":number": import_getElevation3.getElevation
+      },
+      inset: getInset2
+    };
+    var YStack2 = (0, import_core53.styled)(import_core53.View, {
+      flexDirection: "column",
+      variants: variants3
+    });
+    YStack2.displayName = "YStack";
+    var XStack2 = (0, import_core53.styled)(import_core53.View, {
+      flexDirection: "row",
+      variants: variants3
+    });
+    XStack2.displayName = "XStack";
+    var ZStack2 = (0, import_core53.styled)(
+      YStack2,
+      {
+        position: "relative"
+      },
+      {
+        neverFlatten: true,
+        isZStack: true
+      }
+    );
+    ZStack2.displayName = "ZStack";
+  }
+});
+
+// node_modules/@tamagui/get-token/dist/cjs/index.js
+var require_cjs17 = __commonJS({
+  "node_modules/@tamagui/get-token/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      getRadius: () => getRadius,
+      getSize: () => getSize10,
+      getSpace: () => getSpace5,
+      getTokenRelative: () => getTokenRelative,
+      stepTokenUpOrDown: () => stepTokenUpOrDown
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var import_web15 = require("@tamagui/core");
+    var defaultOptions = {
+      shift: 0,
+      bounds: [0]
+    };
+    var getSize10 = /* @__PURE__ */ __name((size4, options) => getTokenRelative("size", size4, options), "getSize");
+    var getSpace5 = /* @__PURE__ */ __name((space2, options) => getTokenRelative("space", space2, options), "getSpace");
+    var getRadius = /* @__PURE__ */ __name((radius2, options) => getTokenRelative("radius", radius2, options), "getRadius");
+    var cacheVariables = {};
+    var cacheWholeVariables = {};
+    var cacheKeys = {};
+    var cacheWholeKeys = {};
+    var stepTokenUpOrDown = /* @__PURE__ */ __name((type, current, options = defaultOptions) => {
+      var _a, _b;
+      const tokens3 = (0, import_web15.getTokens)({ prefixed: true })[type];
+      if (!(type in cacheVariables)) {
+        cacheKeys[type] = [], cacheVariables[type] = [], cacheWholeKeys[type] = [], cacheWholeVariables[type] = [];
+        const sorted = Object.keys(tokens3).map((k) => tokens3[k]).sort((a, b) => a.val - b.val);
+        for (const token of sorted)
+          cacheKeys[type].push(token.key), cacheVariables[type].push(token);
+        const sortedExcludingHalfSteps = sorted.filter((x) => !x.key.endsWith(".5"));
+        for (const token of sortedExcludingHalfSteps)
+          cacheWholeKeys[type].push(token.key), cacheWholeVariables[type].push(token);
+      }
+      const isString = typeof current == "string", tokensOrdered = (options.excludeHalfSteps ? isString ? cacheWholeKeys : cacheWholeVariables : isString ? cacheKeys : cacheVariables)[type], min2 = ((_a = options.bounds) == null ? void 0 : _a[0]) ?? 0, max2 = ((_b = options.bounds) == null ? void 0 : _b[1]) ?? tokensOrdered.length - 1, currentIndex = tokensOrdered.indexOf(current);
+      let shift3 = options.shift || 0;
+      shift3 && (current === "$true" || (0, import_web15.isVariable)(current) && current.name === "true") && (shift3 += shift3 > 0 ? 1 : -1);
+      const index3 = Math.min(max2, Math.max(min2, currentIndex + shift3)), found = tokensOrdered[index3];
+      return (typeof found == "string" ? tokens3[found] : found) || tokens3.$true;
+    }, "stepTokenUpOrDown");
+    var getTokenRelative = stepTokenUpOrDown;
+  }
+});
+
+// node_modules/@tamagui/get-button-sized/dist/cjs/index.js
+var require_cjs18 = __commonJS({
+  "node_modules/@tamagui/get-button-sized/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      getButtonSized: () => getButtonSized6
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var import_get_token14 = require_cjs17();
+    var getButtonSized6 = /* @__PURE__ */ __name((val, { tokens: tokens3, props }) => {
+      if (!val || props.circular)
+        return;
+      if (typeof val == "number")
+        return {
+          paddingHorizontal: val * 0.25,
+          height: val,
+          borderRadius: props.circular ? 1e5 : val * 0.2
+        };
+      const xSize = (0, import_get_token14.getSpace)(val), radiusToken = tokens3.radius[val] ?? tokens3.radius.$true;
+      return {
+        paddingHorizontal: xSize,
+        height: val,
+        borderRadius: props.circular ? 1e5 : radiusToken
+      };
+    }, "getButtonSized");
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/variants.js
+var require_variants = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/variants.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var variants_exports = {};
+    __export2(variants_exports, {
+      bordered: () => bordered2,
+      circular: () => circular2,
+      elevate: () => elevate2,
+      focusTheme: () => focusTheme2,
+      hoverTheme: () => hoverTheme2,
+      padded: () => padded2,
+      pressTheme: () => pressTheme2,
+      radiused: () => radiused2
+    });
+    module2.exports = __toCommonJS2(variants_exports);
+    var import_getElevation3 = require_getElevation();
+    var elevate2 = {
+      true: (_, extras) => (0, import_getElevation3.getElevation)(extras.props.size, extras)
+    };
+    var bordered2 = /* @__PURE__ */ __name((val, { props }) => ({
+      // TODO size it with size in '...size'
+      borderWidth: typeof val == "number" ? val : 1,
+      borderColor: "$borderColor",
+      ...props.hoverTheme && {
+        hoverStyle: {
+          borderColor: "$borderColorHover"
+        }
+      },
+      ...props.pressTheme && {
+        pressStyle: {
+          borderColor: "$borderColorPress"
+        }
+      },
+      ...props.focusTheme && {
+        focusStyle: {
+          borderColor: "$borderColorFocus"
+        }
+      }
+    }), "bordered");
+    var padded2 = {
+      true: (_, extras) => {
+        const { tokens: tokens3, props } = extras;
+        return {
+          padding: tokens3.space[props.size] || tokens3.space.$true
+        };
+      }
+    };
+    var radiused2 = {
+      true: (_, extras) => {
+        const { tokens: tokens3, props } = extras;
+        return {
+          borderRadius: tokens3.radius[props.size] || tokens3.radius.$true
+        };
+      }
+    };
+    var circularStyle2 = {
+      borderRadius: 1e5,
+      padding: 0
+    };
+    var circular2 = {
+      true: (_, { props, tokens: tokens3 }) => {
+        if (!("size" in props))
+          return circularStyle2;
+        const size4 = typeof props.size == "number" ? props.size : tokens3.size[props.size];
+        return {
+          ...circularStyle2,
+          width: size4,
+          height: size4,
+          maxWidth: size4,
+          maxHeight: size4,
+          minWidth: size4,
+          minHeight: size4
+        };
+      }
+    };
+    var hoverTheme2 = {
+      true: {
+        hoverStyle: {
+          backgroundColor: "$backgroundHover",
+          borderColor: "$borderColorHover"
+        }
+      },
+      false: {}
+    };
+    var pressTheme2 = {
+      true: {
+        cursor: "pointer",
+        pressStyle: {
+          backgroundColor: "$backgroundPress",
+          borderColor: "$borderColorPress"
+        }
+      },
+      false: {}
+    };
+    var focusTheme2 = {
+      true: {
+        focusStyle: {
+          backgroundColor: "$backgroundFocus",
+          borderColor: "$borderColorFocus"
+        }
+      },
+      false: {}
+    };
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/SizableStack.js
+var require_SizableStack = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/SizableStack.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var SizableStack_exports = {};
+    __export2(SizableStack_exports, {
+      SizableStack: () => SizableStack2
+    });
+    module2.exports = __toCommonJS2(SizableStack_exports);
+    var import_core53 = require("@tamagui/core");
+    var import_get_button_sized6 = require_cjs18();
+    var import_Stacks3 = require_Stacks();
+    var import_variants3 = require_variants();
+    var SizableStack2 = (0, import_core53.styled)(import_Stacks3.XStack, {
+      name: "SizableStack",
+      variants: {
+        unstyled: {
+          true: {
+            hoverTheme: false,
+            pressTheme: false,
+            focusTheme: false,
+            elevate: false,
+            bordered: false
+          }
+        },
+        hoverTheme: import_variants3.hoverTheme,
+        pressTheme: import_variants3.pressTheme,
+        focusTheme: import_variants3.focusTheme,
+        circular: import_variants3.circular,
+        elevate: import_variants3.elevate,
+        bordered: import_variants3.bordered,
+        size: {
+          "...size": (val, extras) => (0, import_get_button_sized6.getButtonSized)(val, extras)
+        }
+      }
+    });
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/ThemeableStack.js
+var require_ThemeableStack = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/ThemeableStack.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var ThemeableStack_exports = {};
+    __export2(ThemeableStack_exports, {
+      ThemeableStack: () => ThemeableStack2,
+      themeableVariants: () => themeableVariants2
+    });
+    module2.exports = __toCommonJS2(ThemeableStack_exports);
+    var import_core53 = require("@tamagui/core");
+    var import_Stacks3 = require_Stacks();
+    var import_variants3 = require_variants();
+    var chromelessStyle2 = {
+      backgroundColor: "transparent",
+      borderColor: "transparent",
+      shadowColor: "transparent",
+      hoverStyle: {
+        borderColor: "transparent"
+      }
+    };
+    var themeableVariants2 = {
+      backgrounded: {
+        true: {
+          backgroundColor: "$background"
+        }
+      },
+      radiused: import_variants3.radiused,
+      hoverTheme: import_variants3.hoverTheme,
+      pressTheme: import_variants3.pressTheme,
+      focusTheme: import_variants3.focusTheme,
+      circular: import_variants3.circular,
+      padded: import_variants3.padded,
+      elevate: import_variants3.elevate,
+      bordered: import_variants3.bordered,
+      transparent: {
+        true: {
+          backgroundColor: "transparent"
+        }
+      },
+      chromeless: {
+        true: chromelessStyle2,
+        all: {
+          ...chromelessStyle2,
+          hoverStyle: chromelessStyle2,
+          pressStyle: chromelessStyle2,
+          focusStyle: chromelessStyle2
+        }
+      }
+    };
+    var ThemeableStack2 = (0, import_core53.styled)(import_Stacks3.YStack, {
+      variants: themeableVariants2
+    });
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/NestingContext.js
+var require_NestingContext = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/NestingContext.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var NestingContext_exports = {};
+    __export2(NestingContext_exports, {
+      ButtonNestingContext: () => ButtonNestingContext2
+    });
+    module2.exports = __toCommonJS2(NestingContext_exports);
+    var import_react49 = require("react");
+    var ButtonNestingContext2 = (0, import_react49.createContext)(false);
+  }
+});
+
+// node_modules/@tamagui/stacks/dist/cjs/index.js
+var require_cjs19 = __commonJS({
+  "node_modules/@tamagui/stacks/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_Stacks(), module2.exports);
+    __reExport2(src_exports, require_SizableStack(), module2.exports);
+    __reExport2(src_exports, require_ThemeableStack(), module2.exports);
+    __reExport2(src_exports, require_NestingContext(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/get-font-sized/dist/cjs/index.js
+var require_cjs20 = __commonJS({
+  "node_modules/@tamagui/get-font-sized/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    __export2(src_exports, {
+      getFontSized: () => getFontSized4
+    });
+    module2.exports = __toCommonJS2(src_exports);
+    var import_core53 = require("@tamagui/core");
+    var getFontSized4 = /* @__PURE__ */ __name((sizeTokenIn = "$true", { font, fontFamily, props }) => {
+      var _a, _b, _c, _d, _e, _f;
+      if (!font) {
+        process.env.NODE_ENV === "development" && console.warn(
+          "Warning: No font found in props",
+          { ...props },
+          'For a sized text component, you either need to set fontFamily directly, or through the "defaultFont" setting in your createTamagui config.'
+        );
+        return;
+      }
+      const sizeToken = sizeTokenIn === "$true" ? getDefaultSizeToken(font) : sizeTokenIn, fontSize = font.size[sizeToken], lineHeight = (_a = font.lineHeight) == null ? void 0 : _a[sizeToken], fontWeight = (_b = font.weight) == null ? void 0 : _b[sizeToken], letterSpacing = (_c = font.letterSpacing) == null ? void 0 : _c[sizeToken], textTransform = (_d = font.transform) == null ? void 0 : _d[sizeToken], fontStyle = props.fontStyle ?? ((_e = font.style) == null ? void 0 : _e[sizeToken]), style = {
+        color: props.color ?? ((_f = font.color) == null ? void 0 : _f[sizeToken]),
+        fontStyle,
+        textTransform,
+        fontFamily,
+        fontWeight,
+        letterSpacing,
+        fontSize,
+        lineHeight
+      };
+      return process.env.NODE_ENV === "development" && props.debug && props.debug === "verbose" && (console.groupCollapsed("  \u{1F539} getFontSized", sizeTokenIn, sizeToken), console.info({ style, props, font }), console.groupEnd()), style;
+    }, "getFontSized");
+    var cache = /* @__PURE__ */ new WeakMap();
+    function getDefaultSizeToken(font) {
+      if (typeof font == "object" && cache.has(font))
+        return cache.get(font);
+      const sizeTokens = "$true" in font.size ? font.size : (0, import_core53.getTokens)().size, sizeDefault = sizeTokens.$true, sizeDefaultSpecific = sizeDefault ? Object.keys(sizeTokens).find(
+        (x) => x !== "$true" && sizeTokens[x].val === sizeDefault.val
+      ) : null;
+      return !sizeDefault || !sizeDefaultSpecific ? (process.env.NODE_ENV === "development" && console.warn(`No default size is set in your tokens for the "true" key, fonts will be inconsistent.
+
+      Fix this by having consistent tokens across fonts and sizes and setting a true key for your size tokens, or
+      set true keys for all your font tokens: "size", "lineHeight", "fontStyle", etc.`), Object.keys(font.size)[3]) : (cache.set(font, sizeDefaultSpecific), sizeDefaultSpecific);
+    }
+    __name(getDefaultSizeToken, "getDefaultSizeToken");
+  }
+});
+
+// node_modules/@tamagui/text/dist/cjs/SizableText.js
+var require_SizableText = __commonJS({
+  "node_modules/@tamagui/text/dist/cjs/SizableText.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var SizableText_exports = {};
+    __export2(SizableText_exports, {
+      SizableText: () => SizableText2
+    });
+    module2.exports = __toCommonJS2(SizableText_exports);
+    var import_get_font_sized4 = require_cjs20();
+    var import_web15 = require("@tamagui/core");
+    var variants3 = {
+      unstyled: {
+        false: {
+          size: "$true",
+          color: "$color"
+        }
+      },
+      size: import_get_font_sized4.getFontSized
+    };
+    variants3.fontFamily = {
+      "...": (_, extras) => {
+        const size4 = extras.props.size || "$true";
+        return (0, import_get_font_sized4.getFontSized)(size4, extras);
+      }
+    };
+    var SizableText2 = (0, import_web15.styled)(import_web15.Text, {
+      name: "SizableText",
+      fontFamily: "$body",
+      variants: variants3,
+      defaultVariants: {
+        unstyled: process.env.TAMAGUI_HEADLESS === "1"
+      }
+    });
+  }
+});
+
+// node_modules/@tamagui/text/dist/cjs/Paragraph.js
+var require_Paragraph = __commonJS({
+  "node_modules/@tamagui/text/dist/cjs/Paragraph.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var Paragraph_exports = {};
+    __export2(Paragraph_exports, {
+      Paragraph: () => Paragraph2
+    });
+    module2.exports = __toCommonJS2(Paragraph_exports);
+    var import_web15 = require("@tamagui/core");
+    var import_SizableText2 = require_SizableText();
+    var Paragraph2 = (0, import_web15.styled)(import_SizableText2.SizableText, {
+      name: "Paragraph",
+      tag: "p",
+      userSelect: "auto",
+      color: "$color",
+      size: "$true"
+    });
+  }
+});
+
+// node_modules/@tamagui/text/dist/cjs/Headings.js
+var require_Headings = __commonJS({
+  "node_modules/@tamagui/text/dist/cjs/Headings.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var Headings_exports = {};
+    __export2(Headings_exports, {
+      H1: () => H12,
+      H2: () => H22,
+      H3: () => H32,
+      H4: () => H42,
+      H5: () => H52,
+      H6: () => H62,
+      Heading: () => Heading2
+    });
+    module2.exports = __toCommonJS2(Headings_exports);
+    var import_web15 = require("@tamagui/core");
+    var import_Paragraph2 = require_Paragraph();
+    var Heading2 = (0, import_web15.styled)(import_Paragraph2.Paragraph, {
+      tag: "span",
+      name: "Heading",
+      accessibilityRole: "header",
+      fontFamily: "$heading",
+      size: "$8",
+      margin: 0
+    });
+    var H12 = (0, import_web15.styled)(Heading2, {
+      name: "H1",
+      tag: "h1",
+      size: "$10"
+    });
+    var H22 = (0, import_web15.styled)(Heading2, {
+      name: "H2",
+      tag: "h2",
+      size: "$9"
+    });
+    var H32 = (0, import_web15.styled)(Heading2, {
+      name: "H3",
+      tag: "h3",
+      size: "$8"
+    });
+    var H42 = (0, import_web15.styled)(Heading2, {
+      name: "H4",
+      tag: "h4",
+      size: "$7"
+    });
+    var H52 = (0, import_web15.styled)(Heading2, {
+      name: "H5",
+      tag: "h5",
+      size: "$6"
+    });
+    var H62 = (0, import_web15.styled)(Heading2, {
+      name: "H6",
+      tag: "h6",
+      size: "$5"
+    });
+  }
+});
+
+// node_modules/@tamagui/text/dist/cjs/wrapChildrenInText.js
+var require_wrapChildrenInText = __commonJS({
+  "node_modules/@tamagui/text/dist/cjs/wrapChildrenInText.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var wrapChildrenInText_exports = {};
+    __export2(wrapChildrenInText_exports, {
+      wrapChildrenInText: () => wrapChildrenInText2
+    });
+    module2.exports = __toCommonJS2(wrapChildrenInText_exports);
+    var import_react49 = __toESM2(require("react"));
+    var import_jsx_runtime56 = (
+      // so "data-disable-theme" is a hack to fix themeInverse, don't ask me why
+      require("react/jsx-runtime")
+    );
+    function wrapChildrenInText2(TextComponent, propsIn, extraProps) {
+      const {
+        children,
+        textProps,
+        size: size4,
+        noTextWrap,
+        color: color2,
+        fontFamily,
+        fontSize,
+        fontWeight,
+        letterSpacing,
+        textAlign,
+        fontStyle,
+        maxFontSizeMultiplier
+      } = propsIn;
+      if (noTextWrap || !children)
+        return [children];
+      const props = {
+        ...extraProps
+      };
+      return color2 && (props.color = color2), fontFamily && (props.fontFamily = fontFamily), fontSize && (props.fontSize = fontSize), fontWeight && (props.fontWeight = fontWeight), letterSpacing && (props.letterSpacing = letterSpacing), textAlign && (props.textAlign = textAlign), size4 && (props.size = size4), fontStyle && (props.fontStyle = fontStyle), maxFontSizeMultiplier && (props.maxFontSizeMultiplier = maxFontSizeMultiplier), import_react49.default.Children.toArray(children).map((child, index3) => typeof child == "string" ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(TextComponent, { ...props, ...textProps, children: child }, index3) : child);
+    }
+    __name(wrapChildrenInText2, "wrapChildrenInText");
+  }
+});
+
+// node_modules/@tamagui/text/dist/cjs/types.js
+var require_types3 = __commonJS({
+  "node_modules/@tamagui/text/dist/cjs/types.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var types_exports = {};
+    module2.exports = __toCommonJS2(types_exports);
+  }
+});
+
+// node_modules/@tamagui/text/dist/cjs/index.js
+var require_cjs21 = __commonJS({
+  "node_modules/@tamagui/text/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_SizableText(), module2.exports);
+    __reExport2(src_exports, require_Paragraph(), module2.exports);
+    __reExport2(src_exports, require_Headings(), module2.exports);
+    __reExport2(src_exports, require_wrapChildrenInText(), module2.exports);
+    __reExport2(src_exports, require_types3(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/use-direction/dist/cjs/useDirection.js
+var require_useDirection = __commonJS({
+  "node_modules/@tamagui/use-direction/dist/cjs/useDirection.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var useDirection_exports = {};
+    __export2(useDirection_exports, {
+      DirectionProvider: () => DirectionProvider,
+      Provider: () => Provider,
+      useDirection: () => useDirection2
+    });
+    module2.exports = __toCommonJS2(useDirection_exports);
+    var React43 = __toESM2(require("react"));
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    var DirectionContext2 = React43.createContext(void 0);
+    var DirectionProvider = /* @__PURE__ */ __name((props) => {
+      const { dir, children } = props;
+      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(DirectionContext2.Provider, { value: dir, children });
+    }, "DirectionProvider");
+    function useDirection2(localDir) {
+      const globalDir = React43.useContext(DirectionContext2);
+      return localDir || globalDir || "ltr";
+    }
+    __name(useDirection2, "useDirection");
+    var Provider = DirectionProvider;
+  }
+});
+
+// node_modules/@tamagui/use-direction/dist/cjs/index.js
+var require_cjs22 = __commonJS({
+  "node_modules/@tamagui/use-direction/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_useDirection(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/accordion/dist/cjs/Accordion.js
+var require_Accordion = __commonJS({
+  "node_modules/@tamagui/accordion/dist/cjs/Accordion.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var Accordion_exports = {};
+    __export2(Accordion_exports, {
+      Accordion: () => Accordion
+    });
+    module2.exports = __toCommonJS2(Accordion_exports);
+    var import_collapsible = require_cjs14();
+    var import_collection2 = require_cjs16();
+    var import_compose_refs23 = require_cjs15();
+    var import_constants44 = require_cjs2();
+    var import_helpers25 = require_cjs11();
+    var import_stacks25 = require_cjs19();
+    var import_text8 = require_cjs21();
+    var import_use_controllable_state15 = require_cjs13();
+    var import_use_direction5 = require_cjs22();
+    var import_web15 = require("@tamagui/core");
+    var React43 = __toESM2(require("react"));
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    var ACCORDION_NAME = "Accordion";
+    var ACCORDION_KEYS = ["Home", "End", "ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"];
+    var [Collection2, useCollection2] = (0, import_collection2.createCollection)(ACCORDION_NAME);
+    var ACCORDION_CONTEXT = "Accordion";
+    var AccordionComponent = React43.forwardRef((props, forwardedRef) => {
+      const { type, ...accordionProps } = props, singleProps = accordionProps, multipleProps = accordionProps;
+      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Collection2.Provider, { __scopeCollection: props.__scopeAccordion || ACCORDION_CONTEXT, children: type === "multiple" ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImplMultiple, { ...multipleProps, ref: forwardedRef }) : /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImplSingle, { ...singleProps, ref: forwardedRef }) });
+    });
+    AccordionComponent.displayName = ACCORDION_NAME;
+    AccordionComponent.propTypes = {
+      type(props) {
+        const value = props.value || props.defaultValue;
+        return props.type && !["single", "multiple"].includes(props.type) ? new Error(
+          "Invalid prop `type` supplied to `Accordion`. Expected one of `single | multiple`."
+        ) : props.type === "multiple" && typeof value == "string" ? new Error(
+          "Invalid prop `type` supplied to `Accordion`. Expected `single` when `defaultValue` or `value` is type `string`."
+        ) : props.type === "single" && Array.isArray(value) ? new Error(
+          "Invalid prop `type` supplied to `Accordion`. Expected `multiple` when `defaultValue` or `value` is type `string[]`."
+        ) : null;
+      }
+    };
+    var { Provider: AccordionValueProvider, useStyledContext: useAccordionValueContext } = (0, import_web15.createStyledContext)();
+    var {
+      Provider: AccordionCollapsibleProvider,
+      useStyledContext: useAccordionCollapsibleContext
+    } = (0, import_web15.createStyledContext)();
+    var AccordionImplSingle = React43.forwardRef((props, forwardedRef) => {
+      const {
+        value: valueProp,
+        defaultValue: defaultValue2,
+        control,
+        onValueChange = /* @__PURE__ */ __name(() => {
+        }, "onValueChange"),
+        collapsible = false,
+        ...accordionSingleProps
+      } = props, [value, setValue] = (0, import_use_controllable_state15.useControllableState)({
+        prop: valueProp,
+        defaultProp: defaultValue2 || "",
+        onChange: onValueChange
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        AccordionValueProvider,
+        {
+          scope: props.__scopeAccordion,
+          value: value ? [value] : [],
+          onItemOpen: setValue,
+          onItemClose: React43.useCallback(
+            () => collapsible && setValue(""),
+            [setValue, collapsible]
+          ),
+          children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            AccordionCollapsibleProvider,
+            {
+              scope: props.__scopeAccordion,
+              collapsible,
+              children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImpl, { ...accordionSingleProps, ref: forwardedRef })
+            }
+          )
+        }
+      );
+    });
+    var AccordionImplMultiple = React43.forwardRef((props, forwardedRef) => {
+      const {
+        value: valueProp,
+        defaultValue: defaultValue2,
+        onValueChange = /* @__PURE__ */ __name(() => {
+        }, "onValueChange"),
+        ...accordionMultipleProps
+      } = props, [value, setValue] = (0, import_use_controllable_state15.useControllableState)({
+        prop: valueProp,
+        defaultProp: defaultValue2 || [],
+        onChange: onValueChange
+      }), handleItemOpen = React43.useCallback(
+        (itemValue) => setValue((prevValue = []) => [...prevValue, itemValue]),
+        [setValue]
+      ), handleItemClose = React43.useCallback(
+        (itemValue) => setValue((prevValue = []) => prevValue.filter((value2) => value2 !== itemValue)),
+        [setValue]
+      );
+      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        AccordionValueProvider,
+        {
+          scope: props.__scopeAccordion,
+          value: value || [],
+          onItemOpen: handleItemOpen,
+          onItemClose: handleItemClose,
+          children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionCollapsibleProvider, { scope: props.__scopeAccordion, collapsible: true, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(AccordionImpl, { ...accordionMultipleProps, ref: forwardedRef }) })
+        }
+      );
+    });
+    var { Provider: AccordionImplProvider, useStyledContext: useAccordionContext } = (0, import_web15.createStyledContext)();
+    var AccordionImpl = React43.forwardRef(
+      (props, forwardedRef) => {
+        const {
+          __scopeAccordion,
+          disabled,
+          dir,
+          orientation = "vertical",
+          ...accordionProps
+        } = props, accordionRef = React43.useRef(null), composedRef = (0, import_compose_refs23.useComposedRefs)(accordionRef, forwardedRef), getItems = useCollection2(__scopeAccordion || ACCORDION_CONTEXT), isDirectionLTR = (0, import_use_direction5.useDirection)(dir) === "ltr", handleKeyDown = (0, import_helpers25.composeEventHandlers)(
+          props.onKeyDown,
+          (event) => {
+            var _a;
+            if (!ACCORDION_KEYS.includes(event.key))
+              return;
+            const target = event.target, triggerCollection = getItems().filter((item) => {
+              var _a2;
+              return !((_a2 = item.ref.current) == null ? void 0 : _a2.disabled);
+            }), triggerIndex = triggerCollection.findIndex(
+              (item) => item.ref.current === target
+            ), triggerCount = triggerCollection.length;
+            if (triggerIndex === -1)
+              return;
+            event.preventDefault();
+            let nextIndex = triggerIndex;
+            const homeIndex = 0, endIndex = triggerCount - 1, moveNext = /* @__PURE__ */ __name(() => {
+              nextIndex = triggerIndex + 1, nextIndex > endIndex && (nextIndex = homeIndex);
+            }, "moveNext"), movePrev = /* @__PURE__ */ __name(() => {
+              nextIndex = triggerIndex - 1, nextIndex < homeIndex && (nextIndex = endIndex);
+            }, "movePrev");
+            switch (event.key) {
+              case "Home":
+                nextIndex = homeIndex;
+                break;
+              case "End":
+                nextIndex = endIndex;
+                break;
+              case "ArrowRight":
+                orientation === "horizontal" && (isDirectionLTR ? moveNext() : movePrev());
+                break;
+              case "ArrowDown":
+                orientation === "vertical" && moveNext();
+                break;
+              case "ArrowLeft":
+                orientation === "horizontal" && (isDirectionLTR ? movePrev() : moveNext());
+                break;
+              case "ArrowUp":
+                orientation === "vertical" && movePrev();
+                break;
+            }
+            const clampedIndex = nextIndex % triggerCount;
+            (_a = triggerCollection[clampedIndex].ref.current) == null ? void 0 : _a.focus();
+          }
+        );
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          AccordionImplProvider,
+          {
+            scope: __scopeAccordion,
+            disabled,
+            direction: dir,
+            orientation,
+            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Collection2.Slot, { __scopeCollection: __scopeAccordion || ACCORDION_CONTEXT, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              import_stacks25.YStack,
+              {
+                "data-orientation": orientation,
+                ref: composedRef,
+                ...accordionProps,
+                ...import_constants44.isWeb && {
+                  onKeyDown: handleKeyDown
+                }
+              }
+            ) })
+          }
+        );
+      }
+    );
+    var ITEM_NAME3 = "AccordionItem";
+    var { Provider: AccordionItemProvider, useStyledContext: useAccordionItemContext } = (0, import_web15.createStyledContext)();
+    var AccordionItem = React43.forwardRef(
+      (props, forwardedRef) => {
+        const { __scopeAccordion, value, ...accordionItemProps } = props, accordionContext = useAccordionContext(__scopeAccordion), valueContext = useAccordionValueContext(__scopeAccordion), triggerId = React43.useId(), open = value && valueContext.value.includes(value) || false, disabled = accordionContext.disabled || props.disabled;
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          AccordionItemProvider,
+          {
+            scope: __scopeAccordion,
+            open,
+            disabled,
+            triggerId,
+            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              import_collapsible.Collapsible,
+              {
+                "data-orientation": accordionContext.orientation,
+                "data-state": open ? "open" : "closed",
+                __scopeCollapsible: __scopeAccordion || ACCORDION_CONTEXT,
+                ...accordionItemProps,
+                ref: forwardedRef,
+                disabled,
+                open,
+                onOpenChange: (open2) => {
+                  open2 ? valueContext.onItemOpen(value) : valueContext.onItemClose(value);
+                }
+              }
+            )
+          }
+        );
+      }
+    );
+    AccordionItem.displayName = ITEM_NAME3;
+    var HEADER_NAME = "AccordionHeader";
+    var AccordionHeader = React43.forwardRef(
+      (props, forwardedRef) => {
+        const { __scopeAccordion, ...headerProps } = props, accordionContext = useAccordionContext(__scopeAccordion), itemContext = useAccordionItemContext(__scopeAccordion);
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          import_text8.H1,
+          {
+            "data-orientation": accordionContext.orientation,
+            "data-state": getState6(itemContext.open),
+            "data-disabled": itemContext.disabled ? "" : void 0,
+            ...headerProps,
+            ref: forwardedRef
+          }
+        );
+      }
+    );
+    AccordionHeader.displayName = HEADER_NAME;
+    var AccordionTriggerFrame = (0, import_web15.styled)(import_collapsible.Collapsible.Trigger, {
+      variants: {
+        unstyled: {
+          false: {
+            cursor: "pointer",
+            backgroundColor: "$background",
+            borderColor: "$borderColor",
+            borderWidth: 1,
+            padding: "$true",
+            hoverStyle: {
+              backgroundColor: "$backgroundHover"
+            },
+            focusStyle: {
+              backgroundColor: "$backgroundFocus"
+            },
+            pressStyle: {
+              backgroundColor: "$backgroundPress"
+            }
+          }
+        }
+      },
+      defaultVariants: {
+        unstyled: process.env.TAMAGUI_HEADLESS === "1"
+      }
+    });
+    var AccordionTrigger = AccordionTriggerFrame.styleable(function(props, forwardedRef) {
+      const { __scopeAccordion, ...triggerProps } = props, accordionContext = useAccordionContext(__scopeAccordion), itemContext = useAccordionItemContext(__scopeAccordion), collapsibleContext = useAccordionCollapsibleContext(__scopeAccordion);
+      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Collection2.ItemSlot, { __scopeCollection: __scopeAccordion || ACCORDION_CONTEXT, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        AccordionTriggerFrame,
+        {
+          __scopeCollapsible: __scopeAccordion || ACCORDION_CONTEXT,
+          "aria-disabled": itemContext.open && !collapsibleContext.collapsible || void 0,
+          "data-orientation": accordionContext.orientation,
+          id: itemContext.triggerId,
+          ...triggerProps,
+          ref: forwardedRef
+        }
+      ) });
+    });
+    var AccordionContentFrame = (0, import_web15.styled)(import_collapsible.Collapsible.Content, {
+      variants: {
+        unstyled: {
+          false: {
+            padding: "$true",
+            backgroundColor: "$background"
+          }
+        }
+      },
+      defaultVariants: {
+        unstyled: process.env.TAMAGUI_HEADLESS === "1"
+      }
+    });
+    var AccordionContent = AccordionContentFrame.styleable(function(props, forwardedRef) {
+      const { __scopeAccordion, ...contentProps } = props, accordionContext = useAccordionContext(__scopeAccordion), itemContext = useAccordionItemContext(__scopeAccordion);
+      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        AccordionContentFrame,
+        {
+          role: "region",
+          "aria-labelledby": itemContext.triggerId,
+          "data-orientation": accordionContext.orientation,
+          __scopeCollapsible: __scopeAccordion || ACCORDION_CONTEXT,
+          ...contentProps,
+          ref: forwardedRef
+        }
+      );
+    });
+    function getState6(open) {
+      return open ? "open" : "closed";
+    }
+    __name(getState6, "getState");
+    var Accordion = (0, import_helpers25.withStaticProperties)(AccordionComponent, {
+      Trigger: AccordionTrigger,
+      Header: AccordionHeader,
+      Content: AccordionContent,
+      Item: AccordionItem
+    });
+  }
+});
+
+// node_modules/@tamagui/accordion/dist/cjs/index.js
+var require_cjs23 = __commonJS({
+  "node_modules/@tamagui/accordion/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_Accordion(), module2.exports);
+  }
+});
+
+// node_modules/aria-hidden/dist/es5/index.js
+var require_es5 = __commonJS({
+  "node_modules/aria-hidden/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.suppressOthers = exports2.supportsInert = exports2.inertOthers = exports2.hideOthers = void 0;
+    var getDefaultParent = /* @__PURE__ */ __name(function(originalTarget) {
+      if (typeof document === "undefined") {
+        return null;
+      }
+      var sampleTarget = Array.isArray(originalTarget) ? originalTarget[0] : originalTarget;
+      return sampleTarget.ownerDocument.body;
+    }, "getDefaultParent");
+    var counterMap2 = /* @__PURE__ */ new WeakMap();
+    var uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+    var markerMap2 = {};
+    var lockCount2 = 0;
+    var unwrapHost2 = /* @__PURE__ */ __name(function(node) {
+      return node && (node.host || unwrapHost2(node.parentNode));
+    }, "unwrapHost");
+    var correctTargets = /* @__PURE__ */ __name(function(parent, targets) {
+      return targets.map(function(target) {
+        if (parent.contains(target)) {
+          return target;
+        }
+        var correctedTarget = unwrapHost2(target);
+        if (correctedTarget && parent.contains(correctedTarget)) {
+          return correctedTarget;
+        }
+        console.error("aria-hidden", target, "in not contained inside", parent, ". Doing nothing");
+        return null;
+      }).filter(function(x) {
+        return Boolean(x);
+      });
+    }, "correctTargets");
+    var applyAttributeToOthers2 = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName, controlAttribute) {
+      var targets = correctTargets(parentNode, Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+      if (!markerMap2[markerName]) {
+        markerMap2[markerName] = /* @__PURE__ */ new WeakMap();
+      }
+      var markerCounter = markerMap2[markerName];
+      var hiddenNodes = [];
+      var elementsToKeep = /* @__PURE__ */ new Set();
+      var elementsToStop = new Set(targets);
+      var keep = /* @__PURE__ */ __name(function(el) {
+        if (!el || elementsToKeep.has(el)) {
+          return;
+        }
+        elementsToKeep.add(el);
+        keep(el.parentNode);
+      }, "keep");
+      targets.forEach(keep);
+      var deep = /* @__PURE__ */ __name(function(parent) {
+        if (!parent || elementsToStop.has(parent)) {
+          return;
+        }
+        Array.prototype.forEach.call(parent.children, function(node) {
+          if (elementsToKeep.has(node)) {
+            deep(node);
+          } else {
+            var attr2 = node.getAttribute(controlAttribute);
+            var alreadyHidden = attr2 !== null && attr2 !== "false";
+            var counterValue = (counterMap2.get(node) || 0) + 1;
+            var markerValue = (markerCounter.get(node) || 0) + 1;
+            counterMap2.set(node, counterValue);
+            markerCounter.set(node, markerValue);
+            hiddenNodes.push(node);
+            if (counterValue === 1 && alreadyHidden) {
+              uncontrolledNodes.set(node, true);
+            }
+            if (markerValue === 1) {
+              node.setAttribute(markerName, "true");
+            }
+            if (!alreadyHidden) {
+              node.setAttribute(controlAttribute, "true");
+            }
+          }
+        });
+      }, "deep");
+      deep(parentNode);
+      elementsToKeep.clear();
+      lockCount2++;
+      return function() {
+        hiddenNodes.forEach(function(node) {
+          var counterValue = counterMap2.get(node) - 1;
+          var markerValue = markerCounter.get(node) - 1;
+          counterMap2.set(node, counterValue);
+          markerCounter.set(node, markerValue);
+          if (!counterValue) {
+            if (!uncontrolledNodes.has(node)) {
+              node.removeAttribute(controlAttribute);
+            }
+            uncontrolledNodes.delete(node);
+          }
+          if (!markerValue) {
+            node.removeAttribute(markerName);
+          }
+        });
+        lockCount2--;
+        if (!lockCount2) {
+          counterMap2 = /* @__PURE__ */ new WeakMap();
+          counterMap2 = /* @__PURE__ */ new WeakMap();
+          uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+          markerMap2 = {};
+        }
+      };
+    }, "applyAttributeToOthers");
+    var hideOthers3 = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName) {
+      if (markerName === void 0) {
+        markerName = "data-aria-hidden";
+      }
+      var targets = Array.from(Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+      var activeParentNode = parentNode || getDefaultParent(originalTarget);
+      if (!activeParentNode) {
+        return function() {
+          return null;
+        };
+      }
+      targets.push.apply(targets, Array.from(activeParentNode.querySelectorAll("[aria-live]")));
+      return applyAttributeToOthers2(targets, activeParentNode, markerName, "aria-hidden");
+    }, "hideOthers");
+    exports2.hideOthers = hideOthers3;
+    var inertOthers = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName) {
+      if (markerName === void 0) {
+        markerName = "data-inert-ed";
+      }
+      var activeParentNode = parentNode || getDefaultParent(originalTarget);
+      if (!activeParentNode) {
+        return function() {
+          return null;
+        };
+      }
+      return applyAttributeToOthers2(originalTarget, activeParentNode, markerName, "inert");
+    }, "inertOthers");
+    exports2.inertOthers = inertOthers;
+    var supportsInert2 = /* @__PURE__ */ __name(function() {
+      return typeof HTMLElement !== "undefined" && HTMLElement.prototype.hasOwnProperty("inert");
+    }, "supportsInert");
+    exports2.supportsInert = supportsInert2;
+    var suppressOthers = /* @__PURE__ */ __name(function(originalTarget, parentNode, markerName) {
+      if (markerName === void 0) {
+        markerName = "data-suppressed";
+      }
+      return ((0, exports2.supportsInert)() ? exports2.inertOthers : exports2.hideOthers)(originalTarget, parentNode, markerName);
+    }, "suppressOthers");
+    exports2.suppressOthers = suppressOthers;
+  }
+});
+
+// node_modules/@tamagui/aria-hidden/dist/cjs/AriaHidden.js
+var require_AriaHidden = __commonJS({
+  "node_modules/@tamagui/aria-hidden/dist/cjs/AriaHidden.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var AriaHidden_exports = {};
+    __export2(AriaHidden_exports, {
+      hideOthers: () => import_aria_hidden3.hideOthers
+    });
+    module2.exports = __toCommonJS2(AriaHidden_exports);
+    var import_aria_hidden3 = require_es5();
+  }
+});
+
+// node_modules/@tamagui/aria-hidden/dist/cjs/index.js
+var require_cjs24 = __commonJS({
+  "node_modules/@tamagui/aria-hidden/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_AriaHidden(), module2.exports);
+  }
+});
+
+// node_modules/@tamagui/focus-scope/dist/cjs/FocusScope.js
+var require_FocusScope = __commonJS({
+  "node_modules/@tamagui/focus-scope/dist/cjs/FocusScope.js"(exports2, module2) {
+    var __create2 = Object.create;
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __getProtoOf2 = Object.getPrototypeOf;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = /* @__PURE__ */ __name((target, all) => {
+      for (var name in all)
+        __defProp2(target, name, { get: all[name], enumerable: true });
+    }, "__export");
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __toESM2 = /* @__PURE__ */ __name((mod, isNodeMode, target) => (target = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
+      // If the importer is in node compatibility mode or this is not an ESM
+      // file that has been converted to a CommonJS file using a Babel-
+      // compatible transform (i.e. "__esModule" has not been set), then set
+      // "default" to the CommonJS "module.exports" for node compatibility.
+      isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target,
+      mod
+    )), "__toESM");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var FocusScope_exports = {};
+    __export2(FocusScope_exports, {
+      FocusScope: () => FocusScope4,
+      useFocusScope: () => useFocusScope
+    });
+    module2.exports = __toCommonJS2(FocusScope_exports);
+    var import_compose_refs23 = require_cjs15();
+    var import_use_event3 = require_cjs12();
+    var React43 = __toESM2(require("react"));
+    var import_jsx_runtime56 = require("react/jsx-runtime");
+    var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
+    var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
+    var EVENT_OPTIONS2 = { bubbles: false, cancelable: true };
+    var FocusScope4 = React43.forwardRef(
+      function(props, forwardedRef) {
+        const childProps = useFocusScope(props, forwardedRef);
+        return typeof props.children == "function" ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_jsx_runtime56.Fragment, { children: props.children(childProps) }) : React43.cloneElement(React43.Children.only(props.children), childProps);
+      }
+    );
+    function useFocusScope(props, forwardedRef) {
+      const {
+        loop = false,
+        enabled = true,
+        trapped = false,
+        onMountAutoFocus: onMountAutoFocusProp,
+        onUnmountAutoFocus: onUnmountAutoFocusProp,
+        forceUnmount,
+        children,
+        ...scopeProps
+      } = props, [container, setContainer] = React43.useState(null), onMountAutoFocus = (0, import_use_event3.useEvent)(onMountAutoFocusProp), onUnmountAutoFocus = (0, import_use_event3.useEvent)(onUnmountAutoFocusProp), lastFocusedElementRef = React43.useRef(null), composedRefs = (0, import_compose_refs23.useComposedRefs)(forwardedRef, (node) => setContainer(node)), focusScope = React43.useRef({
+        paused: false,
+        pause() {
+          this.paused = true;
+        },
+        resume() {
+          this.paused = false;
+        }
+      }).current;
+      React43.useEffect(() => {
+        if (!enabled || !trapped)
+          return;
+        const controller = new AbortController();
+        function handleFocusIn(event) {
+          if (focusScope.paused || !container)
+            return;
+          const target = event.target;
+          container.contains(target) ? (target == null ? void 0 : target.addEventListener("blur", handleBlur, { signal: controller.signal }), lastFocusedElementRef.current = target) : focus(lastFocusedElementRef.current, { select: true });
+        }
+        __name(handleFocusIn, "handleFocusIn");
+        function handleFocusOut(event) {
+          controller.abort(), !(focusScope.paused || !container) && (container.contains(event.relatedTarget) || focus(lastFocusedElementRef.current, { select: true }));
+        }
+        __name(handleFocusOut, "handleFocusOut");
+        function handleBlur() {
+          lastFocusedElementRef.current = container;
+        }
+        __name(handleBlur, "handleBlur");
+        return document.addEventListener("focusin", handleFocusIn), document.addEventListener("focusout", handleFocusOut), () => {
+          controller.abort(), document.removeEventListener("focusin", handleFocusIn), document.removeEventListener("focusout", handleFocusOut);
+        };
+      }, [trapped, forceUnmount, container, focusScope.paused]), React43.useEffect(() => {
+        if (!enabled || !container || forceUnmount)
+          return;
+        focusScopesStack.add(focusScope);
+        const previouslyFocusedElement = document.activeElement;
+        if (!container.contains(previouslyFocusedElement)) {
+          const mountEvent = new CustomEvent(AUTOFOCUS_ON_MOUNT, EVENT_OPTIONS2);
+          if (container.addEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus), container.dispatchEvent(mountEvent), !mountEvent.defaultPrevented) {
+            const candidates = removeLinks(getTabbableCandidates(container));
+            focusFirst2(candidates, { select: true }), document.activeElement === previouslyFocusedElement && focus(container);
+          }
+        }
+        return () => {
+          container.removeEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+          const unmountEvent = new CustomEvent(AUTOFOCUS_ON_UNMOUNT, EVENT_OPTIONS2);
+          container.addEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus), container.dispatchEvent(unmountEvent), unmountEvent.defaultPrevented || focus(previouslyFocusedElement ?? document.body, { select: true }), container.removeEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus), focusScopesStack.remove(focusScope);
+        };
+      }, [enabled, container, forceUnmount, onMountAutoFocus, onUnmountAutoFocus, focusScope]);
+      const handleKeyDown = React43.useCallback(
+        (event) => {
+          if (!trapped || !loop || focusScope.paused)
+            return;
+          const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey, focusedElement = document.activeElement;
+          if (isTabKey && focusedElement) {
+            const container2 = event.currentTarget, [first, last] = getTabbableEdges(container2);
+            first && last ? !event.shiftKey && focusedElement === last ? (event.preventDefault(), loop && focus(first, { select: true })) : event.shiftKey && focusedElement === first && (event.preventDefault(), loop && focus(last, { select: true })) : focusedElement === container2 && event.preventDefault();
+          }
+        },
+        [loop, trapped, focusScope.paused]
+      );
+      return {
+        tabIndex: -1,
+        ...scopeProps,
+        ref: composedRefs,
+        onKeyDown: handleKeyDown
+      };
+    }
+    __name(useFocusScope, "useFocusScope");
+    function focusFirst2(candidates, { select = false } = {}) {
+      const previouslyFocusedElement = document.activeElement;
+      for (const candidate of candidates)
+        if (focus(candidate, { select }), document.activeElement !== previouslyFocusedElement)
+          return;
+    }
+    __name(focusFirst2, "focusFirst");
+    function getTabbableEdges(container) {
+      const candidates = getTabbableCandidates(container), first = findVisible(candidates, container), last = findVisible(candidates.reverse(), container);
+      return [first, last];
+    }
+    __name(getTabbableEdges, "getTabbableEdges");
+    function getTabbableCandidates(container) {
+      const nodes = [], walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, {
+        acceptNode: (node) => {
+          const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
+          return node.disabled || node.hidden || isHiddenInput ? NodeFilter.FILTER_SKIP : node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        }
+      });
+      for (; walker.nextNode(); )
+        nodes.push(walker.currentNode);
+      return nodes;
+    }
+    __name(getTabbableCandidates, "getTabbableCandidates");
+    function findVisible(elements, container) {
+      for (const element of elements)
+        if (!isHidden(element, { upTo: container }))
+          return element;
+    }
+    __name(findVisible, "findVisible");
+    function isHidden(node, { upTo }) {
+      if (getComputedStyle(node).visibility === "hidden")
+        return true;
+      for (; node; ) {
+        if (upTo !== void 0 && node === upTo)
+          return false;
+        if (getComputedStyle(node).display === "none")
+          return true;
+        node = node.parentElement;
+      }
+      return false;
+    }
+    __name(isHidden, "isHidden");
+    function isSelectableInput(element) {
+      return element instanceof HTMLInputElement && "select" in element;
+    }
+    __name(isSelectableInput, "isSelectableInput");
+    function focus(element, { select = false } = {}) {
+      if (element == null ? void 0 : element.focus) {
+        const previouslyFocusedElement = document.activeElement;
+        element.focus({ preventScroll: true }), element !== previouslyFocusedElement && isSelectableInput(element) && select && element.select();
+      }
+    }
+    __name(focus, "focus");
+    var focusScopesStack = createFocusScopesStack();
+    function createFocusScopesStack() {
+      let stack = [];
+      return {
+        add(focusScope) {
+          const activeFocusScope = stack[0];
+          focusScope !== activeFocusScope && (activeFocusScope == null ? void 0 : activeFocusScope.pause()), stack = arrayRemove(stack, focusScope), stack.unshift(focusScope);
+        },
+        remove(focusScope) {
+          var _a;
+          stack = arrayRemove(stack, focusScope), (_a = stack[0]) == null ? void 0 : _a.resume();
+        }
+      };
+    }
+    __name(createFocusScopesStack, "createFocusScopesStack");
+    function arrayRemove(array, item) {
+      const updatedArray = [...array], index3 = updatedArray.indexOf(item);
+      return index3 !== -1 && updatedArray.splice(index3, 1), updatedArray;
+    }
+    __name(arrayRemove, "arrayRemove");
+    function removeLinks(items) {
+      return items.filter((item) => item.tagName !== "A");
+    }
+    __name(removeLinks, "removeLinks");
+  }
+});
+
+// node_modules/@tamagui/focus-scope/dist/cjs/index.js
+var require_cjs25 = __commonJS({
+  "node_modules/@tamagui/focus-scope/dist/cjs/index.js"(exports2, module2) {
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __copyProps2 = /* @__PURE__ */ __name((to, from, except, desc) => {
+      if (from && typeof from == "object" || typeof from == "function")
+        for (let key of __getOwnPropNames2(from))
+          !__hasOwnProp2.call(to, key) && key !== except && __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      return to;
+    }, "__copyProps");
+    var __reExport2 = /* @__PURE__ */ __name((target, mod, secondTarget) => (__copyProps2(target, mod, "default"), secondTarget && __copyProps2(secondTarget, mod, "default")), "__reExport");
+    var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
+    var src_exports = {};
+    module2.exports = __toCommonJS2(src_exports);
+    __reExport2(src_exports, require_FocusScope(), module2.exports);
+  }
+});
+
+// node_modules/tslib/tslib.es6.mjs
+var tslib_es6_exports = {};
+__export(tslib_es6_exports, {
+  __addDisposableResource: () => __addDisposableResource,
+  __assign: () => __assign,
+  __asyncDelegator: () => __asyncDelegator,
+  __asyncGenerator: () => __asyncGenerator,
+  __asyncValues: () => __asyncValues,
+  __await: () => __await,
+  __awaiter: () => __awaiter,
+  __classPrivateFieldGet: () => __classPrivateFieldGet,
+  __classPrivateFieldIn: () => __classPrivateFieldIn,
+  __classPrivateFieldSet: () => __classPrivateFieldSet,
+  __createBinding: () => __createBinding,
+  __decorate: () => __decorate,
+  __disposeResources: () => __disposeResources,
+  __esDecorate: () => __esDecorate,
+  __exportStar: () => __exportStar,
+  __extends: () => __extends,
+  __generator: () => __generator,
+  __importDefault: () => __importDefault,
+  __importStar: () => __importStar,
+  __makeTemplateObject: () => __makeTemplateObject,
+  __metadata: () => __metadata,
+  __param: () => __param,
+  __propKey: () => __propKey,
+  __read: () => __read,
+  __rest: () => __rest,
+  __runInitializers: () => __runInitializers,
+  __setFunctionName: () => __setFunctionName,
+  __spread: () => __spread,
+  __spreadArray: () => __spreadArray,
+  __spreadArrays: () => __spreadArrays,
+  __values: () => __values,
+  default: () => tslib_es6_default
+});
+function __extends(d, b) {
+  if (typeof b !== "function" && b !== null)
+    throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+  extendStatics(d, b);
+  function __() {
+    this.constructor = d;
+  }
+  __name(__, "__");
+  d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+function __rest(s, e) {
+  var t2 = {};
+  for (var p in s)
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+      t2[p] = s[p];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+      if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+        t2[p[i]] = s[p[i]];
+    }
+  return t2;
+}
+function __decorate(decorators, target, key, desc) {
+  var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+  if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+    r = Reflect.decorate(decorators, target, key, desc);
+  else
+    for (var i = decorators.length - 1; i >= 0; i--)
+      if (d = decorators[i])
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+function __param(paramIndex, decorator) {
+  return function(target, key) {
+    decorator(target, key, paramIndex);
+  };
+}
+function __esDecorate(ctor, descriptorIn, decorators, contextIn, initializers, extraInitializers) {
+  function accept(f) {
+    if (f !== void 0 && typeof f !== "function")
+      throw new TypeError("Function expected");
+    return f;
+  }
+  __name(accept, "accept");
+  var kind = contextIn.kind, key = kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
+  var target = !descriptorIn && ctor ? contextIn["static"] ? ctor : ctor.prototype : null;
+  var descriptor = descriptorIn || (target ? Object.getOwnPropertyDescriptor(target, contextIn.name) : {});
+  var _, done = false;
+  for (var i = decorators.length - 1; i >= 0; i--) {
+    var context = {};
+    for (var p in contextIn)
+      context[p] = p === "access" ? {} : contextIn[p];
+    for (var p in contextIn.access)
+      context.access[p] = contextIn.access[p];
+    context.addInitializer = function(f) {
+      if (done)
+        throw new TypeError("Cannot add initializers after decoration has completed");
+      extraInitializers.push(accept(f || null));
+    };
+    var result = (0, decorators[i])(kind === "accessor" ? { get: descriptor.get, set: descriptor.set } : descriptor[key], context);
+    if (kind === "accessor") {
+      if (result === void 0)
+        continue;
+      if (result === null || typeof result !== "object")
+        throw new TypeError("Object expected");
+      if (_ = accept(result.get))
+        descriptor.get = _;
+      if (_ = accept(result.set))
+        descriptor.set = _;
+      if (_ = accept(result.init))
+        initializers.unshift(_);
+    } else if (_ = accept(result)) {
+      if (kind === "field")
+        initializers.unshift(_);
+      else
+        descriptor[key] = _;
+    }
+  }
+  if (target)
+    Object.defineProperty(target, contextIn.name, descriptor);
+  done = true;
+}
+function __runInitializers(thisArg, initializers, value) {
+  var useValue = arguments.length > 2;
+  for (var i = 0; i < initializers.length; i++) {
+    value = useValue ? initializers[i].call(thisArg, value) : initializers[i].call(thisArg);
+  }
+  return useValue ? value : void 0;
+}
+function __propKey(x) {
+  return typeof x === "symbol" ? x : "".concat(x);
+}
+function __setFunctionName(f, name, prefix) {
+  if (typeof name === "symbol")
+    name = name.description ? "[".concat(name.description, "]") : "";
+  return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
+}
+function __metadata(metadataKey, metadataValue) {
+  if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+    return Reflect.metadata(metadataKey, metadataValue);
+}
+function __awaiter(thisArg, _arguments, P, generator) {
+  function adopt(value) {
+    return value instanceof P ? value : new P(function(resolve) {
+      resolve(value);
+    });
+  }
+  __name(adopt, "adopt");
+  return new (P || (P = Promise))(function(resolve, reject) {
+    function fulfilled(value) {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    __name(fulfilled, "fulfilled");
+    function rejected(value) {
+      try {
+        step(generator["throw"](value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    __name(rejected, "rejected");
+    function step(result) {
+      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+    }
+    __name(step, "step");
+    step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
+}
+function __generator(thisArg, body) {
+  var _ = { label: 0, sent: function() {
+    if (t2[0] & 1)
+      throw t2[1];
+    return t2[1];
+  }, trys: [], ops: [] }, f, y, t2, g;
+  return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
+    return this;
+  }), g;
+  function verb(n) {
+    return function(v) {
+      return step([n, v]);
+    };
+  }
+  __name(verb, "verb");
+  function step(op) {
+    if (f)
+      throw new TypeError("Generator is already executing.");
+    while (g && (g = 0, op[0] && (_ = 0)), _)
+      try {
+        if (f = 1, y && (t2 = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t2 = y["return"]) && t2.call(y), 0) : y.next) && !(t2 = t2.call(y, op[1])).done)
+          return t2;
+        if (y = 0, t2)
+          op = [op[0] & 2, t2.value];
+        switch (op[0]) {
+          case 0:
+          case 1:
+            t2 = op;
+            break;
+          case 4:
+            _.label++;
+            return { value: op[1], done: false };
+          case 5:
+            _.label++;
+            y = op[1];
+            op = [0];
+            continue;
+          case 7:
+            op = _.ops.pop();
+            _.trys.pop();
+            continue;
+          default:
+            if (!(t2 = _.trys, t2 = t2.length > 0 && t2[t2.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+              _ = 0;
+              continue;
+            }
+            if (op[0] === 3 && (!t2 || op[1] > t2[0] && op[1] < t2[3])) {
+              _.label = op[1];
+              break;
+            }
+            if (op[0] === 6 && _.label < t2[1]) {
+              _.label = t2[1];
+              t2 = op;
+              break;
+            }
+            if (t2 && _.label < t2[2]) {
+              _.label = t2[2];
+              _.ops.push(op);
+              break;
+            }
+            if (t2[2])
+              _.ops.pop();
+            _.trys.pop();
+            continue;
+        }
+        op = body.call(thisArg, _);
+      } catch (e) {
+        op = [6, e];
+        y = 0;
+      } finally {
+        f = t2 = 0;
+      }
+    if (op[0] & 5)
+      throw op[1];
+    return { value: op[0] ? op[1] : void 0, done: true };
+  }
+  __name(step, "step");
+}
+function __exportStar(m, o) {
+  for (var p in m)
+    if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
+      __createBinding(o, m, p);
+}
+function __values(o) {
+  var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+  if (m)
+    return m.call(o);
+  if (o && typeof o.length === "number")
+    return {
+      next: function() {
+        if (o && i >= o.length)
+          o = void 0;
+        return { value: o && o[i++], done: !o };
+      }
+    };
+  throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+function __read(o, n) {
+  var m = typeof Symbol === "function" && o[Symbol.iterator];
+  if (!m)
+    return o;
+  var i = m.call(o), r, ar = [], e;
+  try {
+    while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
+      ar.push(r.value);
+  } catch (error) {
+    e = { error };
+  } finally {
+    try {
+      if (r && !r.done && (m = i["return"]))
+        m.call(i);
+    } finally {
+      if (e)
+        throw e.error;
+    }
+  }
+  return ar;
+}
+function __spread() {
+  for (var ar = [], i = 0; i < arguments.length; i++)
+    ar = ar.concat(__read(arguments[i]));
+  return ar;
+}
+function __spreadArrays() {
+  for (var s = 0, i = 0, il = arguments.length; i < il; i++)
+    s += arguments[i].length;
+  for (var r = Array(s), k = 0, i = 0; i < il; i++)
+    for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+      r[k] = a[j];
+  return r;
+}
+function __spreadArray(to, from, pack) {
+  if (pack || arguments.length === 2)
+    for (var i = 0, l = from.length, ar; i < l; i++) {
+      if (ar || !(i in from)) {
+        if (!ar)
+          ar = Array.prototype.slice.call(from, 0, i);
+        ar[i] = from[i];
+      }
+    }
+  return to.concat(ar || Array.prototype.slice.call(from));
+}
+function __await(v) {
+  return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+function __asyncGenerator(thisArg, _arguments, generator) {
+  if (!Symbol.asyncIterator)
+    throw new TypeError("Symbol.asyncIterator is not defined.");
+  var g = generator.apply(thisArg, _arguments || []), i, q = [];
+  return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+    return this;
+  }, i;
+  function verb(n) {
+    if (g[n])
+      i[n] = function(v) {
+        return new Promise(function(a, b) {
+          q.push([n, v, a, b]) > 1 || resume(n, v);
+        });
+      };
+  }
+  __name(verb, "verb");
+  function resume(n, v) {
+    try {
+      step(g[n](v));
+    } catch (e) {
+      settle(q[0][3], e);
+    }
+  }
+  __name(resume, "resume");
+  function step(r) {
+    r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+  }
+  __name(step, "step");
+  function fulfill(value) {
+    resume("next", value);
+  }
+  __name(fulfill, "fulfill");
+  function reject(value) {
+    resume("throw", value);
+  }
+  __name(reject, "reject");
+  function settle(f, v) {
+    if (f(v), q.shift(), q.length)
+      resume(q[0][0], q[0][1]);
+  }
+  __name(settle, "settle");
+}
+function __asyncDelegator(o) {
+  var i, p;
+  return i = {}, verb("next"), verb("throw", function(e) {
+    throw e;
+  }), verb("return"), i[Symbol.iterator] = function() {
+    return this;
+  }, i;
+  function verb(n, f) {
+    i[n] = o[n] ? function(v) {
+      return (p = !p) ? { value: __await(o[n](v)), done: false } : f ? f(v) : v;
+    } : f;
+  }
+  __name(verb, "verb");
+}
+function __asyncValues(o) {
+  if (!Symbol.asyncIterator)
+    throw new TypeError("Symbol.asyncIterator is not defined.");
+  var m = o[Symbol.asyncIterator], i;
+  return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+    return this;
+  }, i);
+  function verb(n) {
+    i[n] = o[n] && function(v) {
+      return new Promise(function(resolve, reject) {
+        v = o[n](v), settle(resolve, reject, v.done, v.value);
+      });
+    };
+  }
+  __name(verb, "verb");
+  function settle(resolve, reject, d, v) {
+    Promise.resolve(v).then(function(v2) {
+      resolve({ value: v2, done: d });
+    }, reject);
+  }
+  __name(settle, "settle");
+}
+function __makeTemplateObject(cooked, raw) {
+  if (Object.defineProperty) {
+    Object.defineProperty(cooked, "raw", { value: raw });
+  } else {
+    cooked.raw = raw;
+  }
+  return cooked;
+}
+function __importStar(mod) {
+  if (mod && mod.__esModule)
+    return mod;
+  var result = {};
+  if (mod != null) {
+    for (var k in mod)
+      if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+        __createBinding(result, mod, k);
+  }
+  __setModuleDefault(result, mod);
+  return result;
+}
+function __importDefault(mod) {
+  return mod && mod.__esModule ? mod : { default: mod };
+}
+function __classPrivateFieldGet(receiver, state, kind, f) {
+  if (kind === "a" && !f)
+    throw new TypeError("Private accessor was defined without a getter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
+    throw new TypeError("Cannot read private member from an object whose class did not declare it");
+  return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+}
+function __classPrivateFieldSet(receiver, state, value, kind, f) {
+  if (kind === "m")
+    throw new TypeError("Private method is not writable");
+  if (kind === "a" && !f)
+    throw new TypeError("Private accessor was defined without a setter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
+    throw new TypeError("Cannot write private member to an object whose class did not declare it");
+  return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
+}
+function __classPrivateFieldIn(state, receiver) {
+  if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
+    throw new TypeError("Cannot use 'in' operator on non-object");
+  return typeof state === "function" ? receiver === state : state.has(receiver);
+}
+function __addDisposableResource(env, value, async) {
+  if (value !== null && value !== void 0) {
+    if (typeof value !== "object" && typeof value !== "function")
+      throw new TypeError("Object expected.");
+    var dispose;
+    if (async) {
+      if (!Symbol.asyncDispose)
+        throw new TypeError("Symbol.asyncDispose is not defined.");
+      dispose = value[Symbol.asyncDispose];
+    }
+    if (dispose === void 0) {
+      if (!Symbol.dispose)
+        throw new TypeError("Symbol.dispose is not defined.");
+      dispose = value[Symbol.dispose];
+    }
+    if (typeof dispose !== "function")
+      throw new TypeError("Object not disposable.");
+    env.stack.push({ value, dispose, async });
+  } else if (async) {
+    env.stack.push({ async: true });
+  }
+  return value;
+}
+function __disposeResources(env) {
+  function fail(e) {
+    env.error = env.hasError ? new _SuppressedError(e, env.error, "An error was suppressed during disposal.") : e;
+    env.hasError = true;
+  }
+  __name(fail, "fail");
+  function next() {
+    while (env.stack.length) {
+      var rec = env.stack.pop();
+      try {
+        var result = rec.dispose && rec.dispose.call(rec.value);
+        if (rec.async)
+          return Promise.resolve(result).then(next, function(e) {
+            fail(e);
+            return next();
+          });
+      } catch (e) {
+        fail(e);
+      }
+    }
+    if (env.hasError)
+      throw env.error;
+  }
+  __name(next, "next");
+  return next();
+}
+var extendStatics, __assign, __createBinding, __setModuleDefault, _SuppressedError, tslib_es6_default;
+var init_tslib_es6 = __esm({
+  "node_modules/tslib/tslib.es6.mjs"() {
+    extendStatics = /* @__PURE__ */ __name(function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
+        for (var p in b2)
+          if (Object.prototype.hasOwnProperty.call(b2, p))
+            d2[p] = b2[p];
+      };
+      return extendStatics(d, b);
+    }, "extendStatics");
+    __name(__extends, "__extends");
+    __assign = /* @__PURE__ */ __name(function() {
+      __assign = Object.assign || /* @__PURE__ */ __name(function __assign2(t2) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+          s = arguments[i];
+          for (var p in s)
+            if (Object.prototype.hasOwnProperty.call(s, p))
+              t2[p] = s[p];
+        }
+        return t2;
+      }, "__assign");
+      return __assign.apply(this, arguments);
+    }, "__assign");
+    __name(__rest, "__rest");
+    __name(__decorate, "__decorate");
+    __name(__param, "__param");
+    __name(__esDecorate, "__esDecorate");
+    __name(__runInitializers, "__runInitializers");
+    __name(__propKey, "__propKey");
+    __name(__setFunctionName, "__setFunctionName");
+    __name(__metadata, "__metadata");
+    __name(__awaiter, "__awaiter");
+    __name(__generator, "__generator");
+    __createBinding = Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    };
+    __name(__exportStar, "__exportStar");
+    __name(__values, "__values");
+    __name(__read, "__read");
+    __name(__spread, "__spread");
+    __name(__spreadArrays, "__spreadArrays");
+    __name(__spreadArray, "__spreadArray");
+    __name(__await, "__await");
+    __name(__asyncGenerator, "__asyncGenerator");
+    __name(__asyncDelegator, "__asyncDelegator");
+    __name(__asyncValues, "__asyncValues");
+    __name(__makeTemplateObject, "__makeTemplateObject");
+    __setModuleDefault = Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    };
+    __name(__importStar, "__importStar");
+    __name(__importDefault, "__importDefault");
+    __name(__classPrivateFieldGet, "__classPrivateFieldGet");
+    __name(__classPrivateFieldSet, "__classPrivateFieldSet");
+    __name(__classPrivateFieldIn, "__classPrivateFieldIn");
+    __name(__addDisposableResource, "__addDisposableResource");
+    _SuppressedError = typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
+      var e = new Error(message);
+      return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+    };
+    __name(__disposeResources, "__disposeResources");
+    tslib_es6_default = {
+      __extends,
+      __assign,
+      __rest,
+      __decorate,
+      __param,
+      __metadata,
+      __awaiter,
+      __generator,
+      __createBinding,
+      __exportStar,
+      __values,
+      __read,
+      __spread,
+      __spreadArrays,
+      __spreadArray,
+      __await,
+      __asyncGenerator,
+      __asyncDelegator,
+      __asyncValues,
+      __makeTemplateObject,
+      __importStar,
+      __importDefault,
+      __classPrivateFieldGet,
+      __classPrivateFieldSet,
+      __classPrivateFieldIn,
+      __addDisposableResource,
+      __disposeResources
+    };
+  }
+});
+
+// node_modules/react-remove-scroll-bar/dist/es5/constants.js
+var require_constants2 = __commonJS({
+  "node_modules/react-remove-scroll-bar/dist/es5/constants.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.removedBarSizeVariable = exports2.noScrollbarsClassName = exports2.fullWidthClassName = exports2.zeroRightClassName = void 0;
+    exports2.zeroRightClassName = "right-scroll-bar-position";
+    exports2.fullWidthClassName = "width-before-scroll-bar";
+    exports2.noScrollbarsClassName = "with-scroll-bars-hidden";
+    exports2.removedBarSizeVariable = "--removed-body-scroll-bar-size";
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/assignRef.js
+var require_assignRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/assignRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.assignRef = void 0;
+    function assignRef(ref, value) {
+      if (typeof ref === "function") {
+        ref(value);
+      } else if (ref) {
+        ref.current = value;
+      }
+      return ref;
+    }
+    __name(assignRef, "assignRef");
+    exports2.assignRef = assignRef;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/useRef.js
+var require_useRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/useRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.useCallbackRef = void 0;
+    var react_1 = require("react");
+    function useCallbackRef2(initialValue2, callback) {
+      var ref = (0, react_1.useState)(function() {
+        return {
+          // value
+          value: initialValue2,
+          // last callback
+          callback,
+          // "memoized" public interface
+          facade: {
+            get current() {
+              return ref.value;
+            },
+            set current(value) {
+              var last = ref.value;
+              if (last !== value) {
+                ref.value = value;
+                ref.callback(value, last);
+              }
+            }
+          }
+        };
+      })[0];
+      ref.callback = callback;
+      return ref.facade;
+    }
+    __name(useCallbackRef2, "useCallbackRef");
+    exports2.useCallbackRef = useCallbackRef2;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/createRef.js
+var require_createRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/createRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.createCallbackRef = void 0;
+    function createCallbackRef(callback) {
+      var current = null;
+      return {
+        get current() {
+          return current;
+        },
+        set current(value) {
+          var last = current;
+          if (last !== value) {
+            current = value;
+            callback(value, last);
+          }
+        }
+      };
+    }
+    __name(createCallbackRef, "createCallbackRef");
+    exports2.createCallbackRef = createCallbackRef;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/mergeRef.js
+var require_mergeRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/mergeRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.mergeRefs = void 0;
+    var assignRef_1 = require_assignRef();
+    var createRef_1 = require_createRef();
+    function mergeRefs(refs) {
+      return (0, createRef_1.createCallbackRef)(function(newValue) {
+        return refs.forEach(function(ref) {
+          return (0, assignRef_1.assignRef)(ref, newValue);
+        });
+      });
+    }
+    __name(mergeRefs, "mergeRefs");
+    exports2.mergeRefs = mergeRefs;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/useMergeRef.js
+var require_useMergeRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/useMergeRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.useMergeRefs = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var assignRef_1 = require_assignRef();
+    var useRef_1 = require_useRef();
+    var currentValues = /* @__PURE__ */ new WeakMap();
+    function useMergeRefs(refs, defaultValue2) {
+      var callbackRef = (0, useRef_1.useCallbackRef)(defaultValue2 || null, function(newValue) {
+        return refs.forEach(function(ref) {
+          return (0, assignRef_1.assignRef)(ref, newValue);
+        });
+      });
+      React43.useLayoutEffect(function() {
+        var oldValue = currentValues.get(callbackRef);
+        if (oldValue) {
+          var prevRefs_1 = new Set(oldValue);
+          var nextRefs_1 = new Set(refs);
+          var current_1 = callbackRef.current;
+          prevRefs_1.forEach(function(ref) {
+            if (!nextRefs_1.has(ref)) {
+              (0, assignRef_1.assignRef)(ref, null);
+            }
+          });
+          nextRefs_1.forEach(function(ref) {
+            if (!prevRefs_1.has(ref)) {
+              (0, assignRef_1.assignRef)(ref, current_1);
+            }
+          });
+        }
+        currentValues.set(callbackRef, refs);
+      }, [refs]);
+      return callbackRef;
+    }
+    __name(useMergeRefs, "useMergeRefs");
+    exports2.useMergeRefs = useMergeRefs;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/useTransformRef.js
+var require_useTransformRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/useTransformRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.useTransformRef = void 0;
+    var assignRef_1 = require_assignRef();
+    var useRef_1 = require_useRef();
+    function useTransformRef(ref, transformer) {
+      return (0, useRef_1.useCallbackRef)(null, function(value) {
+        return (0, assignRef_1.assignRef)(ref, transformer(value));
+      });
+    }
+    __name(useTransformRef, "useTransformRef");
+    exports2.useTransformRef = useTransformRef;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/transformRef.js
+var require_transformRef = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/transformRef.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.transformRef = void 0;
+    var assignRef_1 = require_assignRef();
+    var createRef_1 = require_createRef();
+    function transformRef(ref, transformer) {
+      return (0, createRef_1.createCallbackRef)(function(value) {
+        return (0, assignRef_1.assignRef)(ref, transformer(value));
+      });
+    }
+    __name(transformRef, "transformRef");
+    exports2.transformRef = transformRef;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/refToCallback.js
+var require_refToCallback = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/refToCallback.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.useRefToCallback = exports2.refToCallback = void 0;
+    function refToCallback(ref) {
+      return function(newValue) {
+        if (typeof ref === "function") {
+          ref(newValue);
+        } else if (ref) {
+          ref.current = newValue;
+        }
+      };
+    }
+    __name(refToCallback, "refToCallback");
+    exports2.refToCallback = refToCallback;
+    var nullCallback = /* @__PURE__ */ __name(function() {
+      return null;
+    }, "nullCallback");
+    var weakMem = /* @__PURE__ */ new WeakMap();
+    var weakMemoize = /* @__PURE__ */ __name(function(ref) {
+      var usedRef = ref || nullCallback;
+      var storedRef = weakMem.get(usedRef);
+      if (storedRef) {
+        return storedRef;
+      }
+      var cb = refToCallback(usedRef);
+      weakMem.set(usedRef, cb);
+      return cb;
+    }, "weakMemoize");
+    function useRefToCallback(ref) {
+      return weakMemoize(ref);
+    }
+    __name(useRefToCallback, "useRefToCallback");
+    exports2.useRefToCallback = useRefToCallback;
+  }
+});
+
+// node_modules/use-callback-ref/dist/es5/index.js
+var require_es52 = __commonJS({
+  "node_modules/use-callback-ref/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.useRefToCallback = exports2.refToCallback = exports2.transformRef = exports2.useTransformRef = exports2.useMergeRefs = exports2.mergeRefs = exports2.createCallbackRef = exports2.useCallbackRef = exports2.assignRef = void 0;
+    var assignRef_1 = require_assignRef();
+    Object.defineProperty(exports2, "assignRef", { enumerable: true, get: function() {
+      return assignRef_1.assignRef;
+    } });
+    var useRef_1 = require_useRef();
+    Object.defineProperty(exports2, "useCallbackRef", { enumerable: true, get: function() {
+      return useRef_1.useCallbackRef;
+    } });
+    var createRef_1 = require_createRef();
+    Object.defineProperty(exports2, "createCallbackRef", { enumerable: true, get: function() {
+      return createRef_1.createCallbackRef;
+    } });
+    var mergeRef_1 = require_mergeRef();
+    Object.defineProperty(exports2, "mergeRefs", { enumerable: true, get: function() {
+      return mergeRef_1.mergeRefs;
+    } });
+    var useMergeRef_1 = require_useMergeRef();
+    Object.defineProperty(exports2, "useMergeRefs", { enumerable: true, get: function() {
+      return useMergeRef_1.useMergeRefs;
+    } });
+    var useTransformRef_1 = require_useTransformRef();
+    Object.defineProperty(exports2, "useTransformRef", { enumerable: true, get: function() {
+      return useTransformRef_1.useTransformRef;
+    } });
+    var transformRef_1 = require_transformRef();
+    Object.defineProperty(exports2, "transformRef", { enumerable: true, get: function() {
+      return transformRef_1.transformRef;
+    } });
+    var refToCallback_1 = require_refToCallback();
+    Object.defineProperty(exports2, "refToCallback", { enumerable: true, get: function() {
+      return refToCallback_1.refToCallback;
+    } });
+    Object.defineProperty(exports2, "useRefToCallback", { enumerable: true, get: function() {
+      return refToCallback_1.useRefToCallback;
+    } });
+  }
+});
+
+// node_modules/detect-node-es/es5/node.js
+var require_node = __commonJS({
+  "node_modules/detect-node-es/es5/node.js"(exports2, module2) {
+    module2.exports.isNode = Object.prototype.toString.call(typeof process !== "undefined" ? process : 0) === "[object process]";
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/env.js
+var require_env = __commonJS({
+  "node_modules/use-sidecar/dist/es5/env.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.env = void 0;
+    var detect_node_es_1 = require_node();
+    exports2.env = {
+      isNode: detect_node_es_1.isNode,
+      forceCache: false
+    };
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/hook.js
+var require_hook = __commonJS({
+  "node_modules/use-sidecar/dist/es5/hook.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.useSidecar = void 0;
+    var react_1 = require("react");
+    var env_1 = require_env();
+    var cache = /* @__PURE__ */ new WeakMap();
+    var NO_OPTIONS = {};
+    function useSidecar(importer, effect) {
+      var options = effect && effect.options || NO_OPTIONS;
+      if (env_1.env.isNode && !options.ssr) {
+        return [null, null];
+      }
+      return useRealSidecar(importer, effect);
+    }
+    __name(useSidecar, "useSidecar");
+    exports2.useSidecar = useSidecar;
+    function useRealSidecar(importer, effect) {
+      var options = effect && effect.options || NO_OPTIONS;
+      var couldUseCache = env_1.env.forceCache || env_1.env.isNode && !!options.ssr || !options.async;
+      var _a = (0, react_1.useState)(couldUseCache ? function() {
+        return cache.get(importer);
+      } : void 0), Car = _a[0], setCar = _a[1];
+      var _b = (0, react_1.useState)(null), error = _b[0], setError = _b[1];
+      (0, react_1.useEffect)(function() {
+        if (!Car) {
+          importer().then(function(car) {
+            var resolved = effect ? effect.read() : car.default || car;
+            if (!resolved) {
+              console.error("Sidecar error: with importer", importer);
+              var error_1;
+              if (effect) {
+                console.error("Sidecar error: with medium", effect);
+                error_1 = new Error("Sidecar medium was not found");
+              } else {
+                error_1 = new Error("Sidecar was not found in exports");
+              }
+              setError(function() {
+                return error_1;
+              });
+              throw error_1;
+            }
+            cache.set(importer, resolved);
+            setCar(function() {
+              return resolved;
+            });
+          }, function(e) {
+            return setError(function() {
+              return e;
+            });
+          });
+        }
+      }, []);
+      return [Car, error];
+    }
+    __name(useRealSidecar, "useRealSidecar");
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/hoc.js
+var require_hoc = __commonJS({
+  "node_modules/use-sidecar/dist/es5/hoc.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.sidecar = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var hook_1 = require_hook();
+    function sidecar(importer, errorComponent) {
+      var ErrorCase = /* @__PURE__ */ __name(function() {
+        return errorComponent;
+      }, "ErrorCase");
+      return /* @__PURE__ */ __name(function Sidecar(props) {
+        var _a = (0, hook_1.useSidecar)(importer, props.sideCar), Car = _a[0], error = _a[1];
+        if (error && errorComponent) {
+          return ErrorCase;
+        }
+        return Car ? React43.createElement(Car, tslib_1.__assign({}, props)) : null;
+      }, "Sidecar");
+    }
+    __name(sidecar, "sidecar");
+    exports2.sidecar = sidecar;
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/config.js
+var require_config = __commonJS({
+  "node_modules/use-sidecar/dist/es5/config.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.setConfig = exports2.config = void 0;
+    exports2.config = {
+      onError: function(e) {
+        return console.error(e);
+      }
+    };
+    var setConfig = /* @__PURE__ */ __name(function(conf) {
+      Object.assign(exports2.config, conf);
+    }, "setConfig");
+    exports2.setConfig = setConfig;
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/medium.js
+var require_medium = __commonJS({
+  "node_modules/use-sidecar/dist/es5/medium.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.createSidecarMedium = exports2.createMedium = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    function ItoI(a) {
+      return a;
+    }
+    __name(ItoI, "ItoI");
+    function innerCreateMedium(defaults, middleware) {
+      if (middleware === void 0) {
+        middleware = ItoI;
+      }
+      var buffer = [];
+      var assigned = false;
+      var medium = {
+        read: function() {
+          if (assigned) {
+            throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");
+          }
+          if (buffer.length) {
+            return buffer[buffer.length - 1];
+          }
+          return defaults;
+        },
+        useMedium: function(data) {
+          var item = middleware(data, assigned);
+          buffer.push(item);
+          return function() {
+            buffer = buffer.filter(function(x) {
+              return x !== item;
+            });
+          };
+        },
+        assignSyncMedium: function(cb) {
+          assigned = true;
+          while (buffer.length) {
+            var cbs2 = buffer;
+            buffer = [];
+            cbs2.forEach(cb);
+          }
+          buffer = {
+            push: function(x) {
+              return cb(x);
+            },
+            filter: function() {
+              return buffer;
+            }
+          };
+        },
+        assignMedium: function(cb) {
+          assigned = true;
+          var pendingQueue = [];
+          if (buffer.length) {
+            var cbs2 = buffer;
+            buffer = [];
+            cbs2.forEach(cb);
+            pendingQueue = buffer;
+          }
+          var executeQueue = /* @__PURE__ */ __name(function() {
+            var cbs3 = pendingQueue;
+            pendingQueue = [];
+            cbs3.forEach(cb);
+          }, "executeQueue");
+          var cycle = /* @__PURE__ */ __name(function() {
+            return Promise.resolve().then(executeQueue);
+          }, "cycle");
+          cycle();
+          buffer = {
+            push: function(x) {
+              pendingQueue.push(x);
+              cycle();
+            },
+            filter: function(filter) {
+              pendingQueue = pendingQueue.filter(filter);
+              return buffer;
+            }
+          };
+        }
+      };
+      return medium;
+    }
+    __name(innerCreateMedium, "innerCreateMedium");
+    function createMedium(defaults, middleware) {
+      if (middleware === void 0) {
+        middleware = ItoI;
+      }
+      return innerCreateMedium(defaults, middleware);
+    }
+    __name(createMedium, "createMedium");
+    exports2.createMedium = createMedium;
+    function createSidecarMedium(options) {
+      if (options === void 0) {
+        options = {};
+      }
+      var medium = innerCreateMedium(null);
+      medium.options = tslib_1.__assign({ async: true, ssr: false }, options);
+      return medium;
+    }
+    __name(createSidecarMedium, "createSidecarMedium");
+    exports2.createSidecarMedium = createSidecarMedium;
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/renderProp.js
+var require_renderProp = __commonJS({
+  "node_modules/use-sidecar/dist/es5/renderProp.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.renderCar = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var react_1 = require("react");
+    function renderCar(WrappedComponent, defaults) {
+      function State(_a) {
+        var stateRef = _a.stateRef, props = _a.props;
+        var renderTarget = (0, react_1.useCallback)(/* @__PURE__ */ __name(function SideTarget() {
+          var args = [];
+          for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+          }
+          (0, react_1.useLayoutEffect)(function() {
+            stateRef.current(args);
+          });
+          return null;
+        }, "SideTarget"), []);
+        return React43.createElement(WrappedComponent, tslib_1.__assign({}, props, { children: renderTarget }));
+      }
+      __name(State, "State");
+      var Children5 = React43.memo(function(_a) {
+        var stateRef = _a.stateRef, defaultState = _a.defaultState, children = _a.children;
+        var _b = (0, react_1.useState)(defaultState.current), state = _b[0], setState = _b[1];
+        (0, react_1.useEffect)(function() {
+          stateRef.current = setState;
+        }, []);
+        return children.apply(void 0, state);
+      }, function() {
+        return true;
+      });
+      return /* @__PURE__ */ __name(function Combiner(props) {
+        var defaultState = React43.useRef(defaults(props));
+        var ref = React43.useRef(function(state) {
+          return defaultState.current = state;
+        });
+        return React43.createElement(
+          React43.Fragment,
+          null,
+          React43.createElement(State, { stateRef: ref, props }),
+          React43.createElement(Children5, { stateRef: ref, defaultState, children: props.children })
+        );
+      }, "Combiner");
+    }
+    __name(renderCar, "renderCar");
+    exports2.renderCar = renderCar;
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/exports.js
+var require_exports = __commonJS({
+  "node_modules/use-sidecar/dist/es5/exports.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.exportSidecar = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var SideCar = /* @__PURE__ */ __name(function(_a) {
+      var sideCar = _a.sideCar, rest = tslib_1.__rest(_a, ["sideCar"]);
+      if (!sideCar) {
+        throw new Error("Sidecar: please provide `sideCar` property to import the right car");
+      }
+      var Target = sideCar.read();
+      if (!Target) {
+        throw new Error("Sidecar medium not found");
+      }
+      return React43.createElement(Target, tslib_1.__assign({}, rest));
+    }, "SideCar");
+    SideCar.isSideCarExport = true;
+    function exportSidecar(medium, exported) {
+      medium.useMedium(exported);
+      return SideCar;
+    }
+    __name(exportSidecar, "exportSidecar");
+    exports2.exportSidecar = exportSidecar;
+  }
+});
+
+// node_modules/use-sidecar/dist/es5/index.js
+var require_es53 = __commonJS({
+  "node_modules/use-sidecar/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.exportSidecar = exports2.renderCar = exports2.createSidecarMedium = exports2.createMedium = exports2.setConfig = exports2.useSidecar = exports2.sidecar = void 0;
+    var hoc_1 = require_hoc();
+    Object.defineProperty(exports2, "sidecar", { enumerable: true, get: function() {
+      return hoc_1.sidecar;
+    } });
+    var hook_1 = require_hook();
+    Object.defineProperty(exports2, "useSidecar", { enumerable: true, get: function() {
+      return hook_1.useSidecar;
+    } });
+    var config_1 = require_config();
+    Object.defineProperty(exports2, "setConfig", { enumerable: true, get: function() {
+      return config_1.setConfig;
+    } });
+    var medium_1 = require_medium();
+    Object.defineProperty(exports2, "createMedium", { enumerable: true, get: function() {
+      return medium_1.createMedium;
+    } });
+    Object.defineProperty(exports2, "createSidecarMedium", { enumerable: true, get: function() {
+      return medium_1.createSidecarMedium;
+    } });
+    var renderProp_1 = require_renderProp();
+    Object.defineProperty(exports2, "renderCar", { enumerable: true, get: function() {
+      return renderProp_1.renderCar;
+    } });
+    var exports_1 = require_exports();
+    Object.defineProperty(exports2, "exportSidecar", { enumerable: true, get: function() {
+      return exports_1.exportSidecar;
+    } });
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/medium.js
+var require_medium2 = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/medium.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.effectCar = void 0;
+    var use_sidecar_1 = require_es53();
+    exports2.effectCar = (0, use_sidecar_1.createSidecarMedium)();
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/UI.js
+var require_UI = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/UI.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.RemoveScroll = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var constants_1 = require_constants2();
+    var use_callback_ref_1 = require_es52();
+    var medium_1 = require_medium2();
+    var nothing = /* @__PURE__ */ __name(function() {
+      return;
+    }, "nothing");
+    var RemoveScroll2 = React43.forwardRef(function(props, parentRef) {
+      var ref = React43.useRef(null);
+      var _a = React43.useState({
+        onScrollCapture: nothing,
+        onWheelCapture: nothing,
+        onTouchMoveCapture: nothing
+      }), callbacks = _a[0], setCallbacks = _a[1];
+      var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b = props.as, Container = _b === void 0 ? "div" : _b, rest = tslib_1.__rest(props, ["forwardProps", "children", "className", "removeScrollBar", "enabled", "shards", "sideCar", "noIsolation", "inert", "allowPinchZoom", "as"]);
+      var SideCar = sideCar;
+      var containerRef = (0, use_callback_ref_1.useMergeRefs)([ref, parentRef]);
+      var containerProps = tslib_1.__assign(tslib_1.__assign({}, rest), callbacks);
+      return React43.createElement(
+        React43.Fragment,
+        null,
+        enabled && React43.createElement(SideCar, { sideCar: medium_1.effectCar, removeScrollBar, shards, noIsolation, inert, setCallbacks, allowPinchZoom: !!allowPinchZoom, lockRef: ref }),
+        forwardProps ? React43.cloneElement(React43.Children.only(children), tslib_1.__assign(tslib_1.__assign({}, containerProps), { ref: containerRef })) : React43.createElement(Container, tslib_1.__assign({}, containerProps, { className, ref: containerRef }), children)
+      );
+    });
+    exports2.RemoveScroll = RemoveScroll2;
+    RemoveScroll2.defaultProps = {
+      enabled: true,
+      removeScrollBar: true,
+      inert: false
+    };
+    RemoveScroll2.classNames = {
+      fullWidth: constants_1.fullWidthClassName,
+      zeroRight: constants_1.zeroRightClassName
+    };
+  }
+});
+
+// node_modules/get-nonce/dist/es5/index.js
+var require_es54 = __commonJS({
+  "node_modules/get-nonce/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    var currentNonce;
+    exports2.setNonce = function(nonce) {
+      currentNonce = nonce;
+    };
+    exports2.getNonce = function() {
+      if (currentNonce) {
+        return currentNonce;
+      }
+      if (typeof __webpack_nonce__ !== "undefined") {
+        return __webpack_nonce__;
+      }
+      return void 0;
+    };
+  }
+});
+
+// node_modules/react-style-singleton/dist/es5/singleton.js
+var require_singleton = __commonJS({
+  "node_modules/react-style-singleton/dist/es5/singleton.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.stylesheetSingleton = void 0;
+    var get_nonce_1 = require_es54();
+    function makeStyleTag() {
+      if (!document)
+        return null;
+      var tag = document.createElement("style");
+      tag.type = "text/css";
+      var nonce = (0, get_nonce_1.getNonce)();
+      if (nonce) {
+        tag.setAttribute("nonce", nonce);
+      }
+      return tag;
+    }
+    __name(makeStyleTag, "makeStyleTag");
+    function injectStyles(tag, css) {
+      if (tag.styleSheet) {
+        tag.styleSheet.cssText = css;
+      } else {
+        tag.appendChild(document.createTextNode(css));
+      }
+    }
+    __name(injectStyles, "injectStyles");
+    function insertStyleTag(tag) {
+      var head = document.head || document.getElementsByTagName("head")[0];
+      head.appendChild(tag);
+    }
+    __name(insertStyleTag, "insertStyleTag");
+    var stylesheetSingleton = /* @__PURE__ */ __name(function() {
+      var counter = 0;
+      var stylesheet = null;
+      return {
+        add: function(style) {
+          if (counter == 0) {
+            if (stylesheet = makeStyleTag()) {
+              injectStyles(stylesheet, style);
+              insertStyleTag(stylesheet);
+            }
+          }
+          counter++;
+        },
+        remove: function() {
+          counter--;
+          if (!counter && stylesheet) {
+            stylesheet.parentNode && stylesheet.parentNode.removeChild(stylesheet);
+            stylesheet = null;
+          }
+        }
+      };
+    }, "stylesheetSingleton");
+    exports2.stylesheetSingleton = stylesheetSingleton;
+  }
+});
+
+// node_modules/react-style-singleton/dist/es5/hook.js
+var require_hook2 = __commonJS({
+  "node_modules/react-style-singleton/dist/es5/hook.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.styleHookSingleton = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var singleton_1 = require_singleton();
+    var styleHookSingleton = /* @__PURE__ */ __name(function() {
+      var sheet = (0, singleton_1.stylesheetSingleton)();
+      return function(styles, isDynamic) {
+        React43.useEffect(function() {
+          sheet.add(styles);
+          return function() {
+            sheet.remove();
+          };
+        }, [styles && isDynamic]);
+      };
+    }, "styleHookSingleton");
+    exports2.styleHookSingleton = styleHookSingleton;
+  }
+});
+
+// node_modules/react-style-singleton/dist/es5/component.js
+var require_component = __commonJS({
+  "node_modules/react-style-singleton/dist/es5/component.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.styleSingleton = void 0;
+    var hook_1 = require_hook2();
+    var styleSingleton = /* @__PURE__ */ __name(function() {
+      var useStyle2 = (0, hook_1.styleHookSingleton)();
+      var Sheet2 = /* @__PURE__ */ __name(function(_a) {
+        var styles = _a.styles, dynamic = _a.dynamic;
+        useStyle2(styles, dynamic);
+        return null;
+      }, "Sheet");
+      return Sheet2;
+    }, "styleSingleton");
+    exports2.styleSingleton = styleSingleton;
+  }
+});
+
+// node_modules/react-style-singleton/dist/es5/index.js
+var require_es55 = __commonJS({
+  "node_modules/react-style-singleton/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.styleHookSingleton = exports2.stylesheetSingleton = exports2.styleSingleton = void 0;
+    var component_1 = require_component();
+    Object.defineProperty(exports2, "styleSingleton", { enumerable: true, get: function() {
+      return component_1.styleSingleton;
+    } });
+    var singleton_1 = require_singleton();
+    Object.defineProperty(exports2, "stylesheetSingleton", { enumerable: true, get: function() {
+      return singleton_1.stylesheetSingleton;
+    } });
+    var hook_1 = require_hook2();
+    Object.defineProperty(exports2, "styleHookSingleton", { enumerable: true, get: function() {
+      return hook_1.styleHookSingleton;
+    } });
+  }
+});
+
+// node_modules/react-remove-scroll-bar/dist/es5/utils.js
+var require_utils2 = __commonJS({
+  "node_modules/react-remove-scroll-bar/dist/es5/utils.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.getGapWidth = exports2.zeroGap = void 0;
+    exports2.zeroGap = {
+      left: 0,
+      top: 0,
+      right: 0,
+      gap: 0
+    };
+    var parse = /* @__PURE__ */ __name(function(x) {
+      return parseInt(x || "", 10) || 0;
+    }, "parse");
+    var getOffset = /* @__PURE__ */ __name(function(gapMode) {
+      var cs = window.getComputedStyle(document.body);
+      var left = cs[gapMode === "padding" ? "paddingLeft" : "marginLeft"];
+      var top = cs[gapMode === "padding" ? "paddingTop" : "marginTop"];
+      var right = cs[gapMode === "padding" ? "paddingRight" : "marginRight"];
+      return [parse(left), parse(top), parse(right)];
+    }, "getOffset");
+    var getGapWidth = /* @__PURE__ */ __name(function(gapMode) {
+      if (gapMode === void 0) {
+        gapMode = "margin";
+      }
+      if (typeof window === "undefined") {
+        return exports2.zeroGap;
+      }
+      var offsets = getOffset(gapMode);
+      var documentWidth = document.documentElement.clientWidth;
+      var windowWidth = window.innerWidth;
+      return {
+        left: offsets[0],
+        top: offsets[1],
+        right: offsets[2],
+        gap: Math.max(0, windowWidth - documentWidth + offsets[2] - offsets[0])
+      };
+    }, "getGapWidth");
+    exports2.getGapWidth = getGapWidth;
+  }
+});
+
+// node_modules/react-remove-scroll-bar/dist/es5/component.js
+var require_component2 = __commonJS({
+  "node_modules/react-remove-scroll-bar/dist/es5/component.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.RemoveScrollBar = exports2.lockAttribute = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var react_style_singleton_1 = require_es55();
+    var constants_1 = require_constants2();
+    var utils_1 = require_utils2();
+    var Style = (0, react_style_singleton_1.styleSingleton)();
+    exports2.lockAttribute = "data-scroll-locked";
+    var getStyles = /* @__PURE__ */ __name(function(_a, allowRelative, gapMode, important) {
+      var left = _a.left, top = _a.top, right = _a.right, gap = _a.gap;
+      if (gapMode === void 0) {
+        gapMode = "margin";
+      }
+      return "\n  .".concat(constants_1.noScrollbarsClassName, " {\n   overflow: hidden ").concat(important, ";\n   padding-right: ").concat(gap, "px ").concat(important, ";\n  }\n  body[").concat(exports2.lockAttribute, "] {\n    overflow: hidden ").concat(important, ";\n    overscroll-behavior: contain;\n    ").concat([
+        allowRelative && "position: relative ".concat(important, ";"),
+        gapMode === "margin" && "\n    padding-left: ".concat(left, "px;\n    padding-top: ").concat(top, "px;\n    padding-right: ").concat(right, "px;\n    margin-left:0;\n    margin-top:0;\n    margin-right: ").concat(gap, "px ").concat(important, ";\n    "),
+        gapMode === "padding" && "padding-right: ".concat(gap, "px ").concat(important, ";")
+      ].filter(Boolean).join(""), "\n  }\n  \n  .").concat(constants_1.zeroRightClassName, " {\n    right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(constants_1.fullWidthClassName, " {\n    margin-right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(constants_1.zeroRightClassName, " .").concat(constants_1.zeroRightClassName, " {\n    right: 0 ").concat(important, ";\n  }\n  \n  .").concat(constants_1.fullWidthClassName, " .").concat(constants_1.fullWidthClassName, " {\n    margin-right: 0 ").concat(important, ";\n  }\n  \n  body[").concat(exports2.lockAttribute, "] {\n    ").concat(constants_1.removedBarSizeVariable, ": ").concat(gap, "px;\n  }\n");
+    }, "getStyles");
+    var RemoveScrollBar = /* @__PURE__ */ __name(function(props) {
+      var noRelative = props.noRelative, noImportant = props.noImportant, _a = props.gapMode, gapMode = _a === void 0 ? "margin" : _a;
+      var gap = React43.useMemo(function() {
+        return (0, utils_1.getGapWidth)(gapMode);
+      }, [gapMode]);
+      React43.useEffect(function() {
+        document.body.setAttribute(exports2.lockAttribute, "");
+        return function() {
+          document.body.removeAttribute(exports2.lockAttribute);
+        };
+      }, []);
+      return React43.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
+    }, "RemoveScrollBar");
+    exports2.RemoveScrollBar = RemoveScrollBar;
+  }
+});
+
+// node_modules/react-remove-scroll-bar/dist/es5/index.js
+var require_es56 = __commonJS({
+  "node_modules/react-remove-scroll-bar/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.getGapWidth = exports2.removedBarSizeVariable = exports2.noScrollbarsClassName = exports2.fullWidthClassName = exports2.zeroRightClassName = exports2.RemoveScrollBar = void 0;
+    var component_1 = require_component2();
+    Object.defineProperty(exports2, "RemoveScrollBar", { enumerable: true, get: function() {
+      return component_1.RemoveScrollBar;
+    } });
+    var constants_1 = require_constants2();
+    Object.defineProperty(exports2, "zeroRightClassName", { enumerable: true, get: function() {
+      return constants_1.zeroRightClassName;
+    } });
+    Object.defineProperty(exports2, "fullWidthClassName", { enumerable: true, get: function() {
+      return constants_1.fullWidthClassName;
+    } });
+    Object.defineProperty(exports2, "noScrollbarsClassName", { enumerable: true, get: function() {
+      return constants_1.noScrollbarsClassName;
+    } });
+    Object.defineProperty(exports2, "removedBarSizeVariable", { enumerable: true, get: function() {
+      return constants_1.removedBarSizeVariable;
+    } });
+    var utils_1 = require_utils2();
+    Object.defineProperty(exports2, "getGapWidth", { enumerable: true, get: function() {
+      return utils_1.getGapWidth;
+    } });
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/aggresiveCapture.js
+var require_aggresiveCapture = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/aggresiveCapture.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.nonPassive = void 0;
+    var passiveSupported = false;
+    if (typeof window !== "undefined") {
+      try {
+        options = Object.defineProperty({}, "passive", {
+          get: function() {
+            passiveSupported = true;
+            return true;
+          }
+        });
+        window.addEventListener("test", options, options);
+        window.removeEventListener("test", options, options);
+      } catch (err) {
+        passiveSupported = false;
+      }
+    }
+    var options;
+    exports2.nonPassive = passiveSupported ? { passive: false } : false;
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/handleScroll.js
+var require_handleScroll = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/handleScroll.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.handleScroll = exports2.locationCouldBeScrolled = void 0;
+    var alwaysContainsScroll = /* @__PURE__ */ __name(function(node) {
+      return node.tagName === "TEXTAREA";
+    }, "alwaysContainsScroll");
+    var elementCanBeScrolled = /* @__PURE__ */ __name(function(node, overflow) {
+      var styles = window.getComputedStyle(node);
+      return (
+        // not-not-scrollable
+        styles[overflow] !== "hidden" && // contains scroll inside self
+        !(styles.overflowY === styles.overflowX && !alwaysContainsScroll(node) && styles[overflow] === "visible")
+      );
+    }, "elementCanBeScrolled");
+    var elementCouldBeVScrolled = /* @__PURE__ */ __name(function(node) {
+      return elementCanBeScrolled(node, "overflowY");
+    }, "elementCouldBeVScrolled");
+    var elementCouldBeHScrolled = /* @__PURE__ */ __name(function(node) {
+      return elementCanBeScrolled(node, "overflowX");
+    }, "elementCouldBeHScrolled");
+    var locationCouldBeScrolled = /* @__PURE__ */ __name(function(axis, node) {
+      var current = node;
+      do {
+        if (typeof ShadowRoot !== "undefined" && current instanceof ShadowRoot) {
+          current = current.host;
+        }
+        var isScrollable = elementCouldBeScrolled(axis, current);
+        if (isScrollable) {
+          var _a = getScrollVariables(axis, current), s = _a[1], d = _a[2];
+          if (s > d) {
+            return true;
+          }
+        }
+        current = current.parentNode;
+      } while (current && current !== document.body);
+      return false;
+    }, "locationCouldBeScrolled");
+    exports2.locationCouldBeScrolled = locationCouldBeScrolled;
+    var getVScrollVariables = /* @__PURE__ */ __name(function(_a) {
+      var scrollTop = _a.scrollTop, scrollHeight = _a.scrollHeight, clientHeight = _a.clientHeight;
+      return [
+        scrollTop,
+        scrollHeight,
+        clientHeight
+      ];
+    }, "getVScrollVariables");
+    var getHScrollVariables = /* @__PURE__ */ __name(function(_a) {
+      var scrollLeft = _a.scrollLeft, scrollWidth = _a.scrollWidth, clientWidth = _a.clientWidth;
+      return [
+        scrollLeft,
+        scrollWidth,
+        clientWidth
+      ];
+    }, "getHScrollVariables");
+    var elementCouldBeScrolled = /* @__PURE__ */ __name(function(axis, node) {
+      return axis === "v" ? elementCouldBeVScrolled(node) : elementCouldBeHScrolled(node);
+    }, "elementCouldBeScrolled");
+    var getScrollVariables = /* @__PURE__ */ __name(function(axis, node) {
+      return axis === "v" ? getVScrollVariables(node) : getHScrollVariables(node);
+    }, "getScrollVariables");
+    var getDirectionFactor = /* @__PURE__ */ __name(function(axis, direction) {
+      return axis === "h" && direction === "rtl" ? -1 : 1;
+    }, "getDirectionFactor");
+    var handleScroll = /* @__PURE__ */ __name(function(axis, endTarget, event, sourceDelta, noOverscroll) {
+      var directionFactor = getDirectionFactor(axis, window.getComputedStyle(endTarget).direction);
+      var delta = directionFactor * sourceDelta;
+      var target = event.target;
+      var targetInLock = endTarget.contains(target);
+      var shouldCancelScroll = false;
+      var isDeltaPositive = delta > 0;
+      var availableScroll = 0;
+      var availableScrollTop = 0;
+      do {
+        var _a = getScrollVariables(axis, target), position = _a[0], scroll_1 = _a[1], capacity = _a[2];
+        var elementScroll = scroll_1 - capacity - directionFactor * position;
+        if (position || elementScroll) {
+          if (elementCouldBeScrolled(axis, target)) {
+            availableScroll += elementScroll;
+            availableScrollTop += position;
+          }
+        }
+        target = target.parentNode;
+      } while (
+        // portaled content
+        !targetInLock && target !== document.body || // self content
+        targetInLock && (endTarget.contains(target) || endTarget === target)
+      );
+      if (isDeltaPositive && (noOverscroll && availableScroll === 0 || !noOverscroll && delta > availableScroll)) {
+        shouldCancelScroll = true;
+      } else if (!isDeltaPositive && (noOverscroll && availableScrollTop === 0 || !noOverscroll && -delta > availableScrollTop)) {
+        shouldCancelScroll = true;
+      }
+      return shouldCancelScroll;
+    }, "handleScroll");
+    exports2.handleScroll = handleScroll;
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/SideEffect.js
+var require_SideEffect = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/SideEffect.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.RemoveScrollSideCar = exports2.getDeltaXY = exports2.getTouchXY = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var react_remove_scroll_bar_1 = require_es56();
+    var react_style_singleton_1 = require_es55();
+    var aggresiveCapture_1 = require_aggresiveCapture();
+    var handleScroll_1 = require_handleScroll();
+    var getTouchXY = /* @__PURE__ */ __name(function(event) {
+      return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
+    }, "getTouchXY");
+    exports2.getTouchXY = getTouchXY;
+    var getDeltaXY = /* @__PURE__ */ __name(function(event) {
+      return [event.deltaX, event.deltaY];
+    }, "getDeltaXY");
+    exports2.getDeltaXY = getDeltaXY;
+    var extractRef = /* @__PURE__ */ __name(function(ref) {
+      return ref && "current" in ref ? ref.current : ref;
+    }, "extractRef");
+    var deltaCompare = /* @__PURE__ */ __name(function(x, y) {
+      return x[0] === y[0] && x[1] === y[1];
+    }, "deltaCompare");
+    var generateStyle = /* @__PURE__ */ __name(function(id) {
+      return "\n  .block-interactivity-".concat(id, " {pointer-events: none;}\n  .allow-interactivity-").concat(id, " {pointer-events: all;}\n");
+    }, "generateStyle");
+    var idCounter = 0;
+    var lockStack = [];
+    function RemoveScrollSideCar(props) {
+      var shouldPreventQueue = React43.useRef([]);
+      var touchStartRef = React43.useRef([0, 0]);
+      var activeAxis = React43.useRef();
+      var id = React43.useState(idCounter++)[0];
+      var Style = React43.useState(function() {
+        return (0, react_style_singleton_1.styleSingleton)();
+      })[0];
+      var lastProps = React43.useRef(props);
+      React43.useEffect(function() {
+        lastProps.current = props;
+      }, [props]);
+      React43.useEffect(function() {
+        if (props.inert) {
+          document.body.classList.add("block-interactivity-".concat(id));
+          var allow_1 = tslib_1.__spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
+          allow_1.forEach(function(el) {
+            return el.classList.add("allow-interactivity-".concat(id));
+          });
+          return function() {
+            document.body.classList.remove("block-interactivity-".concat(id));
+            allow_1.forEach(function(el) {
+              return el.classList.remove("allow-interactivity-".concat(id));
+            });
+          };
+        }
+        return;
+      }, [props.inert, props.lockRef.current, props.shards]);
+      var shouldCancelEvent = React43.useCallback(function(event, parent) {
+        if ("touches" in event && event.touches.length === 2) {
+          return !lastProps.current.allowPinchZoom;
+        }
+        var touch = (0, exports2.getTouchXY)(event);
+        var touchStart = touchStartRef.current;
+        var deltaX = "deltaX" in event ? event.deltaX : touchStart[0] - touch[0];
+        var deltaY = "deltaY" in event ? event.deltaY : touchStart[1] - touch[1];
+        var currentAxis;
+        var target = event.target;
+        var moveDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "h" : "v";
+        if ("touches" in event && moveDirection === "h" && target.type === "range") {
+          return false;
+        }
+        var canBeScrolledInMainDirection = (0, handleScroll_1.locationCouldBeScrolled)(moveDirection, target);
+        if (!canBeScrolledInMainDirection) {
+          return true;
+        }
+        if (canBeScrolledInMainDirection) {
+          currentAxis = moveDirection;
+        } else {
+          currentAxis = moveDirection === "v" ? "h" : "v";
+          canBeScrolledInMainDirection = (0, handleScroll_1.locationCouldBeScrolled)(moveDirection, target);
+        }
+        if (!canBeScrolledInMainDirection) {
+          return false;
+        }
+        if (!activeAxis.current && "changedTouches" in event && (deltaX || deltaY)) {
+          activeAxis.current = currentAxis;
+        }
+        if (!currentAxis) {
+          return true;
+        }
+        var cancelingAxis = activeAxis.current || currentAxis;
+        return (0, handleScroll_1.handleScroll)(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY, true);
+      }, []);
+      var shouldPrevent = React43.useCallback(function(_event) {
+        var event = _event;
+        if (!lockStack.length || lockStack[lockStack.length - 1] !== Style) {
+          return;
+        }
+        var delta = "deltaY" in event ? (0, exports2.getDeltaXY)(event) : (0, exports2.getTouchXY)(event);
+        var sourceEvent = shouldPreventQueue.current.filter(function(e) {
+          return e.name === event.type && e.target === event.target && deltaCompare(e.delta, delta);
+        })[0];
+        if (sourceEvent && sourceEvent.should) {
+          if (event.cancelable) {
+            event.preventDefault();
+          }
+          return;
+        }
+        if (!sourceEvent) {
+          var shardNodes = (lastProps.current.shards || []).map(extractRef).filter(Boolean).filter(function(node) {
+            return node.contains(event.target);
+          });
+          var shouldStop = shardNodes.length > 0 ? shouldCancelEvent(event, shardNodes[0]) : !lastProps.current.noIsolation;
+          if (shouldStop) {
+            if (event.cancelable) {
+              event.preventDefault();
+            }
+          }
+        }
+      }, []);
+      var shouldCancel = React43.useCallback(function(name, delta, target, should) {
+        var event = { name, delta, target, should };
+        shouldPreventQueue.current.push(event);
+        setTimeout(function() {
+          shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e) {
+            return e !== event;
+          });
+        }, 1);
+      }, []);
+      var scrollTouchStart = React43.useCallback(function(event) {
+        touchStartRef.current = (0, exports2.getTouchXY)(event);
+        activeAxis.current = void 0;
+      }, []);
+      var scrollWheel = React43.useCallback(function(event) {
+        shouldCancel(event.type, (0, exports2.getDeltaXY)(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+      }, []);
+      var scrollTouchMove = React43.useCallback(function(event) {
+        shouldCancel(event.type, (0, exports2.getTouchXY)(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+      }, []);
+      React43.useEffect(function() {
+        lockStack.push(Style);
+        props.setCallbacks({
+          onScrollCapture: scrollWheel,
+          onWheelCapture: scrollWheel,
+          onTouchMoveCapture: scrollTouchMove
+        });
+        document.addEventListener("wheel", shouldPrevent, aggresiveCapture_1.nonPassive);
+        document.addEventListener("touchmove", shouldPrevent, aggresiveCapture_1.nonPassive);
+        document.addEventListener("touchstart", scrollTouchStart, aggresiveCapture_1.nonPassive);
+        return function() {
+          lockStack = lockStack.filter(function(inst) {
+            return inst !== Style;
+          });
+          document.removeEventListener("wheel", shouldPrevent, aggresiveCapture_1.nonPassive);
+          document.removeEventListener("touchmove", shouldPrevent, aggresiveCapture_1.nonPassive);
+          document.removeEventListener("touchstart", scrollTouchStart, aggresiveCapture_1.nonPassive);
+        };
+      }, []);
+      var removeScrollBar = props.removeScrollBar, inert = props.inert;
+      return React43.createElement(
+        React43.Fragment,
+        null,
+        inert ? React43.createElement(Style, { styles: generateStyle(id) }) : null,
+        removeScrollBar ? React43.createElement(react_remove_scroll_bar_1.RemoveScrollBar, { gapMode: "margin" }) : null
+      );
+    }
+    __name(RemoveScrollSideCar, "RemoveScrollSideCar");
+    exports2.RemoveScrollSideCar = RemoveScrollSideCar;
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/sidecar.js
+var require_sidecar = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/sidecar.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    var use_sidecar_1 = require_es53();
+    var SideEffect_1 = require_SideEffect();
+    var medium_1 = require_medium2();
+    exports2.default = (0, use_sidecar_1.exportSidecar)(medium_1.effectCar, SideEffect_1.RemoveScrollSideCar);
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/Combination.js
+var require_Combination = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/Combination.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var React43 = tslib_1.__importStar(require("react"));
+    var UI_1 = require_UI();
+    var sidecar_1 = tslib_1.__importDefault(require_sidecar());
+    var ReactRemoveScroll = React43.forwardRef(function(props, ref) {
+      return React43.createElement(UI_1.RemoveScroll, tslib_1.__assign({}, props, { ref, sideCar: sidecar_1.default }));
+    });
+    ReactRemoveScroll.classNames = UI_1.RemoveScroll.classNames;
+    exports2.default = ReactRemoveScroll;
+  }
+});
+
+// node_modules/react-remove-scroll/dist/es5/index.js
+var require_es57 = __commonJS({
+  "node_modules/react-remove-scroll/dist/es5/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.RemoveScroll = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var Combination_1 = tslib_1.__importDefault(require_Combination());
+    exports2.RemoveScroll = Combination_1.default;
+  }
+});
+
 // node_modules/@tamagui/image/dist/cjs/Image.js
 var require_Image2 = __commonJS({
   "node_modules/@tamagui/image/dist/cjs/Image.js"(exports2, module2) {
@@ -26566,10 +26800,10 @@ var require_Image2 = __commonJS({
       Image: () => Image2
     });
     module2.exports = __toCommonJS2(Image_exports);
-    var import_constants44 = require_cjs();
+    var import_constants44 = require_cjs2();
     var import_core53 = require("@tamagui/core");
     var import_react49 = require("react");
-    var import_react_native = require_cjs25();
+    var import_react_native = require_cjs3();
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var StyledImage = (0, import_core53.styled)(import_react_native.Image, {
       name: "Image"
@@ -26800,7 +27034,7 @@ var require_cjs28 = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var src_exports = {};
     module2.exports = __toCommonJS2(src_exports);
-    __reExport2(src_exports, require_cjs10(), module2.exports);
+    __reExport2(src_exports, require_cjs11(), module2.exports);
     __reExport2(src_exports, require_prevent(), module2.exports);
     __reExport2(src_exports, require_useCurrentColor(), module2.exports);
     __reExport2(src_exports, require_useGetThemedIcon(), module2.exports);
@@ -26865,7 +27099,7 @@ var require_focusableInputHOC = __commonJS({
       useFocusable: () => useFocusable2
     });
     module2.exports = __toCommonJS2(focusableInputHOC_exports);
-    var import_compose_refs23 = require_cjs14();
+    var import_compose_refs23 = require_cjs15();
     var import_web15 = require("@tamagui/core");
     var import_react49 = require("react");
     var import_registerFocusable = require_registerFocusable();
@@ -27966,11 +28200,11 @@ var require_Group = __commonJS({
     module2.exports = __toCommonJS2(Group_exports);
     var import_core53 = require("@tamagui/core");
     var import_create_context11 = require_cjs30();
-    var import_helpers25 = require_cjs10();
-    var import_stacks25 = require_cjs18();
-    var import_use_controllable_state15 = require_cjs12();
+    var import_helpers25 = require_cjs11();
+    var import_stacks25 = require_cjs19();
+    var import_use_controllable_state15 = require_cjs13();
     var import_react49 = __toESM2(require("react"));
-    var import_react_native = require_cjs25();
+    var import_react_native = require_cjs3();
     var import_reforest = require_dist();
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var GROUP_NAME3 = "Group";
@@ -28193,12 +28427,12 @@ var require_ListItem = __commonJS({
     });
     module2.exports = __toCommonJS2(ListItem_exports);
     var import_font_size4 = require_cjs27();
-    var import_get_font_sized4 = require_cjs19();
-    var import_get_token14 = require_cjs16();
-    var import_helpers25 = require_cjs10();
+    var import_get_font_sized4 = require_cjs20();
+    var import_get_token14 = require_cjs17();
+    var import_helpers25 = require_cjs11();
     var import_helpers_tamagui4 = require_cjs28();
-    var import_stacks25 = require_cjs18();
-    var import_text8 = require_cjs20();
+    var import_stacks25 = require_cjs19();
+    var import_text8 = require_cjs21();
     var import_web15 = require("@tamagui/core");
     var import_jsx_runtime56 = require("react/jsx-runtime");
     var NAME3 = "ListItem";
@@ -28755,7 +28989,7 @@ var require_mutateTheme = __commonJS({
       mutateThemes: () => mutateThemes
     });
     module2.exports = __toCommonJS2(mutateTheme_exports);
-    var import_constants44 = require_cjs();
+    var import_constants44 = require_cjs2();
     var import_web15 = require("@tamagui/core");
     var import_react49 = require("react");
     function mutateThemes({
@@ -29004,9 +29238,9 @@ __export(tamagui_config_exports, {
   default: () => tamagui_config_default
 });
 module.exports = __toCommonJS(tamagui_config_exports);
-var import_animations_css = __toESM(require_cjs3());
-var import_font_inter = __toESM(require_cjs4());
-var import_react_native_media_driver = __toESM(require_cjs5());
+var import_animations_react_native = __toESM(require_cjs4());
+var import_font_inter = __toESM(require_cjs5());
+var import_react_native_media_driver = __toESM(require_cjs6());
 
 // node_modules/@tamagui/shorthands/dist/esm/index.js
 var shorthands = {
@@ -33538,7 +33772,7 @@ globalThis.React ||= React;
 typeof requestAnimationFrame > "u" && (globalThis.requestAnimationFrame = setImmediate);
 
 // node_modules/tamagui/dist/esm/index.js
-__reExport(esm_exports2, __toESM(require_cjs22()));
+__reExport(esm_exports2, __toESM(require_cjs23()));
 
 // node_modules/@tamagui/constants/dist/esm/constants.js
 var import_react = require("react");
@@ -34182,7 +34416,7 @@ var AnimatePresence = /* @__PURE__ */ __name(({
 AnimatePresence.displayName = "AnimatePresence";
 
 // node_modules/@tamagui/dialog/dist/esm/Dialog.js
-var import_aria_hidden = __toESM(require_cjs23());
+var import_aria_hidden = __toESM(require_cjs24());
 var import_core13 = require("@tamagui/core");
 
 // node_modules/@tamagui/use-callback-ref/dist/esm/index.js
@@ -34404,7 +34638,7 @@ function handleAndDispatchCustomEvent(name, handler, detail, { discrete }) {
 __name(handleAndDispatchCustomEvent, "handleAndDispatchCustomEvent");
 
 // node_modules/@tamagui/dialog/dist/esm/Dialog.js
-var import_focus_scope = __toESM(require_cjs24());
+var import_focus_scope = __toESM(require_cjs25());
 
 // node_modules/@tamagui/stacks/dist/esm/Stacks.js
 var import_core3 = require("@tamagui/core");
@@ -34485,7 +34719,7 @@ ZStack.displayName = "ZStack";
 
 // node_modules/@tamagui/stacks/dist/esm/SizableStack.js
 var import_core4 = require("@tamagui/core");
-var import_get_button_sized = __toESM(require_cjs17());
+var import_get_button_sized = __toESM(require_cjs18());
 
 // node_modules/@tamagui/stacks/dist/esm/variants.js
 var elevate = {
@@ -34863,7 +35097,7 @@ SHEET_HIDDEN_STYLESHEET && document.head.appendChild(SHEET_HIDDEN_STYLESHEET);
 // node_modules/@tamagui/sheet/dist/esm/createSheet.js
 var import_core10 = require("@tamagui/core");
 var import_react24 = require("react");
-var import_react_native_web4 = __toESM(require_cjs25());
+var import_react_native_web4 = __toESM(require_cjs3());
 
 // node_modules/@tamagui/sheet/dist/esm/SheetContext.js
 var [createSheetContext, createSheetScope] = createContextScope(SHEET_NAME);
@@ -34877,7 +35111,7 @@ var import_core9 = require("@tamagui/core");
 
 // node_modules/@tamagui/use-keyboard-visible/dist/esm/useKeyboardVisible.js
 var import_react17 = require("react");
-var import_react_native_web = __toESM(require_cjs25());
+var import_react_native_web = __toESM(require_cjs3());
 var useKeyboardVisible = /* @__PURE__ */ __name(() => {
   const [isKeyboardVisible, setKeyboardVisible] = (0, import_react17.useState)(false);
   return (0, import_react17.useEffect)(() => {
@@ -34894,7 +35128,7 @@ var useKeyboardVisible = /* @__PURE__ */ __name(() => {
 
 // node_modules/@tamagui/sheet/dist/esm/SheetImplementationCustom.js
 var import_react22 = require("react");
-var import_react_native_web2 = __toESM(require_cjs25());
+var import_react_native_web2 = __toESM(require_cjs3());
 
 // node_modules/@tamagui/sheet/dist/esm/contexts.js
 var import_react18 = require("react");
@@ -35346,7 +35580,7 @@ __name(getYPositions, "getYPositions");
 
 // node_modules/@tamagui/scroll-view/dist/esm/ScrollView.js
 var import_web2 = require("@tamagui/core");
-var import_react_native_web3 = __toESM(require_cjs25());
+var import_react_native_web3 = __toESM(require_cjs3());
 var ScrollView = (0, import_web2.styled)(import_react_native_web3.ScrollView, {
   name: "ScrollView",
   scrollEnabled: true,
@@ -35664,7 +35898,7 @@ var SheetController = /* @__PURE__ */ __name(({
 
 // node_modules/@tamagui/sheet/dist/esm/nativeSheet.js
 var import_react26 = require("react");
-var import_react_native_web5 = __toESM(require_cjs25());
+var import_react_native_web5 = __toESM(require_cjs3());
 var import_jsx_runtime14 = require("react/jsx-runtime");
 var nativeSheets = {
   ios: null
@@ -35694,7 +35928,7 @@ function setupNativeSheet(platform2, Implementation) {
 __name(setupNativeSheet, "setupNativeSheet");
 
 // node_modules/@tamagui/text/dist/esm/SizableText.js
-var import_get_font_sized = __toESM(require_cjs19());
+var import_get_font_sized = __toESM(require_cjs20());
 var import_web3 = require("@tamagui/core");
 var variants2 = {
   unstyled: {
@@ -36579,7 +36813,7 @@ Avatar.displayName = AVATAR_NAME;
 
 // node_modules/@tamagui/button/dist/esm/Button.js
 var import_font_size = __toESM(require_cjs27());
-var import_get_button_sized2 = __toESM(require_cjs17());
+var import_get_button_sized2 = __toESM(require_cjs18());
 var import_helpers_tamagui = __toESM(require_cjs28());
 var import_web8 = require("@tamagui/core");
 var import_react28 = require("react");
@@ -36871,7 +37105,7 @@ var Card = (0, import_web9.withStaticProperties)(CardFrame, {
 
 // node_modules/@tamagui/checkbox/dist/esm/Checkbox.js
 var import_core17 = require("@tamagui/core");
-var import_get_token = __toESM(require_cjs16());
+var import_get_token = __toESM(require_cjs17());
 
 // node_modules/@tamagui/checkbox/dist/esm/CheckboxStyledContext.js
 var import_core16 = require("@tamagui/core");
@@ -36953,8 +37187,8 @@ var CheckboxFrame = (0, import_core17.styled)(ThemeableStack, {
 
 // node_modules/@tamagui/label/dist/esm/Label.js
 var import_focusable = __toESM(require_cjs29());
-var import_get_button_sized3 = __toESM(require_cjs17());
-var import_get_font_sized2 = __toESM(require_cjs19());
+var import_get_button_sized3 = __toESM(require_cjs18());
+var import_get_font_sized2 = __toESM(require_cjs20());
 var import_web10 = require("@tamagui/core");
 var React14 = __toESM(require("react"));
 var import_jsx_runtime20 = require("react/jsx-runtime");
@@ -37175,7 +37409,7 @@ __name(useCheckbox, "useCheckbox");
 // node_modules/@tamagui/checkbox/dist/esm/createCheckbox.js
 var import_core18 = require("@tamagui/core");
 var import_font_size2 = __toESM(require_cjs27());
-var import_get_token2 = __toESM(require_cjs16());
+var import_get_token2 = __toESM(require_cjs17());
 var import_helpers_tamagui2 = __toESM(require_cjs28());
 var import_react31 = __toESM(require("react"));
 var import_jsx_runtime23 = require("react/jsx-runtime");
@@ -37351,7 +37585,7 @@ var Form2 = withStaticProperties(FormComponent, {
 
 // node_modules/tamagui/dist/esm/index.js
 __reExport(esm_exports2, __toESM(require_cjs31()));
-__reExport(esm_exports2, __toESM(require_cjs5()));
+__reExport(esm_exports2, __toESM(require_cjs6()));
 
 // node_modules/@tamagui/elements/dist/esm/index.js
 var import_core20 = require("@tamagui/core");
@@ -37422,7 +37656,7 @@ function Animate({ children, type, ...props }) {
 __name(Animate, "Animate");
 
 // node_modules/@tamagui/popover/dist/esm/Popover.js
-var import_aria_hidden2 = __toESM(require_cjs23());
+var import_aria_hidden2 = __toESM(require_cjs24());
 var import_core24 = require("@tamagui/core");
 
 // node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs
@@ -39118,13 +39352,13 @@ var useFloating2 = /* @__PURE__ */ __name((props) => {
 }, "useFloating");
 
 // node_modules/@tamagui/popover/dist/esm/Popover.js
-var import_focus_scope2 = __toESM(require_cjs24());
+var import_focus_scope2 = __toESM(require_cjs25());
 
 // node_modules/@tamagui/popper/dist/esm/Popper.js
 var import_core23 = require("@tamagui/core");
-var import_get_token3 = __toESM(require_cjs16());
+var import_get_token3 = __toESM(require_cjs17());
 var React19 = __toESM(require("react"));
-var import_react_native_web6 = __toESM(require_cjs25());
+var import_react_native_web6 = __toESM(require_cjs3());
 var import_jsx_runtime26 = require("react/jsx-runtime");
 var PopperContext = (0, import_core23.createStyledContext)({});
 var { useStyledContext: usePopperContext, Provider: PopperProvider } = PopperContext;
@@ -39369,7 +39603,7 @@ var PopperArrow = PopperArrowFrame.styleable(
 
 // node_modules/@tamagui/popover/dist/esm/Popover.js
 var React21 = __toESM(require("react"));
-var import_react_native_web7 = __toESM(require_cjs25());
+var import_react_native_web7 = __toESM(require_cjs3());
 
 // node_modules/@floating-ui/react/dist/floating-ui.react.mjs
 var React20 = __toESM(require("react"), 1);
@@ -43160,7 +43394,7 @@ var useShowPopoverSheet = /* @__PURE__ */ __name((context) => {
 
 // node_modules/@tamagui/progress/dist/esm/Progress.js
 var import_core25 = require("@tamagui/core");
-var import_get_token4 = __toESM(require_cjs16());
+var import_get_token4 = __toESM(require_cjs17());
 var React22 = __toESM(require("react"));
 var import_jsx_runtime28 = require("react/jsx-runtime");
 var PROGRESS_NAME = "Progress";
@@ -43288,7 +43522,7 @@ var Progress = withStaticProperties(
 
 // node_modules/@tamagui/radio-group/dist/esm/RadioGroup.js
 var import_core28 = require("@tamagui/core");
-var import_get_token5 = __toESM(require_cjs16());
+var import_get_token5 = __toESM(require_cjs17());
 
 // node_modules/@tamagui/collection/dist/esm/Collection.js
 var import_core26 = require("@tamagui/core");
@@ -43891,7 +44125,7 @@ RadioGroup.displayName = RADIO_GROUP_NAME;
 
 // node_modules/@tamagui/select/dist/esm/Select.js
 var import_core35 = require("@tamagui/core");
-var import_get_token6 = __toESM(require_cjs16());
+var import_get_token6 = __toESM(require_cjs17());
 var import_list_item3 = __toESM(require_cjs32());
 
 // node_modules/@tamagui/separator/dist/esm/Separator.js
@@ -43987,7 +44221,7 @@ var ForwardSelectContext = /* @__PURE__ */ __name(({
 
 // node_modules/@tamagui/select/dist/esm/SelectContent.js
 var import_core31 = require("@tamagui/core");
-var import_focus_scope3 = __toESM(require_cjs24());
+var import_focus_scope3 = __toESM(require_cjs25());
 var import_react41 = require("react");
 
 // node_modules/@tamagui/select/dist/esm/useSelectBreakpointActive.js
@@ -44937,7 +45171,7 @@ Select.displayName = SELECT_NAME;
 
 // node_modules/@tamagui/slider/dist/esm/Slider.js
 var import_core37 = require("@tamagui/core");
-var import_get_token8 = __toESM(require_cjs16());
+var import_get_token8 = __toESM(require_cjs17());
 var React34 = __toESM(require("react"));
 
 // node_modules/@tamagui/slider/dist/esm/constants.js
@@ -45020,7 +45254,7 @@ __name(roundValue, "roundValue");
 
 // node_modules/@tamagui/slider/dist/esm/SliderImpl.js
 var import_core36 = require("@tamagui/core");
-var import_get_token7 = __toESM(require_cjs16());
+var import_get_token7 = __toESM(require_cjs17());
 var React33 = __toESM(require("react"));
 var import_jsx_runtime42 = require("react/jsx-runtime");
 var SliderFrame = (0, import_core36.styled)(YStack, {
@@ -45594,7 +45828,7 @@ __name(useSwitch, "useSwitch");
 
 // node_modules/@tamagui/switch/dist/esm/createSwitch.js
 var React36 = __toESM(require("react"));
-var import_react_native_web8 = __toESM(require_cjs25());
+var import_react_native_web8 = __toESM(require_cjs3());
 
 // node_modules/@tamagui/switch/dist/esm/StyledContext.js
 var import_core38 = require("@tamagui/core");
@@ -45605,7 +45839,7 @@ var SwitchStyledContext = (0, import_core38.createStyledContext)({
 
 // node_modules/@tamagui/switch/dist/esm/Switch.js
 var import_core39 = require("@tamagui/core");
-var import_get_token9 = __toESM(require_cjs16());
+var import_get_token9 = __toESM(require_cjs17());
 var SwitchThumb = (0, import_core39.styled)(ThemeableStack, {
   name: "SwitchThumb",
   variants: {
@@ -45793,7 +46027,7 @@ var Switch = createSwitch({
 });
 
 // node_modules/@tamagui/tabs/dist/esm/Tabs.js
-var import_get_button_sized4 = __toESM(require_cjs17());
+var import_get_button_sized4 = __toESM(require_cjs18());
 var import_group = __toESM(require_cjs31());
 var import_web11 = require("@tamagui/core");
 var React37 = __toESM(require("react"));
@@ -46064,7 +46298,7 @@ __reExport(esm_exports2, __toESM(require_cjs33()));
 // node_modules/@tamagui/toggle-group/dist/esm/ToggleGroup.js
 var import_focusable2 = __toESM(require_cjs29());
 var import_font_size3 = __toESM(require_cjs27());
-var import_get_token10 = __toESM(require_cjs16());
+var import_get_token10 = __toESM(require_cjs17());
 var import_group2 = __toESM(require_cjs31());
 var import_helpers_tamagui3 = __toESM(require_cjs28());
 var import_web13 = require("@tamagui/core");
@@ -46399,7 +46633,7 @@ var ToggleGroupImpl = ToggleGroupImplElementFrame.extractable(
 
 // node_modules/@tamagui/tooltip/dist/esm/Tooltip.js
 var import_core41 = require("@tamagui/core");
-var import_get_token11 = __toESM(require_cjs16());
+var import_get_token11 = __toESM(require_cjs17());
 var React40 = __toESM(require("react"));
 var import_jsx_runtime49 = require("react/jsx-runtime");
 var TOOLTIP_SCOPE = "tooltip";
@@ -46552,7 +46786,7 @@ var voidFn = /* @__PURE__ */ __name(() => {
 }, "voidFn");
 
 // node_modules/@tamagui/tooltip/dist/esm/TooltipSimple.js
-var import_get_token12 = __toESM(require_cjs16());
+var import_get_token12 = __toESM(require_cjs17());
 var React41 = __toESM(require("react"));
 var import_jsx_runtime50 = require("react/jsx-runtime");
 var TooltipSimple = React41.forwardRef(
@@ -46621,7 +46855,7 @@ var defaultTooltipDelay = { open: 3e3, close: 100 };
 
 // node_modules/@tamagui/use-window-dimensions/dist/esm/index.js
 var import_react48 = require("react");
-var import_react_native_web9 = __toESM(require_cjs25());
+var import_react_native_web9 = __toESM(require_cjs3());
 var initialValue = {
   height: 800,
   width: 600
@@ -46741,7 +46975,7 @@ var TamaguiProvider = /* @__PURE__ */ __name(({ children, ...props }) => /* @__P
 
 // node_modules/tamagui/dist/esm/views/Anchor.js
 var import_core44 = require("@tamagui/core");
-var import_react_native_web10 = __toESM(require_cjs25());
+var import_react_native_web10 = __toESM(require_cjs3());
 var import_jsx_runtime52 = require("react/jsx-runtime");
 var AnchorFrame = (0, import_core44.styled)(SizableText, {
   name: "Anchor",
@@ -46798,13 +47032,13 @@ var Fieldset = (0, import_core46.styled)(YStack, {
 // node_modules/tamagui/dist/esm/views/Input.js
 var import_core48 = require("@tamagui/core");
 var import_focusable3 = __toESM(require_cjs29());
-var import_react_native_web11 = __toESM(require_cjs25());
+var import_react_native_web11 = __toESM(require_cjs3());
 
 // node_modules/tamagui/dist/esm/helpers/inputHelpers.js
 var import_core47 = require("@tamagui/core");
-var import_get_button_sized5 = __toESM(require_cjs17());
-var import_get_font_sized3 = __toESM(require_cjs19());
-var import_get_token13 = __toESM(require_cjs16());
+var import_get_button_sized5 = __toESM(require_cjs18());
+var import_get_font_sized3 = __toESM(require_cjs20());
+var import_get_token13 = __toESM(require_cjs17());
 var inputSizeVariant = /* @__PURE__ */ __name((val = "$true", extras) => {
   if (extras.props.multiline || extras.props.numberOfLines > 1)
     return textAreaSizeVariant(val, extras);
@@ -46914,7 +47148,7 @@ __name(useInputProps, "useInputProps");
 // node_modules/tamagui/dist/esm/views/Spinner.js
 var import_core49 = require("@tamagui/core");
 var React42 = __toESM(require("react"));
-var import_react_native_web12 = __toESM(require_cjs25());
+var import_react_native_web12 = __toESM(require_cjs3());
 var import_jsx_runtime54 = require("react/jsx-runtime");
 var Spinner = YStack.extractable(
   (0, import_core49.themeable)(
@@ -46979,7 +47213,7 @@ var Text3 = (0, import_core51.styled)(import_core51.Text, {
 var import_core52 = require("@tamagui/core");
 
 // tamagui.config.ts
-var animations = (0, import_animations_css.createAnimations)({
+var animations = (0, import_animations_react_native.createAnimations)({
   fast: {
     damping: 20,
     mass: 1.2,

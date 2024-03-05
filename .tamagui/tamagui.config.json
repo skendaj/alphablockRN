@@ -22479,6 +22479,7 @@
     "onlyAllowShorthands": false,
     "fontLanguages": [],
     "animations": {
+      "isReactNative": true,
       "animations": {
         "fast": {
           "damping": 20,
@@ -22495,12 +22496,13 @@
           "stiffness": 60
         }
       },
-      "usePresence": "Function",
-      "ResetPresence": "Function",
-      "supportsCSSVars": true,
+      "View": "Component",
+      "Text": "Component",
       "useAnimatedNumber": "Function",
       "useAnimatedNumberReaction": "Function",
       "useAnimatedNumberStyle": "Function",
+      "usePresence": "Function",
+      "ResetPresence": "Function",
       "useAnimations": "Function"
     },
     "media": {

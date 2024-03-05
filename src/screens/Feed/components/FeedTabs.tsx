@@ -136,7 +136,7 @@ export const FeedTabs = () => {
             value="tab1"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Coins
             </SizableText>
           </Tabs.Tab>
@@ -148,7 +148,7 @@ export const FeedTabs = () => {
             value="tab2"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Watchlists
             </SizableText>
           </Tabs.Tab>
@@ -160,7 +160,7 @@ export const FeedTabs = () => {
             value="tab3"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Overview
             </SizableText>
           </Tabs.Tab>
@@ -171,7 +171,7 @@ export const FeedTabs = () => {
             value="tab4"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Exchanges
             </SizableText>
           </Tabs.Tab>
@@ -182,7 +182,7 @@ export const FeedTabs = () => {
             value="tab5"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Chains
             </SizableText>
           </Tabs.Tab>
@@ -193,7 +193,7 @@ export const FeedTabs = () => {
             value="tab6"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Notifications
             </SizableText>
           </Tabs.Tab>
@@ -204,7 +204,7 @@ export const FeedTabs = () => {
             value="tab7"
             onInteraction={handleOnInteraction}
           >
-            <SizableText color="$white" fontWeight="$bold">
+            <SizableText color="$white" fontWeight="500">
               Categories
             </SizableText>
           </Tabs.Tab>

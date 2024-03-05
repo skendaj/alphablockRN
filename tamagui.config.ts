@@ -35,7 +35,7 @@ const tokens = createTokens({
     white: '#fff',
     blackbg: '#222531',
     darkbg: '#2b2e3d',
-    // borderColorPrimaryWithOpacity: 'rgba(97, 136, 255, 0.4)',
+    borderColorPrimaryWithOpacity: 'rgba(97, 136, 255, 0.4)',
   },
 });
 const config = createTamagui({
